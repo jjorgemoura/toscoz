@@ -1,0 +1,35 @@
+disabled_rules:
+
+opt_in_rules:
+ - attributes
+ - closure_end_indentation
+ - closure_spacing
+ - conditional_returns_on_newline
+ - empty_count
+ - explicit_init
+ - explicit_type_interface
+ - fatal_error_message
+ - file_header
+ - first_where
+ - force_unwrapping
+ - implicitly_unwrapped_optional
+ - missing_docs
+ - nimble_operator
+ - number_separator
+ - object_literal
+ - operator_usage_whitespace
+ - overridden_super_call
+ - private_outlet
+ - prohibited_super_call
+ - redundant_nil_coalescing
+ - switch_case_on_newline
+ - valid_docs
+
+excluded:
+  - Pods
+  - Carthage
+
+line_length: 200
+file_length:
+  warning: 300
+  error: 500

@@ -1,0 +1,38 @@
+
+codecov:
+  branch: master
+
+coverage:
+  precision: 2
+  round: down
+  range: "80...100"
+  ignore:
+    - docs/*
+    - fastlane/*
+
+  notify:
+    slack:
+      default:
+        url: "https://hooks.slack.com/services/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"
+        attachments: "diff, sunburst"
+        # threshold: 1%
+        # only_pulls: false
+        # branches: null
+        # flags: null
+        # paths: null
+        # message: "Coverage {{changed}} for {{owner}}/{{repo}}"
+
+  status:
+    project:
+      default:
+        target: auto
+        branches:
+          - master
+          - develop
+
+comment:
+  layout: "header, diff, changes, sunburst, uncovered, tree"
+  behavior: default
+  branches:
+    - master
+    - develop
