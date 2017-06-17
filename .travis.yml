@@ -1,13 +1,12 @@
 language: objective-c
-os: osx
+# os: osx
 osx_image: xcode8.3
 xcode_sdk: iphonesimulator10.3
 
 xcode_project: sapataz.xcodeproj
 
 script:
-- xcodebuild -project toscoz.xcodeproj -scheme toscoz -configuration Debug -sdk iphonesimulator
-  -destination "OS=10.3,name=iPhone 7" CODE_SIGNING_REQUIRED=NO clean build test analyze
+- xcodebuild -project toscoz.xcodeproj -scheme toscoz -configuration Debug -sdk iphonesimulator -destination "OS=10.3.1,name=iPhone 7" CODE_SIGNING_REQUIRED=NO clean build test analyze
 
 after_success:
 - bash <(curl -s https://codecov.io/bash) -J 'toscoz'
