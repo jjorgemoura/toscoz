@@ -1,5 +1,4 @@
 language: objective-c
-# dist: osx
 os: osx
 osx_image: xcode8.3
 xcode_sdk: iphonesimulator10.3
@@ -7,16 +6,16 @@ xcode_sdk: iphonesimulator10.3
 xcode_project: sapataz.xcodeproj
 
 script:
-  - xcodebuild -project toscoz.xcodeproj -scheme toscoz -configuration Debug -sdk iphonesimulator -destination "OS=10.3,name=iPhone 7" CODE_SIGNING_REQUIRED=NO clean build test analyze
-  # - bundle exec danger
+- xcodebuild -project toscoz.xcodeproj -scheme toscoz -configuration Debug -sdk iphonesimulator
+  -destination "OS=10.3,name=iPhone 7" CODE_SIGNING_REQUIRED=NO clean build test analyze
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash) -J 'toscoz'
+- bash <(curl -s https://codecov.io/bash) -J 'toscoz'
 
 notifications:
   email: false
   slack:
     rooms:
-      - secure: tJZantT+f8uNPq3w0Y5UFezlpy1g6O5sHOnHi5x0K8yP6RPnQjStivHXvRCExzRJCIRvnv4k7Ha8ZULcc//JN2BcgnYIR0f4IF5N6OG20238MRS0IRjT+TPa2IWYfqyC7w4Qnea4tc4fhkOR9zVmr/EZfZ0M9srGC/vaxzDwmJb/f/1SZdaDvjjqKtl0KCT8cR/oFjT/+QPhTT6lH0m8AGdZjW6/4HhVVjzl3SJ/vfgdZe0mAFbgYT+AJpyjK5hvtgkjDjSu6K9q0Xn8mX28+WtxvzJuJQbOpupP2fXCZQMPGWuvHai7PWFq4NuFHd/af4fzMzwlVJBViXlPIxFNZas5OwqUBbRSgmbXf8xdBX9rY1T5skikfiIif0Yr+9AM2JD99r2b3J+LmAFIW80CAO4SvamF2rTdGUVogWdU7nRPIH3VaVUJGNVsmG39m05K8rVH2gJGw93+SOm5N05WP789kx8ZEilGFPRSkUmp/snNwpZZMZpN0lLq35tnkJ0YGiArevjqq3PPgugmSMPifu4D4ThNJcTLuhc81JCZzRIbdt+RkXTaDCMtOCaJIRLJMJqMUxsGs5TTfFUS2lWbObLjnNise9XHBuiRhu/+mxfhc4UipC+CusrYIZP/pFhFfDsNj8RU8PieuUbNoxzty/n1OdDeTqVEZmY6rmFAuc4=
+      secure: Au0K922OZijH3BHVMrasF4sYp6BCWtbRYyI60tnFx6SCjnDMmZfDjIFRwlrLqbe/GUcWludUICHUpwlztsErGJkvm4Xw3JLeqgNQE8pbwXku9kdDiqXLIZNdRT6GmnEEITChrwiRmHYtTS3wcQbapFk1rLWR+8leIn8ow3+zIWnla3aZ5UTWHgU+k1HZNFRcgpoH8y4uKKPQ3XPXrhwkEpbB3ywmiYZgUsPpvqMq7NeJASGHoqLxKiNkLqyKIeyvT+7boEM3smbg0mzc+uC0SFVP6BZ1rfAVjFag8pK01UVctQhfxtFgaM/KbipJcTvqoOwxxz4XRYfZBlFQeEElqtA63TiNMOlHcDdYUJABszUyxA1/3NjSN/WwczFRAN7bCFUYE/NDMMbbeptapdjfGRgBa7EsMFES2tUpicDO4cZNZg19Ymjut5BVTto2luov7FPKbefQJcOxynoS+e5+I8w4qoAlRgOdgyBBIP1BA2vDvs9ECvXp+6wJb++lVyTibrQozdhCN2Lk3dSo2gCJjc94zuHnsm1girhZuRQbJmaHorQ+y0DYCsNgpVrgugMbPai0C/RY7oBunvcrYskQXClqWMM1mB3g4z5ALTeK0rNlxkKEwH8G4idUjRN/3afWaAP9RpM3EQPon60msuhMsTufmXLafX5twTYki8OoB08=
     on_success: always
     on_failure: always
