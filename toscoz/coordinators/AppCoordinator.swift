@@ -11,6 +11,8 @@ import UIKit
 class AppCoordinator: RootCoordinator {
 
     let window: UIWindow
+    var playerCoordinator: PlayerCoordinator?
+    var homeCoordinator: HomeCoordinator?
 
     init(window: UIWindow) {
         self.window = window
@@ -18,16 +20,16 @@ class AppCoordinator: RootCoordinator {
 
     func start() {
         if isSongPlaying() {
-            let playerCoordinator = PlayerCoordinator(window: window)
-            playerCoordinator.start()
+            playerCoordinator = PlayerCoordinator(window: window)
+            playerCoordinator?.start()
         } else {
-            let homeCoordinator = HomeCoordinator()
-            homeCoordinator.start()
+            homeCoordinator = HomeCoordinator(window: window)
+            homeCoordinator?.start()
         }
     }
 
     // MARK: - Private methods
     private func isSongPlaying() -> Bool {
-        return true
+        return false
     }
 }

@@ -15,10 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var appCoordinator: AppCoordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        window = UIWindow(frame: UIScreen.main.bounds)
+        window = self.window ?? UIWindow()
         appCoordinator = AppCoordinator(window: window!)
         appCoordinator?.start()
-        window?.makeKeyAndVisible()
+
+        self.window!.backgroundColor = UIColor.lightGray
+        window!.makeKeyAndVisible()
         return true
     }
 
@@ -44,4 +46,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 }
-

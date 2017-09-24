@@ -6,4 +6,7 @@
 //  Copyright © 2017 Jorge Moura. All rights reserved.
 //
 
-import Foundation
+protocol HomeViewModel {
+
+    func userHomeSelected() 
+}
