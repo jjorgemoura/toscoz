@@ -8,5 +8,5 @@
 
 protocol HomeViewModel {
 
-    func userHomeSelected() 
+    func userHomeSelected()
 }

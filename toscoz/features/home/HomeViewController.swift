@@ -29,14 +29,16 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @objc func selectUser() {
+    @objc
+    func selectUser() {
         print("HomeViewController -> select User")
         if let viewModel = viewModel {
             viewModel.userHomeSelected()
         }
     }
 
-    @objc func selectSettings() {
+    @objc
+    func selectSettings() {
         print("HomeViewController -> select Settings")
     }
 }

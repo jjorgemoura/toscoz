@@ -11,7 +11,7 @@ import UIKit
 class HomeCoordinator: RootCoordinator {
 
     let window: UIWindow
-    var tabViewController = UITabBarController()
+    var tabViewController: UITabBarController = UITabBarController()
 
     init(window: UIWindow) {
         self.window = window

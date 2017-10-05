@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsMainViewController: UIViewController {
+internal class SettingsMainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,6 @@ class SettingsMainViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation
