@@ -29,12 +29,13 @@ class PlayerViewController: UIViewController {
 //        super.didReceiveMemoryWarning()
 //    }
 
-    @objc func getSwipeAction(_ recognizer: UISwipeGestureRecognizer){
+    @objc
+    func getSwipeAction(_ recognizer: UISwipeGestureRecognizer) {
         if recognizer.direction == .down {
             print("SDFASDGSDG")
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            appDelegate.appCoordinator?.start()
+            if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+                appDelegate.appCoordinator?.start()
+            }
         }
     }
 }
-

@@ -13,7 +13,7 @@ class PlayerCoordinator: NSObject, RootCoordinator {
     private var playerSliderViewControllers: [UIViewController] = []
 
     let window: UIWindow
-    let playerSliderViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
+    let playerSliderViewController: UIPageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
 
     init(window: UIWindow) {
         self.window = window
@@ -24,7 +24,7 @@ class PlayerCoordinator: NSObject, RootCoordinator {
         let albumViewController = PlayerAlbumViewController()
 
         //VC 2
-        let playerViewModel =  PlayerViewModel(song: "", startingPoint: 0)
+        let playerViewModel = PlayerViewModel(song: "", startingPoint: 0)
         //viewModel.model = MVVMCAuthenticateModel()
         //viewModel.coordinatorDelegate = self
         //vc.viewModel = viewModel
@@ -45,7 +45,6 @@ class PlayerCoordinator: NSObject, RootCoordinator {
         playerSliderViewController.dataSource = self
 //        playerSliderViewController.delegate = self
         playerSliderViewController.setViewControllers([playerViewController], direction: .forward, animated: false)
-
 
         window.rootViewController = playerSliderViewController
 

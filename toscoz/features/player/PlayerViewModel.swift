@@ -11,5 +11,4 @@ struct PlayerViewModel {
     let song: String
     let startingPoint: Int
 
-    
 }
