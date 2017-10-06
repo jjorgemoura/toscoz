@@ -44,12 +44,6 @@
 		B4C47D591F2262AD0055A8B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C47D571F2262AD0055A8B8 /* LaunchScreen.storyboard */; };
 		CF5B2A8E1F86C46800684D8A /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5B2A8C1F86C46800684D8A /* RxCocoa.framework */; };
 		CF5B2A8F1F86C46800684D8A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5B2A8D1F86C46800684D8A /* RxSwift.framework */; };
-		CF5B2A9E1F86CE1700684D8A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5B2A8D1F86C46800684D8A /* RxSwift.framework */; };
-		CF5B2AA11F86CE1700684D8A /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5B2A9F1F86CE1700684D8A /* RxTest.framework */; };
-		CF5B2AA21F86CE1700684D8A /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5B2AA01F86CE1700684D8A /* RxBlocking.framework */; };
-		CF5B2AA31F86CE6E00684D8A /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5B2AA01F86CE1700684D8A /* RxBlocking.framework */; };
-		CF5B2AA41F86CE6E00684D8A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5B2A8D1F86C46800684D8A /* RxSwift.framework */; };
-		CF5B2AA51F86CE6E00684D8A /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5B2A9F1F86CE1700684D8A /* RxTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,9 +125,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF5B2AA11F86CE1700684D8A /* RxTest.framework in Frameworks */,
-				CF5B2AA21F86CE1700684D8A /* RxBlocking.framework in Frameworks */,
-				CF5B2A9E1F86CE1700684D8A /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,9 +132,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF5B2AA31F86CE6E00684D8A /* RxBlocking.framework in Frameworks */,
-				CF5B2AA41F86CE6E00684D8A /* RxSwift.framework in Frameworks */,
-				CF5B2AA51F86CE6E00684D8A /* RxTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
