@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		B41978691EF5B94D00AD2F03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B41978671EF5B92D00AD2F03 /* Assets.xcassets */; };
 		B427FAD31EF58834005FE9A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427FAD21EF58834005FE9A2 /* AppDelegate.swift */; };
-		B427FAE81EF58835005FE9A2 /* toscozTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427FAE71EF58835005FE9A2 /* toscozTests.swift */; };
-		B427FAF31EF58835005FE9A2 /* toscozUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427FAF21EF58835005FE9A2 /* toscozUITests.swift */; };
+		B427FAE81EF58835005FE9A2 /* ToscozTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427FAE71EF58835005FE9A2 /* ToscozTests.swift */; };
+		B427FAF31EF58835005FE9A2 /* ToscozUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427FAF21EF58835005FE9A2 /* ToscozUITests.swift */; };
 		B493F35B1F857EA90076A417 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B493F3531F857EA90076A417 /* HomeCoordinator.swift */; };
 		B493F35C1F857EA90076A417 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B493F3541F857EA90076A417 /* HomeViewModel.swift */; };
 		B493F35D1F857EA90076A417 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B493F3551F857EA90076A417 /* UserViewController.swift */; };
@@ -75,10 +75,10 @@
 		B427FACF1EF58834005FE9A2 /* toscoz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toscoz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B427FAD21EF58834005FE9A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B427FAE31EF58835005FE9A2 /* toscozTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = toscozTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B427FAE71EF58835005FE9A2 /* toscozTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toscozTests.swift; sourceTree = "<group>"; };
+		B427FAE71EF58835005FE9A2 /* ToscozTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToscozTests.swift; sourceTree = "<group>"; };
 		B427FAE91EF58835005FE9A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B427FAEE1EF58835005FE9A2 /* toscozUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = toscozUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B427FAF21EF58835005FE9A2 /* toscozUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toscozUITests.swift; sourceTree = "<group>"; };
+		B427FAF21EF58835005FE9A2 /* ToscozUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToscozUITests.swift; sourceTree = "<group>"; };
 		B427FAF41EF58835005FE9A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B493F3531F857EA90076A417 /* HomeCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		B493F3541F857EA90076A417 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -195,7 +195,7 @@
 		B427FAE61EF58835005FE9A2 /* toscozTests */ = {
 			isa = PBXGroup;
 			children = (
-				B427FAE71EF58835005FE9A2 /* toscozTests.swift */,
+				B427FAE71EF58835005FE9A2 /* ToscozTests.swift */,
 				B427FAE91EF58835005FE9A2 /* Info.plist */,
 			);
 			path = toscozTests;
@@ -204,7 +204,7 @@
 		B427FAF11EF58835005FE9A2 /* toscozUITests */ = {
 			isa = PBXGroup;
 			children = (
-				B427FAF21EF58835005FE9A2 /* toscozUITests.swift */,
+				B427FAF21EF58835005FE9A2 /* ToscozUITests.swift */,
 				B427FAF41EF58835005FE9A2 /* Info.plist */,
 			);
 			path = toscozUITests;
@@ -506,7 +506,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B427FAE81EF58835005FE9A2 /* toscozTests.swift in Sources */,
+				B427FAE81EF58835005FE9A2 /* ToscozTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,7 +514,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B427FAF31EF58835005FE9A2 /* toscozUITests.swift in Sources */,
+				B427FAF31EF58835005FE9A2 /* ToscozUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
