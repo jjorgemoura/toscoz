@@ -5,6 +5,11 @@ xcode_sdk: iphonesimulator11.0
 
 xcode_project: sapataz.xcodeproj
 
+before_install: 
+  - brew update
+  - brew install carthage
+  - carthage bootstrap --verbose
+
 script:
 - xcodebuild -project toscoz.xcodeproj -scheme toscoz -configuration Debug -sdk iphonesimulator -destination "OS=11.0,name=iPhone X" CODE_SIGNING_REQUIRED=NO clean build test analyze
 

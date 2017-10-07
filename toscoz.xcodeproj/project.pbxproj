@@ -42,6 +42,8 @@
 		B493F3901F857F090076A417 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B493F38E1F857F090076A417 /* AppCoordinator.swift */; };
 		B493F3911F857F090076A417 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B493F38F1F857F090076A417 /* Coordinator.swift */; };
 		B4C47D591F2262AD0055A8B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C47D571F2262AD0055A8B8 /* LaunchScreen.storyboard */; };
+		CF5B2A8E1F86C46800684D8A /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5B2A8C1F86C46800684D8A /* RxCocoa.framework */; };
+		CF5B2A8F1F86C46800684D8A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5B2A8D1F86C46800684D8A /* RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +105,10 @@
 		B493F38E1F857F090076A417 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		B493F38F1F857F090076A417 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B4C47D581F2262AD0055A8B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = toscoz/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		CF5B2A8C1F86C46800684D8A /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		CF5B2A8D1F86C46800684D8A /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		CF5B2A9F1F86CE1700684D8A /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
+		CF5B2AA01F86CE1700684D8A /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF5B2A8E1F86C46800684D8A /* RxCocoa.framework in Frameworks */,
+				CF5B2A8F1F86C46800684D8A /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +155,7 @@
 				B427FAE61EF58835005FE9A2 /* toscozTests */,
 				B427FAF11EF58835005FE9A2 /* toscozUITests */,
 				B427FAD01EF58834005FE9A2 /* Products */,
+				CF5B2A8B1F86C46700684D8A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -282,6 +291,17 @@
 			path = services;
 			sourceTree = "<group>";
 		};
+		CF5B2A8B1F86C46700684D8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF5B2AA01F86CE1700684D8A /* RxBlocking.framework */,
+				CF5B2A9F1F86CE1700684D8A /* RxTest.framework */,
+				CF5B2A8C1F86C46800684D8A /* RxCocoa.framework */,
+				CF5B2A8D1F86C46800684D8A /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -292,7 +312,7 @@
 				B427FACB1EF58834005FE9A2 /* Sources */,
 				B427FACC1EF58834005FE9A2 /* Frameworks */,
 				B427FACD1EF58834005FE9A2 /* Resources */,
-				CF5B2AA61F86D7A100684D8A /* ShellScript */,
+				CF5B2A901F86C49600684D8A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -419,18 +439,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CF5B2AA61F86D7A100684D8A /* ShellScript */ = {
+		CF5B2A901F86C49600684D8A /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 			);
 			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "/usr/local/bin/carthage copy-frameworks ";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -619,6 +643,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = toscoz/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jjorgemoura.toscoz;
@@ -631,6 +659,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = toscoz/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jjorgemoura.toscoz;
@@ -644,6 +676,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = toscozTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jjorgemoura.toscozTests;
@@ -658,6 +694,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = toscozTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jjorgemoura.toscozTests;
@@ -672,6 +712,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 6CHZFW8V57;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = toscozUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jjorgemoura.toscozUITests;
@@ -686,6 +730,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 6CHZFW8V57;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = toscozUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jjorgemoura.toscozUITests;
