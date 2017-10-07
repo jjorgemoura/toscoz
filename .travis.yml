@@ -52,7 +52,7 @@ before_install:
 
 script:
 # - xcodebuild -project toscoz.xcodeproj -scheme toscoz -configuration Debug -sdk iphonesimulator -destination "OS=11.0,name=iPhone X" CODE_SIGNING_REQUIRED=NO clean build test analyze
-xcodebuild analyze test -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -configuration Debug -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
+- xcodebuild analyze test -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -configuration Debug -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
 
 after_success:
 - bash <(curl -s https://codecov.io/bash) -J 'toscoz'
