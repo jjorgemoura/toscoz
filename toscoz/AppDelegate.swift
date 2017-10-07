@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appCoordinator = AppCoordinator(window: window!)
         appCoordinator?.start()
 
-        self.window!.backgroundColor = UIColor.lightGray
+        self.window?.backgroundColor = UIColor.lightGray
         window!.makeKeyAndVisible()
         return true
     }
