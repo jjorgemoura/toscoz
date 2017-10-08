@@ -12,14 +12,14 @@ notifications:
 language: objective-c
 
 # language options
-osx_image: xcode9.1
+osx_image: xcode9
 
 # branches to run
 
 
 # environment variables
 env:
-  # global will stay the same across all matrix possibilities (will not create additional combinations to run)
+  # global: the same across all matrix possibilities
   global:
     - LANG=en_US.UTF-8
 
@@ -28,13 +28,13 @@ env:
 
     - IOS_SDK=iphonesimulator11.0
 
-  # matrix variables will create a new build for each specified variable
+  # matrix: a new build for each specified variable
   matrix:
     - DESTINATION="OS=11.0,name=iPhone X"                               SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
     - DESTINATION="OS=11.0,name=iPhone 8 Plus"                          SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
     # - DESTINATION="OS=11.0,name=iPhone 8"                               SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
     - DESTINATION="OS=11.0,name=iPhone SE"                              SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
-    
+
     - DESTINATION="OS=11.0,name=iPad (5th generation)"                  SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
     # - DESTINATION="OS=11.0,name=iPad Air 2"                             SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
     - DESTINATION="OS=11.0,name=iPad Pro (10.5-inch)"                   SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
@@ -45,10 +45,12 @@ env:
 ####################
 ## begin build steps
 
-before_install: 
+before_install:
   - brew update
-  - brew install carthage
-  - carthage bootstrap --verbose
+  - brew outdated carthage || brew upgrade carthage
+
+before_script:
+  - carthage bootstrap
 
 script:
 # - xcodebuild -project toscoz.xcodeproj -scheme toscoz -configuration Debug -sdk iphonesimulator -destination "OS=11.0,name=iPhone X" CODE_SIGNING_REQUIRED=NO clean build test analyze
@@ -60,4 +62,3 @@ after_success:
 
 ####################
 ## Deployment options
-
