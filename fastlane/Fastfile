@@ -1,53 +1,66 @@
-# Customise this file, documentation can be found here:
-# https://docs.fastlane.tools/actions/
-# All available actions: https://docs.fastlane.tools/actions
-# can also be listed using the `fastlane actions` command
 
-# Change the syntax highlighting to Ruby
-# All lines starting with a # are ignored when running `fastlane`
-
-# If you want to automatically update fastlane if a new version is available:
-# update_fastlane
-
-# This is the minimum version number required.
-# Update this, if you use features of a newer version
+# fastlane constants
 fastlane_version "2.60.1"
-
 default_platform :ios
 
+# constants
+TEAM_ID = "XXXXXX"
+USERNAME = "XXXXXXX"
+
+## ios lanes setup ##
 platform :ios do
-  before_all do
-    # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
-    # cocoapods
-    # carthage
-  end
 
+  # tests
   desc "Runs all the tests"
-  lane :test do
-    scan
+  lane :tests do
+    test_unit
+    test_ui
   end
 
+  desc "Runs unit tests"
+  lane :test_unit do |params|
+    scan(scheme: "toscoz")
+  end
+
+  desc "Run UI tests"
+  lane :test_ui do |params|
+    scan(scheme: "toscozUITest")
+  end
+
+
+  # betas
   desc "Submit a new Beta Build to Apple TestFlight"
-  desc "This will also make sure the profile is up to date"
   lane :beta do
-    # match(type: "appstore") # more information: https://codesigning.guide
-    gym # Build your app - more options available
-    pilot
+    # match(type: "development", readonly: true)
+    gym(scheme: "toscoz", export_method: "development")
+    pilot(
+      username: "jjorge.moura@gmail.com",
+      skip_submission: true
+    )
 
     # sh "your_script.sh"
     # You can also use other beta testing services here (run `fastlane actions`)
   end
 
+
+  # release
   desc "Deploy a new version to the App Store"
   lane :release do
+    precheck
     # match(type: "appstore")
     # snapshot
-    gym # Build your app - more options available
-    deliver(force: true)
+    gym
+    # deliver(force: true)
     # frameit
   end
 
-  # You can define as many lanes as you want
+
+
+  # constants
+  before_all do
+    # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
+    # carthage
+  end
 
   after_all do |lane|
     # This block is called, only if the executed lane was successful
@@ -64,10 +77,3 @@ platform :ios do
     # )
   end
 end
-
-
-# More information about multiple platforms in fastlane: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Platforms.md
-# All available actions: https://docs.fastlane.tools/actions
-
-# fastlane reports which actions are used. No personal data is recorded. 
-# Learn more at https://github.com/fastlane/fastlane#metrics
