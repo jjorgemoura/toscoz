@@ -3,22 +3,30 @@ author_url: http://www.jjorgemoura.com
 copyright: Copyright © 2017 Jorge Moura
 readme: README.md
 
-module: toscoz
-module_version: 0.0.1
+# module: toscoz
+# module_version: 0.2.0
 
 github_url: https://github.com/jjorgemoura/toscoz
 github_file_prefix: https://github.com/jjorgemoura/toscoz/tree/master
 
 # documentation: docs/documentation/*.md
 # root_url:
-docset_icon: docs/resources/Icon-40@2x.png
+# docset_icon: docs/resources/docset-icon@2x.png
 # dash_url:
 
 output: docs
 theme: apple
 
 sdk: iphoneos
+swift-version: 4.0
 clean: true
 source-directory: toscoz/
 
 hide_documentation_coverage: true
+
+
+xcodebuild_arguments:
+    - "-project"
+    - "toscoz.xcodeproj"
+    - "-scheme"
+    - "toscoz"
