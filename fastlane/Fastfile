@@ -15,17 +15,17 @@ platform :ios do
   # tests
   desc "Runs all the tests"
   lane :do_tests do
-    do_unit_test
-    do_ui_test
+    do_unit_tests
+    do_ui_tests
   end
 
   desc "Runs unit tests"
-  lane :do_unit_test do
+  lane :do_unit_tests do
     scan(scheme: xcode_scheme_main)
   end
 
   desc "Run UI tests"
-  lane :do_ui_test do
+  lane :do_ui_tests do
     scan(scheme: xcode_scheme_uitests)
   end
 
@@ -35,9 +35,9 @@ platform :ios do
   lane :do_beta do |option|
     do_validation option option
     do_resources_check
-    # do_tests
+    do_tests
     do_version option
-    # gym(scheme: xcode_scheme_main, export_method: "development")
+    gym(scheme: xcode_scheme_main, export_method: "development")
     # pilot(username: appleid_user, skip_submission: true)
     jazzy(config: ".jazzy.yaml")
   end
