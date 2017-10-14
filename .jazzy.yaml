@@ -11,7 +11,7 @@ github_file_prefix: https://github.com/jjorgemoura/toscoz/tree/master
 
 # documentation: docs/documentation/*.md
 # root_url:
-# docset_icon: docs/resources/docset-icon@2x.png
+docset_icon: fastlane/resources/docset-icon@2x.png
 # dash_url:
 
 output: docs
@@ -24,7 +24,6 @@ source-directory: toscoz/
 
 hide_documentation_coverage: true
 min-acl: internal
-
 
 xcodebuild_arguments:
     - "-project"
