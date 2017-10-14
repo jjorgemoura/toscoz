@@ -59,7 +59,6 @@ platform :ios do
   desc "Runs Check Resources"
   lane :do_resources_check do
     swiftlint
-    # dagger(danger_id: "sapataz",verbose: true)
   end
 
   desc "Versioning -> Increase: MAJOR, MINOR or PATCH"
@@ -99,6 +98,13 @@ platform :ios do
       UI.error "ATTENTION: Please, user the parameter 'version' to set the bump desired!!!"
       abort
     end
+  end
+
+  desc "Runs Danger"
+  lane :do_danger_check do
+    danger(
+      verbose: true
+    )
   end
 
   # constants

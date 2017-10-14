@@ -70,6 +70,11 @@ Versioning -> Increase: MAJOR, MINOR or PATCH
 fastlane ios do_validation
 ```
 Validate the version command and the branch
+### ios do_danger_check
+```
+fastlane ios do_danger_check
+```
+Runs Danger
 
 ----
 

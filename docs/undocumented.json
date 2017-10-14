@@ -1,6 +1,642 @@
 {
   "warnings": [
-
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/AppDelegate.swift",
+      "line": 12,
+      "symbol": "AppDelegate",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/AppDelegate.swift",
+      "line": 14,
+      "symbol": "AppDelegate.window",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/AppDelegate.swift",
+      "line": 15,
+      "symbol": "AppDelegate.appCoordinator",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/AppDelegate.swift",
+      "line": 17,
+      "symbol": "AppDelegate.application(_:didFinishLaunchingWithOptions:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/AppDelegate.swift",
+      "line": 27,
+      "symbol": "AppDelegate.applicationWillResignActive(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/AppDelegate.swift",
+      "line": 32,
+      "symbol": "AppDelegate.applicationDidEnterBackground(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/AppDelegate.swift",
+      "line": 37,
+      "symbol": "AppDelegate.applicationWillEnterForeground(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/AppDelegate.swift",
+      "line": 41,
+      "symbol": "AppDelegate.applicationDidBecomeActive(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/AppDelegate.swift",
+      "line": 45,
+      "symbol": "AppDelegate.applicationWillTerminate(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/coordinators/AppCoordinator.swift",
+      "line": 11,
+      "symbol": "AppCoordinator",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/coordinators/AppCoordinator.swift",
+      "line": 13,
+      "symbol": "AppCoordinator.window",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/coordinators/AppCoordinator.swift",
+      "line": 14,
+      "symbol": "AppCoordinator.playerCoordinator",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/coordinators/AppCoordinator.swift",
+      "line": 15,
+      "symbol": "AppCoordinator.homeCoordinator",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/coordinators/AppCoordinator.swift",
+      "line": 17,
+      "symbol": "AppCoordinator.init(window:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/coordinators/AppCoordinator.swift",
+      "line": 21,
+      "symbol": "AppCoordinator.start()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/coordinators/Coordinator.swift",
+      "line": 11,
+      "symbol": "Coordinator",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/coordinators/Coordinator.swift",
+      "line": 12,
+      "symbol": "Coordinator.start()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/coordinators/Coordinator.swift",
+      "line": 15,
+      "symbol": "RootCoordinator",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/coordinators/Coordinator.swift",
+      "line": 16,
+      "symbol": "RootCoordinator.window",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/coordinators/Coordinator.swift",
+      "line": 19,
+      "symbol": "NavigationCoordinator",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/coordinators/Coordinator.swift",
+      "line": 20,
+      "symbol": "NavigationCoordinator.navigationController",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/services/Album.swift",
+      "line": 9,
+      "symbol": "Album",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/services/Album.swift",
+      "line": 11,
+      "symbol": "Album.artist",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/services/Album.swift",
+      "line": 12,
+      "symbol": "Album.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/services/Album.swift",
+      "line": 13,
+      "symbol": "Album.image",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/services/Artist.swift",
+      "line": 9,
+      "symbol": "Artist",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/services/Artist.swift",
+      "line": 11,
+      "symbol": "Artist.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/services/Artist.swift",
+      "line": 13,
+      "symbol": "Artist.init(name:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/services/Song.swift",
+      "line": 9,
+      "symbol": "Song",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/services/Song.swift",
+      "line": 11,
+      "symbol": "Song.identifier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/services/Song.swift",
+      "line": 12,
+      "symbol": "Song.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/services/Song.swift",
+      "line": 14,
+      "symbol": "Song.init(identifier:name:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/services/SpotifyService.swift",
+      "line": 9,
+      "symbol": "StandardSpotify",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/services/SpotifyService.swift",
+      "line": 11,
+      "symbol": "StandardSpotify.songPlaying()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/services/SpotifyService.swift",
+      "line": 12,
+      "symbol": "StandardSpotify.song(identifier:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/services/StandardSpotifyService.swift",
+      "line": 9,
+      "symbol": "StandardSpotifyService",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/services/StandardSpotifyService.swift",
+      "line": 11,
+      "symbol": "StandardSpotifyService.songPlaying()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/services/StandardSpotifyService.swift",
+      "line": 16,
+      "symbol": "StandardSpotifyService.song(identifier:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/home/HomeCoordinator.swift",
+      "line": 11,
+      "symbol": "HomeCoordinator",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/home/HomeCoordinator.swift",
+      "line": 13,
+      "symbol": "HomeCoordinator.window",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/home/HomeCoordinator.swift",
+      "line": 14,
+      "symbol": "HomeCoordinator.tabViewController",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/home/HomeCoordinator.swift",
+      "line": 16,
+      "symbol": "HomeCoordinator.init(window:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/home/HomeCoordinator.swift",
+      "line": 20,
+      "symbol": "HomeCoordinator.start()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/home/HomeViewController.swift",
+      "line": 11,
+      "symbol": "HomeViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/home/HomeViewController.swift",
+      "line": 13,
+      "symbol": "HomeViewController.viewModel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/home/HomeViewController.swift",
+      "line": 15,
+      "symbol": "HomeViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/home/HomeViewController.swift",
+      "line": 27,
+      "symbol": "HomeViewController.didReceiveMemoryWarning()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/home/HomeViewController.swift",
+      "line": 33,
+      "symbol": "HomeViewController.selectUser()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/home/HomeViewController.swift",
+      "line": 41,
+      "symbol": "HomeViewController.selectSettings()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/home/HomeViewModel.swift",
+      "line": 9,
+      "symbol": "HomeViewModel",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/home/HomeViewModel.swift",
+      "line": 11,
+      "symbol": "HomeViewModel.userHomeSelected()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/home/StandardHomeViewModel.swift",
+      "line": 11,
+      "symbol": "StandardHomeViewModel",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/home/StandardHomeViewModel.swift",
+      "line": 13,
+      "symbol": "StandardHomeViewModel.navigationController",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/home/StandardHomeViewModel.swift",
+      "line": 15,
+      "symbol": "StandardHomeViewModel.init(navigationController:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/home/StandardHomeViewModel.swift",
+      "line": 19,
+      "symbol": "StandardHomeViewModel.userHomeSelected()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/home/UserHomeCoordinator.swift",
+      "line": 11,
+      "symbol": "UserHomeCoordinator",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/home/UserHomeCoordinator.swift",
+      "line": 15,
+      "symbol": "UserHomeCoordinator.navigationController",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/home/UserHomeCoordinator.swift",
+      "line": 17,
+      "symbol": "UserHomeCoordinator.init(navigationController:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/home/UserHomeCoordinator.swift",
+      "line": 21,
+      "symbol": "UserHomeCoordinator.start()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/home/UserViewController.swift",
+      "line": 11,
+      "symbol": "UserViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/home/UserViewController.swift",
+      "line": 13,
+      "symbol": "UserViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/home/UserViewController.swift",
+      "line": 19,
+      "symbol": "UserViewController.didReceiveMemoryWarning()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/player/PlayerAlbumViewController.swift",
+      "line": 11,
+      "symbol": "PlayerAlbumViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/player/PlayerAlbumViewController.swift",
+      "line": 13,
+      "symbol": "PlayerAlbumViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/player/PlayerAlbumViewController.swift",
+      "line": 19,
+      "symbol": "PlayerAlbumViewController.didReceiveMemoryWarning()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/player/PlayerCoordinator.swift",
+      "line": null,
+      "symbol": "PlayerCoordinator",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/player/PlayerCoordinator.swift",
+      "line": 11,
+      "symbol": "PlayerCoordinator",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/player/PlayerCoordinator.swift",
+      "line": 15,
+      "symbol": "PlayerCoordinator.window",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/player/PlayerCoordinator.swift",
+      "line": 16,
+      "symbol": "PlayerCoordinator.playerSliderViewController",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/player/PlayerCoordinator.swift",
+      "line": 18,
+      "symbol": "PlayerCoordinator.init(window:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/player/PlayerCoordinator.swift",
+      "line": 22,
+      "symbol": "PlayerCoordinator.start()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/player/PlayerCoordinator.swift",
+      "line": 59,
+      "symbol": "PlayerCoordinator.presentationCount(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/player/PlayerCoordinator.swift",
+      "line": 63,
+      "symbol": "PlayerCoordinator.presentationIndex(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/player/PlayerCoordinator.swift",
+      "line": 70,
+      "symbol": "PlayerCoordinator.pageViewController(_:viewControllerBefore:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/player/PlayerCoordinator.swift",
+      "line": 83,
+      "symbol": "PlayerCoordinator.pageViewController(_:viewControllerAfter:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/player/PlayerViewController.swift",
+      "line": 11,
+      "symbol": "PlayerViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/player/PlayerViewController.swift",
+      "line": 13,
+      "symbol": "PlayerViewController.playerViewModel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/player/PlayerViewController.swift",
+      "line": 15,
+      "symbol": "PlayerViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/player/PlayerViewController.swift",
+      "line": 33,
+      "symbol": "PlayerViewController.getSwipeAction(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/player/PlayerViewModel.swift",
+      "line": 9,
+      "symbol": "PlayerViewModel",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/player/PlayerViewModel.swift",
+      "line": 11,
+      "symbol": "PlayerViewModel.song",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/player/PlayerViewModel.swift",
+      "line": 12,
+      "symbol": "PlayerViewModel.startingPoint",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/player/TechnicalInfoViewController.swift",
+      "line": 11,
+      "symbol": "TechnicalInfoViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/player/TechnicalInfoViewController.swift",
+      "line": 13,
+      "symbol": "TechnicalInfoViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/player/TechnicalInfoViewController.swift",
+      "line": 19,
+      "symbol": "TechnicalInfoViewController.didReceiveMemoryWarning()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/search/SearchViewController.swift",
+      "line": 11,
+      "symbol": "SearchViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/search/SearchViewController.swift",
+      "line": 13,
+      "symbol": "SearchViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/search/SearchViewController.swift",
+      "line": 18,
+      "symbol": "SearchViewController.didReceiveMemoryWarning()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/settings/SettingsMainViewController.swift",
+      "line": 11,
+      "symbol": "SettingsMainViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/settings/SettingsMainViewController.swift",
+      "line": 13,
+      "symbol": "SettingsMainViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/settings/SettingsMainViewController.swift",
+      "line": 19,
+      "symbol": "SettingsMainViewController.didReceiveMemoryWarning()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
   ],
   "source_directory": "/Users/jorge.moura/Developer/myProjs/github/toscoz"
 }
