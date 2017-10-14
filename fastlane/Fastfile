@@ -4,57 +4,103 @@ fastlane_version "2.60.1"
 default_platform :ios
 
 # constants
-TEAM_ID = "XXXXXX"
-USERNAME = "XXXXXXX"
+xcode_scheme_main = "toscoz"
+xcode_scheme_uitests = "toscoz"
+appleid_user = CredentialsManager::AppfileConfig.try_fetch_value(:apple_id)
+
 
 ## ios lanes setup ##
 platform :ios do
 
   # tests
   desc "Runs all the tests"
-  lane :tests do
-    test_unit
-    test_ui
+  lane :do_tests do
+    do_unit_test
+    do_ui_test
   end
 
   desc "Runs unit tests"
-  lane :test_unit do |params|
-    scan(scheme: "toscoz")
+  lane :do_unit_test do
+    scan(scheme: xcode_scheme_main)
   end
 
   desc "Run UI tests"
-  lane :test_ui do |params|
-    scan(scheme: "toscozUITest")
+  lane :do_ui_test do
+    scan(scheme: xcode_scheme_uitests)
   end
 
 
   # betas
-  desc "Submit a new Beta Build to Apple TestFlight"
-  lane :beta do
-    # match(type: "development", readonly: true)
-    gym(scheme: "toscoz", export_method: "development")
-    pilot(
-      username: "jjorge.moura@gmail.com",
-      skip_submission: true
-    )
-
-    # sh "your_script.sh"
-    # You can also use other beta testing services here (run `fastlane actions`)
+  desc "Submit a new build to TestFlight. Must send parameter version=MAJOR, MINOR or PATCH"
+  lane :do_beta do |option|
+    do_validation option option
+    do_resources_check
+    # do_tests
+    do_version option
+    # gym(scheme: xcode_scheme_main, export_method: "development")
+    # pilot(username: appleid_user, skip_submission: true)
+    jazzy(config: ".jazzy.yaml")
   end
 
 
   # release
   desc "Deploy a new version to the App Store"
-  lane :release do
+  lane :do_release do
     precheck
     # match(type: "appstore")
     # snapshot
-    gym
+    # gym(scheme: xcode_scheme_main, export_method: "development")
     # deliver(force: true)
     # frameit
   end
 
 
+  # auxiliar lanes
+  desc "Runs Check Resources"
+  lane :do_resources_check do
+    # swiftlint
+    # dagger(danger_id: "sapataz",verbose: true)
+    jazzy(config: ".jazzy.yaml")
+  end
+
+  desc "Versioning -> Increase: MAJOR, MINOR or PATCH"
+  lane :do_version do |option|
+    if option[:version] == "MAJOR"
+      increment_version_number(
+        bump_type: "major"
+      )
+    end
+    if option[:version] == "MINOR"
+      increment_version_number(
+        bump_type: "minor"
+      )
+    end
+    if option[:version] == "PATCH"
+      increment_version_number(
+        bump_type: "patch"
+      )
+    end
+  end
+
+  desc "Validate the version command and the branch"
+  lane :do_validation do |option|
+
+    if git_branch != "master"
+      UI.error "ATTENTION: Please, run this commmand on branch master!!!"
+      abort
+    end
+
+    if option[:version]
+      UI.important "Validating the version bump parameter with value: " + option[:version]
+      if option[:version] != "MAJOR" && option[:version] != "MINOR" && option[:version] != "PATCH"
+        UI.error "ATTENTION: Please, user the parameter 'version' with the values MAJOR, MINOR or PATCH!!!"
+        abort
+      end
+    else
+      UI.error "ATTENTION: Please, user the parameter 'version' to set the bump desired!!!"
+      abort
+    end
+  end
 
   # constants
   before_all do

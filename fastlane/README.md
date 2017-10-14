@@ -30,31 +30,46 @@ xcode-select --install
 
 # Available Actions
 ## iOS
-### ios tests
+### ios do_tests
 ```
-fastlane ios tests
+fastlane ios do_tests
 ```
 Runs all the tests
-### ios test_unit
+### ios do_unit_test
 ```
-fastlane ios test_unit
+fastlane ios do_unit_test
 ```
 Runs unit tests
-### ios test_ui
+### ios do_ui_test
 ```
-fastlane ios test_ui
+fastlane ios do_ui_test
 ```
 Run UI tests
-### ios beta
+### ios do_beta
 ```
-fastlane ios beta
+fastlane ios do_beta
 ```
-Submit a new Beta Build to Apple TestFlight
-### ios release
+Submit a new build to TestFlight. Must send parameter version=MAJOR, MINOR or PATCH
+### ios do_release
 ```
-fastlane ios release
+fastlane ios do_release
 ```
 Deploy a new version to the App Store
+### ios do_resources_check
+```
+fastlane ios do_resources_check
+```
+Runs Check Resources
+### ios do_version
+```
+fastlane ios do_version
+```
+Versioning -> Increase: MAJOR, MINOR or PATCH
+### ios do_validation
+```
+fastlane ios do_validation
+```
+Validate the version command and the branch
 
 ----
 
