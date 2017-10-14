@@ -31,14 +31,14 @@ env:
   # matrix: a new build for each specified variable
   matrix:
     - DESTINATION="OS=11.0,name=iPhone X"                               SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
-    - DESTINATION="OS=11.0,name=iPhone 8 Plus"                          SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
+    # - DESTINATION="OS=11.0,name=iPhone 8 Plus"                          SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
     # - DESTINATION="OS=11.0,name=iPhone 8"                               SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
-    - DESTINATION="OS=11.0,name=iPhone SE"                              SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
+    # - DESTINATION="OS=11.0,name=iPhone SE"                              SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
 
-    - DESTINATION="OS=11.0,name=iPad (5th generation)"                  SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
+    # - DESTINATION="OS=11.0,name=iPad (5th generation)"                  SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
     # - DESTINATION="OS=11.0,name=iPad Air 2"                             SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
     - DESTINATION="OS=11.0,name=iPad Pro (10.5-inch)"                   SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
-    - DESTINATION="OS=11.0,name=iPad Pro (12.9-inch) (2nd generation)"  SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
+    # - DESTINATION="OS=11.0,name=iPad Pro (12.9-inch) (2nd generation)"  SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
 
 
 
@@ -48,6 +48,7 @@ env:
 before_install:
   - brew update
   - brew outdated carthage || brew upgrade carthage
+  - fastlane update_fastlane
 
 before_script:
   - carthage bootstrap
