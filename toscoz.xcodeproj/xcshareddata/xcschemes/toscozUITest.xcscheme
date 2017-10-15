@@ -9,14 +9,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B427FACE1EF58834005FE9A2"
-               BuildableName = "toscoz.app"
-               BlueprintName = "toscoz"
+               BlueprintIdentifier = "B427FAED1EF58835005FE9A2"
+               BuildableName = "toscozUITests.xctest"
+               BlueprintName = "toscozUITests"
                ReferencedContainer = "container:toscoz.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,22 +34,13 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B427FAE21EF58835005FE9A2"
-               BuildableName = "toscozTests.xctest"
-               BlueprintName = "toscozTests"
+               BlueprintIdentifier = "B427FAED1EF58835005FE9A2"
+               BuildableName = "toscozUITests.xctest"
+               BlueprintName = "toscozUITests"
                ReferencedContainer = "container:toscoz.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B427FACE1EF58834005FE9A2"
-            BuildableName = "toscoz.app"
-            BlueprintName = "toscoz"
-            ReferencedContainer = "container:toscoz.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -64,16 +55,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B427FACE1EF58834005FE9A2"
-            BuildableName = "toscoz.app"
-            BlueprintName = "toscoz"
+            BlueprintIdentifier = "B427FAED1EF58835005FE9A2"
+            BuildableName = "toscozUITests.xctest"
+            BlueprintName = "toscozUITests"
             ReferencedContainer = "container:toscoz.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -83,16 +73,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B427FACE1EF58834005FE9A2"
-            BuildableName = "toscoz.app"
-            BlueprintName = "toscoz"
+            BlueprintIdentifier = "B427FAED1EF58835005FE9A2"
+            BuildableName = "toscozUITests.xctest"
+            BlueprintName = "toscozUITests"
             ReferencedContainer = "container:toscoz.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

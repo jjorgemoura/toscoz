@@ -1,53 +1,117 @@
-# Customise this file, documentation can be found here:
-# https://docs.fastlane.tools/actions/
-# All available actions: https://docs.fastlane.tools/actions
-# can also be listed using the `fastlane actions` command
 
-# Change the syntax highlighting to Ruby
-# All lines starting with a # are ignored when running `fastlane`
-
-# If you want to automatically update fastlane if a new version is available:
-# update_fastlane
-
-# This is the minimum version number required.
-# Update this, if you use features of a newer version
+# fastlane constants
 fastlane_version "2.60.1"
-
 default_platform :ios
 
+# constants
+xcode_scheme_main = "toscoz"
+xcode_scheme_uitests = "toscoz"
+appleid_user = CredentialsManager::AppfileConfig.try_fetch_value(:apple_id)
+
+
+## ios lanes setup ##
 platform :ios do
-  before_all do
-    # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
-    # cocoapods
-    # carthage
-  end
 
+  # tests
   desc "Runs all the tests"
-  lane :test do
-    scan
+  lane :do_tests do
+    do_unit_tests
+    do_ui_tests
   end
 
-  desc "Submit a new Beta Build to Apple TestFlight"
-  desc "This will also make sure the profile is up to date"
-  lane :beta do
-    # match(type: "appstore") # more information: https://codesigning.guide
-    gym # Build your app - more options available
-    pilot
-
-    # sh "your_script.sh"
-    # You can also use other beta testing services here (run `fastlane actions`)
+  desc "Runs unit tests"
+  lane :do_unit_tests do
+    scan(scheme: xcode_scheme_main)
   end
 
+  desc "Run UI tests"
+  lane :do_ui_tests do
+    scan(scheme: xcode_scheme_uitests)
+  end
+
+
+  # betas
+  desc "Submit a new build to TestFlight. Must send parameter version=MAJOR, MINOR or PATCH"
+  lane :do_beta do |option|
+    do_validation option option
+    do_resources_check
+    do_tests
+    do_version option
+    gym(scheme: xcode_scheme_main, export_method: "development")
+    # pilot(username: appleid_user, skip_submission: true)
+    jazzy(config: ".jazzy.yaml")
+  end
+
+
+  # release
   desc "Deploy a new version to the App Store"
-  lane :release do
+  lane :do_release do
+    precheck
     # match(type: "appstore")
     # snapshot
-    gym # Build your app - more options available
-    deliver(force: true)
+    # gym(scheme: xcode_scheme_main, export_method: "development")
+    # deliver(force: true)
     # frameit
   end
 
-  # You can define as many lanes as you want
+
+  # auxiliar lanes
+  desc "Runs Check Resources"
+  lane :do_resources_check do
+    swiftlint
+  end
+
+  desc "Versioning -> Increase: MAJOR, MINOR or PATCH"
+  lane :do_version do |option|
+    if option[:version] == "MAJOR"
+      increment_version_number(
+        bump_type: "major"
+      )
+    end
+    if option[:version] == "MINOR"
+      increment_version_number(
+        bump_type: "minor"
+      )
+    end
+    if option[:version] == "PATCH"
+      increment_version_number(
+        bump_type: "patch"
+      )
+    end
+  end
+
+  desc "Validate the version command and the branch"
+  lane :do_validation do |option|
+
+    if git_branch != "master"
+      UI.error "ATTENTION: Please, run this commmand on branch master!!!"
+      abort
+    end
+
+    if option[:version]
+      UI.important "Validating the version bump parameter with value: " + option[:version]
+      if option[:version] != "MAJOR" && option[:version] != "MINOR" && option[:version] != "PATCH"
+        UI.error "ATTENTION: Please, user the parameter 'version' with the values MAJOR, MINOR or PATCH!!!"
+        abort
+      end
+    else
+      UI.error "ATTENTION: Please, user the parameter 'version' to set the bump desired!!!"
+      abort
+    end
+  end
+
+  desc "Runs Danger"
+  lane :do_danger_check do
+    danger(
+      verbose: true
+    )
+  end
+
+  # constants
+  before_all do
+    # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
+    # carthage
+  end
 
   after_all do |lane|
     # This block is called, only if the executed lane was successful
@@ -64,10 +128,3 @@ platform :ios do
     # )
   end
 end
-
-
-# More information about multiple platforms in fastlane: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Platforms.md
-# All available actions: https://docs.fastlane.tools/actions
-
-# fastlane reports which actions are used. No personal data is recorded. 
-# Learn more at https://github.com/fastlane/fastlane#metrics
