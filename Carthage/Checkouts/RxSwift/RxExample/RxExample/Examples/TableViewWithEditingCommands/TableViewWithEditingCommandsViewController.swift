@@ -87,7 +87,9 @@ class TableViewWithEditingCommandsViewController: ViewController, UITableViewDel
         let deleteUserCommand = tableView.rx.itemDeleted.map(TableViewEditingCommand.deleteUser)
         let moveUserCommand = tableView
             .rx.itemMoved
-            .map(TableViewEditingCommand.moveUser)
+            .map({ val in
+              return TableViewEditingCommand.moveUser(from: val.0, to: val.1)
+            })
 
         let initialState = TableViewEditingCommandsViewModel(favoriteUsers: [], users: [])
 
@@ -96,7 +98,7 @@ class TableViewWithEditingCommandsViewController: ViewController, UITableViewDel
             accumulator: TableViewEditingCommandsViewModel.executeCommand,
             scheduler: MainScheduler.instance,
             feedback: { _ in initialLoadCommand }, { _ in deleteUserCommand }, { _ in moveUserCommand })
-            .shareReplay(1)
+            .share(replay: 1)
 
         viewModel
             .map {
