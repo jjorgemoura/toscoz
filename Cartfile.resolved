@@ -1,1 +1,2 @@
 github "ReactiveX/RxSwift" "3.6.1"
+github "spotify/SpotifyLogin" "0.1.3"

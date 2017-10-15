@@ -32,14 +32,13 @@ env:
   matrix:
     - DESTINATION="OS=11.0,name=iPhone X"                               SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
     # - DESTINATION="OS=11.0,name=iPhone 8 Plus"                          SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
-    # - DESTINATION="OS=11.0,name=iPhone 8"                               SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
+    - DESTINATION="OS=11.0,name=iPhone 8"                               SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
     # - DESTINATION="OS=11.0,name=iPhone SE"                              SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
 
-    # - DESTINATION="OS=11.0,name=iPad (5th generation)"                  SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
+    - DESTINATION="OS=11.0,name=iPad (5th generation)"                  SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
     # - DESTINATION="OS=11.0,name=iPad Air 2"                             SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
     - DESTINATION="OS=11.0,name=iPad Pro (10.5-inch)"                   SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
     # - DESTINATION="OS=11.0,name=iPad Pro (12.9-inch) (2nd generation)"  SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
-
 
 
 ####################
@@ -51,12 +50,12 @@ before_install:
   - fastlane update_fastlane
 
 before_script:
-  - carthage bootstrap
+  - carthage bootstrap --platform iOS
 
 script:
-# - xcodebuild -project toscoz.xcodeproj -scheme toscoz -configuration Debug -sdk iphonesimulator -destination "OS=11.0,name=iPhone X" CODE_SIGNING_REQUIRED=NO clean build test analyze
 - xcodebuild analyze test -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -configuration Debug -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
 - fastlane do_ui_tests
+# - fastlane do_danger_check
 
 after_success:
 - bash <(curl -s https://codecov.io/bash) -J 'toscoz'
