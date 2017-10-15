@@ -42,6 +42,7 @@
 		B493F3901F857F090076A417 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B493F38E1F857F090076A417 /* AppCoordinator.swift */; };
 		B493F3911F857F090076A417 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B493F38F1F857F090076A417 /* Coordinator.swift */; };
 		B4C47D591F2262AD0055A8B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C47D571F2262AD0055A8B8 /* LaunchScreen.storyboard */; };
+		B4E3B6C01F93701D00CE98D0 /* SpotifyLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E3B6BF1F93701D00CE98D0 /* SpotifyLogin.framework */; };
 		CF5B2A8E1F86C46800684D8A /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5B2A8C1F86C46800684D8A /* RxCocoa.framework */; };
 		CF5B2A8F1F86C46800684D8A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5B2A8D1F86C46800684D8A /* RxSwift.framework */; };
 /* End PBXBuildFile section */
@@ -105,6 +106,7 @@
 		B493F38E1F857F090076A417 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		B493F38F1F857F090076A417 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B4C47D581F2262AD0055A8B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = toscoz/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		B4E3B6BF1F93701D00CE98D0 /* SpotifyLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyLogin.framework; path = Carthage/Build/iOS/SpotifyLogin.framework; sourceTree = "<group>"; };
 		CF5B2A8C1F86C46800684D8A /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		CF5B2A8D1F86C46800684D8A /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		CF5B2A9F1F86CE1700684D8A /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			files = (
 				CF5B2A8E1F86C46800684D8A /* RxCocoa.framework in Frameworks */,
 				CF5B2A8F1F86C46800684D8A /* RxSwift.framework in Frameworks */,
+				B4E3B6C01F93701D00CE98D0 /* SpotifyLogin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +297,7 @@
 		CF5B2A8B1F86C46700684D8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B4E3B6BF1F93701D00CE98D0 /* SpotifyLogin.framework */,
 				CF5B2AA01F86CE1700684D8A /* RxBlocking.framework */,
 				CF5B2A9F1F86CE1700684D8A /* RxTest.framework */,
 				CF5B2A8C1F86C46800684D8A /* RxCocoa.framework */,
@@ -366,7 +370,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Jorge Moura";
 				TargetAttributes = {
 					B427FACE1EF58834005FE9A2 = {
@@ -447,10 +451,12 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SpotifyLogin.framework",
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SpotifyLogin.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -553,6 +559,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -609,6 +617,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
