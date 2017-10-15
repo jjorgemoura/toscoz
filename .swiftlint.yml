@@ -2,7 +2,7 @@
 disabled_rules:
 
 opt_in_rules:
- - array_init 
+ - array_init
  - attributes
  - closure_end_indentation
  - closure_spacing
@@ -14,7 +14,7 @@ opt_in_rules:
  - explicit_type_interface
  - extension_access_modifier
  - fatal_error_message
- - file_header
+ # - file_header
  - first_where
  - force_unwrapping
  - implicit_return
@@ -50,5 +50,14 @@ excluded:
 
 line_length: 220
 file_length:
-  warning: 300
-  error: 500
+  warning: 240
+  error: 450
+# file_header:
+#   required_pattern: |
+#                     \/\/
+#                     \/\/  .*?\.swift
+#                     \/\/  toscoz
+#                     \/\/
+#                     \/\/  Created by .*? on \d{1,2}\/\d{1,2}\/\d{2}\.
+#                     \/\/  Copyright © \d{4} Jorge Moura\. All rights reserved\.
+#                     \/\/
