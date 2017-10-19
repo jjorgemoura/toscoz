@@ -17,6 +17,6 @@ class StandardHomeViewModel: HomeViewModel {
     }
 
     func userHomeSelected() {
-        UserHomeCoordinator(navigationController: navigationController).start()
+//        UserHomeCoordinator(navigationController: navigationController).start()
     }
 }

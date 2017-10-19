@@ -8,18 +8,20 @@
 
 import UIKit
 
-class UserHomeCoordinator: NavigationCoordinator {
+class UserHomeCoordinator: Coordinator {
+    
+    typealias T = String
 
-    private var userViewController: UserViewController?
-
-    let navigationController: UINavigationController
-
-    init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
-    }
-
-    func start() {
-        userViewController = UserViewController()
-        navigationController.pushViewController(userViewController!, animated: true)
-    }
+//    private var userViewController: UserViewController?
+//
+//    let navigationController: UINavigationController
+//
+//    init(navigationController: UINavigationController) {
+//        self.navigationController = navigationController
+//    }
+//
+//    func start() {
+//        userViewController = UserViewController()
+//        navigationController.pushViewController(userViewController!, animated: true)
+//    }
 }

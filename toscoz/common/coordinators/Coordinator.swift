@@ -7,15 +7,28 @@
 //
 
 import UIKit
+import RxSwift
 
 protocol Coordinator {
-    func start()
+    
+    associatedtype T
+//    func start() -> Observable<T>
 }
 
-protocol RootCoordinator: Coordinator {
-    var window: UIWindow { get }
-}
+//protocol RootCoordinator: Coordinator {
+//    var window: UIWindow { get }
+//}
+//
+//protocol NavigationCoordinator: Coordinator {
+//    var navigationController: UINavigationController { get }
+//}
 
-protocol NavigationCoordinator: Coordinator {
+protocol Navigationable {
+    
     var navigationController: UINavigationController { get }
+}
+
+protocol Rootable {
+    
+    var window: UIWindow { get }
 }

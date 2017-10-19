@@ -34,7 +34,7 @@ class PlayerViewController: UIViewController {
         if recognizer.direction == .down {
             print("SDFASDGSDG")
             if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
-                appDelegate.appCoordinator?.start()
+//                appDelegate.appCoordinator?.start()
             }
         }
     }

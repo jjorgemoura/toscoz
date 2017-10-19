@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = self.window ?? UIWindow()
-        appCoordinator = AppCoordinator(window: window!)
-        appCoordinator?.start()
+//        appCoordinator = AppCoordinator(window: window!)
+//        appCoordinator?.start()
 
         self.window?.backgroundColor = UIColor.lightGray
         window!.makeKeyAndVisible()

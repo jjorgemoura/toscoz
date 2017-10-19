@@ -8,28 +8,34 @@
 
 import UIKit
 
-class AppCoordinator: RootCoordinator {
+class AppCoordinator: Coordinator, Rootable {
+    
+    typealias T = Void
+    
 
     let window: UIWindow
+    
     var playerCoordinator: PlayerCoordinator?
     var homeCoordinator: HomeCoordinator?
 
     init(window: UIWindow) {
         self.window = window
     }
+    
+    
 
-    func start() {
-        if isSongPlaying() {
-            playerCoordinator = PlayerCoordinator(window: window)
-            playerCoordinator?.start()
-        } else {
-            homeCoordinator = HomeCoordinator(window: window)
-            homeCoordinator?.start()
-        }
-    }
-
-    // MARK: - Private methods
-    private func isSongPlaying() -> Bool {
-        return false
-    }
+//    func start() {
+//        if isSongPlaying() {
+//            playerCoordinator = PlayerCoordinator(window: window)
+//            playerCoordinator?.start()
+//        } else {
+//            homeCoordinator = HomeCoordinator(window: window)
+//            homeCoordinator?.start()
+//        }
+//    }
+//
+//    // MARK: - Private methods
+//    private func isSongPlaying() -> Bool {
+//        return false
+//    }
 }
