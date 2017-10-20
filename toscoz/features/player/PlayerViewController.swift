@@ -33,9 +33,9 @@ class PlayerViewController: UIViewController {
     func getSwipeAction(_ recognizer: UISwipeGestureRecognizer) {
         if recognizer.direction == .down {
             print("SDFASDGSDG")
-            if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
-//                appDelegate.appCoordinator?.start()
-            }
+//            if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+////                appDelegate.appCoordinator?.start()
+//            }
         }
     }
 }

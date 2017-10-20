@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B41460871F9A7F7A00AEA919 /* HomeTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41460861F9A7F7A00AEA919 /* HomeTabBarCoordinator.swift */; };
 		B41978691EF5B94D00AD2F03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B41978671EF5B92D00AD2F03 /* Assets.xcassets */; };
 		B427FAD31EF58834005FE9A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427FAD21EF58834005FE9A2 /* AppDelegate.swift */; };
 		B427FAE81EF58835005FE9A2 /* ToscozTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427FAE71EF58835005FE9A2 /* ToscozTests.swift */; };
 		B427FAF31EF58835005FE9A2 /* ToscozUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427FAF21EF58835005FE9A2 /* ToscozUITests.swift */; };
-		B493F35B1F857EA90076A417 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B493F3531F857EA90076A417 /* HomeCoordinator.swift */; };
+		B46F09181F9AAB5600C1A357 /* Rootable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46F09171F9AAB5600C1A357 /* Rootable.swift */; };
+		B46F091A1F9AAB6200C1A357 /* Navigationable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46F09191F9AAB6200C1A357 /* Navigationable.swift */; };
 		B493F35C1F857EA90076A417 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B493F3541F857EA90076A417 /* HomeViewModel.swift */; };
 		B493F35D1F857EA90076A417 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B493F3551F857EA90076A417 /* UserViewController.swift */; };
 		B493F35E1F857EA90076A417 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B493F3561F857EA90076A417 /* HomeViewController.xib */; };
@@ -30,7 +32,6 @@
 		B493F3761F857EBA0076A417 /* SettingsMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B493F3731F857EBA0076A417 /* SettingsMainViewController.swift */; };
 		B493F3771F857EBA0076A417 /* SettingsMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B493F3741F857EBA0076A417 /* SettingsMainViewController.xib */; };
 		B493F3781F857EBA0076A417 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B493F3751F857EBA0076A417 /* SettingsCoordinator.swift */; };
-		B493F37D1F857EC10076A417 /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B493F3791F857EC10076A417 /* SearchCoordinator.swift */; };
 		B493F37E1F857EC10076A417 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B493F37A1F857EC10076A417 /* SearchViewController.xib */; };
 		B493F37F1F857EC10076A417 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B493F37B1F857EC10076A417 /* SearchViewController.swift */; };
 		B493F3801F857EC20076A417 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B493F37C1F857EC10076A417 /* SearchViewModel.swift */; };
@@ -65,6 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B41460861F9A7F7A00AEA919 /* HomeTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarCoordinator.swift; sourceTree = "<group>"; };
 		B41978671EF5B92D00AD2F03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B41978681EF5B92D00AD2F03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B427FACF1EF58834005FE9A2 /* toscoz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toscoz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,7 +77,8 @@
 		B427FAEE1EF58835005FE9A2 /* toscozUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = toscozUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B427FAF21EF58835005FE9A2 /* ToscozUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToscozUITests.swift; sourceTree = "<group>"; };
 		B427FAF41EF58835005FE9A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B493F3531F857EA90076A417 /* HomeCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		B46F09171F9AAB5600C1A357 /* Rootable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rootable.swift; sourceTree = "<group>"; };
+		B46F09191F9AAB6200C1A357 /* Navigationable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigationable.swift; sourceTree = "<group>"; };
 		B493F3541F857EA90076A417 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		B493F3551F857EA90076A417 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		B493F3561F857EA90076A417 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -94,7 +97,6 @@
 		B493F3731F857EBA0076A417 /* SettingsMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsMainViewController.swift; sourceTree = "<group>"; };
 		B493F3741F857EBA0076A417 /* SettingsMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsMainViewController.xib; sourceTree = "<group>"; };
 		B493F3751F857EBA0076A417 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
-		B493F3791F857EC10076A417 /* SearchCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
 		B493F37A1F857EC10076A417 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		B493F37B1F857EC10076A417 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		B493F37C1F857EC10076A417 /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
@@ -141,6 +143,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B41451441F9938FA000ECFE8 /* homepage */ = {
+			isa = PBXGroup;
+			children = (
+				B414608A1F9A818500AEA919 /* player */,
+				B41460891F9A817E00AEA919 /* search */,
+				B41460881F9A816300AEA919 /* homepage */,
+				B41460861F9A7F7A00AEA919 /* HomeTabBarCoordinator.swift */,
+			);
+			path = homepage;
+			sourceTree = "<group>";
+		};
+		B414514D1F993AEB000ECFE8 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B493F38F1F857F090076A417 /* Coordinator.swift */,
+				B46F09171F9AAB5600C1A357 /* Rootable.swift */,
+				B46F09191F9AAB6200C1A357 /* Navigationable.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		B41460881F9A816300AEA919 /* homepage */ = {
+			isa = PBXGroup;
+			children = (
+				B493F3591F857EA90076A417 /* HomeViewController.swift */,
+				B493F3561F857EA90076A417 /* HomeViewController.xib */,
+				B493F3541F857EA90076A417 /* HomeViewModel.swift */,
+			);
+			path = homepage;
+			sourceTree = "<group>";
+		};
+		B41460891F9A817E00AEA919 /* search */ = {
+			isa = PBXGroup;
+			children = (
+				B493F37B1F857EC10076A417 /* SearchViewController.swift */,
+				B493F37A1F857EC10076A417 /* SearchViewController.xib */,
+				B493F37C1F857EC10076A417 /* SearchViewModel.swift */,
+			);
+			path = search;
+			sourceTree = "<group>";
+		};
+		B414608A1F9A818500AEA919 /* player */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = player;
+			sourceTree = "<group>";
+		};
 		B41978661EF5B8FE00AD2F03 /* resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,9 +254,9 @@
 		B493F34B1F857DF70076A417 /* features */ = {
 			isa = PBXGroup;
 			children = (
+				B41451441F9938FA000ECFE8 /* homepage */,
 				B493F34D1F857E360076A417 /* home */,
 				B493F3521F857E740076A417 /* player */,
-				B493F34F1F857E480076A417 /* search */,
 				B493F3511F857E660076A417 /* settings */,
 			);
 			path = features;
@@ -215,27 +265,12 @@
 		B493F34D1F857E360076A417 /* home */ = {
 			isa = PBXGroup;
 			children = (
-				B493F3531F857EA90076A417 /* HomeCoordinator.swift */,
-				B493F3591F857EA90076A417 /* HomeViewController.swift */,
-				B493F3561F857EA90076A417 /* HomeViewController.xib */,
-				B493F3541F857EA90076A417 /* HomeViewModel.swift */,
 				B493F35A1F857EA90076A417 /* StandardHomeViewModel.swift */,
 				B493F3571F857EA90076A417 /* UserHomeCoordinator.swift */,
 				B493F3551F857EA90076A417 /* UserViewController.swift */,
 				B493F3581F857EA90076A417 /* UserViewController.xib */,
 			);
 			path = home;
-			sourceTree = "<group>";
-		};
-		B493F34F1F857E480076A417 /* search */ = {
-			isa = PBXGroup;
-			children = (
-				B493F3791F857EC10076A417 /* SearchCoordinator.swift */,
-				B493F37B1F857EC10076A417 /* SearchViewController.swift */,
-				B493F37A1F857EC10076A417 /* SearchViewController.xib */,
-				B493F37C1F857EC10076A417 /* SearchViewModel.swift */,
-			);
-			path = search;
 			sourceTree = "<group>";
 		};
 		B493F3511F857E660076A417 /* settings */ = {
@@ -275,7 +310,7 @@
 		B493F3821F857EDD0076A417 /* coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				B493F38F1F857F090076A417 /* Coordinator.swift */,
+				B414514D1F993AEB000ECFE8 /* protocols */,
 				B493F38E1F857F090076A417 /* AppCoordinator.swift */,
 			);
 			name = coordinator;
@@ -485,18 +520,18 @@
 			files = (
 				B493F3891F857F020076A417 /* Song.swift in Sources */,
 				B427FAD31EF58834005FE9A2 /* AppDelegate.swift in Sources */,
-				B493F37D1F857EC10076A417 /* SearchCoordinator.swift in Sources */,
+				B46F09181F9AAB5600C1A357 /* Rootable.swift in Sources */,
 				B493F35D1F857EA90076A417 /* UserViewController.swift in Sources */,
 				B493F35C1F857EA90076A417 /* HomeViewModel.swift in Sources */,
 				B493F38A1F857F020076A417 /* SpotifyService.swift in Sources */,
 				B493F3901F857F090076A417 /* AppCoordinator.swift in Sources */,
+				B41460871F9A7F7A00AEA919 /* HomeTabBarCoordinator.swift in Sources */,
 				B493F38C1F857F020076A417 /* Artist.swift in Sources */,
 				B493F3911F857F090076A417 /* Coordinator.swift in Sources */,
 				B493F3761F857EBA0076A417 /* SettingsMainViewController.swift in Sources */,
 				B493F3711F857EB10076A417 /* PlayerCoordinator.swift in Sources */,
 				B493F35F1F857EA90076A417 /* UserHomeCoordinator.swift in Sources */,
 				B493F36E1F857EB10076A417 /* TechnicalInfoViewController.swift in Sources */,
-				B493F35B1F857EA90076A417 /* HomeCoordinator.swift in Sources */,
 				B493F36C1F857EB10076A417 /* PlayerViewController.swift in Sources */,
 				B493F37F1F857EC10076A417 /* SearchViewController.swift in Sources */,
 				B493F3621F857EA90076A417 /* StandardHomeViewModel.swift in Sources */,
@@ -505,6 +540,7 @@
 				B493F38D1F857F020076A417 /* StandardSpotifyService.swift in Sources */,
 				B493F3801F857EC20076A417 /* SearchViewModel.swift in Sources */,
 				B493F36B1F857EB10076A417 /* PlayerAlbumViewController.swift in Sources */,
+				B46F091A1F9AAB6200C1A357 /* Navigationable.swift in Sources */,
 				B493F3701F857EB10076A417 /* PlayerViewModel.swift in Sources */,
 				B493F38B1F857F020076A417 /* Album.swift in Sources */,
 			);

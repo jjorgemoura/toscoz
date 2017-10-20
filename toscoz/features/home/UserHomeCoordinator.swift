@@ -6,11 +6,16 @@
 //  Copyright © 2017 Jorge Moura. All rights reserved.
 //
 
+import RxSwift
 import UIKit
 
 class UserHomeCoordinator: Coordinator {
-    
+
     typealias T = String
+
+    func start() -> Observable<String> {
+        return Observable.just("XPTO")
+    }
 
 //    private var userViewController: UserViewController?
 //
