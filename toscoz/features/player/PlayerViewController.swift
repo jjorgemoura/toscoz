@@ -16,8 +16,7 @@ class PlayerViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.orange
 
-//        hidesBottomBarWhenPushed = true
-        tabBarController?.tabBar.isHidden = true
+//        tabBarController?.tabBar.isHidden = true
 
         let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(self.getSwipeAction(_:)))
         swipeDown.direction = .down

@@ -19,33 +19,44 @@ class AppCoordinator: Coordinator, Rootable {
         self.window = window
     }
 
-    func start() -> Observable<Void> {
-        //Several inits
+    func start() -> Observable<T> {
+        appConfiguration()
 
         if isLoggedIn() {
-            let homeTabBarCoordinator = HomeTabBarCoordinator(window: window)
-
-            homeTabBarCoordinator.start()
-                .subscribe(onNext: { result in
-
-                switch result {
-                case HomeTabBarCoordinatorResult.logout:
-                    self.showLogin()
-                }
-
-            }, onError: { error in
-                print(error.localizedDescription)
-            }).disposed(by: DisposeBag())
+            showHomepageScreen()
+        } else {
+            showLoginScreen()
         }
 
         return Observable.never()
     }
 
+    // MARK: - private methods
     private func isLoggedIn() -> Bool {
         return true
     }
 
-    private func showLogin() {
+    private func showLoginScreen() {
+
+    }
+
+    private func showHomepageScreen() {
+        let homeTabBarCoordinator = HomeTabBarCoordinator(window: window)
+
+        homeTabBarCoordinator.start()
+            .subscribe(onNext: { result in
+
+                switch result {
+                case HomeTabBarCoordinatorResult.logout:
+                    self.showLoginScreen()
+                }
+
+            }, onError: { error in
+                print(error.localizedDescription)
+            }).disposed(by: DisposeBag())
+    }
+
+    private func appConfiguration() {
 
     }
 }

@@ -12,6 +12,7 @@ import UIKit
 protocol Coordinator {
 
     associatedtype T
+
     func start() -> Observable<T>
 }
 

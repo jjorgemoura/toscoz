@@ -1,5 +1,5 @@
 //
-//  UserHomeCoordinator.swift
+//  UserCoordinator.swift
 //  toscoz
 //
 //  Created by Jorge Moura on 22/07/2017.
@@ -9,7 +9,7 @@
 import RxSwift
 import UIKit
 
-class UserHomeCoordinator: Coordinator {
+class UserCoordinator: Coordinator {
 
     typealias T = String
 

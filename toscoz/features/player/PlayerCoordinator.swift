@@ -1,5 +1,5 @@
 //
-//  PlayerPresenter.swift
+//  PlayerCoordinator.swift
 //  toscoz
 //
 //  Created by Jorge Moura on 16/07/2017.

@@ -1,5 +1,5 @@
 //
-//  StandardHomeViewModel.swift
+//  HomeDefaultViewModel.swift
 //  toscoz
 //
 //  Created by Jorge Moura on 22/07/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StandardHomeViewModel: HomeViewModel {
+class HomeDefaultViewModel: HomeViewModel {
 
     let navigationController: UINavigationController
 

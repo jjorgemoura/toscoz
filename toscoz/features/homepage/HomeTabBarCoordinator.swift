@@ -24,12 +24,12 @@ class HomeTabBarCoordinator: Coordinator, Rootable {
         self.window = window
     }
 
-    func start() -> Observable<HomeTabBarCoordinatorResult> {
+    func start() -> Observable<T> {
 
         let homeViewController = HomeViewController()
         let searchViewController = SearchViewController()
         let playerViewController = PlayerViewController()
-        playerViewController.hidesBottomBarWhenPushed = true
+//        playerViewController.hidesBottomBarWhenPushed = true
 
         let homeNavigationController = UINavigationController(rootViewController: homeViewController)
 
@@ -44,8 +44,8 @@ class HomeTabBarCoordinator: Coordinator, Rootable {
         playerViewController.tabBarItem = playTabBarItem
         searchViewController.tabBarItem = searchTabBarItem
 
-        let homeViewModel: HomeViewModel = StandardHomeViewModel(navigationController: homeNavigationController)
-        homeViewController.viewModel = homeViewModel
+        homeViewController.viewModel = HomeDefaultViewModel(navigationController: homeNavigationController)
+        searchViewController.searchViewModel = SearchDefaultViewModel()
 
         window.rootViewController = tabViewController
 
