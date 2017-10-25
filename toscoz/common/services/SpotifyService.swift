@@ -6,7 +6,7 @@
 //  Copyright © 2017 Jorge Moura. All rights reserved.
 //
 
-protocol StandardSpotify {
+protocol SpotifyService {
 
     func songPlaying() -> Song
     func song(identifier: String) -> Song

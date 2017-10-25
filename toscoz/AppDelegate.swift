@@ -9,6 +9,7 @@
 import RxSwift
 import UIKit
 
+/// The application AppDelegate.
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

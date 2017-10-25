@@ -107,6 +107,11 @@ platform :ios do
     )
   end
 
+  desc "Runs Documentation"
+  lane :do_documentation do
+    jazzy(config: ".jazzy.yaml")
+  end
+
   # constants
   before_all do
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."

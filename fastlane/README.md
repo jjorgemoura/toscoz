@@ -35,14 +35,14 @@ xcode-select --install
 fastlane ios do_tests
 ```
 Runs all the tests
-### ios do_unit_test
+### ios do_unit_tests
 ```
-fastlane ios do_unit_test
+fastlane ios do_unit_tests
 ```
 Runs unit tests
-### ios do_ui_test
+### ios do_ui_tests
 ```
-fastlane ios do_ui_test
+fastlane ios do_ui_tests
 ```
 Run UI tests
 ### ios do_beta
@@ -75,6 +75,11 @@ Validate the version command and the branch
 fastlane ios do_danger_check
 ```
 Runs Danger
+### ios do_documentation
+```
+fastlane ios do_documentation
+```
+Runs Documentation
 
 ----
 

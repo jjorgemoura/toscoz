@@ -6,7 +6,7 @@
 //  Copyright © 2017 Jorge Moura. All rights reserved.
 //
 
-class SpotifyWebService: StandardSpotify {
+class SpotifyWebService: SpotifyService {
 
     func songPlaying() -> Song {
 

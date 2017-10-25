@@ -18,7 +18,7 @@ class PlayerViewController: UIViewController {
 
 //        tabBarController?.tabBar.isHidden = true
 
-        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(self.getSwipeAction(_:)))
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(self.getSwipeAction(withRecognizer:)))
         swipeDown.direction = .down
 
         self.view.addGestureRecognizer(swipeDown)
@@ -29,7 +29,7 @@ class PlayerViewController: UIViewController {
 //    }
 
     @objc
-    func getSwipeAction(_ recognizer: UISwipeGestureRecognizer) {
+    func getSwipeAction(withRecognizer recognizer: UISwipeGestureRecognizer) {
         if recognizer.direction == .down {
             print("SDFASDGSDG")
 //            if let appDelegate = UIApplication.shared.delegate as? AppDelegate {

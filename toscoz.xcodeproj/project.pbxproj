@@ -12,6 +12,8 @@
 		B427FAD31EF58834005FE9A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427FAD21EF58834005FE9A2 /* AppDelegate.swift */; };
 		B427FAE81EF58835005FE9A2 /* ToscozTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427FAE71EF58835005FE9A2 /* ToscozTests.swift */; };
 		B427FAF31EF58835005FE9A2 /* ToscozUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427FAF21EF58835005FE9A2 /* ToscozUITests.swift */; };
+		B428136E1F9CF4D10086F05A /* AuthenticationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B428136D1F9CF4D10086F05A /* AuthenticationCoordinator.swift */; };
+		B4420F7E1F9E7AA4003444CB /* AuthenticationCoordinatorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4420F7D1F9E7AA4003444CB /* AuthenticationCoordinatorResult.swift */; };
 		B45034041F9B542B0061B86D /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45034031F9B542B0061B86D /* SettingsViewModel.swift */; };
 		B450340E1F9B60280061B86D /* SearchDefaultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B450340D1F9B60280061B86D /* SearchDefaultViewModel.swift */; };
 		B45034181F9B713D0061B86D /* SettingsDefaultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45034171F9B713D0061B86D /* SettingsDefaultViewModel.swift */; };
@@ -23,6 +25,8 @@
 		B470AD621F9BD001002DA826 /* AuthenticationDefaultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470AD611F9BD001002DA826 /* AuthenticationDefaultViewModel.swift */; };
 		B470AD651F9BD015002DA826 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470AD631F9BD015002DA826 /* AuthenticationViewController.swift */; };
 		B470AD661F9BD015002DA826 /* AuthenticationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B470AD641F9BD015002DA826 /* AuthenticationViewController.xib */; };
+		B470AD681F9BD2A0002DA826 /* UserToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470AD671F9BD2A0002DA826 /* UserToken.swift */; };
+		B470AD6A1F9BD352002DA826 /* SportifyCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470AD691F9BD352002DA826 /* SportifyCredentials.swift */; };
 		B493F35C1F857EA90076A417 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B493F3541F857EA90076A417 /* HomeViewModel.swift */; };
 		B493F35D1F857EA90076A417 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B493F3551F857EA90076A417 /* UserViewController.swift */; };
 		B493F35E1F857EA90076A417 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B493F3561F857EA90076A417 /* HomeViewController.xib */; };
@@ -86,6 +90,8 @@
 		B427FAEE1EF58835005FE9A2 /* toscozUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = toscozUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B427FAF21EF58835005FE9A2 /* ToscozUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToscozUITests.swift; sourceTree = "<group>"; };
 		B427FAF41EF58835005FE9A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B428136D1F9CF4D10086F05A /* AuthenticationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationCoordinator.swift; sourceTree = "<group>"; };
+		B4420F7D1F9E7AA4003444CB /* AuthenticationCoordinatorResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationCoordinatorResult.swift; sourceTree = "<group>"; };
 		B45034031F9B542B0061B86D /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		B450340D1F9B60280061B86D /* SearchDefaultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDefaultViewModel.swift; sourceTree = "<group>"; };
 		B45034171F9B713D0061B86D /* SettingsDefaultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDefaultViewModel.swift; sourceTree = "<group>"; };
@@ -97,6 +103,8 @@
 		B470AD611F9BD001002DA826 /* AuthenticationDefaultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDefaultViewModel.swift; sourceTree = "<group>"; };
 		B470AD631F9BD015002DA826 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		B470AD641F9BD015002DA826 /* AuthenticationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationViewController.xib; sourceTree = "<group>"; };
+		B470AD671F9BD2A0002DA826 /* UserToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserToken.swift; sourceTree = "<group>"; };
+		B470AD691F9BD352002DA826 /* SportifyCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportifyCredentials.swift; sourceTree = "<group>"; };
 		B493F3541F857EA90076A417 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		B493F3551F857EA90076A417 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		B493F3561F857EA90076A417 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -302,6 +310,8 @@
 		B470AD5E1F9BCFCC002DA826 /* authtentication */ = {
 			isa = PBXGroup;
 			children = (
+				B428136D1F9CF4D10086F05A /* AuthenticationCoordinator.swift */,
+				B4420F7D1F9E7AA4003444CB /* AuthenticationCoordinatorResult.swift */,
 				B470AD5F1F9BCFEC002DA826 /* AuthenticationViewModel.swift */,
 				B470AD611F9BD001002DA826 /* AuthenticationDefaultViewModel.swift */,
 				B470AD631F9BD015002DA826 /* AuthenticationViewController.swift */,
@@ -384,6 +394,8 @@
 				B493F3841F857F020076A417 /* Song.swift */,
 				B493F3851F857F020076A417 /* SpotifyService.swift */,
 				B493F3881F857F020076A417 /* SpotifyWebService.swift */,
+				B470AD671F9BD2A0002DA826 /* UserToken.swift */,
+				B470AD691F9BD352002DA826 /* SportifyCredentials.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -583,7 +595,9 @@
 				B46F09181F9AAB5600C1A357 /* Rootable.swift in Sources */,
 				B45034181F9B713D0061B86D /* SettingsDefaultViewModel.swift in Sources */,
 				B493F35D1F857EA90076A417 /* UserViewController.swift in Sources */,
+				B4420F7E1F9E7AA4003444CB /* AuthenticationCoordinatorResult.swift in Sources */,
 				B493F35C1F857EA90076A417 /* HomeViewModel.swift in Sources */,
+				B428136E1F9CF4D10086F05A /* AuthenticationCoordinator.swift in Sources */,
 				B493F38A1F857F020076A417 /* SpotifyService.swift in Sources */,
 				B493F3901F857F090076A417 /* AppCoordinator.swift in Sources */,
 				B41460871F9A7F7A00AEA919 /* HomeTabBarCoordinator.swift in Sources */,
@@ -592,6 +606,7 @@
 				B493F3911F857F090076A417 /* Coordinator.swift in Sources */,
 				B493F3761F857EBA0076A417 /* SettingsMainViewController.swift in Sources */,
 				B450341C1F9B716B0061B86D /* UserViewModel.swift in Sources */,
+				B470AD6A1F9BD352002DA826 /* SportifyCredentials.swift in Sources */,
 				B493F3711F857EB10076A417 /* PlayerCoordinator.swift in Sources */,
 				B493F35F1F857EA90076A417 /* UserCoordinator.swift in Sources */,
 				B470AD621F9BD001002DA826 /* AuthenticationDefaultViewModel.swift in Sources */,
@@ -602,6 +617,7 @@
 				B450340E1F9B60280061B86D /* SearchDefaultViewModel.swift in Sources */,
 				B493F3611F857EA90076A417 /* HomeViewController.swift in Sources */,
 				B493F3781F857EBA0076A417 /* SettingsCoordinator.swift in Sources */,
+				B470AD681F9BD2A0002DA826 /* UserToken.swift in Sources */,
 				B493F38D1F857F020076A417 /* SpotifyWebService.swift in Sources */,
 				B493F3801F857EC20076A417 /* SearchViewModel.swift in Sources */,
 				B470AD601F9BCFEC002DA826 /* AuthenticationViewModel.swift in Sources */,
