@@ -59,6 +59,13 @@
 		B4E3B6C01F93701D00CE98D0 /* SpotifyLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E3B6BF1F93701D00CE98D0 /* SpotifyLogin.framework */; };
 		CF5B2A8E1F86C46800684D8A /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5B2A8C1F86C46800684D8A /* RxCocoa.framework */; };
 		CF5B2A8F1F86C46800684D8A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5B2A8D1F86C46800684D8A /* RxSwift.framework */; };
+		CFC7F3231FABB23D00FF8426 /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7F3221FABB23D00FF8426 /* Colours.swift */; };
+		CFC7F3251FABB25500FF8426 /* StyleAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7F3241FABB25500FF8426 /* StyleAttributes.swift */; };
+		CFC7F3271FABB5EE00FF8426 /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7F3261FABB5EE00FF8426 /* UIExtension.swift */; };
+		CFC7F3291FABB78100FF8426 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7F3281FABB78100FF8426 /* LoginButton.swift */; };
+		CFC7F32B1FABB7C800FF8426 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7F32A1FABB7C800FF8426 /* PrimaryButton.swift */; };
+		CFC7F32E1FABBD5000FF8426 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7F32D1FABBD5000FF8426 /* Style.swift */; };
+		CFC7F3301FABBDEB00FF8426 /* BaseStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7F32F1FABBDEB00FF8426 /* BaseStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +146,13 @@
 		CF5B2A8D1F86C46800684D8A /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		CF5B2A9F1F86CE1700684D8A /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		CF5B2AA01F86CE1700684D8A /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		CFC7F3221FABB23D00FF8426 /* Colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
+		CFC7F3241FABB25500FF8426 /* StyleAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleAttributes.swift; sourceTree = "<group>"; };
+		CFC7F3261FABB5EE00FF8426 /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
+		CFC7F3281FABB78100FF8426 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		CFC7F32A1FABB7C800FF8426 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		CFC7F32D1FABBD5000FF8426 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		CFC7F32F1FABBDEB00FF8426 /* BaseStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -372,6 +386,7 @@
 			children = (
 				B493F3821F857EDD0076A417 /* coordinator */,
 				B493F3831F857EE30076A417 /* services */,
+				CFC7F31E1FABAD7100FF8426 /* utilities */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -410,6 +425,52 @@
 				CF5B2A8D1F86C46800684D8A /* RxSwift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CFC7F31E1FABAD7100FF8426 /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CFC7F31F1FABADA500FF8426 /* ui */,
+			);
+			path = utilities;
+			sourceTree = "<group>";
+		};
+		CFC7F31F1FABADA500FF8426 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				CFC7F3211FABAE1700FF8426 /* resources */,
+				CFC7F3201FABADC700FF8426 /* styles */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		CFC7F3201FABADC700FF8426 /* styles */ = {
+			isa = PBXGroup;
+			children = (
+				CFC7F32C1FABB7FD00FF8426 /* mainStyles */,
+				CFC7F3281FABB78100FF8426 /* LoginButton.swift */,
+			);
+			path = styles;
+			sourceTree = "<group>";
+		};
+		CFC7F3211FABAE1700FF8426 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				CFC7F3221FABB23D00FF8426 /* Colours.swift */,
+				CFC7F3241FABB25500FF8426 /* StyleAttributes.swift */,
+				CFC7F3261FABB5EE00FF8426 /* UIExtension.swift */,
+				CFC7F32D1FABBD5000FF8426 /* Style.swift */,
+				CFC7F32F1FABBDEB00FF8426 /* BaseStyle.swift */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		CFC7F32C1FABB7FD00FF8426 /* mainStyles */ = {
+			isa = PBXGroup;
+			children = (
+				CFC7F32A1FABB7C800FF8426 /* PrimaryButton.swift */,
+			);
+			path = mainStyles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -600,6 +661,7 @@
 				B428136E1F9CF4D10086F05A /* AuthenticationCoordinator.swift in Sources */,
 				B493F38A1F857F020076A417 /* SpotifyService.swift in Sources */,
 				B493F3901F857F090076A417 /* AppCoordinator.swift in Sources */,
+				CFC7F3291FABB78100FF8426 /* LoginButton.swift in Sources */,
 				B41460871F9A7F7A00AEA919 /* HomeTabBarCoordinator.swift in Sources */,
 				B450341A1F9B71610061B86D /* UserDefaultViewModel.swift in Sources */,
 				B493F38C1F857F020076A417 /* Artist.swift in Sources */,
@@ -607,24 +669,30 @@
 				B493F3761F857EBA0076A417 /* SettingsMainViewController.swift in Sources */,
 				B450341C1F9B716B0061B86D /* UserViewModel.swift in Sources */,
 				B470AD6A1F9BD352002DA826 /* SportifyCredentials.swift in Sources */,
+				CFC7F32B1FABB7C800FF8426 /* PrimaryButton.swift in Sources */,
 				B493F3711F857EB10076A417 /* PlayerCoordinator.swift in Sources */,
 				B493F35F1F857EA90076A417 /* UserCoordinator.swift in Sources */,
 				B470AD621F9BD001002DA826 /* AuthenticationDefaultViewModel.swift in Sources */,
 				B493F36E1F857EB10076A417 /* TechnicalInfoViewController.swift in Sources */,
 				B493F36C1F857EB10076A417 /* PlayerViewController.swift in Sources */,
 				B493F37F1F857EC10076A417 /* SearchViewController.swift in Sources */,
+				CFC7F3271FABB5EE00FF8426 /* UIExtension.swift in Sources */,
 				B493F3621F857EA90076A417 /* HomeDefaultViewModel.swift in Sources */,
 				B450340E1F9B60280061B86D /* SearchDefaultViewModel.swift in Sources */,
 				B493F3611F857EA90076A417 /* HomeViewController.swift in Sources */,
 				B493F3781F857EBA0076A417 /* SettingsCoordinator.swift in Sources */,
 				B470AD681F9BD2A0002DA826 /* UserToken.swift in Sources */,
 				B493F38D1F857F020076A417 /* SpotifyWebService.swift in Sources */,
+				CFC7F32E1FABBD5000FF8426 /* Style.swift in Sources */,
 				B493F3801F857EC20076A417 /* SearchViewModel.swift in Sources */,
+				CFC7F3301FABBDEB00FF8426 /* BaseStyle.swift in Sources */,
 				B470AD601F9BCFEC002DA826 /* AuthenticationViewModel.swift in Sources */,
 				B45034041F9B542B0061B86D /* SettingsViewModel.swift in Sources */,
+				CFC7F3251FABB25500FF8426 /* StyleAttributes.swift in Sources */,
 				B470AD651F9BD015002DA826 /* AuthenticationViewController.swift in Sources */,
 				B493F36B1F857EB10076A417 /* PlayerAlbumViewController.swift in Sources */,
 				B46F091A1F9AAB6200C1A357 /* Navigationable.swift in Sources */,
+				CFC7F3231FABB23D00FF8426 /* Colours.swift in Sources */,
 				B493F3701F857EB10076A417 /* PlayerViewModel.swift in Sources */,
 				B493F38B1F857F020076A417 /* Album.swift in Sources */,
 			);

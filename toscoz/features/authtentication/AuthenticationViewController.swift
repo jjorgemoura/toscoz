@@ -44,7 +44,6 @@ class AuthenticationViewController: UIViewController {
 //            }
 //            .disposed(by: disposeBag)
 
-
         if let viewModel = viewModel {
 
             cancelButton?.rx.tap
