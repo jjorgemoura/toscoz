@@ -12,7 +12,7 @@ struct Styler: Style {
 
     private let styler: (UIView) -> Void
 
-    init<T: Style>(_ style: T) {
+    init<T: Style>(with style: T) {
         print(T.self)
         print(T.T.self)
         styler = { view in

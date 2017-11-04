@@ -35,7 +35,7 @@ class AuthenticationViewController: UIViewController {
 //        tableView.rowHeight = 48.0
 
         let pButton = PrimaryButton()
-        let style = Styler(pButton)
+        let style = Styler(with: pButton)
         loginButton?.apply(style: style)
         usernameControl?.apply(style: style)
 

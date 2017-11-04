@@ -10,8 +10,6 @@ import UIKit
 
 class PrimaryButton: AppButton, Style {
 
-    typealias T = UIButton
-
 //    var styleRepository: [StyleAttributes: Any] = [:]
 
     override init() {
@@ -21,5 +19,6 @@ class PrimaryButton: AppButton, Style {
     func the(view: UIButton) {
         print("I'm a UIButton")
 
+        view.setTitle("asdasdasdas", for: .highlighted)
     }
 }

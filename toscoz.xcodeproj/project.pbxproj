@@ -58,11 +58,13 @@
 		B493F38D1F857F020076A417 /* SpotifyWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B493F3881F857F020076A417 /* SpotifyWebService.swift */; };
 		B493F3901F857F090076A417 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B493F38E1F857F090076A417 /* AppCoordinator.swift */; };
 		B493F3911F857F090076A417 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B493F38F1F857F090076A417 /* Coordinator.swift */; };
+		B49CB15F1FAE68AF00F64D3F /* AppWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49CB15E1FAE68AF00F64D3F /* AppWindow.swift */; };
+		B49CB1611FAE730600F64D3F /* ColorsPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49CB1601FAE730600F64D3F /* ColorsPalette.swift */; };
 		B4C47D591F2262AD0055A8B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C47D571F2262AD0055A8B8 /* LaunchScreen.storyboard */; };
 		B4E3B6C01F93701D00CE98D0 /* SpotifyLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E3B6BF1F93701D00CE98D0 /* SpotifyLogin.framework */; };
 		CF5B2A8E1F86C46800684D8A /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5B2A8C1F86C46800684D8A /* RxCocoa.framework */; };
 		CF5B2A8F1F86C46800684D8A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5B2A8D1F86C46800684D8A /* RxSwift.framework */; };
-		CFC7F3231FABB23D00FF8426 /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7F3221FABB23D00FF8426 /* Colours.swift */; };
+		CFC7F3231FABB23D00FF8426 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7F3221FABB23D00FF8426 /* Colors.swift */; };
 		CFC7F3251FABB25500FF8426 /* StyleAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7F3241FABB25500FF8426 /* StyleAttributes.swift */; };
 		CFC7F3271FABB5EE00FF8426 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7F3261FABB5EE00FF8426 /* ViewExtension.swift */; };
 		CFC7F3291FABB78100FF8426 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7F3281FABB78100FF8426 /* LoginButton.swift */; };
@@ -145,13 +147,15 @@
 		B493F3881F857F020076A417 /* SpotifyWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyWebService.swift; sourceTree = "<group>"; };
 		B493F38E1F857F090076A417 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		B493F38F1F857F090076A417 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		B49CB15E1FAE68AF00F64D3F /* AppWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindow.swift; sourceTree = "<group>"; };
+		B49CB1601FAE730600F64D3F /* ColorsPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsPalette.swift; sourceTree = "<group>"; };
 		B4C47D581F2262AD0055A8B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = toscoz/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		B4E3B6BF1F93701D00CE98D0 /* SpotifyLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyLogin.framework; path = Carthage/Build/iOS/SpotifyLogin.framework; sourceTree = "<group>"; };
 		CF5B2A8C1F86C46800684D8A /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		CF5B2A8D1F86C46800684D8A /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		CF5B2A9F1F86CE1700684D8A /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		CF5B2AA01F86CE1700684D8A /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
-		CFC7F3221FABB23D00FF8426 /* Colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
+		CFC7F3221FABB23D00FF8426 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CFC7F3241FABB25500FF8426 /* StyleAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleAttributes.swift; sourceTree = "<group>"; };
 		CFC7F3261FABB5EE00FF8426 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		CFC7F3281FABB78100FF8426 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
@@ -311,6 +315,7 @@
 		B428150D1FAE429000F865A4 /* buttons */ = {
 			isa = PBXGroup;
 			children = (
+				B428150E1FAE434800F865A4 /* AppButton.swift */,
 				CFC7F32A1FABB7C800FF8426 /* PrimaryButton.swift */,
 				B42815081FAE1F3800F865A4 /* SecondaryButton.swift */,
 			);
@@ -479,7 +484,8 @@
 		CFC7F3211FABAE1700FF8426 /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				CFC7F3221FABB23D00FF8426 /* Colours.swift */,
+				B49CB1601FAE730600F64D3F /* ColorsPalette.swift */,
+				CFC7F3221FABB23D00FF8426 /* Colors.swift */,
 				CFC7F3241FABB25500FF8426 /* StyleAttributes.swift */,
 				CFC7F32D1FABBD5000FF8426 /* Style.swift */,
 				B428150A1FAE1FDE00F865A4 /* Styler.swift */,
@@ -490,7 +496,7 @@
 		CFC7F32C1FABB7FD00FF8426 /* mainStyles */ = {
 			isa = PBXGroup;
 			children = (
-				B428150E1FAE434800F865A4 /* AppButton.swift */,
+				B49CB15E1FAE68AF00F64D3F /* AppWindow.swift */,
 			);
 			path = mainStyles;
 			sourceTree = "<group>";
@@ -687,6 +693,7 @@
 				CFC7F3291FABB78100FF8426 /* LoginButton.swift in Sources */,
 				B41460871F9A7F7A00AEA919 /* HomeTabBarCoordinator.swift in Sources */,
 				B450341A1F9B71610061B86D /* UserDefaultViewModel.swift in Sources */,
+				B49CB15F1FAE68AF00F64D3F /* AppWindow.swift in Sources */,
 				B493F38C1F857F020076A417 /* Artist.swift in Sources */,
 				B493F3911F857F090076A417 /* Coordinator.swift in Sources */,
 				B493F3761F857EBA0076A417 /* SettingsMainViewController.swift in Sources */,
@@ -703,6 +710,7 @@
 				B428150F1FAE434800F865A4 /* AppButton.swift in Sources */,
 				B493F3621F857EA90076A417 /* HomeDefaultViewModel.swift in Sources */,
 				B450340E1F9B60280061B86D /* SearchDefaultViewModel.swift in Sources */,
+				B49CB1611FAE730600F64D3F /* ColorsPalette.swift in Sources */,
 				B428150B1FAE1FDE00F865A4 /* Styler.swift in Sources */,
 				B493F3611F857EA90076A417 /* HomeViewController.swift in Sources */,
 				B493F3781F857EBA0076A417 /* SettingsCoordinator.swift in Sources */,
@@ -716,7 +724,7 @@
 				B470AD651F9BD015002DA826 /* AuthenticationViewController.swift in Sources */,
 				B493F36B1F857EB10076A417 /* PlayerAlbumViewController.swift in Sources */,
 				B46F091A1F9AAB6200C1A357 /* Navigationable.swift in Sources */,
-				CFC7F3231FABB23D00FF8426 /* Colours.swift in Sources */,
+				CFC7F3231FABB23D00FF8426 /* Colors.swift in Sources */,
 				B493F3701F857EB10076A417 /* PlayerViewModel.swift in Sources */,
 				B493F38B1F857F020076A417 /* Album.swift in Sources */,
 			);

@@ -12,6 +12,5 @@ class SecondaryButton: AppButton, Style {
 
     func the(view: UIButton) {
         print("I'm a Sec UIButton")
-
     }
 }
