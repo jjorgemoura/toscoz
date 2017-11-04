@@ -33,6 +33,12 @@ class AuthenticationViewController: UIViewController {
 //        navigationItem.leftBarButtonItem = cancelButton
         navigationItem.title = "Login"
 //        tableView.rowHeight = 48.0
+
+        let pButton = PrimaryButton()
+        let style = Styler(pButton)
+        loginButton?.apply(style: style)
+        usernameControl?.apply(style: style)
+
     }
 
     private func setupBindings() {

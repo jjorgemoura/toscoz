@@ -8,11 +8,15 @@
 
 import UIKit
 
-class PrimaryButton: Style {
+class PrimaryButton: AppButton, Style {
 
     typealias T = UIButton
 
 //    var styleRepository: [StyleAttributes: Any] = [:]
+
+    override init() {
+        
+    }
 
     func the(view: UIButton) {
         print("I'm a UIButton")

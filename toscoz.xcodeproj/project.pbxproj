@@ -13,6 +13,9 @@
 		B427FAE81EF58835005FE9A2 /* ToscozTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427FAE71EF58835005FE9A2 /* ToscozTests.swift */; };
 		B427FAF31EF58835005FE9A2 /* ToscozUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427FAF21EF58835005FE9A2 /* ToscozUITests.swift */; };
 		B428136E1F9CF4D10086F05A /* AuthenticationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B428136D1F9CF4D10086F05A /* AuthenticationCoordinator.swift */; };
+		B42815091FAE1F3800F865A4 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42815081FAE1F3800F865A4 /* SecondaryButton.swift */; };
+		B428150B1FAE1FDE00F865A4 /* Styler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B428150A1FAE1FDE00F865A4 /* Styler.swift */; };
+		B428150F1FAE434800F865A4 /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B428150E1FAE434800F865A4 /* AppButton.swift */; };
 		B4420F7E1F9E7AA4003444CB /* AuthenticationCoordinatorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4420F7D1F9E7AA4003444CB /* AuthenticationCoordinatorResult.swift */; };
 		B45034041F9B542B0061B86D /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45034031F9B542B0061B86D /* SettingsViewModel.swift */; };
 		B450340E1F9B60280061B86D /* SearchDefaultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B450340D1F9B60280061B86D /* SearchDefaultViewModel.swift */; };
@@ -61,11 +64,10 @@
 		CF5B2A8F1F86C46800684D8A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5B2A8D1F86C46800684D8A /* RxSwift.framework */; };
 		CFC7F3231FABB23D00FF8426 /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7F3221FABB23D00FF8426 /* Colours.swift */; };
 		CFC7F3251FABB25500FF8426 /* StyleAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7F3241FABB25500FF8426 /* StyleAttributes.swift */; };
-		CFC7F3271FABB5EE00FF8426 /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7F3261FABB5EE00FF8426 /* UIExtension.swift */; };
+		CFC7F3271FABB5EE00FF8426 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7F3261FABB5EE00FF8426 /* ViewExtension.swift */; };
 		CFC7F3291FABB78100FF8426 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7F3281FABB78100FF8426 /* LoginButton.swift */; };
 		CFC7F32B1FABB7C800FF8426 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7F32A1FABB7C800FF8426 /* PrimaryButton.swift */; };
 		CFC7F32E1FABBD5000FF8426 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7F32D1FABBD5000FF8426 /* Style.swift */; };
-		CFC7F3301FABBDEB00FF8426 /* BaseStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7F32F1FABBDEB00FF8426 /* BaseStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,9 @@
 		B427FAF21EF58835005FE9A2 /* ToscozUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToscozUITests.swift; sourceTree = "<group>"; };
 		B427FAF41EF58835005FE9A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B428136D1F9CF4D10086F05A /* AuthenticationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationCoordinator.swift; sourceTree = "<group>"; };
+		B42815081FAE1F3800F865A4 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
+		B428150A1FAE1FDE00F865A4 /* Styler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styler.swift; sourceTree = "<group>"; };
+		B428150E1FAE434800F865A4 /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
 		B4420F7D1F9E7AA4003444CB /* AuthenticationCoordinatorResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationCoordinatorResult.swift; sourceTree = "<group>"; };
 		B45034031F9B542B0061B86D /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		B450340D1F9B60280061B86D /* SearchDefaultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDefaultViewModel.swift; sourceTree = "<group>"; };
@@ -148,11 +153,10 @@
 		CF5B2AA01F86CE1700684D8A /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		CFC7F3221FABB23D00FF8426 /* Colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
 		CFC7F3241FABB25500FF8426 /* StyleAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleAttributes.swift; sourceTree = "<group>"; };
-		CFC7F3261FABB5EE00FF8426 /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
+		CFC7F3261FABB5EE00FF8426 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		CFC7F3281FABB78100FF8426 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		CFC7F32A1FABB7C800FF8426 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		CFC7F32D1FABBD5000FF8426 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
-		CFC7F32F1FABBDEB00FF8426 /* BaseStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +300,23 @@
 			path = toscozUITests;
 			sourceTree = "<group>";
 		};
+		B428150C1FAE421200F865A4 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CFC7F3261FABB5EE00FF8426 /* ViewExtension.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		B428150D1FAE429000F865A4 /* buttons */ = {
+			isa = PBXGroup;
+			children = (
+				CFC7F32A1FABB7C800FF8426 /* PrimaryButton.swift */,
+				B42815081FAE1F3800F865A4 /* SecondaryButton.swift */,
+			);
+			path = buttons;
+			sourceTree = "<group>";
+		};
 		B45034021F9B53E50061B86D /* technical */ = {
 			isa = PBXGroup;
 			children = (
@@ -430,6 +451,7 @@
 		CFC7F31E1FABAD7100FF8426 /* utilities */ = {
 			isa = PBXGroup;
 			children = (
+				B428150C1FAE421200F865A4 /* extensions */,
 				CFC7F31F1FABADA500FF8426 /* ui */,
 			);
 			path = utilities;
@@ -448,6 +470,7 @@
 			isa = PBXGroup;
 			children = (
 				CFC7F32C1FABB7FD00FF8426 /* mainStyles */,
+				B428150D1FAE429000F865A4 /* buttons */,
 				CFC7F3281FABB78100FF8426 /* LoginButton.swift */,
 			);
 			path = styles;
@@ -458,9 +481,8 @@
 			children = (
 				CFC7F3221FABB23D00FF8426 /* Colours.swift */,
 				CFC7F3241FABB25500FF8426 /* StyleAttributes.swift */,
-				CFC7F3261FABB5EE00FF8426 /* UIExtension.swift */,
 				CFC7F32D1FABBD5000FF8426 /* Style.swift */,
-				CFC7F32F1FABBDEB00FF8426 /* BaseStyle.swift */,
+				B428150A1FAE1FDE00F865A4 /* Styler.swift */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -468,7 +490,7 @@
 		CFC7F32C1FABB7FD00FF8426 /* mainStyles */ = {
 			isa = PBXGroup;
 			children = (
-				CFC7F32A1FABB7C800FF8426 /* PrimaryButton.swift */,
+				B428150E1FAE434800F865A4 /* AppButton.swift */,
 			);
 			path = mainStyles;
 			sourceTree = "<group>";
@@ -651,6 +673,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B42815091FAE1F3800F865A4 /* SecondaryButton.swift in Sources */,
 				B493F3891F857F020076A417 /* Song.swift in Sources */,
 				B427FAD31EF58834005FE9A2 /* AppDelegate.swift in Sources */,
 				B46F09181F9AAB5600C1A357 /* Rootable.swift in Sources */,
@@ -676,16 +699,17 @@
 				B493F36E1F857EB10076A417 /* TechnicalInfoViewController.swift in Sources */,
 				B493F36C1F857EB10076A417 /* PlayerViewController.swift in Sources */,
 				B493F37F1F857EC10076A417 /* SearchViewController.swift in Sources */,
-				CFC7F3271FABB5EE00FF8426 /* UIExtension.swift in Sources */,
+				CFC7F3271FABB5EE00FF8426 /* ViewExtension.swift in Sources */,
+				B428150F1FAE434800F865A4 /* AppButton.swift in Sources */,
 				B493F3621F857EA90076A417 /* HomeDefaultViewModel.swift in Sources */,
 				B450340E1F9B60280061B86D /* SearchDefaultViewModel.swift in Sources */,
+				B428150B1FAE1FDE00F865A4 /* Styler.swift in Sources */,
 				B493F3611F857EA90076A417 /* HomeViewController.swift in Sources */,
 				B493F3781F857EBA0076A417 /* SettingsCoordinator.swift in Sources */,
 				B470AD681F9BD2A0002DA826 /* UserToken.swift in Sources */,
 				B493F38D1F857F020076A417 /* SpotifyWebService.swift in Sources */,
 				CFC7F32E1FABBD5000FF8426 /* Style.swift in Sources */,
 				B493F3801F857EC20076A417 /* SearchViewModel.swift in Sources */,
-				CFC7F3301FABBDEB00FF8426 /* BaseStyle.swift in Sources */,
 				B470AD601F9BCFEC002DA826 /* AuthenticationViewModel.swift in Sources */,
 				B45034041F9B542B0061B86D /* SettingsViewModel.swift in Sources */,
 				CFC7F3251FABB25500FF8426 /* StyleAttributes.swift in Sources */,

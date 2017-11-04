@@ -10,7 +10,6 @@ import UIKit
 
 protocol Style {
 
-    //UIControl
     associatedtype T: UIView
 
     func the(view: T)

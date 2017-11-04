@@ -10,7 +10,8 @@ enum StyleAttributes: Hashable {
 
     case fontColor
     case fontType
-    case color
+    case tintColor
+    case backgroundColor
     case caption
 
     static func == (lhs: StyleAttributes, rhs: StyleAttributes) -> Bool {
