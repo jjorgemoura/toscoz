@@ -44,7 +44,6 @@ class AuthenticationViewController: UIViewController {
 //            }
 //            .disposed(by: disposeBag)
 
-
         if let viewModel = viewModel {
 
             cancelButton?.rx.tap
@@ -58,6 +57,6 @@ class AuthenticationViewController: UIViewController {
     }
 
     @IBAction func loginButtonPressed(_ sender: Any) {
-
+        print("sdfsaxzfsf")
     }
 }

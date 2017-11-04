@@ -14,10 +14,15 @@ class AuthenticationCoordinator: Coordinator, Rootable {
     typealias T = AuthenticationCoordinatorResult
 
     let window: UIWindow
-    var tabViewController: UITabBarController = UITabBarController()
+//    var tabViewController: UITabBarController = UITabBarController()
 
     init(window: UIWindow) {
         self.window = window
+        print("JM - 2 -> \(self)")
+    }
+
+    deinit {
+        print("JM - D2 -> \(Unmanaged<AnyObject>.passUnretained(self as AnyObject).toOpaque())")
     }
 
     func start() -> Observable<T> {

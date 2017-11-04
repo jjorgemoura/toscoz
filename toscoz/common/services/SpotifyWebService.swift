@@ -8,6 +8,14 @@
 
 class SpotifyWebService: SpotifyService {
 
+    deinit {
+        print("JM - D4 -> \(Unmanaged<AnyObject>.passUnretained(self as AnyObject).toOpaque())")
+    }
+
+    init() {
+        print("JM - 4 -> \(self)")
+    }
+
     func songPlaying() -> Song {
 
         return Song(identifier: "abc", name: "high")

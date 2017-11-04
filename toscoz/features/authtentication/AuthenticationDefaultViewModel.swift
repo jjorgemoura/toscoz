@@ -21,7 +21,13 @@ class AuthenticationDefaultViewModel: AuthenticationViewModel {
     let login: AnyObserver<SportifyCredentials>
     let cancel: AnyObserver<Void>
 
+    deinit {
+        print("JM - D3 -> \(Unmanaged<AnyObject>.passUnretained(self as AnyObject).toOpaque())")
+    }
+
     init(spotifyService: SpotifyService = SpotifyWebService()) {
+//        print("JM - 3 -> \(self)")
+        print("JM - 3")
         let cancelation = PublishSubject<Void>()
         cancel = cancelation.asObserver()
         didCancel = cancelation.asObservable()

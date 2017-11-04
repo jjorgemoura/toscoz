@@ -27,6 +27,11 @@ class AppCoordinator: Coordinator, Rootable {
     /// - Parameter window: The `UIWindow` needs to be init in the initialiser..
     init(window: UIWindow) {
         self.window = window
+        print("JM - 1 -> \(self)")
+    }
+
+    deinit {
+        print("JM - D1 -> \(Unmanaged<AnyObject>.passUnretained(self as AnyObject).toOpaque())")
     }
 
     /// The method that starts the coordinator.
