@@ -8,11 +8,11 @@
 
 import UIKit
 
-class BaseStyle: Style {
+class BaseStyle {
 
-    var styleRepository: [StyleAttributes: Any] = [:]
-
-    func the(view: UIView) {
-
-    }
+//    var styleRepository: [StyleAttributes: Any] = [:]
+//
+//    func the(view: UIView) {
+//
+//    }
 }

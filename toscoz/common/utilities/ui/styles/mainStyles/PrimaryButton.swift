@@ -6,6 +6,16 @@
 //  Copyright © 2017 Jorge Moura. All rights reserved.
 //
 
-class PrimaryButton: BaseStyle {
+import UIKit
 
+class PrimaryButton: Style {
+
+    typealias T = UIButton
+
+//    var styleRepository: [StyleAttributes: Any] = [:]
+
+    func the(view: UIButton) {
+        print("I'm a UIButton")
+
+    }
 }

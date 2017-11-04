@@ -8,9 +8,22 @@
 
 import UIKit
 
-extension UIView {
+extension UIButton {
 
-    func apply(style: Style) {
-        style.the(view: self)
+    func apply<T: Style>(style: T) {
+
+//        let xxx: UIButton = UIButton(type: .roundedRect)
+//        let yyy: UILabel = UILabel()
+
+        let z1 = PrimaryButton()
+        z1.the(view: self)
+        
+//        let xxxxxx = style
+
+//        style.the(view: self)
+        
+        let aa = style
+        
+//        style.the(view: self)
     }
 }
