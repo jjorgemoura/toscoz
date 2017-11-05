@@ -32,7 +32,6 @@ class AuthenticationViewController: UIViewController {
     private func setupUI() {
 //        navigationItem.leftBarButtonItem = cancelButton
         navigationItem.title = "Login"
-//        tableView.rowHeight = 48.0
     }
 
     private func setupBindings() {

@@ -21,6 +21,8 @@ class AppCoordinator: Coordinator, Rootable {
     typealias T = Void
 
     let window: UIWindow
+    private var authenticationCoordinator: AuthenticationCoordinator?
+    private var homeTabBarCoordinator: HomeTabBarCoordinator?
 
     /// The initialiser of the class.
     ///
@@ -55,9 +57,9 @@ class AppCoordinator: Coordinator, Rootable {
     }
 
     private func showLoginScreen() {
-        let authenticationCoordinator = AuthenticationCoordinator(window: window)
+        authenticationCoordinator = AuthenticationCoordinator(window: window)
 
-        authenticationCoordinator.start()
+        authenticationCoordinator?.start()
             .subscribe(onNext: { result in
 
                 switch result {
@@ -69,13 +71,15 @@ class AppCoordinator: Coordinator, Rootable {
 
             }, onError: { error in
                 print(error.localizedDescription)
+            }, onCompleted: {
+                self.authenticationCoordinator = nil
             }).disposed(by: DisposeBag())
     }
 
     private func showHomepageScreen() {
-        let homeTabBarCoordinator = HomeTabBarCoordinator(window: window)
+        homeTabBarCoordinator = HomeTabBarCoordinator(window: window)
 
-        homeTabBarCoordinator.start()
+        homeTabBarCoordinator?.start()
             .subscribe(onNext: { result in
 
                 switch result {
@@ -85,6 +89,8 @@ class AppCoordinator: Coordinator, Rootable {
 
             }, onError: { error in
                 print(error.localizedDescription)
+            }, onCompleted: {
+                self.homeTabBarCoordinator = nil
             }).disposed(by: DisposeBag())
     }
 

@@ -14,7 +14,6 @@ class AuthenticationCoordinator: Coordinator, Rootable {
     typealias T = AuthenticationCoordinatorResult
 
     let window: UIWindow
-//    var tabViewController: UITabBarController = UITabBarController()
 
     init(window: UIWindow) {
         self.window = window
