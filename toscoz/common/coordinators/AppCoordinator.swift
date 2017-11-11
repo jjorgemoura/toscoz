@@ -21,12 +21,21 @@ class AppCoordinator: Coordinator, Rootable {
     typealias T = Void
 
     let window: UIWindow
+    private var authenticationCoordinator: AuthenticationCoordinator?
+    private var homeTabBarCoordinator: HomeTabBarCoordinator?
+
+    let bag: DisposeBag = DisposeBag()
 
     /// The initialiser of the class.
     ///
     /// - Parameter window: The `UIWindow` needs to be init in the initialiser..
     init(window: UIWindow) {
         self.window = window
+        print("JM - 1 -> \(self)")
+    }
+
+    deinit {
+        print("JM - D1 -> \(Unmanaged<AnyObject>.passUnretained(self as AnyObject).toOpaque())")
     }
 
     /// The method that starts the coordinator.
@@ -50,9 +59,9 @@ class AppCoordinator: Coordinator, Rootable {
     }
 
     private func showLoginScreen() {
-        let authenticationCoordinator = AuthenticationCoordinator(window: window)
+        authenticationCoordinator = AuthenticationCoordinator(window: window)
 
-        authenticationCoordinator.start()
+        authenticationCoordinator?.start()
             .subscribe(onNext: { result in
 
                 switch result {
@@ -64,13 +73,15 @@ class AppCoordinator: Coordinator, Rootable {
 
             }, onError: { error in
                 print(error.localizedDescription)
-            }).disposed(by: DisposeBag())
+            }, onCompleted: {
+                self.authenticationCoordinator = nil
+            }).disposed(by: bag)
     }
 
     private func showHomepageScreen() {
-        let homeTabBarCoordinator = HomeTabBarCoordinator(window: window)
+        homeTabBarCoordinator = HomeTabBarCoordinator(window: window)
 
-        homeTabBarCoordinator.start()
+        homeTabBarCoordinator?.start()
             .subscribe(onNext: { result in
 
                 switch result {
@@ -80,6 +91,8 @@ class AppCoordinator: Coordinator, Rootable {
 
             }, onError: { error in
                 print(error.localizedDescription)
+            }, onCompleted: {
+                self.homeTabBarCoordinator = nil
             }).disposed(by: DisposeBag())
     }
 

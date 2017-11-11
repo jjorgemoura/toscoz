@@ -11,17 +11,25 @@ import RxSwift
 class AuthenticationDefaultViewModel: AuthenticationViewModel {
 
     // ViewModel Data to be presented / shown on View/ViewController
-    let didCancel: Observable<Void>
-    let didAuthenticateSuccessfully: Observable<UserToken>
-    let didFailedAuthentication: Observable<String>
+    var didCancel: Observable<Void>
+    var didAuthenticateSuccessfully: Observable<UserToken>
+    var didFailedAuthentication: Observable<String>
 
-    let loginAction: Observable<SportifyCredentials>
+    var loginAction: Observable<SportifyCredentials>
 
     // ViewModel actions to be triggered / called from the View/ViewController
-    let login: AnyObserver<SportifyCredentials>
-    let cancel: AnyObserver<Void>
+    var login: AnyObserver<SportifyCredentials>
+    var cancel: AnyObserver<Void>
+
+    var bag: DisposeBag = DisposeBag()
+
+    deinit {
+        print("JM - D3 -> \(Unmanaged<AnyObject>.passUnretained(self as AnyObject).toOpaque())")
+    }
 
     init(spotifyService: SpotifyService = SpotifyWebService()) {
+        print("JM - 3")
+
         let cancelation = PublishSubject<Void>()
         cancel = cancelation.asObserver()
         didCancel = cancelation.asObservable()
