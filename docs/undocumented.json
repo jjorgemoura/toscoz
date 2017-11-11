@@ -15,6 +15,27 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/coordinators/AppCoordinator.swift",
+      "line": 27,
+      "symbol": "AppCoordinator.bag",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/coordinators/AppCoordinator.swift",
+      "line": 37,
+      "symbol": "AppCoordinator.deinit",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/coordinators/BaseCoordinator.swift",
+      "line": 12,
+      "symbol": "BaseCoordinator",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/services/Album.swift",
       "line": 9,
       "symbol": "Album",
@@ -92,13 +113,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/services/SportifyCredentials.swift",
-      "line": 9,
-      "symbol": "SportifyCredentials",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/services/SpotifyService.swift",
       "line": 9,
       "symbol": "SpotifyService",
@@ -129,22 +143,29 @@
     {
       "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/services/SpotifyWebService.swift",
       "line": 11,
+      "symbol": "SpotifyWebService.deinit",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/services/SpotifyWebService.swift",
+      "line": 15,
+      "symbol": "SpotifyWebService.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/services/SpotifyWebService.swift",
+      "line": 19,
       "symbol": "SpotifyWebService.songPlaying()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/services/SpotifyWebService.swift",
-      "line": 16,
+      "line": 24,
       "symbol": "SpotifyWebService.song(identifier:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/common/services/UserToken.swift",
-      "line": 9,
-      "symbol": "UserToken",
-      "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
@@ -157,7 +178,7 @@
     {
       "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/authtentication/AuthenticationCoordinator.swift",
       "line": 17,
-      "symbol": "AuthenticationCoordinator.tabViewController",
+      "symbol": "AuthenticationCoordinator.bag",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
@@ -165,6 +186,13 @@
       "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/authtentication/AuthenticationCoordinator.swift",
       "line": 19,
       "symbol": "AuthenticationCoordinator.init(window:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/authtentication/AuthenticationCoordinator.swift",
+      "line": 24,
+      "symbol": "AuthenticationCoordinator.deinit",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -220,22 +248,43 @@
     {
       "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/authtentication/AuthenticationDefaultViewModel.swift",
       "line": 24,
+      "symbol": "AuthenticationDefaultViewModel.bag",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/authtentication/AuthenticationDefaultViewModel.swift",
+      "line": 26,
+      "symbol": "AuthenticationDefaultViewModel.deinit",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/authtentication/AuthenticationDefaultViewModel.swift",
+      "line": 30,
       "symbol": "AuthenticationDefaultViewModel.init(spotifyService:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/authtentication/AuthenticationViewController.swift",
-      "line": 11,
+      "line": 13,
       "symbol": "AuthenticationViewController",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/authtentication/AuthenticationViewController.swift",
-      "line": 13,
+      "line": 16,
       "symbol": "AuthenticationViewController.viewModel",
       "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/authtentication/AuthenticationViewController.swift",
+      "line": 24,
+      "symbol": "AuthenticationViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -514,7 +563,7 @@
     {
       "file": "/Users/jorge.moura/Developer/myProjs/github/toscoz/toscoz/features/player/PlayerViewController.swift",
       "line": 32,
-      "symbol": "PlayerViewController.getSwipeAction(_:)",
+      "symbol": "PlayerViewController.getSwipeAction(withRecognizer:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },

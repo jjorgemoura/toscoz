@@ -40,7 +40,7 @@ platform :ios do
     do_version option
     gym(scheme: xcode_scheme_main, export_method: "development")
     # pilot(username: appleid_user, skip_submission: true)
-    jazzy(config: ".jazzy.yaml")
+    do_documentation
   end
 
 

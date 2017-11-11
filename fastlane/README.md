@@ -34,7 +34,7 @@ xcode-select --install
 ```
 fastlane ios do_tests
 ```
-Runs all the tests
+Runs all the tests (unit tests + UI tests)
 ### ios do_unit_tests
 ```
 fastlane ios do_unit_tests
@@ -50,31 +50,13 @@ Run UI tests
 fastlane ios do_beta
 ```
 Submit a new build to TestFlight. Must send parameter version=MAJOR, MINOR or PATCH
+
+For version use: MAJOR -> a major release of the app || MINOR -> for the release of some new features || PATCH -> for a bug fixes release.
 ### ios do_release
 ```
 fastlane ios do_release
 ```
-Deploy a new version to the App Store
-### ios do_resources_check
-```
-fastlane ios do_resources_check
-```
-Runs Check Resources
-### ios do_version
-```
-fastlane ios do_version
-```
-Versioning -> Increase: MAJOR, MINOR or PATCH
-### ios do_validation
-```
-fastlane ios do_validation
-```
-Validate the version command and the branch
-### ios do_danger_check
-```
-fastlane ios do_danger_check
-```
-Runs Danger
+Deploy a new version to the App Store (NOT WORKING YET)
 ### ios do_documentation
 ```
 fastlane ios do_documentation
