@@ -24,6 +24,8 @@ class AppCoordinator: Coordinator, Rootable {
     private var authenticationCoordinator: AuthenticationCoordinator?
     private var homeTabBarCoordinator: HomeTabBarCoordinator?
 
+    let bag: DisposeBag = DisposeBag()
+
     /// The initialiser of the class.
     ///
     /// - Parameter window: The `UIWindow` needs to be init in the initialiser..
@@ -73,7 +75,7 @@ class AppCoordinator: Coordinator, Rootable {
                 print(error.localizedDescription)
             }, onCompleted: {
                 self.authenticationCoordinator = nil
-            }).disposed(by: DisposeBag())
+            }).disposed(by: bag)
     }
 
     private func showHomepageScreen() {

@@ -14,6 +14,7 @@ class AuthenticationCoordinator: Coordinator, Rootable {
     typealias T = AuthenticationCoordinatorResult
 
     let window: UIWindow
+    let bag: DisposeBag = DisposeBag()
 
     init(window: UIWindow) {
         self.window = window
@@ -44,7 +45,7 @@ class AuthenticationCoordinator: Coordinator, Rootable {
             .take(1)
             .do(onNext: { [weak self] event in
                 print("Event -> \(event) || Self -> \(self!)")
-                //                self?.rootViewController.dismiss(animated: true)
+                self?.window.rootViewController = nil
             })
     }
 }

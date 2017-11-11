@@ -10,12 +10,12 @@ import RxSwift
 
 protocol AuthenticationViewModel {
 
-    var didCancel: Observable<Void> { get }
-    var didAuthenticateSuccessfully: Observable<UserToken> { get }
-    var didFailedAuthentication: Observable<String> { get }
+    var didCancel: Observable<Void> { get set }
+    var didAuthenticateSuccessfully: Observable<UserToken> { get set }
+    var didFailedAuthentication: Observable<String> { get set }
 
-    var loginAction: Observable<SportifyCredentials> { get }
+    var loginAction: Observable<SportifyCredentials> { get set }
 
-    var login: AnyObserver<SportifyCredentials> { get }
-    var cancel: AnyObserver<Void> { get }
+    var login: AnyObserver<SportifyCredentials> { get set }
+    var cancel: AnyObserver<Void> { get set }
 }

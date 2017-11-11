@@ -12,13 +12,13 @@ import UIKit
 
 class AuthenticationViewController: UIViewController {
 
-    private let disposeBag: DisposeBag = DisposeBag()
+    private let bag: DisposeBag = DisposeBag()
     var viewModel: AuthenticationViewModel?
 
-    @IBOutlet private weak var loginButton: UIButton?
-    @IBOutlet private weak var cancelButton: UIButton?
-    @IBOutlet private weak var usernameControl: UITextField?
-    @IBOutlet private weak var passwordControl: UITextField?
+    @IBOutlet private var loginButton: UIButton!
+    @IBOutlet private var cancelButton: UIButton!
+    @IBOutlet private var usernameControl: UITextField!
+    @IBOutlet private var passwordControl: UITextField!
 
     // MARK: - ViewController Lifecycle
     override func viewDidLoad() {
@@ -30,7 +30,6 @@ class AuthenticationViewController: UIViewController {
 
     // MARK: - Provate methods
     private func setupUI() {
-//        navigationItem.leftBarButtonItem = cancelButton
         navigationItem.title = "Login"
     }
 
@@ -44,18 +43,13 @@ class AuthenticationViewController: UIViewController {
 //            .disposed(by: disposeBag)
 
         if let viewModel = viewModel {
-
             cancelButton?.rx.tap
                 .bind(to: viewModel.cancel)
-                .disposed(by: disposeBag)
+                .disposed(by: bag)
 
-//            loginButton?.rx.tap
-//                .bind(to: viewModel.login)
-//                .disposed(by: disposeBag)
+            loginButton?.rx.tap
+                .bind(to: viewModel.cancel)
+                .disposed(by: bag)
         }
-    }
-
-    @IBAction func loginButtonPressed(_ sender: Any) {
-        print("sdfsaxzfsf")
     }
 }
