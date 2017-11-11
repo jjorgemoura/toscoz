@@ -1,5 +1,5 @@
 
-disabled_rules:
+# disabled_rules:
 
 opt_in_rules:
  - array_init
@@ -48,10 +48,18 @@ excluded:
   - Pods
   - Carthage
 
-line_length: 220
+line_length: 200
 file_length:
-  warning: 240
-  error: 450
+  warning: 280
+  error: 480
+identifier_name:
+  excluded:
+    - T
+    - URL
+type_name:
+  excluded:
+    - T
+
 # file_header:
 #   required_pattern: |
 #                     \/\/

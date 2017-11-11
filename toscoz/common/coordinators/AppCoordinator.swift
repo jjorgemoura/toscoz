@@ -6,30 +6,97 @@
 //  Copyright © 2017 Jorge Moura. All rights reserved.
 //
 
+import RxSwift
 import UIKit
 
-class AppCoordinator: RootCoordinator {
+/// The AppCoordinator is the startup coordinator, initialised in AppDelegate.
+///
+/// Being the root coordinator, AppCoordinator type is `Void`.
+///
+/// ````
+/// typealias T = Void
+/// ````
+class AppCoordinator: Coordinator, Rootable {
+
+    typealias T = Void
 
     let window: UIWindow
-    var playerCoordinator: PlayerCoordinator?
-    var homeCoordinator: HomeCoordinator?
+    private var authenticationCoordinator: AuthenticationCoordinator?
+    private var homeTabBarCoordinator: HomeTabBarCoordinator?
 
+    let bag: DisposeBag = DisposeBag()
+
+    /// The initialiser of the class.
+    ///
+    /// - Parameter window: The `UIWindow` needs to be init in the initialiser..
     init(window: UIWindow) {
         self.window = window
+        print("JM - 1 -> \(self)")
     }
 
-    func start() {
-        if isSongPlaying() {
-            playerCoordinator = PlayerCoordinator(window: window)
-            playerCoordinator?.start()
+    deinit {
+        print("JM - D1 -> \(Unmanaged<AnyObject>.passUnretained(self as AnyObject).toOpaque())")
+    }
+
+    /// The method that starts the coordinator.
+    ///
+    /// - Returns: Result of the coordinator, `Void` in this coordinator.
+    func start() -> Observable<T> {
+        appConfiguration()
+
+        if isLoggedIn() {
+            showHomepageScreen()
         } else {
-            homeCoordinator = HomeCoordinator(window: window)
-            homeCoordinator?.start()
+            showLoginScreen()
         }
+
+        return Observable.never()
     }
 
-    // MARK: - Private methods
-    private func isSongPlaying() -> Bool {
+    // MARK: - private methods
+    private func isLoggedIn() -> Bool {
         return false
+    }
+
+    private func showLoginScreen() {
+        authenticationCoordinator = AuthenticationCoordinator(window: window)
+
+        authenticationCoordinator?.start()
+            .subscribe(onNext: { result in
+
+                switch result {
+                case .authenticationSuccessful(token: _):
+                    self.showHomepageScreen()
+                case .cancel:
+                    self.showHomepageScreen()
+                }
+
+            }, onError: { error in
+                print(error.localizedDescription)
+            }, onCompleted: {
+                self.authenticationCoordinator = nil
+            }).disposed(by: bag)
+    }
+
+    private func showHomepageScreen() {
+        homeTabBarCoordinator = HomeTabBarCoordinator(window: window)
+
+        homeTabBarCoordinator?.start()
+            .subscribe(onNext: { result in
+
+                switch result {
+                case HomeTabBarCoordinatorResult.logout:
+                    self.showLoginScreen()
+                }
+
+            }, onError: { error in
+                print(error.localizedDescription)
+            }, onCompleted: {
+                self.homeTabBarCoordinator = nil
+            }).disposed(by: DisposeBag())
+    }
+
+    private func appConfiguration() {
+
     }
 }
