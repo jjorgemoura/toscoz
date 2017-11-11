@@ -31,6 +31,12 @@ class AuthenticationViewController: UIViewController {
     // MARK: - Provate methods
     private func setupUI() {
         navigationItem.title = "Login"
+
+        let pButton = PrimaryButton()
+        let style = Styler(with: pButton)
+        loginButton?.apply(style: style)
+        usernameControl?.apply(style: style)
+
     }
 
     private func setupBindings() {

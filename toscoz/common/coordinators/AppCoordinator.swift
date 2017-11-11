@@ -97,6 +97,6 @@ class AppCoordinator: Coordinator, Rootable {
     }
 
     private func appConfiguration() {
-
+        window.apply(style: Styler(with: AppWindow()))
     }
 }
