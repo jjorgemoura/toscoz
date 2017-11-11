@@ -1,6 +1,6 @@
 
 # fastlane constants
-fastlane_version "2.60.1"
+fastlane_version "2.64.0"
 default_platform :ios
 
 # constants
@@ -13,7 +13,7 @@ appleid_user = CredentialsManager::AppfileConfig.try_fetch_value(:apple_id)
 platform :ios do
 
   # tests
-  desc "Runs all the tests"
+  desc "Runs all the tests (unit tests + UI tests)"
   lane :do_tests do
     do_unit_tests
     do_ui_tests
@@ -32,6 +32,7 @@ platform :ios do
 
   # betas
   desc "Submit a new build to TestFlight. Must send parameter version=MAJOR, MINOR or PATCH"
+  desc "For version use: MAJOR -> a major release of the app || MINOR -> for the release of some new features || PATCH -> for a bug fixes release."
   lane :do_beta do |option|
     do_validation option option
     do_resources_check
@@ -44,7 +45,7 @@ platform :ios do
 
 
   # release
-  desc "Deploy a new version to the App Store"
+  desc "Deploy a new version to the App Store (NOT WORKING YET)"
   lane :do_release do
     precheck
     # match(type: "appstore")
@@ -57,12 +58,12 @@ platform :ios do
 
   # auxiliar lanes
   desc "Runs Check Resources"
-  lane :do_resources_check do
+  private_lane :do_resources_check do
     swiftlint
   end
 
   desc "Versioning -> Increase: MAJOR, MINOR or PATCH"
-  lane :do_version do |option|
+  private_lane :do_version do |option|
     if option[:version] == "MAJOR"
       increment_version_number(
         bump_type: "major"
@@ -81,7 +82,7 @@ platform :ios do
   end
 
   desc "Validate the version command and the branch"
-  lane :do_validation do |option|
+  private_lane :do_validation do |option|
 
     if git_branch != "master"
       UI.error "ATTENTION: Please, run this commmand on branch master!!!"
@@ -95,13 +96,13 @@ platform :ios do
         abort
       end
     else
-      UI.error "ATTENTION: Please, user the parameter 'version' to set the bump desired!!!"
+      UI.error "ATTENTION: Please, use the parameter 'version' to set the bump desired!!!"
       abort
     end
   end
 
   desc "Runs Danger"
-  lane :do_danger_check do
+  private_lane :do_danger_check do
     danger(
       verbose: true
     )
