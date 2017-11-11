@@ -62,6 +62,11 @@ Deploy a new version to the App Store (NOT WORKING YET)
 fastlane ios do_documentation
 ```
 Runs Documentation
+### ios do_build_version
+```
+fastlane ios do_build_version
+```
+Increment Xcode's build version. Pass parameter buildID:XXXXX
 
 ----
 

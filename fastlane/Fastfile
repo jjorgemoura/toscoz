@@ -38,6 +38,7 @@ platform :ios do
     do_resources_check
     do_tests
     do_version option
+    do_tag
     gym(scheme: xcode_scheme_main, export_method: "development")
     # pilot(username: appleid_user, skip_submission: true)
     do_documentation
@@ -60,6 +61,14 @@ platform :ios do
   desc "Runs Check Resources"
   private_lane :do_resources_check do
     swiftlint
+  end
+
+  desc "Tag the current version with Xcode's current version"
+  private_lane :do_tag do
+    tagID = "v" + get_version_number
+    add_git_tag(
+      tag: tagID
+    )
   end
 
   desc "Versioning -> Increase: MAJOR, MINOR or PATCH"
@@ -111,6 +120,20 @@ platform :ios do
   desc "Runs Documentation"
   lane :do_documentation do
     jazzy(config: ".jazzy.yaml")
+  end
+
+  desc "Increment Xcode's build version. Pass parameter buildID:XXXXX"
+  lane :do_build_version do |option|
+
+    if option[:buildID]
+      UI.important "Set the Build Version with value: " + option[:buildID]
+      increment_build_number(
+        build_number: option[:buildID]
+      )
+    else
+      UI.error "ATTENTION: Please, use the parameter 'buildID' to set the build version desired!!!"
+      abort
+    end
   end
 
   # constants
