@@ -27,19 +27,18 @@ env:
     - IOS_SCHEME="toscoz"
 
     - IOS_SDK=iphonesimulator11.1
-    - OS_VER=11.1
 
   # matrix: a new build for each specified variable
   matrix:
-    - DESTINATION="OS=$OS_VER,name=iPhone X"                               SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
-    # - DESTINATION="OS=$OS_VER,name=iPhone 8 Plus"                          SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
-    - DESTINATION="OS=$OS_VER,name=iPhone 8"                               SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
-    # - DESTINATION="OS=$OS_VER,name=iPhone SE"                              SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
+    - DESTINATION="OS=11.1,name=iPhone X"                               SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
+    # - DESTINATION="OS=11.1,name=iPhone 8 Plus"                          SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
+    - DESTINATION="OS=11.1,name=iPhone 8"                               SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
+    # - DESTINATION="OS=11.1,name=iPhone SE"                              SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
 
-    # - DESTINATION="OS=$OS_VER,name=iPad (5th generation)"                  SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
-    # - DESTINATION="OS=$OS_VER,name=iPad Air 2"                             SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
-    - DESTINATION="OS=$OS_VER,name=iPad Pro (10.5-inch)"                   SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
-    # - DESTINATION="OS=$OS_VER,name=iPad Pro (12.9-inch) (2nd generation)"  SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
+    # - DESTINATION="OS=11.1,name=iPad (5th generation)"                  SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
+    # - DESTINATION="OS=11.1,name=iPad Air 2"                             SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
+    - DESTINATION="OS=11.1,name=iPad Pro (10.5-inch)"                   SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
+    # - DESTINATION="OS=11.1,name=iPad Pro (12.9-inch) (2nd generation)"  SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
 
 
 ####################
