@@ -33,7 +33,7 @@ platform :ios do
   # betas
   desc "Submit a new build to TestFlight. Must send parameter version=MAJOR, MINOR or PATCH"
   lane :do_beta do |option|
-    do_validation option option
+    do_validation option
     do_resources_check
     do_tests
     do_version option
@@ -105,6 +105,11 @@ platform :ios do
     danger(
       verbose: true
     )
+  end
+
+  desc "Runs Documentation"
+  lane :do_documentation do
+    jazzy(config: ".jazzy.yaml")
   end
 
   # constants

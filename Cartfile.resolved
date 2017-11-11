@@ -1,2 +1,2 @@
-github "ReactiveX/RxSwift" "05e26184d9699d360e6710121b245935d8cbe25a"
+github "ReactiveX/RxSwift" "4.0.0"
 github "spotify/SpotifyLogin" "0.1.3"
