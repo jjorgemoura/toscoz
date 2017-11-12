@@ -12,7 +12,7 @@ notifications:
 language: objective-c
 
 # language options
-osx_image: xcode9
+osx_image: xcode9.1
 
 # branches to run
 
@@ -56,6 +56,10 @@ script:
 - xcodebuild analyze test -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -configuration Debug -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
 - fastlane do_ui_tests
 # - fastlane do_danger_check
+
+after_script:
+- fastlane do_build_version buildID:$TRAVIS_JOB_ID
+- git commit -a -m "Committed by Travis-CI build number: $TRAVIS_JOB_NUMBER"
 
 after_success:
 - bash <(curl -s https://codecov.io/bash) -J 'toscoz'
