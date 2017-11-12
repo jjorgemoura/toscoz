@@ -57,12 +57,10 @@ script:
 - fastlane do_ui_tests
 # - fastlane do_danger_check
 
-after_script:
-- fastlane do_build_version buildID:$TRAVIS_JOB_ID
-- git commit -a -m "Committed by Travis-CI build number: $TRAVIS_JOB_NUMBER"
-
 after_success:
 - bash <(curl -s https://codecov.io/bash) -J 'toscoz'
+# - fastlane do_build_version buildID:$TRAVIS_JOB_NUMBER
+# - git commit -a -m "Committed by Travis-CI build number: $TRAVIS_JOB_NUMBER"
 
 
 ####################

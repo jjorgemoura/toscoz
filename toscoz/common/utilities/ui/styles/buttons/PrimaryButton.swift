@@ -13,7 +13,6 @@ class PrimaryButton: AppButton, Style {
 //    var styleRepository: [StyleAttributes: Any] = [:]
 
     override init() {
-        
     }
 
     func the(view: UIButton) {

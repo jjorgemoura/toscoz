@@ -124,16 +124,20 @@ platform :ios do
 
   desc "Increment Xcode's build version. Pass parameter buildID:XXXXX"
   lane :do_build_version do |option|
-
-    if option[:buildID]
-      UI.important "Set the Build Version with value: " + option[:buildID]
-      increment_build_number(
-        build_number: option[:buildID]
-      )
-    else
-      UI.error "ATTENTION: Please, use the parameter 'buildID' to set the build version desired!!!"
+    if git_branch != "master"
       abort
     end
+    # build_number = get_build_number().to_i + 1
+    build_number = ""
+
+    if option[:buildID]
+      build_number = option[:buildID]
+    end
+
+    UI.important "Set the Build Version with value: #{build_number}"
+    increment_build_number(
+      build_number: build_number
+    )
   end
 
   # constants
