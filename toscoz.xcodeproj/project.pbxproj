@@ -63,6 +63,8 @@
 		B49CB1611FAE730600F64D3F /* ColorsPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49CB1601FAE730600F64D3F /* ColorsPalette.swift */; };
 		B4C47D591F2262AD0055A8B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C47D571F2262AD0055A8B8 /* LaunchScreen.storyboard */; };
 		B4E3B6C01F93701D00CE98D0 /* SpotifyLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E3B6BF1F93701D00CE98D0 /* SpotifyLogin.framework */; };
+		CF19EC3A1FBA4FF5000C725C /* XCTestCaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF19EC391FBA4FF5000C725C /* XCTestCaseExtension.swift */; };
+		CF19EC401FBA5726000C725C /* BaseCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF19EC3F1FBA5726000C725C /* BaseCoordinatorTests.swift */; };
 		CF5B2A8E1F86C46800684D8A /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5B2A8C1F86C46800684D8A /* RxCocoa.framework */; };
 		CF5B2A8F1F86C46800684D8A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5B2A8D1F86C46800684D8A /* RxSwift.framework */; };
 		CFC7F3231FABB23D00FF8426 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7F3221FABB23D00FF8426 /* Colors.swift */; };
@@ -153,6 +155,8 @@
 		B49CB1601FAE730600F64D3F /* ColorsPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsPalette.swift; sourceTree = "<group>"; };
 		B4C47D581F2262AD0055A8B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = toscoz/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		B4E3B6BF1F93701D00CE98D0 /* SpotifyLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyLogin.framework; path = Carthage/Build/iOS/SpotifyLogin.framework; sourceTree = "<group>"; };
+		CF19EC391FBA4FF5000C725C /* XCTestCaseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCaseExtension.swift; sourceTree = "<group>"; };
+		CF19EC3F1FBA5726000C725C /* BaseCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinatorTests.swift; sourceTree = "<group>"; };
 		CF5B2A8C1F86C46800684D8A /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		CF5B2A8D1F86C46800684D8A /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		CF5B2A9F1F86CE1700684D8A /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
@@ -291,6 +295,9 @@
 		B427FAE61EF58835005FE9A2 /* toscozTests */ = {
 			isa = PBXGroup;
 			children = (
+				CF19EC3D1FBA567E000C725C /* common */,
+				CF19EC3B1FBA5656000C725C /* features */,
+				CF19EC371FBA4FBF000C725C /* helpers */,
 				B427FAE71EF58835005FE9A2 /* ToscozTests.swift */,
 				B427FAE91EF58835005FE9A2 /* Info.plist */,
 			);
@@ -442,6 +449,53 @@
 				B470AD691F9BD352002DA826 /* SportifyCredentials.swift */,
 			);
 			path = services;
+			sourceTree = "<group>";
+		};
+		CF19EC371FBA4FBF000C725C /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CF19EC381FBA4FD4000C725C /* extensions */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
+		CF19EC381FBA4FD4000C725C /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CF19EC391FBA4FF5000C725C /* XCTestCaseExtension.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		CF19EC3B1FBA5656000C725C /* features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = features;
+			sourceTree = "<group>";
+		};
+		CF19EC3C1FBA565E000C725C /* coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				CF19EC3F1FBA5726000C725C /* BaseCoordinatorTests.swift */,
+			);
+			path = coordinators;
+			sourceTree = "<group>";
+		};
+		CF19EC3D1FBA567E000C725C /* common */ = {
+			isa = PBXGroup;
+			children = (
+				CF19EC3C1FBA565E000C725C /* coordinators */,
+				CF19EC3E1FBA568C000C725C /* utilities */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		CF19EC3E1FBA568C000C725C /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = utilities;
 			sourceTree = "<group>";
 		};
 		CF5B2A8B1F86C46700684D8A /* Frameworks */ = {
@@ -738,7 +792,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF19EC3A1FBA4FF5000C725C /* XCTestCaseExtension.swift in Sources */,
 				B427FAE81EF58835005FE9A2 /* ToscozTests.swift in Sources */,
+				CF19EC401FBA5726000C725C /* BaseCoordinatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
