@@ -23,6 +23,7 @@ class AppCoordinator: Coordinator, Rootable {
     let window: UIWindow
     private var authenticationCoordinator: AuthenticationCoordinator?
     private var homeTabBarCoordinator: HomeTabBarCoordinator?
+    private var userCoordinator: UserCoordinator?
 
     let bag: DisposeBag = DisposeBag()
 
@@ -60,7 +61,6 @@ class AppCoordinator: Coordinator, Rootable {
 
     private func showLoginScreen() {
         authenticationCoordinator = AuthenticationCoordinator(window: window)
-
         authenticationCoordinator?.start()
             .subscribe(onNext: { result in
 
@@ -68,7 +68,7 @@ class AppCoordinator: Coordinator, Rootable {
                 case .authenticationSuccessful(token: _):
                     self.showHomepageScreen()
                 case .cancel:
-                    self.showHomepageScreen()
+                    self.showUserScreen()
                 }
 
             }, onError: { error in
@@ -80,13 +80,31 @@ class AppCoordinator: Coordinator, Rootable {
 
     private func showHomepageScreen() {
         homeTabBarCoordinator = HomeTabBarCoordinator(window: window)
-
         homeTabBarCoordinator?.start()
             .subscribe(onNext: { result in
 
                 switch result {
                 case HomeTabBarCoordinatorResult.logout:
+                    self.showUserScreen()
+                }
+
+            }, onError: { error in
+                print(error.localizedDescription)
+            }, onCompleted: {
+                self.homeTabBarCoordinator = nil
+            }).disposed(by: DisposeBag())
+    }
+
+    private func showUserScreen() {
+        userCoordinator = UserCoordinator(window: window)
+        userCoordinator?.start()
+            .subscribe(onNext: { result in
+
+                switch result {
+                case UserCoordinatorResult.login:
                     self.showLoginScreen()
+                case UserCoordinatorResult.home:
+                    self.showHomepageScreen()
                 }
 
             }, onError: { error in

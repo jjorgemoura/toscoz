@@ -14,8 +14,6 @@ protocol AuthenticationViewModel {
     var didAuthenticateSuccessfully: Observable<UserToken> { get set }
     var didFailedAuthentication: Observable<String> { get set }
 
-    var loginAction: Observable<SportifyCredentials> { get set }
-
     var login: AnyObserver<SportifyCredentials> { get set }
     var cancel: AnyObserver<Void> { get set }
 }

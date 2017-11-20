@@ -10,12 +10,10 @@ import RxSwift
 
 class AuthenticationDefaultViewModel: AuthenticationViewModel {
 
-    // ViewModel Data to be presented / shown on View/ViewController
+    // ViewModel Delegate / Observables to others (coordinators) to observe
     var didCancel: Observable<Void>
     var didAuthenticateSuccessfully: Observable<UserToken>
     var didFailedAuthentication: Observable<String>
-
-    var loginAction: Observable<SportifyCredentials>
 
     // ViewModel actions to be triggered / called from the View/ViewController
     var login: AnyObserver<SportifyCredentials>
@@ -28,15 +26,19 @@ class AuthenticationDefaultViewModel: AuthenticationViewModel {
     }
 
     init(spotifyService: SpotifyService = SpotifyWebService()) {
-        print("JM - 3")
-
         let cancelation = PublishSubject<Void>()
         cancel = cancelation.asObserver()
         didCancel = cancelation.asObservable()
 
         let authentication = PublishSubject<SportifyCredentials>()
         login = authentication.asObserver()
-        loginAction = authentication.asObservable()
+        authentication.asObservable().subscribe(onNext: { spotifyCredentials in
+
+        }, onError: { error in
+
+        }, onCompleted: {
+
+        }).disposed(by: bag)
 
         didAuthenticateSuccessfully = PublishSubject<UserToken>().asObservable()
 

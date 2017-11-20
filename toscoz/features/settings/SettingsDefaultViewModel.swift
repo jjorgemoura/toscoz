@@ -6,6 +6,6 @@
 //  Copyright © 2017 Jorge Moura. All rights reserved.
 //
 
-class SettingsDefaultViewModel {
+class SettingsDefaultViewModel: SettingsViewModel {
 
 }
