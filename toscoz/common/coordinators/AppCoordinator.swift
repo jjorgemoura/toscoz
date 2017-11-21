@@ -69,6 +69,7 @@ class AppCoordinator: Coordinator, Rootable {
                     self.showHomepageScreen()
                 case .cancel:
                     self.showUserScreen()
+//                    self.showHomepageScreen()
                 }
 
             }, onError: { error in
@@ -92,7 +93,7 @@ class AppCoordinator: Coordinator, Rootable {
                 print(error.localizedDescription)
             }, onCompleted: {
                 self.homeTabBarCoordinator = nil
-            }).disposed(by: DisposeBag())
+            }).disposed(by: bag)
     }
 
     private func showUserScreen() {
@@ -111,7 +112,7 @@ class AppCoordinator: Coordinator, Rootable {
                 print(error.localizedDescription)
             }, onCompleted: {
                 self.homeTabBarCoordinator = nil
-            }).disposed(by: DisposeBag())
+            }).disposed(by: bag)
     }
 
     private func appConfiguration() {

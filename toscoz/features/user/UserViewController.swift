@@ -17,5 +17,26 @@ class UserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "User - Jorge"
+
+        let homeBarButton = UIBarButtonItem(title: "home", style: .plain, target: self, action: #selector(selectHome))
+        navigationItem.leftBarButtonItem = homeBarButton
+
+        let loginBarButton = UIBarButtonItem(title: "login", style: .plain, target: self, action: #selector(selectLogin))
+        navigationItem.rightBarButtonItem = loginBarButton
+    }
+
+    @objc
+    func selectLogin() {
+        if let viewModel = viewModel {
+            viewModel.authenticate.onNext(())
+        }
+    }
+
+    @objc
+    func selectHome() {
+        if let viewModel = viewModel {
+            viewModel.homepage.onNext(())
+        }
     }
 }

@@ -30,14 +30,16 @@ class UserCoordinator: BaseCoordinator, Coordinator, Rootable {
         let viewController = UserViewController()
         viewController.viewModel = viewModel
 
+        let userNavigationController = UINavigationController(rootViewController: viewController)
+
         let whenGoToHomepage = viewModel.didPressGoToHomepage.map { _ -> UserCoordinatorResult in
-            return UserCoordinatorResult.home
+            UserCoordinatorResult.home
         }
         let whenLogin = viewModel.didPressGoToAuthenticate.map { _ -> UserCoordinatorResult in
-            return UserCoordinatorResult.login
+            UserCoordinatorResult.login
         }
 
-        window.rootViewController = viewController
+        window.rootViewController = userNavigationController
 
         return Observable.merge(whenGoToHomepage, whenLogin)
             .take(1)
