@@ -33,3 +33,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 //    ---deinit -> @String(describing: type(of: self))@ || @self@
 }
+
+//extension AppDelegate {
+//    static var shared: AppDelegate {
+//        return UIApplication.shared.delegate as! AppDelegate
+//    }
+//}

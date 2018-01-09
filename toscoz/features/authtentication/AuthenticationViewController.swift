@@ -32,10 +32,10 @@ class AuthenticationViewController: UIViewController {
     private func setupUI() {
         navigationItem.title = "Login"
 
-        let pButton = PrimaryButton()
-        let style = Styler(with: pButton)
-        loginButton?.apply(style: style)
-        usernameControl?.apply(style: style)
+        let primaryButton = PrimaryButton()
+        let primaryButtonStyle = Styler(with: primaryButton)
+        loginButton?.apply(style: primaryButtonStyle)
+        usernameControl?.apply(style: primaryButtonStyle)
 
     }
 

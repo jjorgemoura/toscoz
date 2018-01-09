@@ -10,16 +10,16 @@ import RxSwift
 
 class AuthenticationDefaultViewModel: AuthenticationViewModel {
 
+    private var bag: DisposeBag = DisposeBag()
+
     // ViewModel Delegate / Observables to others (coordinators) to observe
     var didCancel: Observable<Void>
     var didAuthenticateSuccessfully: Observable<UserToken>
     var didFailedAuthentication: Observable<String>
 
     // ViewModel actions to be triggered / called from the View/ViewController
-    var login: AnyObserver<SportifyCredentials>
     var cancel: AnyObserver<Void>
-
-    var bag: DisposeBag = DisposeBag()
+    var login: AnyObserver<SportifyCredentials>
 
     deinit {
         print("JM - D3 -> \(Unmanaged<AnyObject>.passUnretained(self as AnyObject).toOpaque())")
@@ -30,6 +30,9 @@ class AuthenticationDefaultViewModel: AuthenticationViewModel {
         cancel = cancelation.asObserver()
         didCancel = cancelation.asObservable()
 
+        didAuthenticateSuccessfully = PublishSubject<UserToken>().asObservable()
+        didFailedAuthentication = PublishSubject<String>().asObservable()
+        
         let authentication = PublishSubject<SportifyCredentials>()
         login = authentication.asObserver()
         authentication.asObservable().subscribe(onNext: { spotifyCredentials in
@@ -39,9 +42,5 @@ class AuthenticationDefaultViewModel: AuthenticationViewModel {
         }, onCompleted: {
 
         }).disposed(by: bag)
-
-        didAuthenticateSuccessfully = PublishSubject<UserToken>().asObservable()
-
-        didFailedAuthentication = PublishSubject<String>().asObservable()
     }
 }
