@@ -9,24 +9,43 @@
 import RxSwift
 import UIKit
 
-class UserCoordinator: Coordinator {
+class UserCoordinator: BaseCoordinator, Coordinator, Rootable {
 
-    typealias T = String
+    typealias T = UserCoordinatorResult
 
-    func start() -> Observable<String> {
-        return Observable.just("XPTO")
+    let window: UIWindow
+
+    init(window: UIWindow) {
+        self.window = window
+        super.init()
+        print("JM - 7 -> \(self)")
     }
 
-//    private var userViewController: UserViewController?
-//
-//    let navigationController: UINavigationController
-//
-//    init(navigationController: UINavigationController) {
-//        self.navigationController = navigationController
-//    }
-//
-//    func start() {
-//        userViewController = UserViewController()
-//        navigationController.pushViewController(userViewController!, animated: true)
-//    }
+    deinit {
+        print("JM - D7 -> \(Unmanaged<AnyObject>.passUnretained(self as AnyObject).toOpaque())")
+    }
+
+    func start() -> Observable<T> {
+        let viewModel = UserDefaultViewModel()
+        let viewController = UserViewController()
+        viewController.viewModel = viewModel
+
+        let userNavigationController = UINavigationController(rootViewController: viewController)
+
+        let whenGoToHomepage = viewModel.didPressGoToHomepage.map { _ -> UserCoordinatorResult in
+            UserCoordinatorResult.home
+        }
+        let whenLogin = viewModel.didPressGoToAuthenticate.map { _ -> UserCoordinatorResult in
+            UserCoordinatorResult.login
+        }
+
+        window.rootViewController = userNavigationController
+
+        return Observable.merge(whenGoToHomepage, whenLogin)
+            .take(1)
+            .do(onNext: { [weak self] event in
+                print("Event -> \(event) || Self -> \(self!)")
+                self?.window.rootViewController = nil
+            })
+    }
 }

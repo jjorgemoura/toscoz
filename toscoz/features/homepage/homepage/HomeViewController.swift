@@ -24,11 +24,6 @@ class HomeViewController: UIViewController {
         navigationItem.rightBarButtonItem = settingBarButton
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     @objc
     func selectUser() {
         print("HomeViewController -> select User")

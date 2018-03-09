@@ -31,12 +31,10 @@ class AuthenticationCoordinator: Coordinator, Rootable {
         viewController.viewModel = viewModel
 
         let whenCancel = viewModel.didCancel.map { _ -> AuthenticationCoordinatorResult in
-            print("JM: 1")
-            return AuthenticationCoordinatorResult.cancel
+            AuthenticationCoordinatorResult.cancel
         }
         let whenLogin = viewModel.didAuthenticateSuccessfully.map { userToken -> AuthenticationCoordinatorResult in
-            print("JM: 2")
-            return AuthenticationCoordinatorResult.authenticationSuccessful(token: userToken)
+            AuthenticationCoordinatorResult.authenticationSuccessful(token: userToken)
         }
 
         window.rootViewController = viewController

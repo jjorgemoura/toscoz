@@ -30,4 +30,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return true
     }
+
+//    ---deinit -> @String(describing: type(of: self))@ || @self@
 }

@@ -6,29 +6,37 @@
 //  Copyright © 2017 Jorge Moura. All rights reserved.
 //
 
+import RxSwift
 import UIKit
 
 class UserViewController: UIViewController {
 
+    private let bag: DisposeBag = DisposeBag()
+    var viewModel: UserViewModel?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        title = "User - Jorge"
+
+        let homeBarButton = UIBarButtonItem(title: "home", style: .plain, target: self, action: #selector(selectHome))
+        navigationItem.leftBarButtonItem = homeBarButton
+
+        let loginBarButton = UIBarButtonItem(title: "login", style: .plain, target: self, action: #selector(selectLogin))
+        navigationItem.rightBarButtonItem = loginBarButton
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @objc
+    func selectLogin() {
+        if let viewModel = viewModel {
+            viewModel.authenticate.onNext(())
+        }
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @objc
+    func selectHome() {
+        if let viewModel = viewModel {
+            viewModel.homepage.onNext(())
+        }
     }
-    */
-
 }

@@ -31,6 +31,7 @@
 		B470AD661F9BD015002DA826 /* AuthenticationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B470AD641F9BD015002DA826 /* AuthenticationViewController.xib */; };
 		B470AD681F9BD2A0002DA826 /* UserToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470AD671F9BD2A0002DA826 /* UserToken.swift */; };
 		B470AD6A1F9BD352002DA826 /* SportifyCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470AD691F9BD352002DA826 /* SportifyCredentials.swift */; };
+		B477D2261FC37F0E00DF8F4C /* UserCoordinatorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B477D2251FC37F0E00DF8F4C /* UserCoordinatorResult.swift */; };
 		B493F35C1F857EA90076A417 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B493F3541F857EA90076A417 /* HomeViewModel.swift */; };
 		B493F35D1F857EA90076A417 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B493F3551F857EA90076A417 /* UserViewController.swift */; };
 		B493F35E1F857EA90076A417 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B493F3561F857EA90076A417 /* HomeViewController.xib */; };
@@ -124,6 +125,7 @@
 		B470AD641F9BD015002DA826 /* AuthenticationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationViewController.xib; sourceTree = "<group>"; };
 		B470AD671F9BD2A0002DA826 /* UserToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserToken.swift; sourceTree = "<group>"; };
 		B470AD691F9BD352002DA826 /* SportifyCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportifyCredentials.swift; sourceTree = "<group>"; };
+		B477D2251FC37F0E00DF8F4C /* UserCoordinatorResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCoordinatorResult.swift; sourceTree = "<group>"; };
 		B493F3541F857EA90076A417 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		B493F3551F857EA90076A417 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		B493F3561F857EA90076A417 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 			isa = PBXGroup;
 			children = (
 				B493F3571F857EA90076A417 /* UserCoordinator.swift */,
+				B477D2251FC37F0E00DF8F4C /* UserCoordinatorResult.swift */,
 				B450341B1F9B716B0061B86D /* UserViewModel.swift */,
 				B45034191F9B71610061B86D /* UserDefaultViewModel.swift */,
 				B493F3551F857EA90076A417 /* UserViewController.swift */,
@@ -768,6 +771,7 @@
 				B493F35F1F857EA90076A417 /* UserCoordinator.swift in Sources */,
 				B470AD621F9BD001002DA826 /* AuthenticationDefaultViewModel.swift in Sources */,
 				B493F36E1F857EB10076A417 /* TechnicalInfoViewController.swift in Sources */,
+				B477D2261FC37F0E00DF8F4C /* UserCoordinatorResult.swift in Sources */,
 				B493F36C1F857EB10076A417 /* PlayerViewController.swift in Sources */,
 				B493F37F1F857EC10076A417 /* SearchViewController.swift in Sources */,
 				CFC7F3271FABB5EE00FF8426 /* ViewExtension.swift in Sources */,
