@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import sapataz
 
 class BaseCoordinator {
 
@@ -24,6 +25,8 @@ class BaseCoordinator {
     /// - Parameter coordinator: Child coordinator to store.
     private func store(coordinator: BaseCoordinator) {
         childCoordinators[coordinator.identifier] = coordinator
+        
+        let identifier = Identifier().generate()
     }
 
     /// Release coordinator from the `childCoordinators` dictionary.

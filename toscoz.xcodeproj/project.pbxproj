@@ -67,6 +67,7 @@
 		CF19EC401FBA5726000C725C /* BaseCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF19EC3F1FBA5726000C725C /* BaseCoordinatorTests.swift */; };
 		CF5B2A8E1F86C46800684D8A /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5B2A8C1F86C46800684D8A /* RxCocoa.framework */; };
 		CF5B2A8F1F86C46800684D8A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5B2A8D1F86C46800684D8A /* RxSwift.framework */; };
+		CFBDDB211FBCCC9D00E078B2 /* sapataz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFBDDB201FBCCC9D00E078B2 /* sapataz.framework */; };
 		CFC7F3231FABB23D00FF8426 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7F3221FABB23D00FF8426 /* Colors.swift */; };
 		CFC7F3251FABB25500FF8426 /* StyleAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7F3241FABB25500FF8426 /* StyleAttributes.swift */; };
 		CFC7F3271FABB5EE00FF8426 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7F3261FABB5EE00FF8426 /* ViewExtension.swift */; };
@@ -161,6 +162,7 @@
 		CF5B2A8D1F86C46800684D8A /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		CF5B2A9F1F86CE1700684D8A /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		CF5B2AA01F86CE1700684D8A /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		CFBDDB201FBCCC9D00E078B2 /* sapataz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = sapataz.framework; path = Carthage/Build/iOS/sapataz.framework; sourceTree = "<group>"; };
 		CFC7F3221FABB23D00FF8426 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CFC7F3241FABB25500FF8426 /* StyleAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleAttributes.swift; sourceTree = "<group>"; };
 		CFC7F3261FABB5EE00FF8426 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				CF5B2A8E1F86C46800684D8A /* RxCocoa.framework in Frameworks */,
 				CF5B2A8F1F86C46800684D8A /* RxSwift.framework in Frameworks */,
 				B4E3B6C01F93701D00CE98D0 /* SpotifyLogin.framework in Frameworks */,
+				CFBDDB211FBCCC9D00E078B2 /* sapataz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +504,7 @@
 		CF5B2A8B1F86C46700684D8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CFBDDB201FBCCC9D00E078B2 /* sapataz.framework */,
 				B4E3B6BF1F93701D00CE98D0 /* SpotifyLogin.framework */,
 				CF5B2AA01F86CE1700684D8A /* RxBlocking.framework */,
 				CF5B2A9F1F86CE1700684D8A /* RxTest.framework */,
@@ -719,11 +723,13 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SpotifyLogin.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/sapataz.framework",
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SpotifyLogin.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/sapataz.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
