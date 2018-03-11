@@ -29,3 +29,5 @@ struct Styler: Style {
         styler(view)
     }
 }
+
+//TODO: Ver isto -> http://kean.github.io/post/creating_views

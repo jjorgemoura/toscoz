@@ -63,6 +63,7 @@
 		B49CB15F1FAE68AF00F64D3F /* AppWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49CB15E1FAE68AF00F64D3F /* AppWindow.swift */; };
 		B49CB1611FAE730600F64D3F /* ColorsPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49CB1601FAE730600F64D3F /* ColorsPalette.swift */; };
 		B4C47D591F2262AD0055A8B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C47D571F2262AD0055A8B8 /* LaunchScreen.storyboard */; };
+		B4DD8E352019D73D00805B00 /* Bool+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DD8E342019D73D00805B00 /* Bool+.swift */; };
 		B4E3B6C01F93701D00CE98D0 /* SpotifyLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E3B6BF1F93701D00CE98D0 /* SpotifyLogin.framework */; };
 		CF19EC3A1FBA4FF5000C725C /* XCTestCaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF19EC391FBA4FF5000C725C /* XCTestCaseExtension.swift */; };
 		CF19EC401FBA5726000C725C /* BaseCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF19EC3F1FBA5726000C725C /* BaseCoordinatorTests.swift */; };
@@ -156,6 +157,7 @@
 		B49CB15E1FAE68AF00F64D3F /* AppWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindow.swift; sourceTree = "<group>"; };
 		B49CB1601FAE730600F64D3F /* ColorsPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsPalette.swift; sourceTree = "<group>"; };
 		B4C47D581F2262AD0055A8B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = toscoz/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		B4DD8E342019D73D00805B00 /* Bool+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+.swift"; sourceTree = "<group>"; };
 		B4E3B6BF1F93701D00CE98D0 /* SpotifyLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyLogin.framework; path = Carthage/Build/iOS/SpotifyLogin.framework; sourceTree = "<group>"; };
 		CF19EC391FBA4FF5000C725C /* XCTestCaseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCaseExtension.swift; sourceTree = "<group>"; };
 		CF19EC3F1FBA5726000C725C /* BaseCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinatorTests.swift; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				CFC7F3261FABB5EE00FF8426 /* ViewExtension.swift */,
+				B4DD8E342019D73D00805B00 /* Bool+.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -786,6 +789,7 @@
 				B470AD651F9BD015002DA826 /* AuthenticationViewController.swift in Sources */,
 				B493F36B1F857EB10076A417 /* PlayerAlbumViewController.swift in Sources */,
 				B46F091A1F9AAB6200C1A357 /* Navigationable.swift in Sources */,
+				B4DD8E352019D73D00805B00 /* Bool+.swift in Sources */,
 				CFC7F3231FABB23D00FF8426 /* Colors.swift in Sources */,
 				B493F3701F857EB10076A417 /* PlayerViewModel.swift in Sources */,
 				B493F38B1F857F020076A417 /* Album.swift in Sources */,
