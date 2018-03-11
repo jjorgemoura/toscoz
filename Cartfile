@@ -1,3 +1,4 @@
 
 github "ReactiveX/RxSwift"
 github "spotify/SpotifyLogin"
+github "jjorgemoura/sapataz"
