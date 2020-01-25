@@ -2,40 +2,34 @@
 //  AppDelegate.swift
 //  toscoz
 //
-//  Created by Jorge Moura on 17/06/2017.
-//  Copyright © 2017 Jorge Moura. All rights reserved.
+//  Created by Jorge Moura on 24/01/2020.
+//  Copyright © 2020 Jorge Moura. All rights reserved.
 //
 
-import RxSwift
 import UIKit
 
-/// The application AppDelegate.
+// swiftlint:disable discouraged_optional_collection
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    private let disposeBag: DisposeBag = DisposeBag()
-    private var appCoordinator: AppCoordinator?
-
-    var window: UIWindow?
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        window = UIWindow()
-        if let window = window {
-            appCoordinator = AppCoordinator(window: window)
-            appCoordinator?.start()
-                .subscribe()
-                .disposed(by: disposeBag)
-
-            window.makeKeyAndVisible()
-        }
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
         return true
     }
 
-//    ---deinit -> @String(describing: type(of: self))@ || @self@
+    // MARK: UISceneSession Lifecycle
+
+    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+        // Called when a new scene session is being created.
+        // Use this method to select a configuration to create the new scene with.
+        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+    }
+
+    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
+        // Called when the user discards a scene session.
+        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
+        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
 }
 
-//extension AppDelegate {
-//    static var shared: AppDelegate {
-//        return UIApplication.shared.delegate as! AppDelegate
-//    }
-//}
+// swiftlint:enable discouraged_optional_collection
