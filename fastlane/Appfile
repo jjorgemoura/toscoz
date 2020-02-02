@@ -1,4 +1,4 @@
-app_identifier "com.jjorgemoura.toscozz"
+app_identifier "com.jjorgemoura.toscoz"
 
 apple_id ENV["FASTLANE_APPLEID"]
 team_id ENV["FASTLANE_TEAMID"]
