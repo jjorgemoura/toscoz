@@ -33,27 +33,24 @@ jobs:
   include:
     - stage: resources
       name: "Swiftlint"
-      script: swiftlint
+      script: swiftlint lint
 
     - &unit-test
       stage: unit tests
-      name: "Unit Testing"
+      name: "iPhone 11 Pro"
       env: SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" DESTINATION="OS=13.2,name=iPhone 11 Pro"
       script: 
         - xcodebuild -version -sdk
         - xcodebuild analyze test -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -configuration Debug -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
 
     - <<: *unit-test
+      name: "iPhone 8"
       env: SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" DESTINATION="OS=13.2,name=iPhone 8"
-      script:
-        - xcodebuild -version -sdk
-        - xcodebuild analyze test -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -configuration Debug -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
+      
     - <<: *unit-test
+      name: "iPad Pro (11-inch)"
       env: SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" DESTINATION="OS=13.2,name=iPad Pro (11-inch)"
-      script:
-        - xcodebuild -version -sdk
-        - xcodebuild analyze test -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -configuration Debug -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
-
+      
 stages:
 - resources
 - unit tests

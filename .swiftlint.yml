@@ -114,6 +114,7 @@ excluded:
   - Pods
   - Carthage
   - docs
+  - fastlane
 
 line_length:
   warning: 180
