@@ -1,67 +1,60 @@
-# notification options
-notifications:
-  email: false
-  slack:
-    rooms:
-      secure: Au0K922OZijH3BHVMrasF4sYp6BCWtbRYyI60tnFx6SCjnDMmZfDjIFRwlrLqbe/GUcWludUICHUpwlztsErGJkvm4Xw3JLeqgNQE8pbwXku9kdDiqXLIZNdRT6GmnEEITChrwiRmHYtTS3wcQbapFk1rLWR+8leIn8ow3+zIWnla3aZ5UTWHgU+k1HZNFRcgpoH8y4uKKPQ3XPXrhwkEpbB3ywmiYZgUsPpvqMq7NeJASGHoqLxKiNkLqyKIeyvT+7boEM3smbg0mzc+uC0SFVP6BZ1rfAVjFag8pK01UVctQhfxtFgaM/KbipJcTvqoOwxxz4XRYfZBlFQeEElqtA63TiNMOlHcDdYUJABszUyxA1/3NjSN/WwczFRAN7bCFUYE/NDMMbbeptapdjfGRgBa7EsMFES2tUpicDO4cZNZg19Ymjut5BVTto2luov7FPKbefQJcOxynoS+e5+I8w4qoAlRgOdgyBBIP1BA2vDvs9ECvXp+6wJb++lVyTibrQozdhCN2Lk3dSo2gCJjc94zuHnsm1girhZuRQbJmaHorQ+y0DYCsNgpVrgugMbPai0C/RY7oBunvcrYskQXClqWMM1mB3g4z5ALTeK0rNlxkKEwH8G4idUjRN/3afWaAP9RpM3EQPon60msuhMsTufmXLafX5twTYki8OoB08=
-    on_success: always
-    on_failure: always
-
-
 # language
-language: objective-c
+language: swift
 
 # language options
-osx_image: xcode9.1
+osx_image: xcode11.3
+
+# dependencies
+addons:
+  homebrew:
+    packages:
+    - swiftlint
+    update: true
+
+# cache
+cache:
+  - bundler
 
 # branches to run
 
-
-# environment variables
+# global environment variables
 env:
-  # global: the same across all matrix possibilities
   global:
     - LANG=en_US.UTF-8
 
     - PROJECT="toscoz.xcodeproj"
     - IOS_SCHEME="toscoz"
 
-    - IOS_SDK=iphonesimulator11.1
-
-  # matrix: a new build for each specified variable
-  matrix:
-    - DESTINATION="OS=11.1,name=iPhone X"                               SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
-    # - DESTINATION="OS=11.1,name=iPhone 8 Plus"                          SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
-    - DESTINATION="OS=11.1,name=iPhone 8"                               SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
-    # - DESTINATION="OS=11.1,name=iPhone SE"                              SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
-
-    # - DESTINATION="OS=11.1,name=iPad (5th generation)"                  SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
-    # - DESTINATION="OS=11.1,name=iPad Air 2"                             SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
-    - DESTINATION="OS=11.1,name=iPad Pro (10.5-inch)"                   SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
-    # - DESTINATION="OS=11.1,name=iPad Pro (12.9-inch) (2nd generation)"  SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"
-
+    - IOS_SDK=iphonesimulator13.2
 
 ####################
-## begin build steps
 
-before_install:
-  - brew update
-  - brew outdated carthage || brew upgrade carthage
-  - fastlane update_fastlane
+jobs:
+  include:
+    - stage: resources
+      name: "Swiftlint"
+      script: swiftlint
 
-before_script:
-  - carthage bootstrap --platform iOS
+    - &unit-test
+      stage: unit tests
+      name: "Unit Testing"
+      env: SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" DESTINATION="OS=13.2,name=iPhone 11 Pro"
+      script: 
+        - xcodebuild -version -sdk
+        - xcodebuild analyze test -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -configuration Debug -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
 
-script:
-- xcodebuild analyze test -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -configuration Debug -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
-- fastlane do_ui_tests
-# - fastlane do_danger_check
+    - <<: *unit-test
+      env: SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" DESTINATION="OS=13.2,name=iPhone 8"
+      script:
+        - xcodebuild -version -sdk
+        - xcodebuild analyze test -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -configuration Debug -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
+    - <<: *unit-test
+      env: SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" DESTINATION="OS=13.2,name=iPad Pro (11-inch)"
+      script:
+        - xcodebuild -version -sdk
+        - xcodebuild analyze test -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -configuration Debug -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
 
-after_success:
-- bash <(curl -s https://codecov.io/bash) -J 'toscoz'
-# - fastlane do_build_version buildID:$TRAVIS_JOB_NUMBER
-# - git commit -a -m "Committed by Travis-CI build number: $TRAVIS_JOB_NUMBER"
-
-
-####################
-## Deployment options
+stages:
+- resources
+- unit tests
+#- ui tests
