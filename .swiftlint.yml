@@ -116,6 +116,10 @@ excluded:
   - docs
   - fastlane
 
+included:
+    - toscoz
+    - toscozTests
+
 line_length:
   warning: 180
   error: 200
