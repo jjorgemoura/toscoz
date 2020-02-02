@@ -38,6 +38,7 @@
 		CF4DACDD23DBA81900F60F63 /* toscozTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = toscozTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF4DACE123DBA81900F60F63 /* ToscozTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToscozTests.swift; sourceTree = "<group>"; };
 		CF4DACE323DBA81900F60F63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF83406123E6DDD0000FA5C3 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +80,12 @@
 		CF4DACC923DBA81600F60F63 /* toscoz */ = {
 			isa = PBXGroup;
 			children = (
+				CF83406323E6E2F5000FA5C3 /* Features */,
+				CF83406223E6E26E000FA5C3 /* Resources */,
+				CF4DACD223DBA81800F60F63 /* Preview Content */,
 				CF4DACCA23DBA81600F60F63 /* AppDelegate.swift */,
 				CF4DACCC23DBA81600F60F63 /* SceneDelegate.swift */,
-				CF4DACCE23DBA81600F60F63 /* ContentView.swift */,
-				CF4DACD023DBA81800F60F63 /* Assets.xcassets */,
-				CF4DACD523DBA81800F60F63 /* LaunchScreen.storyboard */,
 				CF4DACD823DBA81800F60F63 /* Info.plist */,
-				CF4DACD223DBA81800F60F63 /* Preview Content */,
 			);
 			path = toscoz;
 			sourceTree = "<group>";
@@ -105,6 +105,31 @@
 				CF4DACE323DBA81900F60F63 /* Info.plist */,
 			);
 			path = toscozTests;
+			sourceTree = "<group>";
+		};
+		CF83406223E6E26E000FA5C3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CF4DACD523DBA81800F60F63 /* LaunchScreen.storyboard */,
+				CF4DACD023DBA81800F60F63 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CF83406323E6E2F5000FA5C3 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				CF83406423E6E2FC000FA5C3 /* Main */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		CF83406423E6E2FC000FA5C3 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CF4DACCE23DBA81600F60F63 /* ContentView.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +197,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-PT",
 			);
 			mainGroup = CF4DACBE23DBA81600F60F63;
 			productRefGroup = CF4DACC823DBA81600F60F63 /* Products */;
@@ -259,6 +285,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CF4DACD623DBA81800F60F63 /* Base */,
+				CF83406123E6DDD0000FA5C3 /* pt-PT */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -270,6 +297,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -316,7 +344,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -330,6 +358,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -370,7 +399,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

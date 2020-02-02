@@ -116,7 +116,7 @@ excluded:
   - docs
 
 line_length:
-  warning: 140
+  warning: 180
   error: 200
 
 file_length:
