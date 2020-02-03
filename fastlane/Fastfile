@@ -11,15 +11,23 @@ platform :ios do
   end
 
   lane :run_unit_tests do
-    scan(scheme: ENV["XCODE_SCHEME_TESTS"])
+    scan(
+      scheme: ENV["XCODE_SCHEME_TESTS"],
+      device: "iPhone 11 Pro",
+      code_coverage: true,
+      clean: true
+      )
   end
 
   lane :run_ui_tests do
-    scan(scheme: ENV["XCODE_SCHEME_UI_TESTS"])
+    scan(
+      scheme: ENV["XCODE_SCHEME_UI_TESTS"],
+      clean: true
+      )
   end
 
   lane :do_beta do |option|
-    do_validation option
+    #do_validation option
     #check_resources
     #run_unit_tests
     #run_ui_tests
@@ -27,8 +35,17 @@ platform :ios do
     #set_tag
     #generate_documentation
     
-    #gym(scheme: xcode_scheme_main, export_method: "development")
-    # pilot(username: appleid_user, skip_submission: true)
+    gym(
+      project: ENV["XCODE_PROJECT_NAME"], 
+      scheme: ENV["XCODE_SCHEME"], 
+      configuration: "Release",
+      clean: true,
+      export_method: "development"
+      )
+    
+    pilot(
+      skip_submission: true
+    )
   end
 
 
@@ -53,5 +70,35 @@ platform :ios do
     end
   end
 
+  desc "Versioning -> Increase: MAJOR, MINOR or PATCH"
+  private_lane :bump_version do |option|
+    if option[:version] == "MAJOR"
+      increment_version_number(
+        bump_type: "major"
+      )
+    end
+    if option[:version] == "MINOR"
+      increment_version_number(
+        bump_type: "minor"
+      )
+    end
+    if option[:version] == "PATCH"
+      increment_version_number(
+        bump_type: "patch"
+      )
+    end
+  end
 
+  desc "Tag the current version with Xcode's current version"
+  private_lane :set_tag do
+    tagID = "v" + get_version_number
+    add_git_tag(
+      tag: tagID
+    )
+  end
+
+  desc "Runs Documentation"
+  private_lane :generate_documentation do
+    jazzy(config: ".jazzy.yaml")
+  end
 end

@@ -1,0 +1,103 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/AppDelegate.swift",
+      "line": 14,
+      "symbol": "AppDelegate",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/AppDelegate.swift",
+      "line": 15,
+      "symbol": "AppDelegate.application(_:didFinishLaunchingWithOptions:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/AppDelegate.swift",
+      "line": 22,
+      "symbol": "AppDelegate.application(_:configurationForConnecting:options:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/AppDelegate.swift",
+      "line": 28,
+      "symbol": "AppDelegate.application(_:didDiscardSceneSessions:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Features/Main/ContentView.swift",
+      "line": 11,
+      "symbol": "ContentView",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Features/Main/ContentView.swift",
+      "line": 17,
+      "symbol": "ContentView_Previews",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/SceneDelegate.swift",
+      "line": 12,
+      "symbol": "SceneDelegate",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/SceneDelegate.swift",
+      "line": 13,
+      "symbol": "SceneDelegate.window",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/SceneDelegate.swift",
+      "line": 15,
+      "symbol": "SceneDelegate.scene(_:willConnectTo:options:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/SceneDelegate.swift",
+      "line": 32,
+      "symbol": "SceneDelegate.sceneDidDisconnect(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/SceneDelegate.swift",
+      "line": 39,
+      "symbol": "SceneDelegate.sceneDidBecomeActive(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/SceneDelegate.swift",
+      "line": 44,
+      "symbol": "SceneDelegate.sceneWillResignActive(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/SceneDelegate.swift",
+      "line": 49,
+      "symbol": "SceneDelegate.sceneWillEnterForeground(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/SceneDelegate.swift",
+      "line": 54,
+      "symbol": "SceneDelegate.sceneDidEnterBackground(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/jorge/Developer/myProjs/toscoz"
+}
