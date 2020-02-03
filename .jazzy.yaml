@@ -1,23 +1,23 @@
 author: "Jorge Moura"
 author_url: http://www.jjorgemoura.com
-copyright: Copyright © 2017 Jorge Moura
+copyright: Copyright © 2020 Jorge Moura
 readme: README.md
 
 github_url: https://github.com/jjorgemoura/toscoz
 github_file_prefix: https://github.com/jjorgemoura/toscoz/tree/master
 
 # root_url:
-docset_icon: fastlane/resources/docset-icon@2x.png
+# docset_icon: fastlane/resources/docset-icon@2x.png
 
 output: docs
 theme: apple
 
 sdk: iphoneos
-swift-version: 4.0
+swift-version: 5.1
 source-directory: toscoz/
 clean: true
 
-hide_documentation_coverage: false
+hide_documentation_coverage: true
 skip-undocumented: false
 min_acl: "internal"
 

@@ -1,78 +1,77 @@
 
 # fastlane constants
-fastlane_version "2.64.0"
+fastlane_version "2.130.0"
 default_platform :ios
-
-# constants
-xcode_scheme_main = "toscoz"
-xcode_scheme_uitests = "toscoz"
-appleid_user = CredentialsManager::AppfileConfig.try_fetch_value(:apple_id)
-
 
 ## ios lanes setup ##
 platform :ios do
 
-  # tests
-  desc "Runs all the tests (unit tests + UI tests)"
-  lane :do_tests do
-    do_unit_tests
-    do_ui_tests
-  end
-
-  desc "Runs unit tests"
-  lane :do_unit_tests do
-    scan(scheme: xcode_scheme_main)
-  end
-
-  desc "Run UI tests"
-  lane :do_ui_tests do
-    scan(scheme: xcode_scheme_uitests)
-  end
-
-
-  # betas
-  desc "Submit a new build to TestFlight. Must send parameter version=MAJOR, MINOR or PATCH"
-  desc "For version use: MAJOR -> a major release of the app || MINOR -> for the release of some new features || PATCH -> for a bug fixes release."
-  lane :do_beta do |option|
-    do_validation option
-    do_resources_check
-    do_tests
-    do_version option
-    do_tag
-    gym(scheme: xcode_scheme_main, export_method: "development")
-    # pilot(username: appleid_user, skip_submission: true)
-    do_documentation
-  end
-
-
-  # release
-  desc "Deploy a new version to the App Store (NOT WORKING YET)"
-  lane :do_release do
-    precheck
-    # match(type: "appstore")
-    # snapshot
-    # gym(scheme: xcode_scheme_main, export_method: "development")
-    # deliver(force: true)
-    # frameit
-  end
-
-
-  # auxiliar lanes
-  desc "Runs Check Resources"
-  private_lane :do_resources_check do
+  lane :check_resources do
     swiftlint
   end
 
-  desc "Tag the current version with Xcode's current version"
-  private_lane :do_tag do
-    tagID = "v" + get_version_number
-    add_git_tag(
-      tag: tagID
+  lane :run_unit_tests do
+    scan(
+      scheme: ENV["XCODE_SCHEME_TESTS"],
+      device: "iPhone 11 Pro",
+      code_coverage: true,
+      clean: true
+      )
+  end
+
+  lane :run_ui_tests do
+    scan(
+      scheme: ENV["XCODE_SCHEME_UI_TESTS"],
+      clean: true
+      )
+  end
+
+  lane :do_beta do |option|
+    #do_validation option
+    #check_resources
+    #run_unit_tests
+    #run_ui_tests
+    #bump_version option
+    #set_tag
+    #generate_documentation
+    
+    gym(
+      project: ENV["XCODE_PROJECT_NAME"], 
+      scheme: ENV["XCODE_SCHEME"], 
+      configuration: "Release",
+      clean: true,
+      export_method: "development"
+      )
+    
+    pilot(
+      skip_submission: true
     )
   end
 
+
+  ###### Auxiliar Lanes ######
+
+  desc "Validate the version command and the branch. Must send parameter version=MAJOR, MINOR or PATCH"
+  private_lane :do_validation do |option|
+
+    #ensure_git_branch(
+    #  branch: 'master'
+    #)
+
+    if option[:version]
+      UI.important "Validating the version bump parameter with value: " + option[:version]
+      if option[:version] != "MAJOR" && option[:version] != "MINOR" && option[:version] != "PATCH"
+        UI.error "ATTENTION: Please, user the parameter 'version' with the values MAJOR, MINOR or PATCH!!!"
+        UI.user_error! "Execution aborted by bad input!!!"
+      end
+    else
+      UI.error "ATTENTION: Please, use the parameter 'version' to set the bump desired!!!"
+      UI.user_error! "Execution aborted by bad input!!!"
+    end
+  end
+
   desc "Versioning -> Increase: MAJOR, MINOR or PATCH"
-  private_lane :do_version do |option|
+  private_lane :bump_version do |option|
     if option[:version] == "MAJOR"
       increment_version_number(
         bump_type: "major"
@@ -90,74 +89,16 @@ platform :ios do
     end
   end
 
-  desc "Validate the version command and the branch"
-  private_lane :do_validation do |option|
-
-    if git_branch != "master"
-      UI.error "ATTENTION: Please, run this commmand on branch master!!!"
-      abort
-    end
-
-    if option[:version]
-      UI.important "Validating the version bump parameter with value: " + option[:version]
-      if option[:version] != "MAJOR" && option[:version] != "MINOR" && option[:version] != "PATCH"
-        UI.error "ATTENTION: Please, user the parameter 'version' with the values MAJOR, MINOR or PATCH!!!"
-        abort
-      end
-    else
-      UI.error "ATTENTION: Please, use the parameter 'version' to set the bump desired!!!"
-      abort
-    end
-  end
-
-  desc "Runs Danger"
-  private_lane :do_danger_check do
-    danger(
-      verbose: true
+  desc "Tag the current version with Xcode's current version"
+  private_lane :set_tag do
+    tagID = "v" + get_version_number
+    add_git_tag(
+      tag: tagID
     )
   end
 
   desc "Runs Documentation"
-  lane :do_documentation do
+  private_lane :generate_documentation do
     jazzy(config: ".jazzy.yaml")
-  end
-
-  desc "Increment Xcode's build version. Pass parameter buildID:XXXXX"
-  lane :do_build_version do |option|
-    if git_branch != "master"
-      abort
-    end
-    # build_number = get_build_number().to_i + 1
-    build_number = ""
-
-    if option[:buildID]
-      build_number = option[:buildID]
-    end
-
-    UI.important "Set the Build Version with value: #{build_number}"
-    increment_build_number(
-      build_number: build_number
-    )
-  end
-
-  # constants
-  before_all do
-    # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
-    # carthage
-  end
-
-  after_all do |lane|
-    # This block is called, only if the executed lane was successful
-
-    # slack(
-    #   message: "Successfully deployed new App Update."
-    # )
-  end
-
-  error do |lane, exception|
-    # slack(
-    #   message: exception.message,
-    #   success: false
-    # )
   end
 end
