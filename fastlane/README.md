@@ -8,65 +8,34 @@ Make sure you have the latest version of the Xcode command line tools installed:
 xcode-select --install
 ```
 
-## Choose your installation method:
-
-<table width="100%" >
-<tr>
-<th width="33%"><a href="http://brew.sh">Homebrew</a></th>
-<th width="33%">Installer Script</th>
-<th width="33%">RubyGems</th>
-</tr>
-<tr>
-<td width="33%" align="center">macOS</td>
-<td width="33%" align="center">macOS</td>
-<td width="33%" align="center">macOS or Linux with Ruby 2.0.0 or above</td>
-</tr>
-<tr>
-<td width="33%"><code>brew cask install fastlane</code></td>
-<td width="33%"><a href="https://download.fastlane.tools">Download the zip file</a>. Then double click on the <code>install</code> script (or run it in a terminal window).</td>
-<td width="33%"><code>sudo gem install fastlane -NV</code></td>
-</tr>
-</table>
+Install _fastlane_ using
+```
+[sudo] gem install fastlane -NV
+```
+or alternatively using `brew cask install fastlane`
 
 # Available Actions
 ## iOS
-### ios do_tests
+### ios check_resources
 ```
-fastlane ios do_tests
+fastlane ios check_resources
 ```
-Runs all the tests (unit tests + UI tests)
-### ios do_unit_tests
+
+### ios run_unit_tests
 ```
-fastlane ios do_unit_tests
+fastlane ios run_unit_tests
 ```
-Runs unit tests
-### ios do_ui_tests
+
+### ios run_ui_tests
 ```
-fastlane ios do_ui_tests
+fastlane ios run_ui_tests
 ```
-Run UI tests
+
 ### ios do_beta
 ```
 fastlane ios do_beta
 ```
-Submit a new build to TestFlight. Must send parameter version=MAJOR, MINOR or PATCH
 
-For version use: MAJOR -> a major release of the app || MINOR -> for the release of some new features || PATCH -> for a bug fixes release.
-### ios do_release
-```
-fastlane ios do_release
-```
-Deploy a new version to the App Store (NOT WORKING YET)
-### ios do_documentation
-```
-fastlane ios do_documentation
-```
-Runs Documentation
-### ios do_build_version
-```
-fastlane ios do_build_version
-```
-Increment Xcode's build version. Pass parameter buildID:XXXXX
 
 ----
 
