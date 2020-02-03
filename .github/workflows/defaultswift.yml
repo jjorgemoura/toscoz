@@ -14,5 +14,3 @@ jobs:
       run: bundle update --bundler
     - name: Build and Tests 
       run: bundle exec fastlane run_unit_tests
-    - name: Codecov
-      run: - bash <(curl -s https://codecov.io/bash) -J 'toscoz'
