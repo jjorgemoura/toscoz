@@ -27,25 +27,25 @@ platform :ios do
   end
 
   lane :do_beta do |option|
-    #do_validation option
-    #check_resources
-    #run_unit_tests
+    do_validation option
+    check_resources
+    run_unit_tests
     #run_ui_tests
-    #bump_version option
-    #set_tag
-    #generate_documentation
+    bump_version option
+    set_tag
+    generate_documentation
     
-    gym(
-      project: ENV["XCODE_PROJECT_NAME"], 
-      scheme: ENV["XCODE_SCHEME"], 
-      configuration: "Release",
-      clean: true,
-      export_method: "development"
-      )
+    #gym(
+    #  project: ENV["XCODE_PROJECT_NAME"], 
+    #  scheme: ENV["XCODE_SCHEME"], 
+    #  configuration: "Release",
+    #  clean: true,
+    #  export_method: "development"
+    #)
     
-    pilot(
-      skip_submission: true
-    )
+    #pilot(
+    #  skip_submission: true
+    #)
   end
 
 
@@ -54,9 +54,9 @@ platform :ios do
   desc "Validate the version command and the branch. Must send parameter version=MAJOR, MINOR or PATCH"
   private_lane :do_validation do |option|
 
-    #ensure_git_branch(
-    #  branch: 'master'
-    #)
+    ensure_git_branch(
+      branch: 'master'
+    )
 
     if option[:version]
       UI.important "Validating the version bump parameter with value: " + option[:version]
