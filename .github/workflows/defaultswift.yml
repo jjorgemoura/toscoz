@@ -8,6 +8,9 @@ jobs:
     runs-on: macOS-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Bundle Install 
+      run: bundle install
     - name: Build and Tests 
       run: bundle exec fastlane run_unit_tests
