@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5996B20B23ECC4D3004384CB /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5996B20A23ECC4D3004384CB /* Typography.swift */; };
+		5996B20D23ECC95A004384CB /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5996B20C23ECC95A004384CB /* Fonts.swift */; };
+		59C2FCD723EB7EC800785D75 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C2FCD623EB7EC800785D75 /* UIColor+App.swift */; };
 		CF4DACCB23DBA81600F60F63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4DACCA23DBA81600F60F63 /* AppDelegate.swift */; };
 		CF4DACCD23DBA81600F60F63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4DACCC23DBA81600F60F63 /* SceneDelegate.swift */; };
 		CF4DACCF23DBA81600F60F63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4DACCE23DBA81600F60F63 /* ContentView.swift */; };
@@ -27,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5996B20A23ECC4D3004384CB /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		5996B20C23ECC95A004384CB /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		59C2FCD623EB7EC800785D75 /* UIColor+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
 		CF4DACC723DBA81600F60F63 /* toscoz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toscoz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF4DACCA23DBA81600F60F63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF4DACCC23DBA81600F60F63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +65,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59C2FCD423EB7E1300785D75 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				59C2FCD523EB7E3A00785D75 /* Foundation */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		59C2FCD523EB7E3A00785D75 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				59C2FCD623EB7EC800785D75 /* UIColor+App.swift */,
+				5996B20A23ECC4D3004384CB /* Typography.swift */,
+				5996B20C23ECC95A004384CB /* Fonts.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
 		CF4DACBE23DBA81600F60F63 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +104,7 @@
 		CF4DACC923DBA81600F60F63 /* toscoz */ = {
 			isa = PBXGroup;
 			children = (
+				59C2FCD423EB7E1300785D75 /* Application */,
 				CF83406323E6E2F5000FA5C3 /* Features */,
 				CF83406223E6E26E000FA5C3 /* Resources */,
 				CF4DACD223DBA81800F60F63 /* Preview Content */,
@@ -256,8 +281,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5996B20B23ECC4D3004384CB /* Typography.swift in Sources */,
 				CF4DACCB23DBA81600F60F63 /* AppDelegate.swift in Sources */,
+				59C2FCD723EB7EC800785D75 /* UIColor+App.swift in Sources */,
 				CF4DACCD23DBA81600F60F63 /* SceneDelegate.swift in Sources */,
+				5996B20D23ECC95A004384CB /* Fonts.swift in Sources */,
 				CF4DACCF23DBA81600F60F63 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
