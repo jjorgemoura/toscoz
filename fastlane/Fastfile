@@ -27,7 +27,12 @@ platform :ios do
   end
 
   lane :do_beta do |option|
-    do_validation option
+
+    ensure_git_branch(
+      branch: 'master'
+    )
+
+    version_parameter_validation option
     check_resources
     run_unit_tests
     #run_ui_tests
@@ -59,11 +64,7 @@ platform :ios do
   ###### Auxiliar Lanes ######
 
   desc "Validate the version command and the branch. Must send parameter version=MAJOR, MINOR or PATCH"
-  private_lane :do_validation do |option|
-
-    ensure_git_branch(
-      branch: 'master'
-    )
+  private_lane :version_parameter_validation do |option|
 
     if option[:version]
       UI.important "Validating the version bump parameter with value: " + option[:version]
