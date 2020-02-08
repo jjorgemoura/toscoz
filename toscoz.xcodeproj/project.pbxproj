@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF37EBAB23EF2AD7009A8BC0 /* MyAlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF37EBAA23EF2AD7009A8BC0 /* MyAlbumsViewController.swift */; };
 		CF4DACCB23DBA81600F60F63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4DACCA23DBA81600F60F63 /* AppDelegate.swift */; };
 		CF4DACCD23DBA81600F60F63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4DACCC23DBA81600F60F63 /* SceneDelegate.swift */; };
 		CF4DACCF23DBA81600F60F63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4DACCE23DBA81600F60F63 /* ContentView.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF37EBAA23EF2AD7009A8BC0 /* MyAlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlbumsViewController.swift; sourceTree = "<group>"; };
 		CF4DACC723DBA81600F60F63 /* toscoz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toscoz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF4DACCA23DBA81600F60F63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF4DACCC23DBA81600F60F63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF37EBA923EF2A06009A8BC0 /* Albums */ = {
+			isa = PBXGroup;
+			children = (
+				CF37EBAA23EF2AD7009A8BC0 /* MyAlbumsViewController.swift */,
+			);
+			path = Albums;
+			sourceTree = "<group>";
+		};
 		CF4DACBE23DBA81600F60F63 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +129,7 @@
 		CF83406323E6E2F5000FA5C3 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				CF37EBA923EF2A06009A8BC0 /* Albums */,
 				CF83406423E6E2FC000FA5C3 /* Main */,
 			);
 			path = Features;
@@ -256,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF37EBAB23EF2AD7009A8BC0 /* MyAlbumsViewController.swift in Sources */,
 				CF4DACCB23DBA81600F60F63 /* AppDelegate.swift in Sources */,
 				CF4DACCD23DBA81600F60F63 /* SceneDelegate.swift in Sources */,
 				CF4DACCF23DBA81600F60F63 /* ContentView.swift in Sources */,
