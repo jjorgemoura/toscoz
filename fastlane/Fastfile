@@ -32,8 +32,15 @@ platform :ios do
     run_unit_tests
     #run_ui_tests
     bump_version option
-    set_tag
     generate_documentation
+
+    git_commit(
+      path: "*.*", 
+      message: "Release new Beta!"
+      )
+      
+    set_tag
+    push_git_tags
     
     #gym(
     #  project: ENV["XCODE_PROJECT_NAME"], 
