@@ -1,8 +1,4 @@
 //
-//  SceneDelegate.swift
-//  toscoz
-//
-//  Created by Jorge Moura on 24/01/2020.
 //  Copyright © 2020 Jorge Moura. All rights reserved.
 //
 
