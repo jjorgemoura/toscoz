@@ -3,7 +3,7 @@
 //
 
 import UIKit
-import os.log
+//import os.log
 
 class MyAlbumsViewController: UIViewController {
 
@@ -12,9 +12,11 @@ class MyAlbumsViewController: UIViewController {
     var viewModel: MyAlbumsViewModel?
 
     override func loadView() {
+        viewModel = MyAlbumsViewModel()
+        
         let mainTableView = UITableView(frame: .zero, style: .plain)
-        mainTableView.delegate = self
-        mainTableView.dataSource = self
+        mainTableView.delegate = viewModel
+        mainTableView.dataSource = viewModel
 
         mainTableView.register(UINib(nibName: "MyAlbumsViewCell", bundle: nil), forCellReuseIdentifier: MyAlbumsViewCell.cellIdentifier)
 
@@ -30,24 +32,7 @@ class MyAlbumsViewController: UIViewController {
         tableView?.rowHeight = UITableView.automaticDimension
         tableView?.estimatedRowHeight = 116
         tableView?.backgroundColor = .yellow
+
+        viewModel?.fetchData()
     }
-}
-
-extension MyAlbumsViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: MyAlbumsViewCell.cellIdentifier, for: indexPath) as? MyAlbumsViewCell {
-            cell.configure(viewModel: "adsfadsf")
-            return cell
-        }
-
-        os_log("asdsadasd")
-        return UITableViewCell()
-    }
-}
-
-extension MyAlbumsViewController: UITableViewDelegate {
 }

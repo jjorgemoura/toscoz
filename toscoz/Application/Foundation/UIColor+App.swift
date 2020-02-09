@@ -6,13 +6,13 @@ import UIKit
 
 extension UIColor {
 
-//    convenience init(colorSetName: String) {
-//        self.init(named: colorSetName) ?? UIColor.blue
-//    }
+    static var appPrimary: UIColor {
+        AssetColor(assetName: "tosco").color
+    }
 
-//    static var appPrimary: UIColor {
-//        UIColor(colorSetName: "toscoGreen")
-//    }
+    static var appLabel: UIColor {
+        .label
+    }
 
     static var appLink: UIColor {
         .link

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59C51DC223F0587700C773D4 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C51DBF23F0587700C773D4 /* UIColor+App.swift */; };
+		59C51DC323F0587700C773D4 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C51DC023F0587700C773D4 /* Typography.swift */; };
+		59C51DC423F0587700C773D4 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C51DC123F0587700C773D4 /* Fonts.swift */; };
+		59C51DC623F0837B00C773D4 /* AssetColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C51DC523F0837B00C773D4 /* AssetColor.swift */; };
 		CF1F389023F0148500380E80 /* MyAlbumsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F388F23F0148500380E80 /* MyAlbumsViewCell.swift */; };
 		CF1F389223F0152300380E80 /* MyAlbumsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1F389123F0152300380E80 /* MyAlbumsViewCell.xib */; };
 		CF1F389423F035DD00380E80 /* MyAlbumsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F389323F035DD00380E80 /* MyAlbumsViewModel.swift */; };
@@ -36,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		59C51DBF23F0587700C773D4 /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
+		59C51DC023F0587700C773D4 /* Typography.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		59C51DC123F0587700C773D4 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		59C51DC523F0837B00C773D4 /* AssetColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetColor.swift; sourceTree = "<group>"; };
 		CF1F388F23F0148500380E80 /* MyAlbumsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlbumsViewCell.swift; sourceTree = "<group>"; };
 		CF1F389123F0152300380E80 /* MyAlbumsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyAlbumsViewCell.xib; sourceTree = "<group>"; };
 		CF1F389323F035DD00380E80 /* MyAlbumsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlbumsViewModel.swift; sourceTree = "<group>"; };
@@ -77,6 +85,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59C51DBD23F0587700C773D4 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				59C51DBE23F0587700C773D4 /* Foundation */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		59C51DBE23F0587700C773D4 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				59C51DC523F0837B00C773D4 /* AssetColor.swift */,
+				59C51DBF23F0587700C773D4 /* UIColor+App.swift */,
+				59C51DC023F0587700C773D4 /* Typography.swift */,
+				59C51DC123F0587700C773D4 /* Fonts.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
 		CF1F389523F0363E00380E80 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +148,7 @@
 		CF4DACC923DBA81600F60F63 /* toscoz */ = {
 			isa = PBXGroup;
 			children = (
+				59C51DBD23F0587700C773D4 /* Application */,
 				CF1F389523F0363E00380E80 /* Model */,
 				CF83406323E6E2F5000FA5C3 /* Features */,
 				CF83406223E6E26E000FA5C3 /* Resources */,
@@ -300,16 +328,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59C51DC623F0837B00C773D4 /* AssetColor.swift in Sources */,
+				59C51DC423F0587700C773D4 /* Fonts.swift in Sources */,
 				CF37EBAB23EF2AD7009A8BC0 /* MyAlbumsViewController.swift in Sources */,
 				CF4DACCB23DBA81600F60F63 /* AppDelegate.swift in Sources */,
 				CF4DACCD23DBA81600F60F63 /* SceneDelegate.swift in Sources */,
 				CF1F389B23F03D5100380E80 /* Artist.swift in Sources */,
 				CF1F389023F0148500380E80 /* MyAlbumsViewCell.swift in Sources */,
+				59C51DC223F0587700C773D4 /* UIColor+App.swift in Sources */,
 				CF1F389923F03D2600380E80 /* Song.swift in Sources */,
 				CF1F389423F035DD00380E80 /* MyAlbumsViewModel.swift in Sources */,
 				CF1F389723F0365C00380E80 /* Discography.swift in Sources */,
 				CF1F389F23F03E2400380E80 /* Profile.swift in Sources */,
 				CF4DACCF23DBA81600F60F63 /* ContentView.swift in Sources */,
+				59C51DC323F0587700C773D4 /* Typography.swift in Sources */,
 				CF1F389D23F03D7000380E80 /* Playlist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

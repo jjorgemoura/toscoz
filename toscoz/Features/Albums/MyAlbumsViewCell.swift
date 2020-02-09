@@ -11,9 +11,11 @@ class MyAlbumsViewCell: UITableViewCell {
     @IBOutlet private var titleLabel: UILabel?
     @IBOutlet private var artistLabel: UILabel?
 
-    func configure(viewModel: String) {
+    func configure(viewModel: Discography) {
         backgroundColor = .cyan
-        titleLabel?.text = viewModel
-        artistLabel?.text = "Pink Floyd"
+        titleLabel?.text = viewModel.title
+        artistLabel?.text = viewModel.artist
+
+        titleLabel?.style(as: .title)
     }
 }
