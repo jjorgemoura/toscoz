@@ -22,12 +22,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
             //window.rootViewController = UIHostingController(rootView: contentView)
 
-            let mainViewController = MyAlbumsViewController()
+            let mainViewController = DiscographyViewController()
             window.rootViewController = UINavigationController(rootViewController: mainViewController)
 
             self.window = window
             window.makeKeyAndVisible()
         }
+    }
+
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        print(URLContexts)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

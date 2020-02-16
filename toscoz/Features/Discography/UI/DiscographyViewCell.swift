@@ -4,9 +4,9 @@
 
 import UIKit
 
-class MyAlbumsViewCell: UITableViewCell {
+class DiscographyViewCell: UITableViewCell {
 
-    static let cellIdentifier = "MyAlbumsViewCell"
+    static let cellIdentifier = "DiscographyViewCell"
 
     @IBOutlet private var titleLabel: UILabel?
     @IBOutlet private var artistLabel: UILabel?

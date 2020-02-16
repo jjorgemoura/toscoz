@@ -1,8 +1,4 @@
 //
-//  AssetColor.swift
-//  toscoz
-//
-//  Created by Jorge Moura on 09/02/2020.
 //  Copyright © 2020 Jorge Moura. All rights reserved.
 //
 

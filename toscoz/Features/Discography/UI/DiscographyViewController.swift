@@ -5,20 +5,20 @@
 import UIKit
 //import os.log
 
-class MyAlbumsViewController: UIViewController {
+class DiscographyViewController: UIViewController {
 
     private var tableView: UITableView?
 
-    var viewModel: MyAlbumsViewModel?
+    var viewModel: DiscographyViewModel?
 
     override func loadView() {
-        viewModel = MyAlbumsViewModel()
-        
+        viewModel = DiscographyViewModel(interactor: DiscographyInteractor(repo: DiscographyRemoteRepository()))
+
         let mainTableView = UITableView(frame: .zero, style: .plain)
         mainTableView.delegate = viewModel
         mainTableView.dataSource = viewModel
 
-        mainTableView.register(UINib(nibName: "MyAlbumsViewCell", bundle: nil), forCellReuseIdentifier: MyAlbumsViewCell.cellIdentifier)
+        mainTableView.register(UINib(nibName: "DiscographyViewCell", bundle: nil), forCellReuseIdentifier: DiscographyViewCell.cellIdentifier)
 
         view = mainTableView
         tableView = mainTableView
