@@ -32,6 +32,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
         print(URLContexts)
+
+        if (URLContexts != nil) {
+            SpotifyKit.spotifyToken = ""
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -3,4 +3,6 @@
 //
 
 struct SpotifyKit {
+
+    static var spotifyToken: String?
 }
