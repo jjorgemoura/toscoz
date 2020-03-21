@@ -29,6 +29,20 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Features/Main/ContentView.swift",
+      "line": 11,
+      "symbol": "ContentView",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Features/Main/ContentView.swift",
+      "line": 17,
+      "symbol": "ContentView_Previews",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/SceneDelegate.swift",
       "line": 12,
       "symbol": "SceneDelegate",
@@ -82,20 +96,6 @@
       "line": 54,
       "symbol": "SceneDelegate.sceneDidEnterBackground(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/features/Main/ContentView.swift",
-      "line": 11,
-      "symbol": "ContentView",
-      "symbol_kind": "source.lang.swift.decl.struct",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/features/Main/ContentView.swift",
-      "line": 17,
-      "symbol": "ContentView_Previews",
-      "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     }
   ],
