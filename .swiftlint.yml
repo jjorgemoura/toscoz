@@ -136,13 +136,3 @@ identifier_name:
 type_name:
   excluded:
     - T
-
-# file_header:
-#   required_pattern: |
-#                     \/\/
-#                     \/\/  .*?\.swift
-#                     \/\/  toscoz
-#                     \/\/
-#                     \/\/  Created by .*? on \d{1,2}\/\d{1,2}\/\d{2}\.
-#                     \/\/  Copyright © \d{4} Jorge Moura\. All rights reserved\.
-#                     \/\/

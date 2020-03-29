@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -40,6 +40,7 @@
 		CF4DACD423DBA81800F60F63 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF4DACD323DBA81800F60F63 /* Preview Assets.xcassets */; };
 		CF4DACD723DBA81800F60F63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF4DACD523DBA81800F60F63 /* LaunchScreen.storyboard */; };
 		CF4DACE223DBA81900F60F63 /* ToscozTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4DACE123DBA81900F60F63 /* ToscozTests.swift */; };
+		CF5E25B7242C1A8400E04577 /* Overture in Frameworks */ = {isa = PBXBuildFile; productRef = CF5E25B6242C1A8400E04577 /* Overture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF5E25B7242C1A8400E04577 /* Overture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +317,9 @@
 			dependencies = (
 			);
 			name = toscoz;
+			packageProductDependencies = (
+				CF5E25B6242C1A8400E04577 /* Overture */,
+			);
 			productName = toscoz;
 			productReference = CF4DACC723DBA81600F60F63 /* toscoz.app */;
 			productType = "com.apple.product-type.application";
@@ -366,6 +371,9 @@
 				"pt-PT",
 			);
 			mainGroup = CF4DACBE23DBA81600F60F63;
+			packageReferences = (
+				CF5E25B5242C1A8400E04577 /* XCRemoteSwiftPackageReference "swift-overture" */,
+			);
 			productRefGroup = CF4DACC823DBA81600F60F63 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -724,6 +732,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CF5E25B5242C1A8400E04577 /* XCRemoteSwiftPackageReference "swift-overture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-overture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CF5E25B6242C1A8400E04577 /* Overture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF5E25B5242C1A8400E04577 /* XCRemoteSwiftPackageReference "swift-overture" */;
+			productName = Overture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CF4DACBF23DBA81600F60F63 /* Project object */;
 }
