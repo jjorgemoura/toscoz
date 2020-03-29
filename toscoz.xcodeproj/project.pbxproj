@@ -33,6 +33,8 @@
 		CF1F389D23F03D7000380E80 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F389C23F03D7000380E80 /* Playlist.swift */; };
 		CF1F389F23F03E2400380E80 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F389E23F03E2400380E80 /* Profile.swift */; };
 		CF37EBAB23EF2AD7009A8BC0 /* DiscographyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF37EBAA23EF2AD7009A8BC0 /* DiscographyViewController.swift */; };
+		CF3FC3DC243146E9006A0435 /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3FC3DB243146E9006A0435 /* Functional.swift */; };
+		CF3FC3DE2431472B006A0435 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3FC3DD2431472B006A0435 /* AppState.swift */; };
 		CF4DACCB23DBA81600F60F63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4DACCA23DBA81600F60F63 /* AppDelegate.swift */; };
 		CF4DACCD23DBA81600F60F63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4DACCC23DBA81600F60F63 /* SceneDelegate.swift */; };
 		CF4DACCF23DBA81600F60F63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4DACCE23DBA81600F60F63 /* ContentView.swift */; };
@@ -80,6 +82,8 @@
 		CF1F389C23F03D7000380E80 /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		CF1F389E23F03E2400380E80 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		CF37EBAA23EF2AD7009A8BC0 /* DiscographyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscographyViewController.swift; sourceTree = "<group>"; };
+		CF3FC3DB243146E9006A0435 /* Functional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functional.swift; sourceTree = "<group>"; };
+		CF3FC3DD2431472B006A0435 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		CF4DACC723DBA81600F60F63 /* toscoz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toscoz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF4DACCA23DBA81600F60F63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF4DACCC23DBA81600F60F63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,10 +150,8 @@
 		59C51DBD23F0587700C773D4 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				CF3FC3DA2431459C006A0435 /* State */,
 				59D3C1D423F9F4BF00F63B62 /* Core */,
-				59173E2A23F9AD1200ACDBF0 /* SpotifyAPI */,
-				596BD3C423F1FD4300A45BF8 /* Network */,
-				59C51DBE23F0587700C773D4 /* Foundation */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -224,6 +226,33 @@
 			path = Discography;
 			sourceTree = "<group>";
 		};
+		CF3FC3D724313D99006A0435 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CF3FC3DB243146E9006A0435 /* Functional.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CF3FC3D824313DEE006A0435 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				59C51DBE23F0587700C773D4 /* Foundation */,
+				CF3FC3D724313D99006A0435 /* Utilities */,
+				59173E2A23F9AD1200ACDBF0 /* SpotifyAPI */,
+				596BD3C423F1FD4300A45BF8 /* Network */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		CF3FC3DA2431459C006A0435 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				CF3FC3DD2431472B006A0435 /* AppState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
 		CF4DACBE23DBA81600F60F63 = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +274,7 @@
 		CF4DACC923DBA81600F60F63 /* toscoz */ = {
 			isa = PBXGroup;
 			children = (
+				CF3FC3D824313DEE006A0435 /* System */,
 				59C51DBD23F0587700C773D4 /* Application */,
 				CF1F389523F0363E00380E80 /* Model */,
 				CF83406323E6E2F5000FA5C3 /* Features */,
@@ -452,12 +482,14 @@
 				CF1F389723F0365C00380E80 /* Discography.swift in Sources */,
 				596BD3C623F1FD6600A45BF8 /* Repository.swift in Sources */,
 				CF1F389F23F03E2400380E80 /* Profile.swift in Sources */,
+				CF3FC3DE2431472B006A0435 /* AppState.swift in Sources */,
 				59173E2C23F9AD2C00ACDBF0 /* AuthenticationRepository.swift in Sources */,
 				59D4286523F86203006A87A4 /* DiscographyInteractor.swift in Sources */,
 				59D4286A23F86711006A87A4 /* AlbumResponse.swift in Sources */,
 				CF4DACCF23DBA81600F60F63 /* ContentView.swift in Sources */,
 				5914A65423F9504E006FCFCC /* DiscographyRemoteRepository.swift in Sources */,
 				59C51DC323F0587700C773D4 /* Typography.swift in Sources */,
+				CF3FC3DC243146E9006A0435 /* Functional.swift in Sources */,
 				CF1F389D23F03D7000380E80 /* Playlist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
