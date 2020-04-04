@@ -34,6 +34,6 @@ Created and maintained by [**Jorge Moura**](http://www.jjorgemoura.com).
 
 `toscoz` is released under an [MIT License][mitLink]. See `LICENSE` for details.
 
-**Copyright &copy; 2017-present Jorge Moura.**
+**Copyright &copy; 2012 Jorge Moura.**
 
 [mitLink]:http://opensource.org/licenses/MIT
