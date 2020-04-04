@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/jjorgemoura/toscoz.svg?branch=master)](http://travis-ci.org/jjorgemoura/toscoz) [![license](https://img.shields.io/github/license/mashape/apistatus.svg)][mitLink] [![codecov](https://codecov.io/gh/jjorgemoura/toscoz/branch/master/graph/badge.svg)](https://codecov.io/gh/jjorgemoura/toscoz)
 
-Toscoz is a Spotify client.
+Toscoz uses the Spotify API.
 
 The main goal of Toscoz is be used as a showcase and be a vehicule to try out new architectures, libraries, tools and best practices in several dimensions. Addtionally, it aims also to try to fix some of the limitations of the official Spotify app, such as it's poor behaviour when used in low or without any connactivity.
 
