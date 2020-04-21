@@ -1,14 +1,8 @@
 //
-//  AppDelegate.swift
-//  toscoz
-//
-//  Created by Jorge Moura on 24/01/2020.
 //  Copyright © 2020 Jorge Moura. All rights reserved.
 //
 
 import UIKit
-
-// swiftlint:disable discouraged_optional_collection
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -31,6 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-}
 
-// swiftlint:enable discouraged_optional_collection
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+        print(url)
+        return true
+    }
+}

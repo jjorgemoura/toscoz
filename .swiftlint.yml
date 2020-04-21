@@ -17,7 +17,7 @@ opt_in_rules:
  - convenience_type
  - discouraged_object_literal
  - discouraged_optional_boolean
- - discouraged_optional_collection
+# - discouraged_optional_collection
  - empty_collection_literal
  - empty_count
  - empty_string
@@ -42,9 +42,9 @@ opt_in_rules:
  - force_unwrapping
  - function_default_parameter_at_end
  - identical_operands
- - implicit_return
+# - implicit_return
  - implicitly_unwrapped_optional
- - indentation_width
+# - indentation_width
  - joined_default_parameter
  - last_where
  - legacy_multiple
@@ -62,7 +62,7 @@ opt_in_rules:
  - multiline_parameters_brackets
  - nimble_operator
  - no_extension_access_modifier
- - no_grouping_extension
+ # - no_grouping_extension
  - nslocalizedstring_key
  - nslocalizedstring_require_bundle
  - number_separator
@@ -76,7 +76,7 @@ opt_in_rules:
  - prefixed_toplevel_constant
  - private_action
  - private_outlet
- - prohibited_interface_builder
+ # - prohibited_interface_builder
  - prohibited_super_call
  - quick_discouraged_call
  - quick_discouraged_focused_test
@@ -89,11 +89,11 @@ opt_in_rules:
  - required_enum_case
  - single_test_class
  - sorted_first_last
- - sorted_imports
- - static_operator
+ # - sorted_imports
+ # - static_operator
  - strict_fileprivate
  - strong_iboutlet
- - switch_case_on_newline
+ # - switch_case_on_newline
  - toggle_bool
  - trailing_closure
  - type_contents_order
@@ -106,7 +106,7 @@ opt_in_rules:
  - vertical_parameter_alignment_on_call
  - vertical_whitespace_between_cases
  - vertical_whitespace_closing_braces
- - vertical_whitespace_opening_braces
+ # - vertical_whitespace_opening_braces
  - xct_specific_matcher
  - yoda_condition
 
@@ -129,6 +129,9 @@ file_length:
   error: 400
 
 identifier_name:
+  min_length:
+    warning: 0
+    error: 0
   excluded:
     - T
     - URL
@@ -136,13 +139,3 @@ identifier_name:
 type_name:
   excluded:
     - T
-
-# file_header:
-#   required_pattern: |
-#                     \/\/
-#                     \/\/  .*?\.swift
-#                     \/\/  toscoz
-#                     \/\/
-#                     \/\/  Created by .*? on \d{1,2}\/\d{1,2}\/\d{2}\.
-#                     \/\/  Copyright © \d{4} Jorge Moura\. All rights reserved\.
-#                     \/\/
