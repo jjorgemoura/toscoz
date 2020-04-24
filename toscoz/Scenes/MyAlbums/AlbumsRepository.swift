@@ -2,5 +2,7 @@
 //  Copyright © 2020  Jorge Moura. All rights reserved.
 //
 
-struct Profile {
+protocol AlbumsRepository {
+
+    func loadAlbums() -> [Album]
 }

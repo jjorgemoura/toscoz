@@ -1,11 +1,12 @@
 //
-//  Copyright © 2020 Jorge Moura. All rights reserved.
+//  Copyright © 2020  Jorge Moura. All rights reserved.
 //
 
-import SwiftUI
 import UIKit
+import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -14,27 +15,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Create the SwiftUI view that provides the window contents.
-        //        let contentView = ContentView()
+        let contentView = ContentView()
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-
-            //window.rootViewController = UIHostingController(rootView: contentView)
-
-            let mainViewController = DiscographyViewController()
-            window.rootViewController = UINavigationController(rootViewController: mainViewController)
-
+            window.rootViewController = UIHostingController(rootView: contentView)
             self.window = window
             window.makeKeyAndVisible()
-        }
-    }
-
-    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-        print(URLContexts)
-
-        if (URLContexts != nil) {
-            SpotifyKit.spotifyToken = ""
         }
     }
 

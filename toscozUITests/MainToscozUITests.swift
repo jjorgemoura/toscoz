@@ -2,5 +2,4 @@
 //  Copyright © 2020  Jorge Moura. All rights reserved.
 //
 
-struct Playlist {
-}
+import Foundation
