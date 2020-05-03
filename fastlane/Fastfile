@@ -1,6 +1,6 @@
 
 # fastlane constants
-fastlane_version "2.130.0"
+fastlane_version "2.141.0"
 default_platform :ios
 
 ## ios lanes setup ##

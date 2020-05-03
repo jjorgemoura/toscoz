@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		CF21AE2424547ACE003E6AA2 /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21AE2324547ACE003E6AA2 /* AlbumView.swift */; };
 		CF21AE262454CFAC003E6AA2 /* MyAlbumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21AE252454CFAC003E6AA2 /* MyAlbumsView.swift */; };
 		CF21AE282454DE08003E6AA2 /* CannedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21AE272454DE08003E6AA2 /* CannedData.swift */; };
+		CF23B169245F08AF00621797 /* Overture in Frameworks */ = {isa = PBXBuildFile; productRef = CF23B168245F08AF00621797 /* Overture */; };
 		CFB3824F245389E900700D6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3824E245389E900700D6F /* AppDelegate.swift */; };
 		CFB38251245389E900700D6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB38250245389E900700D6F /* SceneDelegate.swift */; };
 		CFB38258245389EB00700D6F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB38257245389EB00700D6F /* Preview Assets.xcassets */; };
@@ -106,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF23B169245F08AF00621797 /* Overture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,10 +160,10 @@
 			isa = PBXGroup;
 			children = (
 				CFB382A724538B6A00700D6F /* Application */,
+				CFB3828F24538B6A00700D6F /* Core */,
 				CFB3828224538B6900700D6F /* Model */,
-				CFB382A124538B6A00700D6F /* Resources */,
 				CFB3828624538B6900700D6F /* Scenes */,
-				CFB3828F24538B6A00700D6F /* System */,
+				CFB382A124538B6A00700D6F /* Resources */,
 				CFB38256245389EB00700D6F /* Preview Content */,
 				CFB3824E245389E900700D6F /* AppDelegate.swift */,
 				CFB38250245389E900700D6F /* SceneDelegate.swift */,
@@ -218,10 +220,10 @@
 		CFB3828724538B6A00700D6F /* MyAlbums */ = {
 			isa = PBXGroup;
 			children = (
+				CFB3828B24538B6A00700D6F /* Repo */,
 				CFB3828824538B6A00700D6F /* AlbumsRepository.swift */,
 				CFB3828924538B6A00700D6F /* AlbumsInteractor.swift */,
 				CFB3828A24538B6A00700D6F /* AlbumsRemoteRepository.swift */,
-				CFB3828B24538B6A00700D6F /* Repo */,
 				CF21AE252454CFAC003E6AA2 /* MyAlbumsView.swift */,
 			);
 			path = MyAlbums;
@@ -235,15 +237,14 @@
 			path = Repo;
 			sourceTree = "<group>";
 		};
-		CFB3828F24538B6A00700D6F /* System */ = {
+		CFB3828F24538B6A00700D6F /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				CFB3829024538B6A00700D6F /* SpotifyAPI */,
 				CFB3829424538B6A00700D6F /* Network */,
 				CFB3829A24538B6A00700D6F /* Foundation */,
 				CFB3829F24538B6A00700D6F /* Utilities */,
 			);
-			path = System;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		CFB3829024538B6A00700D6F /* SpotifyAPI */ = {
@@ -302,6 +303,7 @@
 			children = (
 				CFB382A824538B6A00700D6F /* Core */,
 				CFB382AA24538B6A00700D6F /* State */,
+				CFB3829024538B6A00700D6F /* SpotifyAPI */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -339,6 +341,9 @@
 			dependencies = (
 			);
 			name = toscoz;
+			packageProductDependencies = (
+				CF23B168245F08AF00621797 /* Overture */,
+			);
 			productName = toscoz;
 			productReference = CFB3824B245389E900700D6F /* toscoz.app */;
 			productType = "com.apple.product-type.application";
@@ -412,6 +417,9 @@
 				"pt-PT",
 			);
 			mainGroup = CFB38242245389E900700D6F;
+			packageReferences = (
+				CF23B167245F08AF00621797 /* XCRemoteSwiftPackageReference "swift-overture" */,
+			);
 			productRefGroup = CFB3824C245389E900700D6F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -835,6 +843,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CF23B167245F08AF00621797 /* XCRemoteSwiftPackageReference "swift-overture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-overture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CF23B168245F08AF00621797 /* Overture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF23B167245F08AF00621797 /* XCRemoteSwiftPackageReference "swift-overture" */;
+			productName = Overture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CFB38243245389E900700D6F /* Project object */;
 }
