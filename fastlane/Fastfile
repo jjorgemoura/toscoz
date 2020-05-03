@@ -79,7 +79,7 @@ platform :ios do
   end
 
   desc "Versioning -> Increase: MAJOR, MINOR or PATCH"
-  private_lane :bump_version do |option|
+  lane :bump_version do |option|
     if option[:version] == "MAJOR"
       increment_version_number(
         bump_type: "major"

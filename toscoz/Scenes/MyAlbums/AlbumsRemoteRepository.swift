@@ -4,9 +4,9 @@
 
 import UIKit
 
-struct DiscographyRemoteRepository: DiscographyRepository {
+struct AlbumsRemoteRepository: AlbumsRepository {
 
-    func loadDiscography() -> [Discography] {
+    func loadAlbums() -> [Album] {
 
 //        let httpRepo = HTTPRepository.standard()
 

@@ -3,111 +3,120 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5914A65423F9504E006FCFCC /* DiscographyRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5914A65323F9504E006FCFCC /* DiscographyRemoteRepository.swift */; };
-		59173E2623F9546A00ACDBF0 /* FileSystemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59173E2523F9546A00ACDBF0 /* FileSystemRepository.swift */; };
-		59173E2923F9633000ACDBF0 /* SpotifyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59173E2823F9633000ACDBF0 /* SpotifyAPI.swift */; };
-		59173E2C23F9AD2C00ACDBF0 /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59173E2B23F9AD2C00ACDBF0 /* AuthenticationRepository.swift */; };
-		596BD3C623F1FD6600A45BF8 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596BD3C523F1FD6600A45BF8 /* Repository.swift */; };
-		596BD3C823F1FD8700A45BF8 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596BD3C723F1FD8700A45BF8 /* NetworkRepository.swift */; };
-		59C51DC223F0587700C773D4 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C51DBF23F0587700C773D4 /* UIColor+App.swift */; };
-		59C51DC323F0587700C773D4 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C51DC023F0587700C773D4 /* Typography.swift */; };
-		59C51DC423F0587700C773D4 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C51DC123F0587700C773D4 /* Fonts.swift */; };
-		59C51DC623F0837B00C773D4 /* AssetColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C51DC523F0837B00C773D4 /* AssetColor.swift */; };
-		59D3C1D323F9F4B700F63B62 /* AppCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D3C1D223F9F4B700F63B62 /* AppCore.swift */; };
-		59D3C1D623F9F4D900F63B62 /* SpotifyKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D3C1D523F9F4D900F63B62 /* SpotifyKit.swift */; };
-		59D4286523F86203006A87A4 /* DiscographyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D4286423F86203006A87A4 /* DiscographyInteractor.swift */; };
-		59D4286723F86498006A87A4 /* DiscographyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D4286623F86498006A87A4 /* DiscographyRepository.swift */; };
-		59D4286A23F86711006A87A4 /* AlbumResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D4286923F86711006A87A4 /* AlbumResponse.swift */; };
-		59D8E04823F6071900862DB8 /* HTTPRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D8E04723F6071900862DB8 /* HTTPRepository.swift */; };
-		59D8E04A23F6072B00862DB8 /* CannedJSONRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D8E04923F6072B00862DB8 /* CannedJSONRepository.swift */; };
-		CF1F389023F0148500380E80 /* DiscographyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F388F23F0148500380E80 /* DiscographyViewCell.swift */; };
-		CF1F389223F0152300380E80 /* DiscographyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1F389123F0152300380E80 /* DiscographyViewCell.xib */; };
-		CF1F389423F035DD00380E80 /* DiscographyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F389323F035DD00380E80 /* DiscographyViewModel.swift */; };
-		CF1F389723F0365C00380E80 /* Discography.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F389623F0365C00380E80 /* Discography.swift */; };
-		CF1F389923F03D2600380E80 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F389823F03D2600380E80 /* Song.swift */; };
-		CF1F389B23F03D5100380E80 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F389A23F03D5100380E80 /* Artist.swift */; };
-		CF1F389D23F03D7000380E80 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F389C23F03D7000380E80 /* Playlist.swift */; };
-		CF1F389F23F03E2400380E80 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F389E23F03E2400380E80 /* Profile.swift */; };
-		CF37EBAB23EF2AD7009A8BC0 /* DiscographyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF37EBAA23EF2AD7009A8BC0 /* DiscographyViewController.swift */; };
-		CF3FC3DC243146E9006A0435 /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3FC3DB243146E9006A0435 /* Functional.swift */; };
-		CF3FC3DE2431472B006A0435 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3FC3DD2431472B006A0435 /* AppState.swift */; };
-		CF4DACCB23DBA81600F60F63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4DACCA23DBA81600F60F63 /* AppDelegate.swift */; };
-		CF4DACCD23DBA81600F60F63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4DACCC23DBA81600F60F63 /* SceneDelegate.swift */; };
-		CF4DACCF23DBA81600F60F63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4DACCE23DBA81600F60F63 /* ContentView.swift */; };
-		CF4DACD123DBA81800F60F63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF4DACD023DBA81800F60F63 /* Assets.xcassets */; };
-		CF4DACD423DBA81800F60F63 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF4DACD323DBA81800F60F63 /* Preview Assets.xcassets */; };
-		CF4DACD723DBA81800F60F63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF4DACD523DBA81800F60F63 /* LaunchScreen.storyboard */; };
-		CF4DACE223DBA81900F60F63 /* ToscozTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4DACE123DBA81900F60F63 /* ToscozTests.swift */; };
-		CF5E25B7242C1A8400E04577 /* Overture in Frameworks */ = {isa = PBXBuildFile; productRef = CF5E25B6242C1A8400E04577 /* Overture */; };
+		CF21AE2424547ACE003E6AA2 /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21AE2324547ACE003E6AA2 /* AlbumView.swift */; };
+		CF21AE262454CFAC003E6AA2 /* MyAlbumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21AE252454CFAC003E6AA2 /* MyAlbumsView.swift */; };
+		CF21AE282454DE08003E6AA2 /* CannedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21AE272454DE08003E6AA2 /* CannedData.swift */; };
+		CFB3824F245389E900700D6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3824E245389E900700D6F /* AppDelegate.swift */; };
+		CFB38251245389E900700D6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB38250245389E900700D6F /* SceneDelegate.swift */; };
+		CFB38258245389EB00700D6F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB38257245389EB00700D6F /* Preview Assets.xcassets */; };
+		CFB3827F24538A2E00700D6F /* MainToscozTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3827E24538A2E00700D6F /* MainToscozTests.swift */; };
+		CFB3828124538A3D00700D6F /* MainToscozUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3828024538A3D00700D6F /* MainToscozUITests.swift */; };
+		CFB382AC24538B6A00700D6F /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3828324538B6900700D6F /* Track.swift */; };
+		CFB382AD24538B6A00700D6F /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3828424538B6900700D6F /* Album.swift */; };
+		CFB382AE24538B6A00700D6F /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3828524538B6900700D6F /* Artist.swift */; };
+		CFB382AF24538B6A00700D6F /* AlbumsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3828824538B6A00700D6F /* AlbumsRepository.swift */; };
+		CFB382B024538B6A00700D6F /* AlbumsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3828924538B6A00700D6F /* AlbumsInteractor.swift */; };
+		CFB382B124538B6A00700D6F /* AlbumsRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3828A24538B6A00700D6F /* AlbumsRemoteRepository.swift */; };
+		CFB382B224538B6A00700D6F /* AlbumResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3828C24538B6A00700D6F /* AlbumResponse.swift */; };
+		CFB382B424538B6A00700D6F /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3829124538B6A00700D6F /* AuthenticationRepository.swift */; };
+		CFB382B524538B6A00700D6F /* SpotifyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3829224538B6A00700D6F /* SpotifyAPI.swift */; };
+		CFB382B624538B6A00700D6F /* SpotifyKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3829324538B6A00700D6F /* SpotifyKit.swift */; };
+		CFB382B724538B6A00700D6F /* CannedJSONRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3829524538B6A00700D6F /* CannedJSONRepository.swift */; };
+		CFB382B824538B6A00700D6F /* HTTPRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3829624538B6A00700D6F /* HTTPRepository.swift */; };
+		CFB382B924538B6A00700D6F /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3829724538B6A00700D6F /* NetworkRepository.swift */; };
+		CFB382BA24538B6A00700D6F /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3829824538B6A00700D6F /* Repository.swift */; };
+		CFB382BB24538B6A00700D6F /* FileSystemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3829924538B6A00700D6F /* FileSystemRepository.swift */; };
+		CFB382BC24538B6A00700D6F /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3829B24538B6A00700D6F /* UIColor+App.swift */; };
+		CFB382BD24538B6A00700D6F /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3829C24538B6A00700D6F /* Typography.swift */; };
+		CFB382BE24538B6A00700D6F /* AssetColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3829D24538B6A00700D6F /* AssetColor.swift */; };
+		CFB382BF24538B6A00700D6F /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3829E24538B6A00700D6F /* Fonts.swift */; };
+		CFB382C024538B6A00700D6F /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB382A024538B6A00700D6F /* Functional.swift */; };
+		CFB382C124538B6A00700D6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB382A224538B6A00700D6F /* Assets.xcassets */; };
+		CFB382C424538B6A00700D6F /* AppCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB382A924538B6A00700D6F /* AppCore.swift */; };
+		CFB382C524538B6A00700D6F /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB382AB24538B6A00700D6F /* AppState.swift */; };
+		CFDE3C7D245392DA00AA9A14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFDE3C7F245392DA00AA9A14 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CF4DACDE23DBA81900F60F63 /* PBXContainerItemProxy */ = {
+		CFB38262245389EB00700D6F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CF4DACBF23DBA81600F60F63 /* Project object */;
+			containerPortal = CFB38243245389E900700D6F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CF4DACC623DBA81600F60F63;
+			remoteGlobalIDString = CFB3824A245389E900700D6F;
+			remoteInfo = toscoz;
+		};
+		CFB3826D245389EB00700D6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFB38243245389E900700D6F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFB3824A245389E900700D6F;
 			remoteInfo = toscoz;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5914A65323F9504E006FCFCC /* DiscographyRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscographyRemoteRepository.swift; sourceTree = "<group>"; };
-		59173E2523F9546A00ACDBF0 /* FileSystemRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSystemRepository.swift; sourceTree = "<group>"; };
-		59173E2823F9633000ACDBF0 /* SpotifyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAPI.swift; sourceTree = "<group>"; };
-		59173E2B23F9AD2C00ACDBF0 /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
-		596BD3C523F1FD6600A45BF8 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		596BD3C723F1FD8700A45BF8 /* NetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepository.swift; sourceTree = "<group>"; };
-		59C51DBF23F0587700C773D4 /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
-		59C51DC023F0587700C773D4 /* Typography.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
-		59C51DC123F0587700C773D4 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
-		59C51DC523F0837B00C773D4 /* AssetColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetColor.swift; sourceTree = "<group>"; };
-		59D3C1D223F9F4B700F63B62 /* AppCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCore.swift; sourceTree = "<group>"; };
-		59D3C1D523F9F4D900F63B62 /* SpotifyKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyKit.swift; sourceTree = "<group>"; };
-		59D4286423F86203006A87A4 /* DiscographyInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscographyInteractor.swift; sourceTree = "<group>"; };
-		59D4286623F86498006A87A4 /* DiscographyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscographyRepository.swift; sourceTree = "<group>"; };
-		59D4286923F86711006A87A4 /* AlbumResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumResponse.swift; sourceTree = "<group>"; };
-		59D8E04723F6071900862DB8 /* HTTPRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRepository.swift; sourceTree = "<group>"; };
-		59D8E04923F6072B00862DB8 /* CannedJSONRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CannedJSONRepository.swift; sourceTree = "<group>"; };
-		CF1F388F23F0148500380E80 /* DiscographyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscographyViewCell.swift; sourceTree = "<group>"; };
-		CF1F389123F0152300380E80 /* DiscographyViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscographyViewCell.xib; sourceTree = "<group>"; };
-		CF1F389323F035DD00380E80 /* DiscographyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscographyViewModel.swift; sourceTree = "<group>"; };
-		CF1F389623F0365C00380E80 /* Discography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discography.swift; sourceTree = "<group>"; };
-		CF1F389823F03D2600380E80 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
-		CF1F389A23F03D5100380E80 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
-		CF1F389C23F03D7000380E80 /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
-		CF1F389E23F03E2400380E80 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		CF37EBAA23EF2AD7009A8BC0 /* DiscographyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscographyViewController.swift; sourceTree = "<group>"; };
-		CF3FC3DB243146E9006A0435 /* Functional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functional.swift; sourceTree = "<group>"; };
-		CF3FC3DD2431472B006A0435 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		CF4DACC723DBA81600F60F63 /* toscoz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toscoz.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF4DACCA23DBA81600F60F63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CF4DACCC23DBA81600F60F63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CF4DACCE23DBA81600F60F63 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		CF4DACD023DBA81800F60F63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CF4DACD323DBA81800F60F63 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CF4DACD623DBA81800F60F63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CF4DACD823DBA81800F60F63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CF4DACDD23DBA81900F60F63 /* toscozTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = toscozTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF4DACE123DBA81900F60F63 /* ToscozTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToscozTests.swift; sourceTree = "<group>"; };
-		CF4DACE323DBA81900F60F63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CF83406123E6DDD0000FA5C3 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		CF21AE2324547ACE003E6AA2 /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
+		CF21AE252454CFAC003E6AA2 /* MyAlbumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlbumsView.swift; sourceTree = "<group>"; };
+		CF21AE272454DE08003E6AA2 /* CannedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CannedData.swift; sourceTree = "<group>"; };
+		CFB3824B245389E900700D6F /* toscoz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toscoz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFB3824E245389E900700D6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CFB38250245389E900700D6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CFB38257245389EB00700D6F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CFB3825C245389EB00700D6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFB38261245389EB00700D6F /* toscozTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = toscozTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFB38267245389EB00700D6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFB3826C245389EB00700D6F /* toscozUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = toscozUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFB38272245389EB00700D6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFB3827E24538A2E00700D6F /* MainToscozTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainToscozTests.swift; sourceTree = "<group>"; };
+		CFB3828024538A3D00700D6F /* MainToscozUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainToscozUITests.swift; sourceTree = "<group>"; };
+		CFB3828324538B6900700D6F /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		CFB3828424538B6900700D6F /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		CFB3828524538B6900700D6F /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		CFB3828824538B6A00700D6F /* AlbumsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumsRepository.swift; sourceTree = "<group>"; };
+		CFB3828924538B6A00700D6F /* AlbumsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumsInteractor.swift; sourceTree = "<group>"; };
+		CFB3828A24538B6A00700D6F /* AlbumsRemoteRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumsRemoteRepository.swift; sourceTree = "<group>"; };
+		CFB3828C24538B6A00700D6F /* AlbumResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumResponse.swift; sourceTree = "<group>"; };
+		CFB3829124538B6A00700D6F /* AuthenticationRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
+		CFB3829224538B6A00700D6F /* SpotifyAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyAPI.swift; sourceTree = "<group>"; };
+		CFB3829324538B6A00700D6F /* SpotifyKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyKit.swift; sourceTree = "<group>"; };
+		CFB3829524538B6A00700D6F /* CannedJSONRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CannedJSONRepository.swift; sourceTree = "<group>"; };
+		CFB3829624538B6A00700D6F /* HTTPRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRepository.swift; sourceTree = "<group>"; };
+		CFB3829724538B6A00700D6F /* NetworkRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRepository.swift; sourceTree = "<group>"; };
+		CFB3829824538B6A00700D6F /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		CFB3829924538B6A00700D6F /* FileSystemRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSystemRepository.swift; sourceTree = "<group>"; };
+		CFB3829B24538B6A00700D6F /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
+		CFB3829C24538B6A00700D6F /* Typography.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		CFB3829D24538B6A00700D6F /* AssetColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetColor.swift; sourceTree = "<group>"; };
+		CFB3829E24538B6A00700D6F /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		CFB382A024538B6A00700D6F /* Functional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functional.swift; sourceTree = "<group>"; };
+		CFB382A224538B6A00700D6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CFB382A924538B6A00700D6F /* AppCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCore.swift; sourceTree = "<group>"; };
+		CFB382AB24538B6A00700D6F /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		CFDE3C7E245392DA00AA9A14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CFDE3C81245392E100AA9A14 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		CFDE3C83245392EB00AA9A14 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CF4DACC423DBA81600F60F63 /* Frameworks */ = {
+		CFB38248245389E900700D6F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF5E25B7242C1A8400E04577 /* Overture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CF4DACDA23DBA81900F60F63 /* Frameworks */ = {
+		CFB3825E245389EB00700D6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFB38269245389EB00700D6F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -117,281 +126,283 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5914A65223F95030006FCFCC /* decodable */ = {
+		CF21AE2224547AAB003E6AA2 /* Album */ = {
 			isa = PBXGroup;
 			children = (
-				59D4286923F86711006A87A4 /* AlbumResponse.swift */,
+				CF21AE2324547ACE003E6AA2 /* AlbumView.swift */,
 			);
-			path = decodable;
+			path = Album;
 			sourceTree = "<group>";
 		};
-		59173E2A23F9AD1200ACDBF0 /* SpotifyAPI */ = {
+		CFB38242245389E900700D6F = {
 			isa = PBXGroup;
 			children = (
-				59173E2823F9633000ACDBF0 /* SpotifyAPI.swift */,
-				59D3C1D523F9F4D900F63B62 /* SpotifyKit.swift */,
-				59173E2B23F9AD2C00ACDBF0 /* AuthenticationRepository.swift */,
-			);
-			path = SpotifyAPI;
-			sourceTree = "<group>";
-		};
-		596BD3C423F1FD4300A45BF8 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				596BD3C523F1FD6600A45BF8 /* Repository.swift */,
-				596BD3C723F1FD8700A45BF8 /* NetworkRepository.swift */,
-				59173E2523F9546A00ACDBF0 /* FileSystemRepository.swift */,
-				59D8E04723F6071900862DB8 /* HTTPRepository.swift */,
-				59D8E04923F6072B00862DB8 /* CannedJSONRepository.swift */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		59C51DBD23F0587700C773D4 /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				CF3FC3DA2431459C006A0435 /* State */,
-				59D3C1D423F9F4BF00F63B62 /* Core */,
-			);
-			path = Application;
-			sourceTree = "<group>";
-		};
-		59C51DBE23F0587700C773D4 /* Foundation */ = {
-			isa = PBXGroup;
-			children = (
-				59C51DC523F0837B00C773D4 /* AssetColor.swift */,
-				59C51DBF23F0587700C773D4 /* UIColor+App.swift */,
-				59C51DC023F0587700C773D4 /* Typography.swift */,
-				59C51DC123F0587700C773D4 /* Fonts.swift */,
-			);
-			path = Foundation;
-			sourceTree = "<group>";
-		};
-		59D3C1D423F9F4BF00F63B62 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				59D3C1D223F9F4B700F63B62 /* AppCore.swift */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		59D4286223F861CB006A87A4 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				CF37EBAA23EF2AD7009A8BC0 /* DiscographyViewController.swift */,
-				CF1F388F23F0148500380E80 /* DiscographyViewCell.swift */,
-				CF1F389123F0152300380E80 /* DiscographyViewCell.xib */,
-				CF1F389323F035DD00380E80 /* DiscographyViewModel.swift */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		59D4286323F861D1006A87A4 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				59D4286423F86203006A87A4 /* DiscographyInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		59D4286823F8649E006A87A4 /* Repo */ = {
-			isa = PBXGroup;
-			children = (
-				5914A65223F95030006FCFCC /* decodable */,
-				59D4286623F86498006A87A4 /* DiscographyRepository.swift */,
-				5914A65323F9504E006FCFCC /* DiscographyRemoteRepository.swift */,
-			);
-			path = Repo;
-			sourceTree = "<group>";
-		};
-		CF1F389523F0363E00380E80 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				CF1F389A23F03D5100380E80 /* Artist.swift */,
-				CF1F389623F0365C00380E80 /* Discography.swift */,
-				CF1F389C23F03D7000380E80 /* Playlist.swift */,
-				CF1F389E23F03E2400380E80 /* Profile.swift */,
-				CF1F389823F03D2600380E80 /* Song.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		CF37EBA923EF2A06009A8BC0 /* Discography */ = {
-			isa = PBXGroup;
-			children = (
-				59D4286823F8649E006A87A4 /* Repo */,
-				59D4286323F861D1006A87A4 /* Interactor */,
-				59D4286223F861CB006A87A4 /* UI */,
-			);
-			path = Discography;
-			sourceTree = "<group>";
-		};
-		CF3FC3D724313D99006A0435 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				CF3FC3DB243146E9006A0435 /* Functional.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
-		CF3FC3D824313DEE006A0435 /* System */ = {
-			isa = PBXGroup;
-			children = (
-				59C51DBE23F0587700C773D4 /* Foundation */,
-				CF3FC3D724313D99006A0435 /* Utilities */,
-				59173E2A23F9AD1200ACDBF0 /* SpotifyAPI */,
-				596BD3C423F1FD4300A45BF8 /* Network */,
-			);
-			path = System;
-			sourceTree = "<group>";
-		};
-		CF3FC3DA2431459C006A0435 /* State */ = {
-			isa = PBXGroup;
-			children = (
-				CF3FC3DD2431472B006A0435 /* AppState.swift */,
-			);
-			path = State;
-			sourceTree = "<group>";
-		};
-		CF4DACBE23DBA81600F60F63 = {
-			isa = PBXGroup;
-			children = (
-				CF4DACC923DBA81600F60F63 /* toscoz */,
-				CF4DACE023DBA81900F60F63 /* toscozTests */,
-				CF4DACC823DBA81600F60F63 /* Products */,
+				CFB3824D245389E900700D6F /* toscoz */,
+				CFB38264245389EB00700D6F /* toscozTests */,
+				CFB3826F245389EB00700D6F /* toscozUITests */,
+				CFB3824C245389E900700D6F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CF4DACC823DBA81600F60F63 /* Products */ = {
+		CFB3824C245389E900700D6F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CF4DACC723DBA81600F60F63 /* toscoz.app */,
-				CF4DACDD23DBA81900F60F63 /* toscozTests.xctest */,
+				CFB3824B245389E900700D6F /* toscoz.app */,
+				CFB38261245389EB00700D6F /* toscozTests.xctest */,
+				CFB3826C245389EB00700D6F /* toscozUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CF4DACC923DBA81600F60F63 /* toscoz */ = {
+		CFB3824D245389E900700D6F /* toscoz */ = {
 			isa = PBXGroup;
 			children = (
-				CF3FC3D824313DEE006A0435 /* System */,
-				59C51DBD23F0587700C773D4 /* Application */,
-				CF1F389523F0363E00380E80 /* Model */,
-				CF83406323E6E2F5000FA5C3 /* Features */,
-				CF83406223E6E26E000FA5C3 /* Resources */,
-				CF4DACD223DBA81800F60F63 /* Preview Content */,
-				CF4DACCA23DBA81600F60F63 /* AppDelegate.swift */,
-				CF4DACCC23DBA81600F60F63 /* SceneDelegate.swift */,
-				CF4DACD823DBA81800F60F63 /* Info.plist */,
+				CFB382A724538B6A00700D6F /* Application */,
+				CFB3828224538B6900700D6F /* Model */,
+				CFB382A124538B6A00700D6F /* Resources */,
+				CFB3828624538B6900700D6F /* Scenes */,
+				CFB3828F24538B6A00700D6F /* System */,
+				CFB38256245389EB00700D6F /* Preview Content */,
+				CFB3824E245389E900700D6F /* AppDelegate.swift */,
+				CFB38250245389E900700D6F /* SceneDelegate.swift */,
+				CFB3825C245389EB00700D6F /* Info.plist */,
 			);
 			path = toscoz;
 			sourceTree = "<group>";
 		};
-		CF4DACD223DBA81800F60F63 /* Preview Content */ = {
+		CFB38256245389EB00700D6F /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				CF4DACD323DBA81800F60F63 /* Preview Assets.xcassets */,
+				CFB38257245389EB00700D6F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		CF4DACE023DBA81900F60F63 /* toscozTests */ = {
+		CFB38264245389EB00700D6F /* toscozTests */ = {
 			isa = PBXGroup;
 			children = (
-				CF4DACE123DBA81900F60F63 /* ToscozTests.swift */,
-				CF4DACE323DBA81900F60F63 /* Info.plist */,
+				CFB3827E24538A2E00700D6F /* MainToscozTests.swift */,
+				CFB38267245389EB00700D6F /* Info.plist */,
 			);
 			path = toscozTests;
 			sourceTree = "<group>";
 		};
-		CF83406223E6E26E000FA5C3 /* Resources */ = {
+		CFB3826F245389EB00700D6F /* toscozUITests */ = {
 			isa = PBXGroup;
 			children = (
-				CF4DACD523DBA81800F60F63 /* LaunchScreen.storyboard */,
-				CF4DACD023DBA81800F60F63 /* Assets.xcassets */,
+				CFB3828024538A3D00700D6F /* MainToscozUITests.swift */,
+				CFB38272245389EB00700D6F /* Info.plist */,
+			);
+			path = toscozUITests;
+			sourceTree = "<group>";
+		};
+		CFB3828224538B6900700D6F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CFB3828324538B6900700D6F /* Track.swift */,
+				CFB3828424538B6900700D6F /* Album.swift */,
+				CFB3828524538B6900700D6F /* Artist.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CFB3828624538B6900700D6F /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CF21AE2224547AAB003E6AA2 /* Album */,
+				CFB3828724538B6A00700D6F /* MyAlbums */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		CFB3828724538B6A00700D6F /* MyAlbums */ = {
+			isa = PBXGroup;
+			children = (
+				CFB3828824538B6A00700D6F /* AlbumsRepository.swift */,
+				CFB3828924538B6A00700D6F /* AlbumsInteractor.swift */,
+				CFB3828A24538B6A00700D6F /* AlbumsRemoteRepository.swift */,
+				CFB3828B24538B6A00700D6F /* Repo */,
+				CF21AE252454CFAC003E6AA2 /* MyAlbumsView.swift */,
+			);
+			path = MyAlbums;
+			sourceTree = "<group>";
+		};
+		CFB3828B24538B6A00700D6F /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				CFB3828C24538B6A00700D6F /* AlbumResponse.swift */,
+			);
+			path = Repo;
+			sourceTree = "<group>";
+		};
+		CFB3828F24538B6A00700D6F /* System */ = {
+			isa = PBXGroup;
+			children = (
+				CFB3829024538B6A00700D6F /* SpotifyAPI */,
+				CFB3829424538B6A00700D6F /* Network */,
+				CFB3829A24538B6A00700D6F /* Foundation */,
+				CFB3829F24538B6A00700D6F /* Utilities */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		CFB3829024538B6A00700D6F /* SpotifyAPI */ = {
+			isa = PBXGroup;
+			children = (
+				CFB3829124538B6A00700D6F /* AuthenticationRepository.swift */,
+				CFB3829224538B6A00700D6F /* SpotifyAPI.swift */,
+				CFB3829324538B6A00700D6F /* SpotifyKit.swift */,
+			);
+			path = SpotifyAPI;
+			sourceTree = "<group>";
+		};
+		CFB3829424538B6A00700D6F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CFB3829524538B6A00700D6F /* CannedJSONRepository.swift */,
+				CFB3829624538B6A00700D6F /* HTTPRepository.swift */,
+				CFB3829724538B6A00700D6F /* NetworkRepository.swift */,
+				CFB3829824538B6A00700D6F /* Repository.swift */,
+				CFB3829924538B6A00700D6F /* FileSystemRepository.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CFB3829A24538B6A00700D6F /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				CFB3829B24538B6A00700D6F /* UIColor+App.swift */,
+				CFB3829C24538B6A00700D6F /* Typography.swift */,
+				CFB3829D24538B6A00700D6F /* AssetColor.swift */,
+				CFB3829E24538B6A00700D6F /* Fonts.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		CFB3829F24538B6A00700D6F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CFB382A024538B6A00700D6F /* Functional.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CFB382A124538B6A00700D6F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CFB382A224538B6A00700D6F /* Assets.xcassets */,
+				CFDE3C7F245392DA00AA9A14 /* LaunchScreen.storyboard */,
+				CF21AE272454DE08003E6AA2 /* CannedData.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		CF83406323E6E2F5000FA5C3 /* Features */ = {
+		CFB382A724538B6A00700D6F /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				CF37EBA923EF2A06009A8BC0 /* Discography */,
-				CF83406423E6E2FC000FA5C3 /* Main */,
+				CFB382A824538B6A00700D6F /* Core */,
+				CFB382AA24538B6A00700D6F /* State */,
 			);
-			path = Features;
+			path = Application;
 			sourceTree = "<group>";
 		};
-		CF83406423E6E2FC000FA5C3 /* Main */ = {
+		CFB382A824538B6A00700D6F /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				CF4DACCE23DBA81600F60F63 /* ContentView.swift */,
+				CFB382A924538B6A00700D6F /* AppCore.swift */,
 			);
-			path = Main;
+			path = Core;
+			sourceTree = "<group>";
+		};
+		CFB382AA24538B6A00700D6F /* State */ = {
+			isa = PBXGroup;
+			children = (
+				CFB382AB24538B6A00700D6F /* AppState.swift */,
+			);
+			path = State;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CF4DACC623DBA81600F60F63 /* toscoz */ = {
+		CFB3824A245389E900700D6F /* toscoz */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CF4DACE623DBA81900F60F63 /* Build configuration list for PBXNativeTarget "toscoz" */;
+			buildConfigurationList = CFB38275245389EB00700D6F /* Build configuration list for PBXNativeTarget "toscoz" */;
 			buildPhases = (
-				CF4DACC323DBA81600F60F63 /* Sources */,
-				CF4DACC423DBA81600F60F63 /* Frameworks */,
-				CF4DACC523DBA81600F60F63 /* Resources */,
-				CFCAB9EE23DBAC05002DDB79 /* Run Script Swiftlint */,
+				CFB38247245389E900700D6F /* Sources */,
+				CFB38248245389E900700D6F /* Frameworks */,
+				CFB38249245389E900700D6F /* Resources */,
+				CFDE3C7A2453922400AA9A14 /* Run Swiftlint */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = toscoz;
-			packageProductDependencies = (
-				CF5E25B6242C1A8400E04577 /* Overture */,
-			);
 			productName = toscoz;
-			productReference = CF4DACC723DBA81600F60F63 /* toscoz.app */;
+			productReference = CFB3824B245389E900700D6F /* toscoz.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CF4DACDC23DBA81900F60F63 /* toscozTests */ = {
+		CFB38260245389EB00700D6F /* toscozTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CF4DACE923DBA81900F60F63 /* Build configuration list for PBXNativeTarget "toscozTests" */;
+			buildConfigurationList = CFB38278245389EB00700D6F /* Build configuration list for PBXNativeTarget "toscozTests" */;
 			buildPhases = (
-				CF4DACD923DBA81900F60F63 /* Sources */,
-				CF4DACDA23DBA81900F60F63 /* Frameworks */,
-				CF4DACDB23DBA81900F60F63 /* Resources */,
+				CFB3825D245389EB00700D6F /* Sources */,
+				CFB3825E245389EB00700D6F /* Frameworks */,
+				CFB3825F245389EB00700D6F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CF4DACDF23DBA81900F60F63 /* PBXTargetDependency */,
+				CFB38263245389EB00700D6F /* PBXTargetDependency */,
 			);
 			name = toscozTests;
 			productName = toscozTests;
-			productReference = CF4DACDD23DBA81900F60F63 /* toscozTests.xctest */;
+			productReference = CFB38261245389EB00700D6F /* toscozTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CFB3826B245389EB00700D6F /* toscozUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFB3827B245389EB00700D6F /* Build configuration list for PBXNativeTarget "toscozUITests" */;
+			buildPhases = (
+				CFB38268245389EB00700D6F /* Sources */,
+				CFB38269245389EB00700D6F /* Frameworks */,
+				CFB3826A245389EB00700D6F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFB3826E245389EB00700D6F /* PBXTargetDependency */,
+			);
+			name = toscozUITests;
+			productName = toscozUITests;
+			productReference = CFB3826C245389EB00700D6F /* toscozUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CF4DACBF23DBA81600F60F63 /* Project object */ = {
+		CFB38243245389E900700D6F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Jorge Moura";
 				TargetAttributes = {
-					CF4DACC623DBA81600F60F63 = {
-						CreatedOnToolsVersion = 11.3.1;
+					CFB3824A245389E900700D6F = {
+						CreatedOnToolsVersion = 11.4.1;
 					};
-					CF4DACDC23DBA81900F60F63 = {
-						CreatedOnToolsVersion = 11.3.1;
-						TestTargetID = CF4DACC623DBA81600F60F63;
+					CFB38260245389EB00700D6F = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = CFB3824A245389E900700D6F;
+					};
+					CFB3826B245389EB00700D6F = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = CFB3824A245389E900700D6F;
 					};
 				};
 			};
-			buildConfigurationList = CF4DACC223DBA81600F60F63 /* Build configuration list for PBXProject "toscoz" */;
+			buildConfigurationList = CFB38246245389E900700D6F /* Build configuration list for PBXProject "toscoz" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -400,33 +411,37 @@
 				Base,
 				"pt-PT",
 			);
-			mainGroup = CF4DACBE23DBA81600F60F63;
-			packageReferences = (
-				CF5E25B5242C1A8400E04577 /* XCRemoteSwiftPackageReference "swift-overture" */,
-			);
-			productRefGroup = CF4DACC823DBA81600F60F63 /* Products */;
+			mainGroup = CFB38242245389E900700D6F;
+			productRefGroup = CFB3824C245389E900700D6F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CF4DACC623DBA81600F60F63 /* toscoz */,
-				CF4DACDC23DBA81900F60F63 /* toscozTests */,
+				CFB3824A245389E900700D6F /* toscoz */,
+				CFB38260245389EB00700D6F /* toscozTests */,
+				CFB3826B245389EB00700D6F /* toscozUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CF4DACC523DBA81600F60F63 /* Resources */ = {
+		CFB38249245389E900700D6F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF4DACD723DBA81800F60F63 /* LaunchScreen.storyboard in Resources */,
-				CF4DACD423DBA81800F60F63 /* Preview Assets.xcassets in Resources */,
-				CF1F389223F0152300380E80 /* DiscographyViewCell.xib in Resources */,
-				CF4DACD123DBA81800F60F63 /* Assets.xcassets in Resources */,
+				CFDE3C7D245392DA00AA9A14 /* LaunchScreen.storyboard in Resources */,
+				CFB38258245389EB00700D6F /* Preview Assets.xcassets in Resources */,
+				CFB382C124538B6A00700D6F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CF4DACDB23DBA81900F60F63 /* Resources */ = {
+		CFB3825F245389EB00700D6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFB3826A245389EB00700D6F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -436,7 +451,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CFCAB9EE23DBAC05002DDB79 /* Run Script Swiftlint */ = {
+		CFDE3C7A2453922400AA9A14 /* Run Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -445,7 +460,7 @@
 			);
 			inputPaths = (
 			);
-			name = "Run Script Swiftlint";
+			name = "Run Swiftlint";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -457,67 +472,78 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CF4DACC323DBA81600F60F63 /* Sources */ = {
+		CFB38247245389E900700D6F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59C51DC623F0837B00C773D4 /* AssetColor.swift in Sources */,
-				59D3C1D623F9F4D900F63B62 /* SpotifyKit.swift in Sources */,
-				59C51DC423F0587700C773D4 /* Fonts.swift in Sources */,
-				59173E2623F9546A00ACDBF0 /* FileSystemRepository.swift in Sources */,
-				CF37EBAB23EF2AD7009A8BC0 /* DiscographyViewController.swift in Sources */,
-				59D4286723F86498006A87A4 /* DiscographyRepository.swift in Sources */,
-				CF4DACCB23DBA81600F60F63 /* AppDelegate.swift in Sources */,
-				CF4DACCD23DBA81600F60F63 /* SceneDelegate.swift in Sources */,
-				59D8E04823F6071900862DB8 /* HTTPRepository.swift in Sources */,
-				CF1F389B23F03D5100380E80 /* Artist.swift in Sources */,
-				59D3C1D323F9F4B700F63B62 /* AppCore.swift in Sources */,
-				CF1F389023F0148500380E80 /* DiscographyViewCell.swift in Sources */,
-				59173E2923F9633000ACDBF0 /* SpotifyAPI.swift in Sources */,
-				596BD3C823F1FD8700A45BF8 /* NetworkRepository.swift in Sources */,
-				59C51DC223F0587700C773D4 /* UIColor+App.swift in Sources */,
-				CF1F389923F03D2600380E80 /* Song.swift in Sources */,
-				CF1F389423F035DD00380E80 /* DiscographyViewModel.swift in Sources */,
-				59D8E04A23F6072B00862DB8 /* CannedJSONRepository.swift in Sources */,
-				CF1F389723F0365C00380E80 /* Discography.swift in Sources */,
-				596BD3C623F1FD6600A45BF8 /* Repository.swift in Sources */,
-				CF1F389F23F03E2400380E80 /* Profile.swift in Sources */,
-				CF3FC3DE2431472B006A0435 /* AppState.swift in Sources */,
-				59173E2C23F9AD2C00ACDBF0 /* AuthenticationRepository.swift in Sources */,
-				59D4286523F86203006A87A4 /* DiscographyInteractor.swift in Sources */,
-				59D4286A23F86711006A87A4 /* AlbumResponse.swift in Sources */,
-				CF4DACCF23DBA81600F60F63 /* ContentView.swift in Sources */,
-				5914A65423F9504E006FCFCC /* DiscographyRemoteRepository.swift in Sources */,
-				59C51DC323F0587700C773D4 /* Typography.swift in Sources */,
-				CF3FC3DC243146E9006A0435 /* Functional.swift in Sources */,
-				CF1F389D23F03D7000380E80 /* Playlist.swift in Sources */,
+				CFB382B024538B6A00700D6F /* AlbumsInteractor.swift in Sources */,
+				CFB382B624538B6A00700D6F /* SpotifyKit.swift in Sources */,
+				CFB382BE24538B6A00700D6F /* AssetColor.swift in Sources */,
+				CFB382C424538B6A00700D6F /* AppCore.swift in Sources */,
+				CFB382B724538B6A00700D6F /* CannedJSONRepository.swift in Sources */,
+				CFB382AE24538B6A00700D6F /* Artist.swift in Sources */,
+				CFB382C024538B6A00700D6F /* Functional.swift in Sources */,
+				CFB3824F245389E900700D6F /* AppDelegate.swift in Sources */,
+				CFB38251245389E900700D6F /* SceneDelegate.swift in Sources */,
+				CFB382BD24538B6A00700D6F /* Typography.swift in Sources */,
+				CFB382BF24538B6A00700D6F /* Fonts.swift in Sources */,
+				CFB382B124538B6A00700D6F /* AlbumsRemoteRepository.swift in Sources */,
+				CF21AE2424547ACE003E6AA2 /* AlbumView.swift in Sources */,
+				CFB382B524538B6A00700D6F /* SpotifyAPI.swift in Sources */,
+				CFB382AF24538B6A00700D6F /* AlbumsRepository.swift in Sources */,
+				CF21AE282454DE08003E6AA2 /* CannedData.swift in Sources */,
+				CFB382BB24538B6A00700D6F /* FileSystemRepository.swift in Sources */,
+				CFB382AC24538B6A00700D6F /* Track.swift in Sources */,
+				CFB382B424538B6A00700D6F /* AuthenticationRepository.swift in Sources */,
+				CFB382B224538B6A00700D6F /* AlbumResponse.swift in Sources */,
+				CFB382AD24538B6A00700D6F /* Album.swift in Sources */,
+				CFB382B824538B6A00700D6F /* HTTPRepository.swift in Sources */,
+				CFB382BC24538B6A00700D6F /* UIColor+App.swift in Sources */,
+				CF21AE262454CFAC003E6AA2 /* MyAlbumsView.swift in Sources */,
+				CFB382C524538B6A00700D6F /* AppState.swift in Sources */,
+				CFB382B924538B6A00700D6F /* NetworkRepository.swift in Sources */,
+				CFB382BA24538B6A00700D6F /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CF4DACD923DBA81900F60F63 /* Sources */ = {
+		CFB3825D245389EB00700D6F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF4DACE223DBA81900F60F63 /* ToscozTests.swift in Sources */,
+				CFB3827F24538A2E00700D6F /* MainToscozTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFB38268245389EB00700D6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFB3828124538A3D00700D6F /* MainToscozUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CF4DACDF23DBA81900F60F63 /* PBXTargetDependency */ = {
+		CFB38263245389EB00700D6F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CF4DACC623DBA81600F60F63 /* toscoz */;
-			targetProxy = CF4DACDE23DBA81900F60F63 /* PBXContainerItemProxy */;
+			target = CFB3824A245389E900700D6F /* toscoz */;
+			targetProxy = CFB38262245389EB00700D6F /* PBXContainerItemProxy */;
+		};
+		CFB3826E245389EB00700D6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CFB3824A245389E900700D6F /* toscoz */;
+			targetProxy = CFB3826D245389EB00700D6F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CF4DACD523DBA81800F60F63 /* LaunchScreen.storyboard */ = {
+		CFDE3C7F245392DA00AA9A14 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CF4DACD623DBA81800F60F63 /* Base */,
-				CF83406123E6DDD0000FA5C3 /* pt-PT */,
+				CFDE3C7E245392DA00AA9A14 /* Base */,
+				CFDE3C81245392E100AA9A14 /* pt-PT */,
+				CFDE3C83245392EB00AA9A14 /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -525,11 +551,10 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		CF4DACE423DBA81900F60F63 /* Debug */ = {
+		CFB38273245389EB00700D6F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -576,8 +601,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -588,11 +612,10 @@
 			};
 			name = Debug;
 		};
-		CF4DACE523DBA81900F60F63 /* Release */ = {
+		CFB38274245389EB00700D6F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -633,8 +656,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -645,11 +667,12 @@
 			};
 			name = Release;
 		};
-		CF4DACE723DBA81900F60F63 /* Debug */ = {
+		CFB38276245389EB00700D6F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"toscoz/Preview Content\"";
 				DEVELOPMENT_TEAM = 6CHZFW8V57;
 				ENABLE_PREVIEWS = YES;
@@ -658,7 +681,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "";
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jjorgemoura.toscoz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -666,11 +689,12 @@
 			};
 			name = Debug;
 		};
-		CF4DACE823DBA81900F60F63 /* Release */ = {
+		CFB38277245389EB00700D6F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"toscoz/Preview Content\"";
 				DEVELOPMENT_TEAM = 6CHZFW8V57;
 				ENABLE_PREVIEWS = YES;
@@ -679,7 +703,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "";
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jjorgemoura.toscoz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -687,7 +711,7 @@
 			};
 			name = Release;
 		};
-		CF4DACEA23DBA81900F60F63 /* Debug */ = {
+		CFB38279245389EB00700D6F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -695,13 +719,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6CHZFW8V57;
 				INFOPLIST_FILE = toscozTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jjorgemoura.toscozTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -710,7 +733,7 @@
 			};
 			name = Debug;
 		};
-		CF4DACEB23DBA81900F60F63 /* Release */ = {
+		CFB3827A245389EB00700D6F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -718,71 +741,100 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6CHZFW8V57;
 				INFOPLIST_FILE = toscozTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jjorgemoura.toscozTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/toscoz.app/toscoz";
+			};
+			name = Release;
+		};
+		CFB3827C245389EB00700D6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6CHZFW8V57;
+				INFOPLIST_FILE = toscozUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jjorgemoura.toscozUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = toscoz;
+			};
+			name = Debug;
+		};
+		CFB3827D245389EB00700D6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6CHZFW8V57;
+				INFOPLIST_FILE = toscozUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jjorgemoura.toscozUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = toscoz;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CF4DACC223DBA81600F60F63 /* Build configuration list for PBXProject "toscoz" */ = {
+		CFB38246245389E900700D6F /* Build configuration list for PBXProject "toscoz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CF4DACE423DBA81900F60F63 /* Debug */,
-				CF4DACE523DBA81900F60F63 /* Release */,
+				CFB38273245389EB00700D6F /* Debug */,
+				CFB38274245389EB00700D6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CF4DACE623DBA81900F60F63 /* Build configuration list for PBXNativeTarget "toscoz" */ = {
+		CFB38275245389EB00700D6F /* Build configuration list for PBXNativeTarget "toscoz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CF4DACE723DBA81900F60F63 /* Debug */,
-				CF4DACE823DBA81900F60F63 /* Release */,
+				CFB38276245389EB00700D6F /* Debug */,
+				CFB38277245389EB00700D6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CF4DACE923DBA81900F60F63 /* Build configuration list for PBXNativeTarget "toscozTests" */ = {
+		CFB38278245389EB00700D6F /* Build configuration list for PBXNativeTarget "toscozTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CF4DACEA23DBA81900F60F63 /* Debug */,
-				CF4DACEB23DBA81900F60F63 /* Release */,
+				CFB38279245389EB00700D6F /* Debug */,
+				CFB3827A245389EB00700D6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFB3827B245389EB00700D6F /* Build configuration list for PBXNativeTarget "toscozUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFB3827C245389EB00700D6F /* Debug */,
+				CFB3827D245389EB00700D6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		CF5E25B5242C1A8400E04577 /* XCRemoteSwiftPackageReference "swift-overture" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-overture.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.5.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		CF5E25B6242C1A8400E04577 /* Overture */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CF5E25B5242C1A8400E04577 /* XCRemoteSwiftPackageReference "swift-overture" */;
-			productName = Overture;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = CF4DACBF23DBA81600F60F63 /* Project object */;
+	rootObject = CFB38243245389E900700D6F /* Project object */;
 }
