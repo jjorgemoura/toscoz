@@ -2,9 +2,9 @@
 //  Copyright © 2020  Jorge Moura. All rights reserved.
 //
 
-struct Album {
+struct Album: Identifiable {
 
-    let identifier: String
+    let id: String
     let name: String
     let artist: [Artist]
     let popularity: Int

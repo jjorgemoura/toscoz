@@ -65,7 +65,7 @@ opt_in_rules:
  # - no_grouping_extension
  - nslocalizedstring_key
  - nslocalizedstring_require_bundle
- - number_separator
+ # - number_separator
  - object_literal
  - operator_usage_whitespace
  - optional_enum_case_matching
