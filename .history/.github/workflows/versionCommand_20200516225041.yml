@@ -27,10 +27,10 @@ jobs:
       
 
     - name: printStuff
-      run: echo ${{ github.event.pull_request_review_comment.body }}
+      run: echo ${{ github.event.body }}
 
     - name: printStuff2
-      run: echo ${{ github.event.pull_request_review_comment.path }}
+      run: echo ${{ github.event.path }}
 
     - name: printStuff3
-      run: echo ${{ github.event.pull_request_review_comment.commit_id }}
+      run: echo ${{ github.event.commit_id }}
