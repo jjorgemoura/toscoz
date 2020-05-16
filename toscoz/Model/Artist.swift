@@ -4,8 +4,6 @@
 
 struct Artist: Identifiable {
 
-//    public var id: String { url }
-
     let id: String
     let name: String
 }

@@ -10,7 +10,7 @@ precedencegroup ForwardApplication {
 /// This operator is called pipe-forward.
 infix operator |> : ForwardApplication
 
-/** This function is one use of the pipe-forward operator.
+/** This function is one use of the pipe-forward operator. Overtune call it *with*.
  - Parameters:
    - x: a value
    - f: a function that has as input the same type as x.
@@ -25,9 +25,9 @@ precedencegroup ForwardComposition {
     higherThan: ForwardApplication
 }
 
-infix operator >>>>: ForwardComposition
+infix operator >>>: ForwardComposition
 
-/** A generic function that has two functions as parameters and return a function that composes the two inputs.
+/** A generic function that has two functions as parameters and return a function that composes the two inputs. Overtune call it *pipe*.
 
     The operator has a requierement that return type of the function *f* must the the same as the input type of function *g*
 
@@ -36,7 +36,7 @@ infix operator >>>>: ForwardComposition
    - g: a generic function f with input of type *B* and returns type *C*
  - Returns: return a generic composed function that has type *A* as inout and returns type *C*
  */
-func >>>> <A, B, C>(f: @escaping (A) -> B, g: @escaping (B) -> C) -> (A) -> C {
+func >>> <A, B, C>(f: @escaping (A) -> B, g: @escaping (B) -> C) -> (A) -> C {
     return { a in
         g(f(a))
     }
