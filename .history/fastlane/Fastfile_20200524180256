@@ -75,7 +75,7 @@ platform :ios do
 
   ############ Save / Read Version File ############
   
-  private_lane :save_version_token do |options|
+  lane :save_version_token do |options|
     pr_version_message = options[:version_tag]
     validate_version_token version_token:pr_version_message
 
@@ -123,6 +123,10 @@ platform :ios do
 
     stored_version_token
   end
+
+
+
+
 
 ############ Bump Build and Version ############
 

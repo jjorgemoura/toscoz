@@ -1,4 +1,4 @@
-name: PR Versioning
+  name: PR Versioning
 
 on:
   pull_request:

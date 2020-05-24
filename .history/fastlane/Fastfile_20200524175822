@@ -75,17 +75,16 @@ platform :ios do
 
   ############ Save / Read Version File ############
   
-  private_lane :save_version_token do |options|
+  lane :save_version_token do |options|
     pr_version_message = options[:version_tag]
     validate_version_token version_token:pr_version_message
 
-    if (pr_version_message = read_version_token)
-      puts "Version token is -> " + pr_version_message
-      puts "Version Token is the same. Do not need to update file!"
-    else
-      Dir.chdir("..") do
-        File.write("version.txt", pr_version_message)
-      end
+    if (pr_version_message == read_version_token)
+      puts "IS THE SAME"
+    end
+
+    Dir.chdir("..") do
+      File.write("version.txt", pr_version_message)
     end
   end
 
@@ -121,8 +120,12 @@ platform :ios do
       end
     end
 
-    stored_version_token
+    return stored_version_token
   end
+
+
+
+
 
 ############ Bump Build and Version ############
 

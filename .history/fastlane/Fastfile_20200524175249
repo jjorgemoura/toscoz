@@ -34,7 +34,6 @@ platform :ios do
     )
 
     bump_build_number
-    update_version
     generate_documentation
     commit_and_push_master
   end
@@ -79,13 +78,8 @@ platform :ios do
     pr_version_message = options[:version_tag]
     validate_version_token version_token:pr_version_message
 
-    if (pr_version_message = read_version_token)
-      puts "Version token is -> " + pr_version_message
-      puts "Version Token is the same. Do not need to update file!"
-    else
-      Dir.chdir("..") do
-        File.write("version.txt", pr_version_message)
-      end
+    Dir.chdir("..") do
+      File.write("version.txt", pr_version_message)
     end
   end
 
@@ -107,21 +101,6 @@ platform :ios do
     Dir.chdir("..") do
       File.delete('version.txt')
     end
-  end
-
-
-  private_lane :read_version_token do
-    stored_version_token = ""
-
-    Dir.chdir("..") do
-      if (File.exist?('version.txt'))
-        File.open('version.txt') do |file|
-          stored_version_token = file.read().downcase
-        end
-      end
-    end
-
-    stored_version_token
   end
 
 ############ Bump Build and Version ############
