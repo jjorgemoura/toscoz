@@ -38,13 +38,4 @@ jobs:
       run: echo ${{ github.event.pull_request_review_comment.created }}
 
     - name: printStuff4
-      run: echo ${{ github.event.pull_request }}
-
-    - name: printStuff5
-      run: echo ${{ github.event.pull_request.comments }}
-
-    - name: printStuff6
-      run: echo ${{ github.event.pull_request.body }}
-
-    - name: printStuff7
-      run: echo ${{ github.event.pull_request.body.labels }}
+      run: echo ${{ github.event.pull_request_review_comment.created }}
