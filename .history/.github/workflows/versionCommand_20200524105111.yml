@@ -1,0 +1,50 @@
+name: VersionCommand
+
+on:
+  pull_request_review_comment:
+    types: [created]
+  pull_request:
+    types: [ labeled ]
+
+jobs:
+  build:
+
+    runs-on: macOS-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: ReadMessage_P
+      if: ${{ github.event.body == 'bump:patch' }}
+      run: echo This event is a pull request that had an assignee removed.
+
+    - name: ReadMessage_Minor
+      if: ${{ github.event.body == 'bump:minor' }}
+      run: echo This event is a pull request that had an assignee removed.
+
+    - name: ReadMessage_Major
+      if: ${{ github.event.body == 'bump:major' }}
+      run: echo This event is a pull request that had an assignee removed.
+      
+
+    - name: printStuff
+      run: echo ${{ github.event.pull_request_review_comment.created.body }}
+
+    - name: printStuff2
+      run: echo ${{ github.event.pull_request_review_comment }}
+
+    - name: printStuff3
+      run: echo ${{ github.event.pull_request_review_comment.created }}
+
+    - name: printStuff4
+      run: echo ${{ github.event.pull_request }}
+
+    - name: printStuff5
+      run: echo ${{ github.event.pull_request.comments }}
+
+    - name: printStuff6
+      run: echo ${{ github.event.pull_request.labels }}
+
+    - name: printStuff7
+      run: echo ${{ github.event.pull_request.labels }}

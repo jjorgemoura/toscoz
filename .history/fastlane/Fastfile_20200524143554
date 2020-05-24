@@ -1,0 +1,171 @@
+# fastlane constants
+fastlane_version "2.141.0"
+default_platform :ios
+
+###### Public Lanes ######
+platform :ios do
+
+  lane :check_resources do
+    swiftlint
+  end
+
+  lane :run_unit_tests do
+    scan(
+      scheme: ENV["XCODE_SCHEME_TESTS"],
+      device: "iPhone 11 Pro",
+      code_coverage: true,
+      clean: true
+      )
+  end
+
+  lane :run_ui_tests do
+    scan(
+      scheme: ENV["XCODE_SCHEME_UI_TESTS"],
+      device: "iPhone 11 Pro",
+      clean: true
+      )
+  end
+
+  lane :run_pr_version do |options|
+    save_version_token options
+    commit_and_push_master
+  end
+
+  lane :run_master_build do
+    ensure_git_branch(
+      branch: 'master'
+    )
+
+    bump_build_number
+    generate_documentation
+    #commit_and_push_master
+  end
+
+  lane :release_beta do |options|
+    ensure_git_branch(
+      branch: 'master'
+    )
+
+    #version_parameter_validation option
+    check_resources
+    #run_unit_tests
+    #run_ui_tests
+    #bump_version option
+
+    #git_commit(
+    #  path: "*.*", 
+    #  message: "Release new Beta!"
+    #)
+      
+    #set_tag
+    #push_git_tags
+    
+    #gym(
+    #  project: ENV["XCODE_PROJECT_NAME"], 
+    #  scheme: ENV["XCODE_SCHEME"], 
+    #  configuration: "Release",
+    #  clean: true,
+    #  export_method: "development"
+    #)
+    
+    #pilot(
+    #  skip_submission: true
+    #)
+  end
+
+
+
+  ###### Auxiliar Lanes ######
+
+  desc "Save version token into a local file."
+  private_lane :save_version_token do |options|
+
+    pr_version_message = options[:version_tag]
+    validate_version_token version_token:pr_version_message
+
+    Dir.chdir("..") do
+      File.write("version.txt", pr_version_message)
+    end
+  end
+
+  desc "Update Project Version with version token stored in file"
+  lane :update_version do
+
+    stored_version_token = ""
+    Dir.chdir("..") do
+      if (File.exist?('version.txt'))
+        File.open('version.txt') do |file|
+          stored_version_token = file.read().downcase
+        end
+      else 
+        UI.user_error!("File version.txt doesn't exist!!!")
+      end
+    end
+
+    do_version version_token:stored_version_token
+
+    Dir.chdir("..") do
+      File.delete('version.txt')
+    end
+  end
+
+  ###### Private Lanes ######
+
+  private_lane :bump_build_number do |option|
+    #if option[:buildNumber]
+    #  UI.error "ATTENTION: Please, use the parameter 'buildNumber' to set the bump desired!!!"
+    #  UI.user_error! "Execution aborted by bad input!!!"
+    #end  
+
+    increment_build_number(
+      build_number: option[:buildNumber]
+    )
+  end
+
+  private_lane :validate_version_token do |option|    
+    version_token = option[:version_token]
+
+    if version_token != "patch" && version_token != "minor" && version_token != "major"
+      UI.user_error!("Version Token not valid!!!")
+    end
+  end
+
+  desc "Versioning -> Increase: MAJOR, MINOR or PATCH"
+  private_lane :do_version do |option|
+      
+    validate_version_token version_token:option[:version_token]
+    increment_version_number(
+      bump_type: option[:version_token]
+    )
+  end
+
+
+  private_lane :set_tag do
+    add_git_tag(
+      tag: get_version_number
+    )
+  end
+
+  private_lane :generate_documentation do
+    jazzy(config: ".jazzy.yaml")
+  end
+
+  private_lane :commit_and_push_master do
+    # sh("git checkout --track origin/master")
+
+    git_pull
+
+    git_add(path: ".")
+    
+    git_commit(
+      path: ["."], 
+      message: "NO_CI", 
+      allow_nothing_to_commit: true
+    )
+    
+    # push_to_git_remote(
+    #   no_verify: true,
+    #   set_upstream: true
+    # )
+  end
+end

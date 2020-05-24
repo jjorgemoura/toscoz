@@ -3,17 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		CF21AE2424547ACE003E6AA2 /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21AE2324547ACE003E6AA2 /* AlbumView.swift */; };
 		CF21AE262454CFAC003E6AA2 /* MyAlbumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21AE252454CFAC003E6AA2 /* MyAlbumsView.swift */; };
 		CF21AE282454DE08003E6AA2 /* CannedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21AE272454DE08003E6AA2 /* CannedData.swift */; };
+		CF23B169245F08AF00621797 /* Overture in Frameworks */ = {isa = PBXBuildFile; productRef = CF23B168245F08AF00621797 /* Overture */; };
+		CF23B170245F296100621797 /* Famelz.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23B16F245F296100621797 /* Famelz.swift */; };
+		CF23B172245F297F00621797 /* FamelzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23B171245F297F00621797 /* FamelzTests.swift */; };
+		CF8D686C24702A8B008A3CC5 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = CF8D686B24702A8B008A3CC5 /* ComposableArchitecture */; };
 		CFB3824F245389E900700D6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3824E245389E900700D6F /* AppDelegate.swift */; };
 		CFB38251245389E900700D6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB38250245389E900700D6F /* SceneDelegate.swift */; };
 		CFB38258245389EB00700D6F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB38257245389EB00700D6F /* Preview Assets.xcassets */; };
-		CFB3827F24538A2E00700D6F /* MainToscozTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3827E24538A2E00700D6F /* MainToscozTests.swift */; };
 		CFB3828124538A3D00700D6F /* MainToscozUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3828024538A3D00700D6F /* MainToscozUITests.swift */; };
 		CFB382AC24538B6A00700D6F /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3828324538B6900700D6F /* Track.swift */; };
 		CFB382AD24538B6A00700D6F /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3828424538B6900700D6F /* Album.swift */; };
@@ -62,6 +65,8 @@
 		CF21AE2324547ACE003E6AA2 /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
 		CF21AE252454CFAC003E6AA2 /* MyAlbumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlbumsView.swift; sourceTree = "<group>"; };
 		CF21AE272454DE08003E6AA2 /* CannedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CannedData.swift; sourceTree = "<group>"; };
+		CF23B16F245F296100621797 /* Famelz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Famelz.swift; sourceTree = "<group>"; };
+		CF23B171245F297F00621797 /* FamelzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamelzTests.swift; sourceTree = "<group>"; };
 		CFB3824B245389E900700D6F /* toscoz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toscoz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFB3824E245389E900700D6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFB38250245389E900700D6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,7 +76,6 @@
 		CFB38267245389EB00700D6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFB3826C245389EB00700D6F /* toscozUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = toscozUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFB38272245389EB00700D6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CFB3827E24538A2E00700D6F /* MainToscozTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainToscozTests.swift; sourceTree = "<group>"; };
 		CFB3828024538A3D00700D6F /* MainToscozUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainToscozUITests.swift; sourceTree = "<group>"; };
 		CFB3828324538B6900700D6F /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		CFB3828424538B6900700D6F /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF8D686C24702A8B008A3CC5 /* ComposableArchitecture in Frameworks */,
+				CF23B169245F08AF00621797 /* Overture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +140,41 @@
 			path = Album;
 			sourceTree = "<group>";
 		};
+		CF23B16A245F17AA00621797 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				CFB3829524538B6A00700D6F /* CannedJSONRepository.swift */,
+				CFB3829624538B6A00700D6F /* HTTPRepository.swift */,
+				CFB3829724538B6A00700D6F /* NetworkRepository.swift */,
+				CFB3829824538B6A00700D6F /* Repository.swift */,
+				CFB3829924538B6A00700D6F /* FileSystemRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		CF23B16B245F241C00621797 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		CF23B16C245F243300621797 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CF23B16D245F244700621797 /* Network */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		CF23B16D245F244700621797 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CF23B171245F297F00621797 /* FamelzTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		CFB38242245389E900700D6F = {
 			isa = PBXGroup;
 			children = (
@@ -158,10 +199,10 @@
 			isa = PBXGroup;
 			children = (
 				CFB382A724538B6A00700D6F /* Application */,
+				CFB3828F24538B6A00700D6F /* Core */,
 				CFB3828224538B6900700D6F /* Model */,
-				CFB382A124538B6A00700D6F /* Resources */,
 				CFB3828624538B6900700D6F /* Scenes */,
-				CFB3828F24538B6A00700D6F /* System */,
+				CFB382A124538B6A00700D6F /* Resources */,
 				CFB38256245389EB00700D6F /* Preview Content */,
 				CFB3824E245389E900700D6F /* AppDelegate.swift */,
 				CFB38250245389E900700D6F /* SceneDelegate.swift */,
@@ -181,7 +222,8 @@
 		CFB38264245389EB00700D6F /* toscozTests */ = {
 			isa = PBXGroup;
 			children = (
-				CFB3827E24538A2E00700D6F /* MainToscozTests.swift */,
+				CF23B16B245F241C00621797 /* Application */,
+				CF23B16C245F243300621797 /* Core */,
 				CFB38267245389EB00700D6F /* Info.plist */,
 			);
 			path = toscozTests;
@@ -218,10 +260,10 @@
 		CFB3828724538B6A00700D6F /* MyAlbums */ = {
 			isa = PBXGroup;
 			children = (
+				CFB3828B24538B6A00700D6F /* Repo */,
 				CFB3828824538B6A00700D6F /* AlbumsRepository.swift */,
 				CFB3828924538B6A00700D6F /* AlbumsInteractor.swift */,
 				CFB3828A24538B6A00700D6F /* AlbumsRemoteRepository.swift */,
-				CFB3828B24538B6A00700D6F /* Repo */,
 				CF21AE252454CFAC003E6AA2 /* MyAlbumsView.swift */,
 			);
 			path = MyAlbums;
@@ -235,15 +277,15 @@
 			path = Repo;
 			sourceTree = "<group>";
 		};
-		CFB3828F24538B6A00700D6F /* System */ = {
+		CFB3828F24538B6A00700D6F /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				CFB3829024538B6A00700D6F /* SpotifyAPI */,
+				CF23B16A245F17AA00621797 /* Repository */,
 				CFB3829424538B6A00700D6F /* Network */,
 				CFB3829A24538B6A00700D6F /* Foundation */,
 				CFB3829F24538B6A00700D6F /* Utilities */,
 			);
-			path = System;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		CFB3829024538B6A00700D6F /* SpotifyAPI */ = {
@@ -259,11 +301,7 @@
 		CFB3829424538B6A00700D6F /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				CFB3829524538B6A00700D6F /* CannedJSONRepository.swift */,
-				CFB3829624538B6A00700D6F /* HTTPRepository.swift */,
-				CFB3829724538B6A00700D6F /* NetworkRepository.swift */,
-				CFB3829824538B6A00700D6F /* Repository.swift */,
-				CFB3829924538B6A00700D6F /* FileSystemRepository.swift */,
+				CF23B16F245F296100621797 /* Famelz.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -302,6 +340,7 @@
 			children = (
 				CFB382A824538B6A00700D6F /* Core */,
 				CFB382AA24538B6A00700D6F /* State */,
+				CFB3829024538B6A00700D6F /* SpotifyAPI */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -339,6 +378,10 @@
 			dependencies = (
 			);
 			name = toscoz;
+			packageProductDependencies = (
+				CF23B168245F08AF00621797 /* Overture */,
+				CF8D686B24702A8B008A3CC5 /* ComposableArchitecture */,
+			);
 			productName = toscoz;
 			productReference = CFB3824B245389E900700D6F /* toscoz.app */;
 			productType = "com.apple.product-type.application";
@@ -412,6 +455,10 @@
 				"pt-PT",
 			);
 			mainGroup = CFB38242245389E900700D6F;
+			packageReferences = (
+				CF23B167245F08AF00621797 /* XCRemoteSwiftPackageReference "swift-overture" */,
+				CF8D686A24702A8B008A3CC5 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = CFB3824C245389E900700D6F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -482,6 +529,7 @@
 				CFB382C424538B6A00700D6F /* AppCore.swift in Sources */,
 				CFB382B724538B6A00700D6F /* CannedJSONRepository.swift in Sources */,
 				CFB382AE24538B6A00700D6F /* Artist.swift in Sources */,
+				CF23B170245F296100621797 /* Famelz.swift in Sources */,
 				CFB382C024538B6A00700D6F /* Functional.swift in Sources */,
 				CFB3824F245389E900700D6F /* AppDelegate.swift in Sources */,
 				CFB38251245389E900700D6F /* SceneDelegate.swift in Sources */,
@@ -510,7 +558,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFB3827F24538A2E00700D6F /* MainToscozTests.swift in Sources */,
+				CF23B172245F297F00621797 /* FamelzTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,7 +720,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"toscoz/Preview Content\"";
 				DEVELOPMENT_TEAM = 6CHZFW8V57;
 				ENABLE_PREVIEWS = YES;
@@ -694,7 +742,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"toscoz/Preview Content\"";
 				DEVELOPMENT_TEAM = 6CHZFW8V57;
 				ENABLE_PREVIEWS = YES;
@@ -835,6 +883,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CF23B167245F08AF00621797 /* XCRemoteSwiftPackageReference "swift-overture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-overture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
+		CF8D686A24702A8B008A3CC5 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CF23B168245F08AF00621797 /* Overture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF23B167245F08AF00621797 /* XCRemoteSwiftPackageReference "swift-overture" */;
+			productName = Overture;
+		};
+		CF8D686B24702A8B008A3CC5 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF8D686A24702A8B008A3CC5 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CFB38243245389E900700D6F /* Project object */;
 }

@@ -16,29 +16,29 @@ or alternatively using `brew cask install fastlane`
 
 # Available Actions
 ## iOS
-### ios check_resources
-```
-fastlane ios check_resources
-```
-
 ### ios run_unit_tests
 ```
 fastlane ios run_unit_tests
 ```
 
-### ios run_ui_tests
+### ios run_pr_version
 ```
-fastlane ios run_ui_tests
-```
-
-### ios do_beta
-```
-fastlane ios do_beta
+fastlane ios run_pr_version
 ```
 
-### ios bump_version
+### ios run_master_build
 ```
-fastlane ios bump_version
+fastlane ios run_master_build
+```
+
+### ios release_beta
+```
+fastlane ios release_beta
+```
+
+### ios do_version
+```
+fastlane ios do_version
 ```
 Versioning -> Increase: MAJOR, MINOR or PATCH
 

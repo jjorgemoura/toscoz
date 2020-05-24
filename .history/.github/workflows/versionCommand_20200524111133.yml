@@ -1,0 +1,27 @@
+name: Versioning Label
+  pull_request:
+    types: [ labeled ]
+
+jobs:
+  build:
+
+    runs-on: macOS-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: ReadMessage_Patch
+      if: ${{ contains( github.event.pull_request.labels.*.name, 'bump:patch') }}
+      run: echo Lets bump version as patch.
+      run: bundle exec fastlane run_unit_tests
+
+    - name: ReadMessage_Minor
+      if: ${{ contains( github.event.pull_request.labels.*.name, 'bump:minor') }}
+      run: echo Lets bump version as minor.
+      run: bundle exec fastlane run_unit_tests
+
+    - name: ReadMessage_Major
+      if: ${{ contains( github.event.pull_request.labels.*.name, 'bump:major') }}
+      run: echo Lets bump version as major.
+      run: bundle exec fastlane run_unit_tests

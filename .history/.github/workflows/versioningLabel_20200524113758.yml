@@ -1,0 +1,27 @@
+name: PR Versioning
+  pull_request:
+    types: [ labeled ]
+
+jobs:
+  labelTagVersion:
+    name: Label Tag Version
+    runs-on: macOS-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: ReadMessage_Patch
+      if: ${{ contains( github.event.pull_request.labels.*.name, 'bump:patch') }}
+      run: echo Lets bump version -> patch.
+      run: bundle exec fastlane save_version_token version_tag:patch
+
+    - name: ReadMessage_Minor
+      if: ${{ contains( github.event.pull_request.labels.*.name, 'bump:minor') }}
+      run: echo Lets bump version -> minor.
+      run: bundle exec fastlane save_version_token version_tag:minor
+
+    - name: ReadMessage_Major
+      if: ${{ contains( github.event.pull_request.labels.*.name, 'bump:major') }}
+      run: echo Lets bump version -> major.
+      run: bundle exec fastlane save_version_token version_tag:major

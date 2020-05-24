@@ -1,0 +1,132 @@
+
+# fastlane constants
+fastlane_version "2.146.0"
+default_platform :ios
+
+## ios lanes setup ##
+platform :ios do
+
+  lane :check_resources do
+    swiftlint
+  end
+
+  lane :run_unit_tests do
+    scan(
+      scheme: ENV["XCODE_SCHEME_TESTS"],
+      device: "iPhone 11 Pro",
+      code_coverage: true,
+      clean: true
+      )
+  end
+
+  lane :run_ui_tests do
+    scan(
+      scheme: ENV["XCODE_SCHEME_UI_TESTS"],
+      device: "iPhone 11 Pro",
+      clean: true
+      )
+  end
+
+  # lane :run_master_checks
+  #  bump_build_version
+  #  generate_documentation
+  #end
+
+  lane :release_beta do |option|
+
+    ensure_git_branch(
+      branch: 'master'
+    )
+
+    version_parameter_validation option
+    check_resources
+    run_unit_tests
+    #run_ui_tests
+    bump_version option
+    generate_documentation
+
+    git_commit(
+      path: "*.*", 
+      message: "Release new Beta!"
+      )
+      
+    set_tag
+    push_git_tags
+    
+    #gym(
+    #  project: ENV["XCODE_PROJECT_NAME"], 
+    #  scheme: ENV["XCODE_SCHEME"], 
+    #  configuration: "Release",
+    #  clean: true,
+    #  export_method: "development"
+    #)
+    
+    #pilot(
+    #  skip_submission: true
+    #)
+  end
+
+
+
+  ###### Auxiliar Lanes ######
+
+
+
+  ###### Private Lanes ######
+
+  desc "Validate the version command and the branch. Must send parameter version=MAJOR, MINOR or PATCH"
+  private_lane :version_parameter_validation do |option|
+
+    if option[:version]
+      UI.important "Validating the version bump parameter with value: " + option[:version]
+      if option[:version] != "MAJOR" && option[:version] != "MINOR" && option[:version] != "PATCH"
+        UI.error "ATTENTION: Please, user the parameter 'version' with the values MAJOR, MINOR or PATCH!!!"
+        UI.user_error! "Execution aborted by bad input!!!"
+      end
+    else
+      UI.error "ATTENTION: Please, use the parameter 'version' to set the bump desired!!!"
+      UI.user_error! "Execution aborted by bad input!!!"
+    end
+  end
+
+  desc "Versioning -> Increase: MAJOR, MINOR or PATCH"
+  lane :bump_version do |option|
+    if option[:version] == "MAJOR"
+      increment_version_number(
+        bump_type: "major"
+      )
+    end
+    if option[:version] == "MINOR"
+      increment_version_number(
+        bump_type: "minor"
+      )
+    end
+    if option[:version] == "PATCH"
+      increment_version_number(
+        bump_type: "patch"
+      )
+    end
+  end
+
+  lane :bump_build_version do |option|
+    if !option[:buildNumber]
+      UI.error "ATTENTION: Please, use the parameter 'buildNumber' to set the bump desired!!!"
+      UI.user_error! "Execution aborted by bad input!!!"
+    end  
+
+    increment_build_number(
+      build_number: option[:buildNumber]
+    )
+  end
+
+  private_lane :set_tag do
+    tagID = "v" + get_version_number
+    add_git_tag(
+      tag: tagID
+    )
+  end
+
+  private_lane :generate_documentation do
+    jazzy(config: ".jazzy.yaml")
+  end
+end
