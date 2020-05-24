@@ -27,7 +27,7 @@ platform :ios do
   end
 
   lane :run_pr_version do |options|
-    save_version_token options
+    save_version_token options:options
     #commit_and_push_master
   end
 
@@ -41,7 +41,7 @@ platform :ios do
     #commit_and_push_master
   end
 
-  lane :release_beta do |options|
+  lane :release_beta do |option|
     ensure_git_branch(
       branch: 'master'
     )

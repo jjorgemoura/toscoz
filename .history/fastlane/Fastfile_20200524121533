@@ -26,11 +26,6 @@ platform :ios do
       )
   end
 
-  lane :run_pr_version do |options|
-    save_version_token options
-    #commit_and_push_master
-  end
-
   lane :run_master_build do
     ensure_git_branch(
       branch: 'master'
@@ -41,24 +36,24 @@ platform :ios do
     #commit_and_push_master
   end
 
-  lane :release_beta do |options|
+  lane :release_beta do |option|
     ensure_git_branch(
       branch: 'master'
     )
 
-    #version_parameter_validation option
+    version_parameter_validation option
     check_resources
-    #run_unit_tests
+    run_unit_tests
     #run_ui_tests
-    #bump_version option
+    bump_version option
 
-    #git_commit(
-    #  path: "*.*", 
-    #  message: "Release new Beta!"
-    #)
+    git_commit(
+      path: "*.*", 
+      message: "Release new Beta!"
+      )
       
-    #set_tag
-    #push_git_tags
+    set_tag
+    push_git_tags
     
     #gym(
     #  project: ENV["XCODE_PROJECT_NAME"], 
@@ -77,8 +72,8 @@ platform :ios do
 
   ###### Auxiliar Lanes ######
 
-  desc "Save version token into a local file."
-  private_lane :save_version_token do |options|
+  desc "Save version info token into file"
+  lane :save_version_token do |options|
 
     pr_version_message = options[:version_tag]
     validate_version_token version_token:pr_version_message
@@ -109,9 +104,52 @@ platform :ios do
     end
   end
 
+  desc "Versioning -> Increase: MAJOR, MINOR or PATCH"
+  private_lane :do_version do |option|
+      
+    validate_version_token version_token:option[:version_token]
+    increment_version_number(
+      bump_type: option[:version_token]
+    )
+  end
+
   ###### Private Lanes ######
 
-  private_lane :bump_build_number do |option|
+  desc "Validate the version command and the branch. Must send parameter version=MAJOR, MINOR or PATCH"
+  private_lane :version_parameter_validation do |option|
+
+    if option[:version]
+      UI.important "Validating the version bump parameter with value: " + option[:version]
+      if option[:version] != "MAJOR" && option[:version] != "MINOR" && option[:version] != "PATCH"
+        UI.error "ATTENTION: Please, user the parameter 'version' with the values MAJOR, MINOR or PATCH!!!"
+        UI.user_error! "Execution aborted by bad input!!!"
+      end
+    else
+      UI.error "ATTENTION: Please, use the parameter 'version' to set the bump desired!!!"
+      UI.user_error! "Execution aborted by bad input!!!"
+    end
+  end
+
+  desc "Versioning -> Increase: MAJOR, MINOR or PATCH"
+  lane :bump_version do |option|
+    if option[:version] == "MAJOR"
+      increment_version_number(
+        bump_type: "major"
+      )
+    end
+    if option[:version] == "MINOR"
+      increment_version_number(
+        bump_type: "minor"
+      )
+    end
+    if option[:version] == "PATCH"
+      increment_version_number(
+        bump_type: "patch"
+      )
+    end
+  end
+
+  lane :bump_build_number do |option|
     #if option[:buildNumber]
     #  UI.error "ATTENTION: Please, use the parameter 'buildNumber' to set the bump desired!!!"
     #  UI.user_error! "Execution aborted by bad input!!!"
@@ -129,16 +167,6 @@ platform :ios do
       UI.user_error!("Version Token not valid!!!")
     end
   end
-
-  desc "Versioning -> Increase: MAJOR, MINOR or PATCH"
-  private_lane :do_version do |option|
-      
-    validate_version_token version_token:option[:version_token]
-    increment_version_number(
-      bump_type: option[:version_token]
-    )
-  end
-
 
   private_lane :set_tag do
     add_git_tag(

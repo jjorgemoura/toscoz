@@ -31,21 +31,26 @@ fastlane ios run_unit_tests
 fastlane ios run_ui_tests
 ```
 
+### ios run_pr_version
+```
+fastlane ios run_pr_version
+```
+
+### ios run_master_build
+```
+fastlane ios run_master_build
+```
+
 ### ios release_beta
 ```
 fastlane ios release_beta
 ```
 
-### ios bump_version
+### ios update_version
 ```
-fastlane ios bump_version
+fastlane ios update_version
 ```
-Versioning -> Increase: MAJOR, MINOR or PATCH
-### ios bump_build_version
-```
-fastlane ios bump_build_version
-```
-
+Update Project Version with version token stored in file
 
 ----
 

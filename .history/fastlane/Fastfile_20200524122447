@@ -26,11 +26,6 @@ platform :ios do
       )
   end
 
-  lane :run_pr_version do |options|
-    save_version_token options
-    #commit_and_push_master
-  end
-
   lane :run_master_build do
     ensure_git_branch(
       branch: 'master'
@@ -41,7 +36,7 @@ platform :ios do
     #commit_and_push_master
   end
 
-  lane :release_beta do |options|
+  lane :release_beta do |option|
     ensure_git_branch(
       branch: 'master'
     )
@@ -78,7 +73,7 @@ platform :ios do
   ###### Auxiliar Lanes ######
 
   desc "Save version token into a local file."
-  private_lane :save_version_token do |options|
+  lane :save_version_token do |options|
 
     pr_version_message = options[:version_tag]
     validate_version_token version_token:pr_version_message

@@ -27,7 +27,10 @@ platform :ios do
   end
 
   lane :run_pr_version do |options|
-    save_version_token options
+    puts "XXXX2"
+    puts options
+    puts "YYYY2"
+    save_version_token options:options
     #commit_and_push_master
   end
 
@@ -81,6 +84,9 @@ platform :ios do
   private_lane :save_version_token do |options|
 
     pr_version_message = options[:version_tag]
+    puts "XXXX"
+    puts pr_version_message
+    puts "YYYY"
     validate_version_token version_token:pr_version_message
 
     Dir.chdir("..") do
