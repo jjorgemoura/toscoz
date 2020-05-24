@@ -160,7 +160,7 @@ platform :ios do
     git_add(path: ".")
     
     git_commit(
-      path: ["."], 
+      path: ["./toscoz.xcodeproj/*", "./version.txt", "./docs/*"], 
       message: "NO_CI", 
       allow_nothing_to_commit: true
     )
