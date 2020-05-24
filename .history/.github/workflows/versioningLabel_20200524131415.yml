@@ -2,7 +2,7 @@ name: PR Versioning
 
 on:
   pull_request:
-    types: [ labeled ]
+    types: [ labeled, unlabeled ]
 
 jobs:
   labelTagVersion:
@@ -18,12 +18,12 @@ jobs:
 
     - name: ReadMessage_Patch
       if: ${{ contains( github.event.pull_request.labels.*.name, 'bump:patch') }}
-      run: bundle exec fastlane run_pr_version version_tag:patch
+      run: bundle exec fastlane save_version_token version_tag:patch
 
     - name: ReadMessage_Minor
       if: ${{ contains( github.event.pull_request.labels.*.name, 'bump:minor') }}
-      run: bundle exec fastlane run_pr_version version_tag:minor
+      run: bundle exec fastlane save_version_token version_tag:minor
 
     - name: ReadMessage_Major
       if: ${{ contains( github.event.pull_request.labels.*.name, 'bump:major') }}
-      run: bundle exec fastlane run_pr_version version_tag:major
+      run: bundle exec fastlane save_version_token version_tag:major
