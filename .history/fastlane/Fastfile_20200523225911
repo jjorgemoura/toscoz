@@ -28,10 +28,6 @@ platform :ios do
   end
 
   lane :run_master_checks do
-    ensure_git_branch(
-      branch: 'master'
-    )
-
     bump_build_version
     generate_documentation
     commit_and_push_master

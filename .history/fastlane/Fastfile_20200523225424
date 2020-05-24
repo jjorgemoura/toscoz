@@ -27,15 +27,10 @@ platform :ios do
       )
   end
 
-  lane :run_master_checks do
-    ensure_git_branch(
-      branch: 'master'
-    )
-
-    bump_build_version
-    generate_documentation
-    commit_and_push_master
-  end
+  # lane :run_master_checks
+  #  bump_build_version
+  #  generate_documentation
+  #end
 
   lane :release_beta do |option|
 
@@ -114,10 +109,10 @@ platform :ios do
   end
 
   lane :bump_build_version do |option|
-    #if option[:buildNumber]
-    #  UI.error "ATTENTION: Please, use the parameter 'buildNumber' to set the bump desired!!!"
-    #  UI.user_error! "Execution aborted by bad input!!!"
-    #end  
+    if !option[:buildNumber]
+      UI.error "ATTENTION: Please, use the parameter 'buildNumber' to set the bump desired!!!"
+      UI.user_error! "Execution aborted by bad input!!!"
+    end  
 
     increment_build_number(
       build_number: option[:buildNumber]
@@ -133,21 +128,5 @@ platform :ios do
 
   private_lane :generate_documentation do
     jazzy(config: ".jazzy.yaml")
-  end
-
-
-  private_lane :commit_and_push_master do
-    
-    # sh("git checkout --track origin/master")
-
-    git_pull
-    # git_add(path: "./docs/*", shell_escape: false)
-    # git_add(path: "version.txt", shell_escape: false)
-    git_commit(path: ["./toscoz.xcodeproj", "./version.txt", "./docs/*"], message: "NO_CI", allow_nothing_to_commit: true)
-    push_to_git_remote(
-      local_branch: "master",
-      remote_branch: "master",
-      no_verify: true
-    )
   end
 end

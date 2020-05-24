@@ -31,9 +31,9 @@ fastlane ios run_unit_tests
 fastlane ios run_ui_tests
 ```
 
-### ios do_beta
+### ios release_beta
 ```
-fastlane ios do_beta
+fastlane ios release_beta
 ```
 
 ### ios bump_version
@@ -41,6 +41,11 @@ fastlane ios do_beta
 fastlane ios bump_version
 ```
 Versioning -> Increase: MAJOR, MINOR or PATCH
+### ios bump_build_version
+```
+fastlane ios bump_build_version
+```
+
 
 ----
 
