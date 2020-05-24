@@ -171,9 +171,9 @@ platform :ios do
       allow_nothing_to_commit: true
     )
     
-    push_to_git_remote(
-      no_verify: true,
-      set_upstream: true
-    )
+    # push_to_git_remote(
+    #   no_verify: true,
+    #   set_upstream: true
+    # )
   end
 end
