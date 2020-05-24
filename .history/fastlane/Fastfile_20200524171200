@@ -70,11 +70,13 @@ platform :ios do
     #)
   end
 
+
   ############ Auxiliar Lanes ############
 
   ############ Save / Read Version File ############
-  
+  desc "Save version token into a local file."
   private_lane :save_version_token do |options|
+
     pr_version_message = options[:version_tag]
     validate_version_token version_token:pr_version_message
 
@@ -83,9 +85,10 @@ platform :ios do
     end
   end
 
+  desc "Update Project Version with version token stored in file"
   private_lane :update_version do
-    stored_version_token = ""
 
+    stored_version_token = ""
     Dir.chdir("..") do
       if (File.exist?('version.txt'))
         File.open('version.txt') do |file|
@@ -126,8 +129,8 @@ platform :ios do
 
   desc "Versioning -> Increase: MAJOR, MINOR or PATCH"
   private_lane :do_version do |option|
+      
     validate_version_token version_token:option[:version_token]
-    
     increment_version_number(
       bump_type: option[:version_token]
     )
