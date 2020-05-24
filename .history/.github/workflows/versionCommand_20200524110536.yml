@@ -20,11 +20,11 @@ jobs:
       run: echo Lets bump version as patch.
 
     - name: ReadMessage_Minor
-      if: ${{ contains( github.event.pull_request.labels.*.name, 'bump:minor') }}
+      if: ${{ contains( github.event.pull_request.labels.*.name, 'bump:patch') }}
       run: echo Lets bump version as minor.
 
     - name: ReadMessage_Major
-      if: ${{ contains( github.event.pull_request.labels.*.name, 'bump:major') }}
+      if: ${{ contains( github.event.pull_request.labels.*.name, 'bump:patch') }}
       run: echo Lets bump version as major.
     
     - name: printStuff5
