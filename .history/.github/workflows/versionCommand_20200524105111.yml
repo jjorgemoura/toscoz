@@ -47,4 +47,4 @@ jobs:
       run: echo ${{ github.event.pull_request.labels }}
 
     - name: printStuff7
-      run: echo ${{ github.event.pull_request.labels.name }}
+      run: echo ${{ github.event.pull_request.labels }}
