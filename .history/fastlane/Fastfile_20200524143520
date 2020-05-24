@@ -154,6 +154,8 @@ platform :ios do
     # sh("git checkout --track origin/master")
 
     git_pull
+    # git_add(path: "./docs/*", shell_escape: false)
+    # git_add(path: "version.txt", shell_escape: false)
 
     git_add(path: ".")
     
