@@ -16,19 +16,9 @@ or alternatively using `brew cask install fastlane`
 
 # Available Actions
 ## iOS
-### ios check_resources
-```
-fastlane ios check_resources
-```
-
 ### ios run_unit_tests
 ```
 fastlane ios run_unit_tests
-```
-
-### ios run_ui_tests
-```
-fastlane ios run_ui_tests
 ```
 
 ### ios run_pr_version
@@ -46,11 +36,11 @@ fastlane ios run_master_build
 fastlane ios release_beta
 ```
 
-### ios update_version
+### ios bump_build_number
 ```
-fastlane ios update_version
+fastlane ios bump_build_number
 ```
-Update Project Version with version token stored in file
+
 
 ----
 
