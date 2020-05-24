@@ -1,11 +1,11 @@
-name: Release
+name: Beta
 
 on:
   push:
     branches: [ master ]
 
 jobs:
-  masterBuild:
+  build:
     name: Master Build
     runs-on: macOS-latest
 
