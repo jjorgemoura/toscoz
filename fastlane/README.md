@@ -36,11 +36,11 @@ fastlane ios run_master_build
 fastlane ios release_beta
 ```
 
-### ios bump_build_number
+### ios do_version
 ```
-fastlane ios bump_build_number
+fastlane ios do_version
 ```
-
+Versioning -> Increase: MAJOR, MINOR or PATCH
 
 ----
 
