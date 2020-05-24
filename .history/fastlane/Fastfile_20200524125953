@@ -157,11 +157,7 @@ platform :ios do
     # git_add(path: "./docs/*", shell_escape: false)
     # git_add(path: "version.txt", shell_escape: false)
     
-    git_commit(
-      path: ["./toscoz.xcodeproj/*", "./version.txt", "./docs/*"], 
-      message: "NO_CI", 
-      allow_nothing_to_commit: true
-    )
+    git_commit(path: ["./toscoz.xcodeproj", "./version.txt", "./docs/*"], message: "NO_CI", allow_nothing_to_commit: true)
     
     push_to_git_remote(
       no_verify: true,
