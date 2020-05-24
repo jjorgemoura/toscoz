@@ -38,7 +38,7 @@ platform :ios do
 
     bump_build_number
     generate_documentation
-    commit_and_push_master
+    #commit_and_push_master
   end
 
   lane :release_beta do |options|
@@ -72,6 +72,7 @@ platform :ios do
     #  skip_submission: true
     #)
   end
+
 
 
   ###### Auxiliar Lanes ######
@@ -137,6 +138,7 @@ platform :ios do
       bump_type: option[:version_token]
     )
   end
+
 
   private_lane :set_tag do
     add_git_tag(
