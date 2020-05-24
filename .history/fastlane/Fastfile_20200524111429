@@ -32,7 +32,7 @@ platform :ios do
       branch: 'master'
     )
 
-    bump_build_number
+    bump_build_version
     generate_documentation
     commit_and_push_master
   end
@@ -73,16 +73,6 @@ platform :ios do
 
   ###### Auxiliar Lanes ######
 
-  desc "Save version info token into file"
-  lane :save_version_token do |options|
-
-    pr_version_message = options[:version_tag]
-    validate_version_token version_token:pr_version_message
-
-    Dir.chdir("..") do
-      File.write("version.txt", pr_version_message)
-    end
-  end
 
 
   ###### Private Lanes ######
@@ -121,7 +111,7 @@ platform :ios do
     end
   end
 
-  lane :bump_build_number do |option|
+  lane :bump_build_version do |option|
     #if option[:buildNumber]
     #  UI.error "ATTENTION: Please, use the parameter 'buildNumber' to set the bump desired!!!"
     #  UI.user_error! "Execution aborted by bad input!!!"
@@ -130,14 +120,6 @@ platform :ios do
     increment_build_number(
       build_number: option[:buildNumber]
     )
-  end
-
-  private_lane :validate_version_token do |option|    
-    version_token = option[:version_token]
-    
-    if version_token != "patch" && version_token != "minor" && version_token != "major"
-      UI.user_error!("Version Token not valid!!!")
-    end
   end
 
   private_lane :set_tag do
@@ -150,7 +132,9 @@ platform :ios do
     jazzy(config: ".jazzy.yaml")
   end
 
+
   private_lane :commit_and_push_master do
+    
     # sh("git checkout --track origin/master")
 
     git_pull
