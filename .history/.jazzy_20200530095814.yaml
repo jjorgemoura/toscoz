@@ -14,15 +14,15 @@ theme: apple
 
 sdk: iphoneos
 # swift-version: 5.1
-# source_directory: toscoz/
+source_directory: toscoz/
 clean: true
 
-hide_documentation_coverage: false
+hide_documentation_coverage: true
 skip_undocumented: false
 min_acl: internal
 
-xcodebuild_arguments:
-    - "-project"
-    - "toscoz.xcodeproj"
-    - "-scheme"
-    - "toscoz"
+# xcodebuild_arguments:
+#     - "-project"
+#     - "toscoz.xcodeproj"
+#     - "-scheme"
+#     - "toscoz"

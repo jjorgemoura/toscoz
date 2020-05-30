@@ -14,10 +14,10 @@ theme: apple
 
 sdk: iphoneos
 # swift-version: 5.1
-# source_directory: toscoz/
+source-directory: toscoz/
 clean: true
 
-hide_documentation_coverage: false
+hide_documentation_coverage: true
 skip_undocumented: false
 min_acl: internal
 

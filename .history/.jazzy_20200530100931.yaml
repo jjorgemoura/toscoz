@@ -18,7 +18,7 @@ sdk: iphoneos
 clean: true
 
 hide_documentation_coverage: false
-skip_undocumented: false
+# skip_undocumented: false
 min_acl: internal
 
 xcodebuild_arguments:

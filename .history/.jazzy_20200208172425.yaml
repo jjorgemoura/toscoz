@@ -13,13 +13,13 @@ output: docs
 theme: apple
 
 sdk: iphoneos
-# swift-version: 5.1
-# source_directory: toscoz/
+swift-version: 5.1
+source-directory: toscoz/
 clean: true
 
-hide_documentation_coverage: false
-skip_undocumented: false
-min_acl: internal
+hide_documentation_coverage: true
+skip-undocumented: false
+min_acl: "internal"
 
 xcodebuild_arguments:
     - "-project"

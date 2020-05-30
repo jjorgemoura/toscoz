@@ -17,7 +17,7 @@ sdk: iphoneos
 # source_directory: toscoz/
 clean: true
 
-hide_documentation_coverage: false
+hide_documentation_coverage: true
 skip_undocumented: false
 min_acl: internal
 
