@@ -4,7 +4,7 @@
 
 import Foundation
 
-struct CannedData {
+enum CannedData {
 
     static let albums: [Album] = {
 

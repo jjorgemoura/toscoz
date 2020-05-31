@@ -3,6 +3,10 @@
 //
 
 enum AppAction: Equatable {
+//    case login
+//    case fetchMyAlbums
+//    case listMyAlbums
+
     case settingsButtonTapped
     case settingsScreenDismissed
 }
