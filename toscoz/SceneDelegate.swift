@@ -4,6 +4,7 @@
 
 import UIKit
 import SwiftUI
+import ComposableArchitecture
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -15,7 +16,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Create the SwiftUI view that provides the window contents.
-        let contentView = MyAlbumsView(albums: CannedData.albums)
+
+        let versionNumber = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "unknown version"
+        let versionBuild = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? ""
+
+        let version = "Version: \(versionNumber) (\(versionBuild))"
+
+        let appState = AppState(showSettings: false, myAlbums: CannedData.albums, settings: SettingsPageBuilder.build(version: version))
+
+        let store = Store(initialState: appState,
+                          reducer: AppReducer().main,
+                          environment: AppEnvironment(appVersion: version))
+
+        let contentView = MyAlbumsView(store: store)
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
