@@ -47,6 +47,8 @@
 		CFC6D4BD2483C63000E5511D /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC6D4BC2483C63000E5511D /* Setting.swift */; };
 		CFC6D4BF2483C7E900E5511D /* SettingsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC6D4BE2483C7E900E5511D /* SettingsGroup.swift */; };
 		CFC6D4C12483CA1700E5511D /* SettingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC6D4C02483CA1700E5511D /* SettingType.swift */; };
+		CFC6D4C42483F81300E5511D /* SettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC6D4C32483F81300E5511D /* SettingsPage.swift */; };
+		CFC6D4C62483F82500E5511D /* SettingsPageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC6D4C52483F82500E5511D /* SettingsPageType.swift */; };
 		CFDE3C7D245392DA00AA9A14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFDE3C7F245392DA00AA9A14 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +114,8 @@
 		CFC6D4BC2483C63000E5511D /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		CFC6D4BE2483C7E900E5511D /* SettingsGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsGroup.swift; sourceTree = "<group>"; };
 		CFC6D4C02483CA1700E5511D /* SettingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingType.swift; sourceTree = "<group>"; };
+		CFC6D4C32483F81300E5511D /* SettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPage.swift; sourceTree = "<group>"; };
+		CFC6D4C52483F82500E5511D /* SettingsPageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPageType.swift; sourceTree = "<group>"; };
 		CFDE3C7E245392DA00AA9A14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFDE3C81245392E100AA9A14 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		CFDE3C83245392EB00AA9A14 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -260,12 +264,10 @@
 		CFB3828224538B6900700D6F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CFC6D4C22483F7D200E5511D /* Settings */,
 				CFB3828324538B6900700D6F /* Track.swift */,
 				CFB3828424538B6900700D6F /* Album.swift */,
 				CFB3828524538B6900700D6F /* Artist.swift */,
-				CFC6D4BC2483C63000E5511D /* Setting.swift */,
-				CFC6D4BE2483C7E900E5511D /* SettingsGroup.swift */,
-				CFC6D4C02483CA1700E5511D /* SettingType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -383,6 +385,18 @@
 			isa = PBXGroup;
 			children = (
 				CFC6D4BA2483BD7500E5511D /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		CFC6D4C22483F7D200E5511D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				CFC6D4C02483CA1700E5511D /* SettingType.swift */,
+				CFC6D4BC2483C63000E5511D /* Setting.swift */,
+				CFC6D4BE2483C7E900E5511D /* SettingsGroup.swift */,
+				CFC6D4C52483F82500E5511D /* SettingsPageType.swift */,
+				CFC6D4C32483F81300E5511D /* SettingsPage.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -550,6 +564,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFB382B024538B6A00700D6F /* AlbumsInteractor.swift in Sources */,
+				CFC6D4C62483F82500E5511D /* SettingsPageType.swift in Sources */,
 				CFB382B624538B6A00700D6F /* SpotifyKit.swift in Sources */,
 				CFC6D4C12483CA1700E5511D /* SettingType.swift in Sources */,
 				CFB382BE24538B6A00700D6F /* AssetColor.swift in Sources */,
@@ -568,6 +583,7 @@
 				CFB382B524538B6A00700D6F /* SpotifyAPI.swift in Sources */,
 				CFB382AF24538B6A00700D6F /* AlbumsRepository.swift in Sources */,
 				CFA2C4F0247B1F8400E26608 /* AppReducer.swift in Sources */,
+				CFC6D4C42483F81300E5511D /* SettingsPage.swift in Sources */,
 				CF21AE282454DE08003E6AA2 /* CannedData.swift in Sources */,
 				CFB382BB24538B6A00700D6F /* FileSystemRepository.swift in Sources */,
 				CFB382AC24538B6A00700D6F /* Track.swift in Sources */,

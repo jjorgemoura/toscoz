@@ -13,22 +13,30 @@ struct SettingsView: View {
 
         WithViewStore(self.store) { viewState in
 
-//            Text("sdsd")
-            Text("sadzssa -> \(viewState.settings.type.rawValue)")
+//            Text("sadzssa -> \(viewState.settings.type.rawValue)")
 
-//            List(asdasd.groups) { group in
-//
-//                Text("sdf sdfsdf sdfsdfsfd")
-//            }
+            NavigationView {
+//                List(viewState.groups.footer) { setting in
+//                    Text(setting)
+//                }
+
+                Text("sadzssa -> \(viewState.settings.type.rawValue)")
+                .navigationBarTitle("Settings")
+            }
         }
     }
 }
 
 struct SettingsView_Previews: PreviewProvider {
+    static let demoStore = Store(initialState: AppState(showSettings: false, myAlbums: CannedData.albums, settings: SettingsPageBuilder.build(version: "")),
+                                 reducer: AppReducer().main,
+                                 environment: AppEnvironment(appVersion: "4.6.4"))
+
     static var previews: some View {
-//        Group {
-//            AlbumView()
-//        }
-        Text("sd")
+        Group {
+            SettingsView(store: demoStore)
+            SettingsView(store: demoStore)
+                .colorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
+        }
     }
 }

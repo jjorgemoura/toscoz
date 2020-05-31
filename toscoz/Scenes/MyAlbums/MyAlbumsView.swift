@@ -13,41 +13,21 @@ struct MyAlbumsView: View {
 
         WithViewStore(self.store) { viewState in
 
-            List(viewState.myAlbums) { album in
-                HStack {
-                    VStack(alignment: .leading) {
-                        Text(album.name)
-                        Text(album.artist[0].name)
-                            .font(.caption)
+            NavigationView {
+                List(viewState.myAlbums) { album in
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text(album.name)
+                            Text(album.artist[0].name)
+                                .font(.caption)
+                        }
                     }
                 }
+                .navigationBarTitle("My Albums")
+                .navigationBarItems(trailing:
+                    Button(action: {}, label: { Image(systemName: "gear") })
+                )
             }
-        .navigationBarTitle("My Albums")
-        .navigationBarItems(trailing:
-            Button(action: {}, label: { Image(systemName: "gear") })
-            )
-
-//            NavigationView {
-//                VStack {
-//                    Text("London")
-//                    Text("Next Hour")
-//                    Text("Sunny and moderate breeze")
-//                }
-//                .navigationBarTitle(
-//                    Text(""),
-//                    displayMode: .inline
-//                )
-//                    .navigationBarItems(
-//                        trailing:
-//                        HStack {
-//                            Button(action: {}) {
-//                                Image(systemName: "magnifyingglass")
-//                            }
-//                            .foregroundColor(.blue)
-//                        }
-//                )
-//            }
-//            .navigationViewStyle(DefaultNavigationViewStyle())
         }
     }
 }

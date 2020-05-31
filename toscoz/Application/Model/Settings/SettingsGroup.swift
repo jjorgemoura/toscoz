@@ -2,33 +2,10 @@
 //  Copyright © 2020  Jorge Moura. All rights reserved.
 //
 
-enum SettingsPageType: String {
-    case topLevel
-    case detail
-}
-
-struct SettingsPage: Equatable {
-    let type: SettingsPageType
-    let groups: [SettingsGroup]
-}
-
 struct SettingsGroup: Equatable {
     let header: String?
     let footer: String?
     let settings: [Setting]
-}
-
-struct Setting: Equatable {
-    let title: String
-    let body: String?
-    let linkPage: SettingsPage?
-    let type: SettingType
-}
-
-enum SettingType: String {
-    case page
-    case statement
-    case toggle
 }
 
 struct SettingsPageBuilder {
