@@ -14,6 +14,9 @@
 		CF23B170245F296100621797 /* Famelz.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23B16F245F296100621797 /* Famelz.swift */; };
 		CF23B172245F297F00621797 /* FamelzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23B171245F297F00621797 /* FamelzTests.swift */; };
 		CF8D686C24702A8B008A3CC5 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = CF8D686B24702A8B008A3CC5 /* ComposableArchitecture */; };
+		CFA2C4EE247B1F7B00E26608 /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA2C4ED247B1F7B00E26608 /* AppAction.swift */; };
+		CFA2C4F0247B1F8400E26608 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA2C4EF247B1F8400E26608 /* AppReducer.swift */; };
+		CFA2C4F2247B1F9600E26608 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA2C4F1247B1F9600E26608 /* AppEnvironment.swift */; };
 		CFB3824F245389E900700D6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3824E245389E900700D6F /* AppDelegate.swift */; };
 		CFB38251245389E900700D6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB38250245389E900700D6F /* SceneDelegate.swift */; };
 		CFB38258245389EB00700D6F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB38257245389EB00700D6F /* Preview Assets.xcassets */; };
@@ -39,7 +42,6 @@
 		CFB382BF24538B6A00700D6F /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3829E24538B6A00700D6F /* Fonts.swift */; };
 		CFB382C024538B6A00700D6F /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB382A024538B6A00700D6F /* Functional.swift */; };
 		CFB382C124538B6A00700D6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB382A224538B6A00700D6F /* Assets.xcassets */; };
-		CFB382C424538B6A00700D6F /* AppCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB382A924538B6A00700D6F /* AppCore.swift */; };
 		CFB382C524538B6A00700D6F /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB382AB24538B6A00700D6F /* AppState.swift */; };
 		CFDE3C7D245392DA00AA9A14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFDE3C7F245392DA00AA9A14 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -67,6 +69,9 @@
 		CF21AE272454DE08003E6AA2 /* CannedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CannedData.swift; sourceTree = "<group>"; };
 		CF23B16F245F296100621797 /* Famelz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Famelz.swift; sourceTree = "<group>"; };
 		CF23B171245F297F00621797 /* FamelzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamelzTests.swift; sourceTree = "<group>"; };
+		CFA2C4ED247B1F7B00E26608 /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
+		CFA2C4EF247B1F8400E26608 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		CFA2C4F1247B1F9600E26608 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		CFB3824B245389E900700D6F /* toscoz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toscoz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFB3824E245389E900700D6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFB38250245389E900700D6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,7 +103,6 @@
 		CFB3829E24538B6A00700D6F /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		CFB382A024538B6A00700D6F /* Functional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functional.swift; sourceTree = "<group>"; };
 		CFB382A224538B6A00700D6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CFB382A924538B6A00700D6F /* AppCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCore.swift; sourceTree = "<group>"; };
 		CFB382AB24538B6A00700D6F /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		CFDE3C7E245392DA00AA9A14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFDE3C81245392E100AA9A14 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -175,6 +179,14 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		CFA2C4EC247B1DC800E26608 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CFB3828924538B6A00700D6F /* AlbumsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		CFB38242245389E900700D6F = {
 			isa = PBXGroup;
 			children = (
@@ -200,7 +212,6 @@
 			children = (
 				CFB382A724538B6A00700D6F /* Application */,
 				CFB3828F24538B6A00700D6F /* Core */,
-				CFB3828224538B6900700D6F /* Model */,
 				CFB3828624538B6900700D6F /* Scenes */,
 				CFB382A124538B6A00700D6F /* Resources */,
 				CFB38256245389EB00700D6F /* Preview Content */,
@@ -260,10 +271,8 @@
 		CFB3828724538B6A00700D6F /* MyAlbums */ = {
 			isa = PBXGroup;
 			children = (
+				CFA2C4EC247B1DC800E26608 /* Interactor */,
 				CFB3828B24538B6A00700D6F /* Repo */,
-				CFB3828824538B6A00700D6F /* AlbumsRepository.swift */,
-				CFB3828924538B6A00700D6F /* AlbumsInteractor.swift */,
-				CFB3828A24538B6A00700D6F /* AlbumsRemoteRepository.swift */,
 				CF21AE252454CFAC003E6AA2 /* MyAlbumsView.swift */,
 			);
 			path = MyAlbums;
@@ -272,6 +281,8 @@
 		CFB3828B24538B6A00700D6F /* Repo */ = {
 			isa = PBXGroup;
 			children = (
+				CFB3828A24538B6A00700D6F /* AlbumsRemoteRepository.swift */,
+				CFB3828824538B6A00700D6F /* AlbumsRepository.swift */,
 				CFB3828C24538B6A00700D6F /* AlbumResponse.swift */,
 			);
 			path = Repo;
@@ -338,27 +349,22 @@
 		CFB382A724538B6A00700D6F /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				CFB382A824538B6A00700D6F /* Core */,
-				CFB382AA24538B6A00700D6F /* State */,
+				CFB3828224538B6900700D6F /* Model */,
+				CFB382AA24538B6A00700D6F /* Core */,
 				CFB3829024538B6A00700D6F /* SpotifyAPI */,
 			);
 			path = Application;
 			sourceTree = "<group>";
 		};
-		CFB382A824538B6A00700D6F /* Core */ = {
+		CFB382AA24538B6A00700D6F /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				CFB382A924538B6A00700D6F /* AppCore.swift */,
+				CFA2C4ED247B1F7B00E26608 /* AppAction.swift */,
+				CFB382AB24538B6A00700D6F /* AppState.swift */,
+				CFA2C4EF247B1F8400E26608 /* AppReducer.swift */,
+				CFA2C4F1247B1F9600E26608 /* AppEnvironment.swift */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		CFB382AA24538B6A00700D6F /* State */ = {
-			isa = PBXGroup;
-			children = (
-				CFB382AB24538B6A00700D6F /* AppState.swift */,
-			);
-			path = State;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,7 +435,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Jorge Moura";
 				TargetAttributes = {
 					CFB3824A245389E900700D6F = {
@@ -526,9 +532,9 @@
 				CFB382B024538B6A00700D6F /* AlbumsInteractor.swift in Sources */,
 				CFB382B624538B6A00700D6F /* SpotifyKit.swift in Sources */,
 				CFB382BE24538B6A00700D6F /* AssetColor.swift in Sources */,
-				CFB382C424538B6A00700D6F /* AppCore.swift in Sources */,
 				CFB382B724538B6A00700D6F /* CannedJSONRepository.swift in Sources */,
 				CFB382AE24538B6A00700D6F /* Artist.swift in Sources */,
+				CFA2C4F2247B1F9600E26608 /* AppEnvironment.swift in Sources */,
 				CF23B170245F296100621797 /* Famelz.swift in Sources */,
 				CFB382C024538B6A00700D6F /* Functional.swift in Sources */,
 				CFB3824F245389E900700D6F /* AppDelegate.swift in Sources */,
@@ -539,12 +545,14 @@
 				CF21AE2424547ACE003E6AA2 /* AlbumView.swift in Sources */,
 				CFB382B524538B6A00700D6F /* SpotifyAPI.swift in Sources */,
 				CFB382AF24538B6A00700D6F /* AlbumsRepository.swift in Sources */,
+				CFA2C4F0247B1F8400E26608 /* AppReducer.swift in Sources */,
 				CF21AE282454DE08003E6AA2 /* CannedData.swift in Sources */,
 				CFB382BB24538B6A00700D6F /* FileSystemRepository.swift in Sources */,
 				CFB382AC24538B6A00700D6F /* Track.swift in Sources */,
 				CFB382B424538B6A00700D6F /* AuthenticationRepository.swift in Sources */,
 				CFB382B224538B6A00700D6F /* AlbumResponse.swift in Sources */,
 				CFB382AD24538B6A00700D6F /* Album.swift in Sources */,
+				CFA2C4EE247B1F7B00E26608 /* AppAction.swift in Sources */,
 				CFB382B824538B6A00700D6F /* HTTPRepository.swift in Sources */,
 				CFB382BC24538B6A00700D6F /* UIColor+App.swift in Sources */,
 				CF21AE262454CFAC003E6AA2 /* MyAlbumsView.swift in Sources */,
@@ -603,6 +611,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -664,6 +673,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

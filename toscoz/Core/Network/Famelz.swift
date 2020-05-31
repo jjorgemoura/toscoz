@@ -8,11 +8,7 @@ struct Famelz {
 
     func perform(request: String) -> Response {
 
-        
-
-
         let xxx = URLSession.shared.dataTask(with: URL(string: "www.google.com")!) { (data, response, error) in
-
         }
         xxx.resume()
 

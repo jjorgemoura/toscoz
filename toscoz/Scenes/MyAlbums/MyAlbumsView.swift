@@ -13,11 +13,10 @@ struct MyAlbumsView: View {
         List(albums) { album in
 
             HStack {
-                Image("sdfdfaf")
-                VStack {
+                VStack(alignment: .leading) {
                     Text(album.name)
-                    Text("1977")
-                        .font(.footnote)
+                    Text(album.artist[0].name)
+                        .font(.caption)
                 }
             }
         }

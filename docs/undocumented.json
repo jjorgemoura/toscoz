@@ -1,6 +1,670 @@
 {
   "warnings": [
-
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/AppDelegate.swift",
+      "line": 8,
+      "symbol": "AppDelegate",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/AppDelegate.swift",
+      "line": 10,
+      "symbol": "AppDelegate.application(_:didFinishLaunchingWithOptions:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/AppDelegate.swift",
+      "line": 17,
+      "symbol": "AppDelegate.application(_:configurationForConnecting:options:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/AppDelegate.swift",
+      "line": 23,
+      "symbol": "AppDelegate.application(_:didDiscardSceneSessions:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Application/Core/AppAction.swift",
+      "line": 5,
+      "symbol": "AppAction",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Application/Core/AppAction.swift",
+      "line": 6,
+      "symbol": "AppAction.settingsButtonTapped",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Application/Core/AppAction.swift",
+      "line": 7,
+      "symbol": "AppAction.settingsScreenDismissed",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Application/Core/AppEnvironment.swift",
+      "line": 5,
+      "symbol": "AppEnvironment",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Application/Core/AppReducer.swift",
+      "line": 7,
+      "symbol": "AppReducer",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Application/Core/AppReducer.swift",
+      "line": 10,
+      "symbol": "AppReducer.main",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Application/Core/AppState.swift",
+      "line": 5,
+      "symbol": "AppState",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Application/Core/AppState.swift",
+      "line": 6,
+      "symbol": "AppState.showSettings",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Application/Core/AppState.swift",
+      "line": 7,
+      "symbol": "AppState.myAlbums",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Application/Model/Album.swift",
+      "line": 5,
+      "symbol": "Album",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Application/Model/Album.swift",
+      "line": 7,
+      "symbol": "Album.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Application/Model/Album.swift",
+      "line": 8,
+      "symbol": "Album.artist",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Application/Model/Album.swift",
+      "line": 9,
+      "symbol": "Album.popularity",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Application/Model/Artist.swift",
+      "line": 5,
+      "symbol": "Artist",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Application/Model/Artist.swift",
+      "line": 7,
+      "symbol": "Artist.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Application/Model/Track.swift",
+      "line": 5,
+      "symbol": "Track",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Application/Model/Track.swift",
+      "line": 6,
+      "symbol": "Track.identifier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Application/Model/Track.swift",
+      "line": 7,
+      "symbol": "Track.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Application/Model/Track.swift",
+      "line": 8,
+      "symbol": "Track.trackNumber",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Application/Model/Track.swift",
+      "line": 9,
+      "symbol": "Track.duration",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Application/SpotifyAPI/AuthenticationRepository.swift",
+      "line": 7,
+      "symbol": "AuthenticationRepository",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Application/SpotifyAPI/SpotifyAPI.swift",
+      "line": 7,
+      "symbol": "SpotifyApiResources",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Application/SpotifyAPI/SpotifyAPI.swift",
+      "line": 8,
+      "symbol": "SpotifyApiResources.discography(limit:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Application/SpotifyAPI/SpotifyAPI.swift",
+      "line": 11,
+      "symbol": "SpotifyAPI",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Application/SpotifyAPI/SpotifyAPI.swift",
+      "line": 13,
+      "symbol": "SpotifyAPI.api(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Application/SpotifyAPI/SpotifyKit.swift",
+      "line": 5,
+      "symbol": "SpotifyKit",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Application/SpotifyAPI/SpotifyKit.swift",
+      "line": 7,
+      "symbol": "SpotifyKit.spotifyToken",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Foundation/AssetColor.swift",
+      "line": 7,
+      "symbol": "AssetColor",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Foundation/AssetColor.swift",
+      "line": 10,
+      "symbol": "AssetColor.color",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Foundation/AssetColor.swift",
+      "line": 16,
+      "symbol": "AssetColor.init(assetName:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Foundation/Typography.swift",
+      "line": 7,
+      "symbol": "Typography",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Foundation/Typography.swift",
+      "line": 9,
+      "symbol": "Typography.style(element:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Foundation/Typography.swift",
+      "line": 16,
+      "symbol": "TypographyTextStyle",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Foundation/Typography.swift",
+      "line": 17,
+      "symbol": "TypographyTextStyle.title",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Foundation/Typography.swift",
+      "line": 18,
+      "symbol": "TypographyTextStyle.body",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Foundation/Typography.swift",
+      "line": 19,
+      "symbol": "TypographyTextStyle.body2",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Foundation/Typography.swift",
+      "line": 21,
+      "symbol": "TypographyTextStyle.color()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Foundation/Typography.swift",
+      "line": 42,
+      "symbol": "UILabel.style(as:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Foundation/UIColor+App.swift",
+      "line": 9,
+      "symbol": "UIColor.appPrimary",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Foundation/UIColor+App.swift",
+      "line": 13,
+      "symbol": "UIColor.appLabel",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Foundation/UIColor+App.swift",
+      "line": 17,
+      "symbol": "UIColor.appLink",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Network/Famelz.swift",
+      "line": 7,
+      "symbol": "Famelz",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Network/Famelz.swift",
+      "line": 9,
+      "symbol": "Famelz.perform(request:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Network/Famelz.swift",
+      "line": 19,
+      "symbol": "Response",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Network/Famelz.swift",
+      "line": 22,
+      "symbol": "FamelzResource",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Network/Famelz.swift",
+      "line": 26,
+      "symbol": "FamelzBackendRegistry",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Network/Famelz.swift",
+      "line": 30,
+      "symbol": "FamelzEndpointPath",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Repository/FileSystemRepository.swift",
+      "line": 7,
+      "symbol": "ReadFileSystemRepository",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Repository/FileSystemRepository.swift",
+      "line": 10,
+      "symbol": "WriteFileSystemRepository",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Repository/FileSystemRepository.swift",
+      "line": 13,
+      "symbol": "FileSystemRepository",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Repository/HTTPRepository.swift",
+      "line": 8,
+      "symbol": "HTTPRepository",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Repository/HTTPRepository.swift",
+      "line": 17,
+      "symbol": "HTTPRepository.init(urlSessionConfiguration:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Repository/HTTPRepository.swift",
+      "line": 22,
+      "symbol": "HTTPRepository.standard()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Repository/HTTPRepository.swift",
+      "line": 27,
+      "symbol": "HTTPRepository.read(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Repository/NetworkRepository.swift",
+      "line": 7,
+      "symbol": "ReadNetworkRepository",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Repository/NetworkRepository.swift",
+      "line": 10,
+      "symbol": "WriteNetworkRepository",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Repository/NetworkRepository.swift",
+      "line": 13,
+      "symbol": "NetworkRepository",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Repository/Repository.swift",
+      "line": 5,
+      "symbol": "ReadRepository",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Repository/Repository.swift",
+      "line": 7,
+      "symbol": "ReadRepository.Resource",
+      "symbol_kind": "source.lang.swift.decl.associatedtype",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Repository/Repository.swift",
+      "line": 8,
+      "symbol": "ReadRepository.ResponseData",
+      "symbol_kind": "source.lang.swift.decl.associatedtype",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Repository/Repository.swift",
+      "line": 10,
+      "symbol": "ReadRepository.read(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Repository/Repository.swift",
+      "line": 13,
+      "symbol": "WriteRepository",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Repository/Repository.swift",
+      "line": 15,
+      "symbol": "WriteRepository.Resource",
+      "symbol_kind": "source.lang.swift.decl.associatedtype",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Repository/Repository.swift",
+      "line": 16,
+      "symbol": "WriteRepository.Payload",
+      "symbol_kind": "source.lang.swift.decl.associatedtype",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Repository/Repository.swift",
+      "line": 17,
+      "symbol": "WriteRepository.ResponseData",
+      "symbol_kind": "source.lang.swift.decl.associatedtype",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Repository/Repository.swift",
+      "line": 19,
+      "symbol": "WriteRepository.write(to:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Core/Repository/Repository.swift",
+      "line": 22,
+      "symbol": "Repository",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Resources/CannedData.swift",
+      "line": 7,
+      "symbol": "CannedData",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Resources/CannedData.swift",
+      "line": 9,
+      "symbol": "CannedData.albums",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/SceneDelegate.swift",
+      "line": 8,
+      "symbol": "SceneDelegate",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/SceneDelegate.swift",
+      "line": 10,
+      "symbol": "SceneDelegate.window",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/SceneDelegate.swift",
+      "line": 12,
+      "symbol": "SceneDelegate.scene(_:willConnectTo:options:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/SceneDelegate.swift",
+      "line": 29,
+      "symbol": "SceneDelegate.sceneDidDisconnect(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/SceneDelegate.swift",
+      "line": 36,
+      "symbol": "SceneDelegate.sceneDidBecomeActive(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/SceneDelegate.swift",
+      "line": 41,
+      "symbol": "SceneDelegate.sceneWillResignActive(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/SceneDelegate.swift",
+      "line": 46,
+      "symbol": "SceneDelegate.sceneWillEnterForeground(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/SceneDelegate.swift",
+      "line": 51,
+      "symbol": "SceneDelegate.sceneDidEnterBackground(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Scenes/Album/AlbumView.swift",
+      "line": 7,
+      "symbol": "AlbumView",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Scenes/Album/AlbumView.swift",
+      "line": 25,
+      "symbol": "AlbumView_Previews",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Scenes/MyAlbums/Interactor/AlbumsInteractor.swift",
+      "line": 5,
+      "symbol": "AlbumsInteractor",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Scenes/MyAlbums/Interactor/AlbumsInteractor.swift",
+      "line": 7,
+      "symbol": "AlbumsInteractor.repo",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Scenes/MyAlbums/Interactor/AlbumsInteractor.swift",
+      "line": 9,
+      "symbol": "AlbumsInteractor.fetchData()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Scenes/MyAlbums/Interactor/AlbumsInteractor.swift",
+      "line": 14,
+      "symbol": "AlbumsInteractor.fetchData(completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Scenes/MyAlbums/MyAlbumsView.swift",
+      "line": 7,
+      "symbol": "MyAlbumsView",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Scenes/MyAlbums/MyAlbumsView.swift",
+      "line": 9,
+      "symbol": "MyAlbumsView.albums",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Scenes/MyAlbums/MyAlbumsView.swift",
+      "line": 28,
+      "symbol": "MyAlbumsView_Previews",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Scenes/MyAlbums/Repo/AlbumResponse.swift",
+      "line": 5,
+      "symbol": "AlbumResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Scenes/MyAlbums/Repo/AlbumsRemoteRepository.swift",
+      "line": 7,
+      "symbol": "AlbumsRemoteRepository",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Scenes/MyAlbums/Repo/AlbumsRemoteRepository.swift",
+      "line": 9,
+      "symbol": "AlbumsRemoteRepository.loadAlbums()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Scenes/MyAlbums/Repo/AlbumsRepository.swift",
+      "line": 5,
+      "symbol": "AlbumsRepository",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jorge/Developer/myProjs/toscoz/toscoz/Scenes/MyAlbums/Repo/AlbumsRepository.swift",
+      "line": 7,
+      "symbol": "AlbumsRepository.loadAlbums()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
   ],
-  "source_directory": "/Users/runner/runners/2.262.1/work/toscoz/toscoz"
+  "source_directory": "/Users/jorge/Developer/myProjs/toscoz"
 }
