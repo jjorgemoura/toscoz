@@ -86,7 +86,7 @@ platform :ios do
     puts read_version_token
     puts "YYYYYYY3"
 
-    if (pr_version_message == read_version_token)
+    if (pr_version_message = read_version_token)
       puts "Version token is -> " + pr_version_message
       puts "Version Token is the same. Do not need to update file!"
     else
