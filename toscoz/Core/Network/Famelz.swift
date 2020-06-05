@@ -20,13 +20,10 @@ struct Response {
 }
 
 struct FamelzResource {
-
 }
 
 struct FamelzBackendRegistry {
-
 }
 
 struct FamelzEndpointPath {
-
 }

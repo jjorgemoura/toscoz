@@ -34,9 +34,9 @@ struct MyAlbumsView: View {
 
 struct MyAlbumsView_Previews: PreviewProvider {
 
-    static let demoStore = Store(initialState: AppState(showSettings: false, myAlbums: CannedData.albums, settings: SettingsPageBuilder.build(version: "")),
+    static let demoStore = Store(initialState: AppState(myAlbums: CannedData.albums, showSettings: false, settings: SettingsPageBuilder.build(version: "")),
                                  reducer: AppReducer().main,
-                                 environment: AppEnvironment(appVersion: "4.6.4"))
+                                 environment: AppEnvironment(mainQueue: DispatchQueue.main.eraseToAnyScheduler(), appVersion: "4.6.4"))
 
     static var previews: some View {
         Group {

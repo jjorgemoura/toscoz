@@ -3,7 +3,9 @@
 //
 
 struct AppState: Equatable {
-    var showSettings: Bool = false
+
     var myAlbums: [Album] = []
+
+    var showSettings: Bool = false
     var settings: SettingsPage
 }

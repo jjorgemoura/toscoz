@@ -22,13 +22,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let version = "Version: \(versionNumber) (\(versionBuild))"
 
-        let appState = AppState(showSettings: false, myAlbums: CannedData.albums, settings: SettingsPageBuilder.build(version: version))
+        let appState = AppState(myAlbums: CannedData.albums, showSettings: false, settings: SettingsPageBuilder.build(version: version))
 
         let store = Store(initialState: appState,
                           reducer: AppReducer().main,
-                          environment: AppEnvironment(appVersion: version))
+                          environment: AppEnvironment(mainQueue: DispatchQueue.main.eraseToAnyScheduler(), appVersion: version))
 
         let contentView = MyAlbumsView(store: store)
+//        let contentView = SettingsView(store: store)
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
