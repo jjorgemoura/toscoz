@@ -11,10 +11,10 @@ struct MyAlbumsView: View {
 
     var body: some View {
 
-        WithViewStore(self.store) { viewState in
+        WithViewStore(self.store) { viewStore in
 
             NavigationView {
-                List(viewState.myAlbums) { album in
+                List(viewStore.myAlbums) { album in
                     HStack {
                         VStack(alignment: .leading) {
                             Text(album.name)
@@ -28,6 +28,7 @@ struct MyAlbumsView: View {
                     Button(action: {}, label: { Image(systemName: "gear") })
                 )
             }
+            .onAppear { viewStore.send(.autorize) }
         }
     }
 }

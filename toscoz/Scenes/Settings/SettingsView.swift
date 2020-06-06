@@ -11,11 +11,11 @@ struct SettingsView: View {
 
     var body: some View {
 
-        WithViewStore(self.store) { viewState in
+        WithViewStore(self.store) { viewStore in
 
             NavigationView {
                 List {
-                    ForEach(viewState.settings.groups) { group in
+                    ForEach(viewStore.settings.groups) { group in
                         Section(header: Text(group.header ?? ""), footer: Text(group.footer ?? "")) {
                             ForEach(group.settings) { item in
                                 Text(item.title)

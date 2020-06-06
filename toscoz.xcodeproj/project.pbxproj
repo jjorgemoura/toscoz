@@ -43,6 +43,7 @@
 		CFB382C024538B6A00700D6F /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB382A024538B6A00700D6F /* Functional.swift */; };
 		CFB382C124538B6A00700D6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB382A224538B6A00700D6F /* Assets.xcassets */; };
 		CFB382C524538B6A00700D6F /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB382AB24538B6A00700D6F /* AppState.swift */; };
+		CFC66A1C248AF3E30051A4B9 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC66A1B248AF3E30051A4B9 /* Decoder.swift */; };
 		CFC6D4BB2483BD7600E5511D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC6D4BA2483BD7500E5511D /* SettingsView.swift */; };
 		CFC6D4BD2483C63000E5511D /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC6D4BC2483C63000E5511D /* Setting.swift */; };
 		CFC6D4BF2483C7E900E5511D /* SettingsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC6D4BE2483C7E900E5511D /* SettingsGroup.swift */; };
@@ -110,6 +111,7 @@
 		CFB382A024538B6A00700D6F /* Functional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functional.swift; sourceTree = "<group>"; };
 		CFB382A224538B6A00700D6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFB382AB24538B6A00700D6F /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		CFC66A1B248AF3E30051A4B9 /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
 		CFC6D4BA2483BD7500E5511D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		CFC6D4BC2483C63000E5511D /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		CFC6D4BE2483C7E900E5511D /* SettingsGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsGroup.swift; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 		CFB3829424538B6A00700D6F /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				CFC66A1B248AF3E30051A4B9 /* Decoder.swift */,
 				CF23B16F245F296100621797 /* Famelz.swift */,
 			);
 			path = Network;
@@ -597,6 +600,7 @@
 				CF21AE262454CFAC003E6AA2 /* MyAlbumsView.swift in Sources */,
 				CFB382C524538B6A00700D6F /* AppState.swift in Sources */,
 				CFB382B924538B6A00700D6F /* NetworkRepository.swift in Sources */,
+				CFC66A1C248AF3E30051A4B9 /* Decoder.swift in Sources */,
 				CFC6D4BB2483BD7600E5511D /* SettingsView.swift in Sources */,
 				CFB382BA24538B6A00700D6F /* Repository.swift in Sources */,
 			);
