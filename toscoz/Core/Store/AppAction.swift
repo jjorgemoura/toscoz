@@ -8,7 +8,7 @@ enum AppAction: Equatable {
 //    case listMyAlbums
 
     case autorize
-    case autorizeGrantedResult(Result<String, NetworkFailure>)
+//    case autorizeGrantedResult(Result<String, NetworkFailure>)
 
     case loadMyAlbums
     case loadMyalbumsResponse(Result<[Album], NetworkFailure>)

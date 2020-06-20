@@ -33,7 +33,7 @@ struct SettingsView: View {
 struct SettingsView_Previews: PreviewProvider {
     static let demoStore = Store(initialState: AppState(myAlbums: CannedData.albums, showSettings: false, settings: SettingsPageBuilder.build(version: "1.0.4 (453)")),
                                  reducer: AppReducer().main,
-                                 environment: AppEnvironment(mainQueue: DispatchQueue.main.eraseToAnyScheduler(), appVersion: "4.6.4"))
+                                 environment: AppEnvironment(mainQueue: DispatchQueue.main.eraseToAnyScheduler(), appVersion: "4.6.4", authenticationToken: ""))
 
     static var previews: some View {
         Group {

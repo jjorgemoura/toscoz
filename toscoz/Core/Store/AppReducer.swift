@@ -6,23 +6,24 @@ import ComposableArchitecture
 
 struct AppReducer {
 
-    // closure
     let main: Reducer<AppState, AppAction, AppEnvironment> = Reducer { state, action, environment in
         print(environment)
 
         switch action {
         case .autorize:
-            return SpotifyClient.live
-                .authorize()
-                .receive(on: environment.mainQueue)
-                .catchToEffect()
-                .map(AppAction.autorizeGrantedResult)
-
-        case let .autorizeGrantedResult(result):
-            print("-------")
-            print(result)
-            print("-------")
+            SpotifyClient.live.authorize()
             return .none
+//            return SpotifyClient.live
+//                .authorize()
+//                .receive(on: environment.mainQueue)
+//                .catchToEffect()
+//                .map(AppAction.autorizeGrantedResult)
+
+//        case let .autorizeGrantedResult(result):
+//            print("-------")
+//            print(result)
+//            print("-------")
+//            return .none
 
         case .loadMyAlbums:
             return SpotifyClient.live
@@ -50,8 +51,6 @@ struct AppReducer {
         case .settingsScreenDismissed:
             state.showSettings = false
             return .none
-
-        // return side effect. return .none if no side effect
         }
     }
     .debug()

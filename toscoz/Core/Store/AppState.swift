@@ -3,7 +3,6 @@
 //
 
 struct AppState: Equatable {
-
     var myAlbums: [Album] = []
 
     var showSettings: Bool = false

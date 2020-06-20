@@ -8,4 +8,5 @@ import ComposableArchitecture
 struct AppEnvironment {
     var mainQueue: AnySchedulerOf<DispatchQueue>
     var appVersion: String
+    var authenticationToken: String?
 }
