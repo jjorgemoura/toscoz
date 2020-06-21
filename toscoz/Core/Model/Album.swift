@@ -4,7 +4,18 @@
 
 struct Album: Identifiable, Equatable, Decodable {
     let id: String
+    let type: String
     let name: String
-    let artist: [Artist]
+    let artists: [Artist]
+    let albumType: String
     let popularity: Int
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case type
+        case name
+        case artists
+        case albumType = "album_type"
+        case popularity
+    }
 }

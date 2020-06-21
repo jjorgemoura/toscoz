@@ -14,6 +14,8 @@
 		CF23B169245F08AF00621797 /* Overture in Frameworks */ = {isa = PBXBuildFile; productRef = CF23B168245F08AF00621797 /* Overture */; };
 		CF23B170245F296100621797 /* Famelz.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23B16F245F296100621797 /* Famelz.swift */; };
 		CF23B172245F297F00621797 /* FamelzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23B171245F297F00621797 /* FamelzTests.swift */; };
+		CF3254A0249FD1AA0088486C /* UserAlbumsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32549F249FD1AA0088486C /* UserAlbumsResponse.swift */; };
+		CF3254A3249FE3DC0088486C /* SavedAlbumResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3254A2249FE3DC0088486C /* SavedAlbumResponse.swift */; };
 		CF3AFE9F248D82D200F49E8E /* AuthorizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3AFE9E248D82D200F49E8E /* AuthorizeView.swift */; };
 		CF6411E3249E23C000887BD9 /* UserDefaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6411E2249E23C000887BD9 /* UserDefaultTests.swift */; };
 		CF6411E7249E368D00887BD9 /* FakeLocalPersistenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6411E6249E368D00887BD9 /* FakeLocalPersistenceStore.swift */; };
@@ -84,6 +86,8 @@
 		CF21AE272454DE08003E6AA2 /* CannedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CannedData.swift; sourceTree = "<group>"; };
 		CF23B16F245F296100621797 /* Famelz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Famelz.swift; sourceTree = "<group>"; };
 		CF23B171245F297F00621797 /* FamelzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamelzTests.swift; sourceTree = "<group>"; };
+		CF32549F249FD1AA0088486C /* UserAlbumsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAlbumsResponse.swift; sourceTree = "<group>"; };
+		CF3254A2249FE3DC0088486C /* SavedAlbumResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedAlbumResponse.swift; sourceTree = "<group>"; };
 		CF3AFE9E248D82D200F49E8E /* AuthorizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeView.swift; sourceTree = "<group>"; };
 		CF6411E2249E23C000887BD9 /* UserDefaultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultTests.swift; sourceTree = "<group>"; };
 		CF6411E6249E368D00887BD9 /* FakeLocalPersistenceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeLocalPersistenceStore.swift; sourceTree = "<group>"; };
@@ -209,6 +213,15 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		CF3254A1249FD1B20088486C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CF32549F249FD1AA0088486C /* UserAlbumsResponse.swift */,
+				CF3254A2249FE3DC0088486C /* SavedAlbumResponse.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		CF3AFE9D248D82B700F49E8E /* Authorize */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +336,7 @@
 		CFB3828224538B6900700D6F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CF3254A1249FD1B20088486C /* Network */,
 				CFC6D4C22483F7D200E5511D /* Settings */,
 				CFB3828324538B6900700D6F /* Track.swift */,
 				CFB3828424538B6900700D6F /* Album.swift */,
@@ -643,11 +657,13 @@
 				CFB3824F245389E900700D6F /* AppDelegate.swift in Sources */,
 				CFB38251245389E900700D6F /* SceneDelegate.swift in Sources */,
 				CFB382BD24538B6A00700D6F /* Typography.swift in Sources */,
+				CF3254A3249FE3DC0088486C /* SavedAlbumResponse.swift in Sources */,
 				CFB382BF24538B6A00700D6F /* Fonts.swift in Sources */,
 				CFB382B124538B6A00700D6F /* AlbumsRemoteRepository.swift in Sources */,
 				CF21AE2424547ACE003E6AA2 /* AlbumView.swift in Sources */,
 				CFB382B524538B6A00700D6F /* SpotifyAPI.swift in Sources */,
 				CFB382AF24538B6A00700D6F /* AlbumsRepository.swift in Sources */,
+				CF3254A0249FD1AA0088486C /* UserAlbumsResponse.swift in Sources */,
 				CFA2C4F0247B1F8400E26608 /* AppReducer.swift in Sources */,
 				CFC6D4C42483F81300E5511D /* SettingsPage.swift in Sources */,
 				CF21AE282454DE08003E6AA2 /* CannedData.swift in Sources */,

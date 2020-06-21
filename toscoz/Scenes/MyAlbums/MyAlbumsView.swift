@@ -18,7 +18,7 @@ struct MyAlbumsView: View {
                     HStack {
                         VStack(alignment: .leading) {
                             Text(album.name)
-                            Text(album.artist[0].name)
+                            Text(album.artists[0].name)
                                 .font(.caption)
                         }
                     }
@@ -28,7 +28,7 @@ struct MyAlbumsView: View {
                     Button(action: {}, label: { Image(systemName: "gear") })
                 )
             }
-            .onAppear { viewStore.send(.autorize) }
+            .onAppear { viewStore.send(.loadMyAlbums) }
         }
     }
 }
