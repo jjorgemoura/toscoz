@@ -4,6 +4,7 @@
 
 import UIKit
 import SwiftUI
+import ComposableArchitecture
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -14,15 +15,62 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
-        // Create the SwiftUI view that provides the window contents.
-        let contentView = MyAlbumsView(albums: CannedData.albums)
+        let localPersistanceStore = LocalPersistenceStore()
+
+        let environment: AppEnvironment
+        if let token = localPersistanceStore.spotifyToken, SpotifyKit().isTokenValid(tokenTimestamp: localPersistanceStore.spotifyTokenTimestamp) {
+            environment = buildAppEnvironment(with: token)
+        } else {
+            environment = buildAppEnvironment(with: nil)
+        }
+
+        let store = Store(initialState: buildAppState(version: AppVersion.appVersion),
+                          reducer: AppReducer().main,
+                          environment: buildAppEnvironment(with: nil))
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
+
+            if environment.authenticationToken == nil {
+                window.rootViewController = UIHostingController(rootView: AuthorizeView(store: store))
+            } else {
+                window.rootViewController = UIHostingController(rootView: MyAlbumsView(store: store))
+            }
+
             self.window = window
             window.makeKeyAndVisible()
+        }
+    }
+
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        print(URLContexts)
+
+        if URLContexts.count == 1 {
+            guard let xpto = URLContexts.first?.url else { return }
+            print(xpto)
+
+            let accessT = xpto.absoluteString.split(separator: "#").last!.split(separator: "&").filter { $0.contains("access_token") }
+
+            let authToken2 = accessT.first!.split(separator: "=").last!.map { String($0) }
+            let authToken = String(accessT.first!.split(separator: "=").last!)
+            print(authToken2)
+            print(authToken)
+
+            var localPersistanceStore = LocalPersistenceStore()
+            localPersistanceStore.spotifyToken = authToken
+            localPersistanceStore.spotifyTokenTimestamp = Date().timeIntervalSince1970
+
+            let store = Store(initialState: buildAppState(version: AppVersion.appVersion),
+                              reducer: AppReducer().main,
+                              environment: buildAppEnvironment(with: authToken))
+
+            if let windowScene = scene as? UIWindowScene {
+                let window = UIWindow(windowScene: windowScene)
+                window.rootViewController = UIHostingController(rootView: MyAlbumsView(store: store))
+                self.window = window
+                window.makeKeyAndVisible()
+            }
         }
     }
 
@@ -52,5 +100,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+    }
+
+    // MARK: - Auxiliar methods about init the store
+
+    private func buildAppEnvironment(with token: String?) -> AppEnvironment {
+        return AppEnvironment(mainQueue: DispatchQueue.main.eraseToAnyScheduler(), appVersion: AppVersion.appVersion, authenticationToken: token)
+    }
+
+    private func buildAppState(version: String) -> AppState {
+        return AppState(myAlbums: [], showSettings: false, settings: SettingsPageBuilder.build(version: version))
     }
 }

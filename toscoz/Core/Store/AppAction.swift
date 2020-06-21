@@ -3,9 +3,10 @@
 //
 
 enum AppAction: Equatable {
-//    case login
-//    case fetchMyAlbums
-//    case listMyAlbums
+    case autorize
+
+    case loadMyAlbums
+    case loadMyalbumsResponse(Result<UserAlbumsResponse, NetworkFailure>)
 
     case settingsButtonTapped
     case settingsScreenDismissed

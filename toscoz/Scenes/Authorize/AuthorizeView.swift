@@ -5,35 +5,23 @@
 import SwiftUI
 import ComposableArchitecture
 
-struct MyAlbumsView: View {
+struct AuthorizeView: View {
 
     let store: Store<AppState, AppAction>
 
     var body: some View {
 
         WithViewStore(self.store) { viewStore in
-
-            NavigationView {
-                List(viewStore.myAlbums) { album in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(album.name)
-                            Text(album.artists[0].name)
-                                .font(.caption)
-                        }
-                    }
-                }
-                .navigationBarTitle("My Albums")
-                .navigationBarItems(trailing:
-                    Button(action: {}, label: { Image(systemName: "gear") })
-                )
+            VStack {
+                Text("Authorize on Spotify ...")
+                    .foregroundColor(.green)
             }
-            .onAppear { viewStore.send(.loadMyAlbums) }
+            .onAppear { viewStore.send(.autorize) }
         }
     }
 }
 
-struct MyAlbumsView_Previews: PreviewProvider {
+struct AuthorizeView_Previews: PreviewProvider {
 
     static let demoStore = Store(initialState: AppState(myAlbums: CannedData.albums, showSettings: false, settings: SettingsPageBuilder.build(version: "")),
                                  reducer: AppReducer().main,
@@ -41,8 +29,8 @@ struct MyAlbumsView_Previews: PreviewProvider {
 
     static var previews: some View {
         Group {
-            MyAlbumsView(store: demoStore)
-            MyAlbumsView(store: demoStore)
+            AuthorizeView(store: demoStore)
+            AuthorizeView(store: demoStore)
                 .colorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
         }
     }

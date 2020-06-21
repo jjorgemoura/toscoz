@@ -36,11 +36,6 @@ fastlane ios run_master_build
 fastlane ios release_beta
 ```
 
-### ios save_version_token
-```
-fastlane ios save_version_token
-```
-
 
 ----
 

@@ -77,9 +77,16 @@ platform :ios do
   
   private_lane :save_version_token do |options|
     pr_version_message = options[:version_tag]
+    puts "xxxxxxx"
+    puts pr_version_message
+    puts "YYYYYYY"
     validate_version_token version_token:pr_version_message
 
-    if (pr_version_message == read_version_token)
+    puts "xxxxxxx3"
+    puts read_version_token
+    puts "YYYYYYY3"
+
+    if (pr_version_message = read_version_token)
       puts "Version token is -> " + pr_version_message
       puts "Version Token is the same. Do not need to update file!"
     else
