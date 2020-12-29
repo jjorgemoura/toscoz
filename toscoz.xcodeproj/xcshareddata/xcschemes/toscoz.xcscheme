@@ -74,6 +74,18 @@
             ReferencedContainer = "container:toscoz.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "SPOTIFY_KEY2"
+            value = "123"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "SPOTIFY_KEY"
+            value = "${TOSCOZ_SPOTIFY_KEY}"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

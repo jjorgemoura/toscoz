@@ -25,6 +25,9 @@ enum SpotifyApi: String {
 //        return URL(string: xpto)!
 //    }
 
-    func appendToken() {
+    static func appendToken() {
+
+        let spotifyKey = ProcessInfo.processInfo.environment["SPOTIFY_KEY"]
+        print(spotifyKey ?? "")
     }
 }

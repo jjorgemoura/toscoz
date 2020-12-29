@@ -17,6 +17,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let localPersistanceStore = LocalPersistenceStore()
 
+        SpotifyApi.appendToken()
+
         let environment: AppEnvironment
         if let token = localPersistanceStore.spotifyToken, SpotifyKit().isTokenValid(tokenTimestamp: localPersistanceStore.spotifyTokenTimestamp) {
             environment = buildAppEnvironment(with: token)
