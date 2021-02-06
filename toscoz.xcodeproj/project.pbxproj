@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CFF1A78B25CEF6AE00996F47 /* ToscozApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1A78A25CEF6AE00996F47 /* ToscozApp.swift */; };
-		CFF1A78D25CEF6AE00996F47 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1A78C25CEF6AE00996F47 /* ContentView.swift */; };
 		CFF1A78F25CEF6B000996F47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF1A78E25CEF6B000996F47 /* Assets.xcassets */; };
 		CFF1A79225CEF6B000996F47 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF1A79125CEF6B000996F47 /* Preview Assets.xcassets */; };
 		CFF1A79D25CEF6B000996F47 /* ToscozTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1A79C25CEF6B000996F47 /* ToscozTests.swift */; };
@@ -37,7 +36,6 @@
 /* Begin PBXFileReference section */
 		CFF1A78725CEF6AE00996F47 /* toscoz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toscoz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF1A78A25CEF6AE00996F47 /* ToscozApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToscozApp.swift; sourceTree = "<group>"; };
-		CFF1A78C25CEF6AE00996F47 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CFF1A78E25CEF6B000996F47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFF1A79125CEF6B000996F47 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CFF1A79325CEF6B000996F47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 				CFF1A82A25CF50D400996F47 /* features */,
 				CFF1A82325CF4D4D00996F47 /* resources */,
 				CFF1A78A25CEF6AE00996F47 /* ToscozApp.swift */,
-				CFF1A78C25CEF6AE00996F47 /* ContentView.swift */,
 				CFF1A79325CEF6B000996F47 /* Info.plist */,
 				CFF1A79025CEF6B000996F47 /* Preview Content */,
 			);
@@ -312,7 +309,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFF1A83425CF512100996F47 /* Xpto.swift in Sources */,
-				CFF1A78D25CEF6AE00996F47 /* ContentView.swift in Sources */,
 				CFF1A82C25CF510D00996F47 /* MyTopView.swift in Sources */,
 				CFF1A78B25CEF6AE00996F47 /* ToscozApp.swift in Sources */,
 			);

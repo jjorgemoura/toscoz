@@ -7,7 +7,7 @@ import SwiftUI
 struct ToscozApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MyTopView()
         }
     }
 }
