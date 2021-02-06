@@ -1,31 +1,31 @@
 name: PR Versioning
 
-on:
-  pull_request:
-    types: [ labeled ]
+# on:
+#   pull_request:
+#     types: [ labeled ]
 
-jobs:
-  labelTagVersion:
-    name: Label Tag Version
-    runs-on: macOS-latest
+# jobs:
+#   labelTagVersion:
+#     name: Label Tag Version
+#     runs-on: macOS-latest
 
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        ref: ${{ github.event.pull_request.head.ref }}
+#     steps:
+#     - name: Checkout
+#       uses: actions/checkout@v2
+#       with:
+#         ref: ${{ github.event.pull_request.head.ref }}
 
-    - name: Bundle Install 
-      run: bundle update --bundler
+#     - name: Bundle Install 
+#       run: bundle update --bundler
 
-    - name: Read Label -> Patch
-      if: ${{ contains( github.event.pull_request.labels.*.name, 'bump:patch') }}
-      run: bundle exec fastlane run_pr_version version_tag:patch
+#     - name: Read Label -> Patch
+#       if: ${{ contains( github.event.pull_request.labels.*.name, 'bump:patch') }}
+#       run: bundle exec fastlane run_pr_version version_tag:patch
 
-    - name: Read Label -> Minor
-      if: ${{ contains( github.event.pull_request.labels.*.name, 'bump:minor') }}
-      run: bundle exec fastlane run_pr_version version_tag:minor
+#     - name: Read Label -> Minor
+#       if: ${{ contains( github.event.pull_request.labels.*.name, 'bump:minor') }}
+#       run: bundle exec fastlane run_pr_version version_tag:minor
 
-    - name: Read Label -> Major
-      if: ${{ contains( github.event.pull_request.labels.*.name, 'bump:major') }}
-      run: bundle exec fastlane run_pr_version version_tag:major
+#     - name: Read Label -> Major
+#       if: ${{ contains( github.event.pull_request.labels.*.name, 'bump:major') }}
+#       run: bundle exec fastlane run_pr_version version_tag:major
