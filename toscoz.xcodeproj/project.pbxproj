@@ -13,6 +13,8 @@
 		CFF1A79225CEF6B000996F47 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF1A79125CEF6B000996F47 /* Preview Assets.xcassets */; };
 		CFF1A79D25CEF6B000996F47 /* ToscozTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1A79C25CEF6B000996F47 /* ToscozTests.swift */; };
 		CFF1A7A825CEF6B000996F47 /* ToscozUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1A7A725CEF6B000996F47 /* ToscozUITests.swift */; };
+		CFF1A82C25CF510D00996F47 /* MyTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1A82B25CF510D00996F47 /* MyTopView.swift */; };
+		CFF1A83425CF512100996F47 /* Xpto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1A83325CF512100996F47 /* Xpto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		CFF1A7A325CEF6B000996F47 /* toscozUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = toscozUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF1A7A725CEF6B000996F47 /* ToscozUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToscozUITests.swift; sourceTree = "<group>"; };
 		CFF1A7A925CEF6B000996F47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFF1A82B25CF510D00996F47 /* MyTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTopView.swift; sourceTree = "<group>"; };
+		CFF1A83325CF512100996F47 /* Xpto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Xpto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +99,11 @@
 		CFF1A78925CEF6AE00996F47 /* toscoz */ = {
 			isa = PBXGroup;
 			children = (
+				CFF1A82225CF4D4500996F47 /* application */,
+				CFF1A82A25CF50D400996F47 /* features */,
+				CFF1A82325CF4D4D00996F47 /* resources */,
 				CFF1A78A25CEF6AE00996F47 /* ToscozApp.swift */,
 				CFF1A78C25CEF6AE00996F47 /* ContentView.swift */,
-				CFF1A78E25CEF6B000996F47 /* Assets.xcassets */,
 				CFF1A79325CEF6B000996F47 /* Info.plist */,
 				CFF1A79025CEF6B000996F47 /* Preview Content */,
 			);
@@ -128,6 +134,30 @@
 				CFF1A7A925CEF6B000996F47 /* Info.plist */,
 			);
 			path = toscozUITests;
+			sourceTree = "<group>";
+		};
+		CFF1A82225CF4D4500996F47 /* application */ = {
+			isa = PBXGroup;
+			children = (
+				CFF1A83325CF512100996F47 /* Xpto.swift */,
+			);
+			path = application;
+			sourceTree = "<group>";
+		};
+		CFF1A82325CF4D4D00996F47 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				CFF1A78E25CEF6B000996F47 /* Assets.xcassets */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		CFF1A82A25CF50D400996F47 /* features */ = {
+			isa = PBXGroup;
+			children = (
+				CFF1A82B25CF510D00996F47 /* MyTopView.swift */,
+			);
+			path = features;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,7 +311,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFF1A83425CF512100996F47 /* Xpto.swift in Sources */,
 				CFF1A78D25CEF6AE00996F47 /* ContentView.swift in Sources */,
+				CFF1A82C25CF510D00996F47 /* MyTopView.swift in Sources */,
 				CFF1A78B25CEF6AE00996F47 /* ToscozApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
