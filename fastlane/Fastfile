@@ -1,86 +1,97 @@
 # fastlane constants
-fastlane_version "2.141.0"
+fastlane_version "2.173.0"
 default_platform :ios
 
 platform :ios do
 
   ############ Public Lanes ############
 
-  lane :run_unit_tests do
-    scan(
-      scheme: ENV["XCODE_SCHEME_TESTS"],
-      device: "iPhone 11 Pro",
-      code_coverage: true,
-      clean: true
-      )
+  desc "Runs all test."
+  lane :run_all_tests do
+    run_unit_tests
+    # run_ui_tests
   end
 
-  # lane :run_ui_tests do
-  #   scan(
-  #     scheme: ENV["XCODE_SCHEME_UI_TESTS"],
-  #     device: "iPhone 11 Pro",
-  #     clean: true
-  #     )
-  # end
-
-  lane :run_pr_version do |options|
+  desc "Sets next expected version for this PR. (branch)"
+  lane :run_set_version do |options|
     save_version_token options
     commit_and_push_master
   end
 
+  desc "Runs a master build (tests, lint, documentation, bumps version). (master)"
   lane :run_master_build do
     ensure_git_branch(
       branch: 'master'
     )
 
     bump_build_number
-    update_version
+    bump_version_number
+    check_resources
     generate_documentation
     commit_and_push_master
   end
 
-  lane :release_beta do |options|
-    ensure_git_branch(
-      branch: 'master'
-    )
+  # desc "Prepares a release. (master)"
+  # lane :run_release do |options|
+  #   ensure_git_branch(
+  #     branch: 'master'
+  #   )
 
-    #version_parameter_validation option
-    check_resources
-    #run_unit_tests
-    #run_ui_tests
-    #bump_version option
-
-    #git_commit(
-    #  path: "*.*", 
-    #  message: "Release new Beta!"
-    #)
+  
+  #   #git_commit(
+  #   #  path: "*.*", 
+  #   #  message: "Release new Beta!"
+  #   #)
       
-    #set_tag
-    #push_git_tags
+  #   #set_tag
+  #   #push_git_tags
     
-    #gym(
-    #  project: ENV["XCODE_PROJECT_NAME"], 
-    #  scheme: ENV["XCODE_SCHEME"], 
-    #  configuration: "Release",
-    #  clean: true,
-    #  export_method: "development"
-    #)
+  #   #gym(
+  #   #  project: ENV["XCODE_PROJECT_NAME"], 
+  #   #  scheme: ENV["XCODE_SCHEME"], 
+  #   #  configuration: "Release",
+  #   #  clean: true,
+  #   #  export_method: "development"
+  #   #)
     
-    #pilot(
-    #  skip_submission: true
-    #)
+  #   #pilot(
+  #   #  skip_submission: true
+  #   #)
+  # end
+
+
+
+
+  # ############ Auxiliar Lanes ############
+
+  # ############ Testing Lanes ############
+
+  private_lane :run_unit_tests do
+    scan(
+      scheme: ENV["XCODE_SCHEME_TESTS"],
+      device: ENV["FASTLANE_TEST_DEVICE"],
+      code_coverage: true,
+      clean: true
+      )
   end
 
-  ############ Auxiliar Lanes ############
+  private_lane :run_ui_tests do
+    scan(
+      scheme: ENV["XCODE_SCHEME_UI_TESTS"],
+      device: ENV["FASTLANE_TEST_DEVICE"],
+      clean: true
+      )
+  end
 
-  ############ Save / Read Version File ############
+  # ############ Save Version Token ############
   
   private_lane :save_version_token do |options|
     pr_version_message = options[:version_tag]
+    puts "Version token is -> " + pr_version_message
+
     validate_version_token version_token:pr_version_message
 
     if (pr_version_message == read_version_token)
-      puts "Version token is -> " + pr_version_message
       puts "Version Token is the same. Do not need to update file!"
     else
       Dir.chdir("..") do
@@ -89,7 +100,23 @@ platform :ios do
     end
   end
 
-  private_lane :update_version do
+  private_lane :read_version_token do
+    stored_version_token = ""
+
+    Dir.chdir("..") do
+      if (File.exist?('version.txt'))
+        File.open('version.txt') do |file|
+          stored_version_token = file.read().downcase
+        end
+      end
+    end
+
+    stored_version_token
+  end
+
+  # ############ Bump Version from file ############
+
+  private_lane :bump_version_number do
     stored_version_token = ""
 
     Dir.chdir("..") do
@@ -109,34 +136,6 @@ platform :ios do
     end
   end
 
-
-  private_lane :read_version_token do
-    stored_version_token = ""
-
-    Dir.chdir("..") do
-      if (File.exist?('version.txt'))
-        File.open('version.txt') do |file|
-          stored_version_token = file.read().downcase
-        end
-      end
-    end
-
-    stored_version_token
-  end
-
-############ Bump Build and Version ############
-
-  private_lane :bump_build_number do |option|
-    #if option[:buildNumber]
-    #  UI.error "ATTENTION: Please, use the parameter 'buildNumber' to set the bump desired!!!"
-    #  UI.user_error! "Execution aborted by bad input!!!"
-    #end  
-
-    increment_build_number(
-      build_number: option[:buildNumber]
-    )
-  end
-
   desc "Versioning -> Increase: MAJOR, MINOR or PATCH"
   private_lane :do_version do |option|
     validate_version_token version_token:option[:version_token]
@@ -154,17 +153,27 @@ platform :ios do
     end
   end
 
-  ############ Resources ############
+  # ############ Bump Build ############
+
+  private_lane :bump_build_number do |option|
+    increment_build_number(
+      build_number: option[:buildNumber]
+    )
+  end
+
+  # ############ Resources ############
 
   private_lane :check_resources do
     swiftlint
+    # swiftformat
   end
 
   private_lane :generate_documentation do
-    jazzy(config: ".jazzy.yaml")
+    # jazzy(config: ".jazzy.yaml")
+    # xxxxx
   end
 
-  ############ Git ############
+  # ############ Git ############
 
   private_lane :set_tag do
     add_git_tag(
@@ -173,6 +182,11 @@ platform :ios do
   end
 
   private_lane :commit_and_push_master do
+    if ENV["FASTLANE_SKIP_PUSH"] == "1"
+      puts "FASTLANE TO SKIP COMMIT AND PUSH"
+      next
+    end
+
     git_add(path: ".")
     
     git_commit(
