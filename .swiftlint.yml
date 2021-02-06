@@ -9,7 +9,7 @@ opt_in_rules:
  - closure_end_indentation
  - closure_spacing
  - collection_alignment
- - conditional_returns_on_newline
+ # - conditional_returns_on_newline
  - contains_over_filter_count
  - contains_over_filter_is_empty
  - contains_over_first_not_nil
@@ -73,7 +73,8 @@ opt_in_rules:
  - override_in_extension
  - pattern_matching_keywords
  - prefer_self_type_over_type_of_self
- - prefixed_toplevel_constant
+ - prefer_zero_over_explicit_init
+#  - prefixed_toplevel_constant
  - private_action
  - private_outlet
  # - prohibited_interface_builder
@@ -95,7 +96,7 @@ opt_in_rules:
  - strong_iboutlet
  # - switch_case_on_newline
  - toggle_bool
- - trailing_closure
+ # - trailing_closure
  - type_contents_order
  - unavailable_function
  - unneeded_parentheses_in_closure_argument
@@ -104,33 +105,27 @@ opt_in_rules:
  - unused_declaration
  - unused_import
  - vertical_parameter_alignment_on_call
- - vertical_whitespace_between_cases
+#  - vertical_whitespace_between_cases
  - vertical_whitespace_closing_braces
  # - vertical_whitespace_opening_braces
  - xct_specific_matcher
  - yoda_condition
 
 excluded:
-  - Pods
-  - Carthage
   - docs
   - fastlane
 
-included:
-    - toscoz
-    - toscozTests
-
-# line_length:
-#   warning: 180
-#   error: 200
+closure_body_length:
+  warning: 50
+  error: 60
 
 line_length:
-  warning: 300
-  error: 500
+  warning: 190
+  error: 220
 
 file_length:
-  warning: 300
-  error: 400
+  warning: 200
+  error: 300
 
 identifier_name:
   min_length:
