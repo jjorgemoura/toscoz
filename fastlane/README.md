@@ -12,30 +12,25 @@ Install _fastlane_ using
 ```
 [sudo] gem install fastlane -NV
 ```
-or alternatively using `brew cask install fastlane`
+or alternatively using `brew install fastlane`
 
 # Available Actions
 ## iOS
-### ios run_unit_tests
+### ios run_all_tests
 ```
-fastlane ios run_unit_tests
+fastlane ios run_all_tests
 ```
-
-### ios run_pr_version
+Runs all test.
+### ios run_set_version
 ```
-fastlane ios run_pr_version
+fastlane ios run_set_version
 ```
-
+Sets next expected version for this PR. (branch)
 ### ios run_master_build
 ```
 fastlane ios run_master_build
 ```
-
-### ios release_beta
-```
-fastlane ios release_beta
-```
-
+Runs a master build (tests, lint, documentation, bumps version). (master)
 
 ----
 
