@@ -3,17 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF0E311E25D01C59007AA03E /* alfazLive in Frameworks */ = {isa = PBXBuildFile; productRef = CF0E311D25D01C59007AA03E /* alfazLive */; };
+		CF0E311F25D01C59007AA03E /* alfazLive in Embed Frameworks */ = {isa = PBXBuildFile; productRef = CF0E311D25D01C59007AA03E /* alfazLive */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CF0F341F25CFF532005DEE2C /* PaletteColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0F341E25CFF532005DEE2C /* PaletteColor.swift */; };
+		CF0F342725CFF60A005DEE2C /* Color+PaletteColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0F342625CFF60A005DEE2C /* Color+PaletteColor.swift */; };
+		CF58BC6B25D007D20021021D /* ArtistsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58BC6A25D007D20021021D /* ArtistsResponse.swift */; };
+		CF58BC7525D008750021021D /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = CF58BC7425D008750021021D /* ComposableArchitecture */; };
+		CF58BC7B25D008CA0021021D /* Overture in Frameworks */ = {isa = PBXBuildFile; productRef = CF58BC7A25D008CA0021021D /* Overture */; };
+		CF58BC8025D008EA0021021D /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58BC7F25D008EA0021021D /* AppState.swift */; };
+		CF58BC8525D009170021021D /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58BC8425D009170021021D /* AppAction.swift */; };
+		CF58BC8A25D009230021021D /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58BC8925D009230021021D /* AppEnvironment.swift */; };
+		CF58BC8F25D009760021021D /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58BC8E25D009760021021D /* AppReducer.swift */; };
+		CFA1FAB425D0046000145DD6 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FAB325D0046000145DD6 /* Artist.swift */; };
 		CFF1A78B25CEF6AE00996F47 /* ToscozApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1A78A25CEF6AE00996F47 /* ToscozApp.swift */; };
 		CFF1A78F25CEF6B000996F47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF1A78E25CEF6B000996F47 /* Assets.xcassets */; };
 		CFF1A79225CEF6B000996F47 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF1A79125CEF6B000996F47 /* Preview Assets.xcassets */; };
 		CFF1A79D25CEF6B000996F47 /* ToscozTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1A79C25CEF6B000996F47 /* ToscozTests.swift */; };
 		CFF1A7A825CEF6B000996F47 /* ToscozUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1A7A725CEF6B000996F47 /* ToscozUITests.swift */; };
 		CFF1A82C25CF510D00996F47 /* MyTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1A82B25CF510D00996F47 /* MyTopView.swift */; };
-		CFF1A83425CF512100996F47 /* Xpto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1A83325CF512100996F47 /* Xpto.swift */; };
+		CFF1A83425CF512100996F47 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1A83325CF512100996F47 /* Typography.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +45,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CF0E312025D01C59007AA03E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CF0E311F25D01C59007AA03E /* alfazLive in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		CF0F341E25CFF532005DEE2C /* PaletteColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteColor.swift; sourceTree = "<group>"; };
+		CF0F342625CFF60A005DEE2C /* Color+PaletteColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+PaletteColor.swift"; sourceTree = "<group>"; };
+		CF58BC6A25D007D20021021D /* ArtistsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsResponse.swift; sourceTree = "<group>"; };
+		CF58BC7F25D008EA0021021D /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		CF58BC8425D009170021021D /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
+		CF58BC8925D009230021021D /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		CF58BC8E25D009760021021D /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		CFA1FAB325D0046000145DD6 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		CFF1A78725CEF6AE00996F47 /* toscoz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toscoz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF1A78A25CEF6AE00996F47 /* ToscozApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToscozApp.swift; sourceTree = "<group>"; };
 		CFF1A78E25CEF6B000996F47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,7 +80,8 @@
 		CFF1A7A725CEF6B000996F47 /* ToscozUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToscozUITests.swift; sourceTree = "<group>"; };
 		CFF1A7A925CEF6B000996F47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFF1A82B25CF510D00996F47 /* MyTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTopView.swift; sourceTree = "<group>"; };
-		CFF1A83325CF512100996F47 /* Xpto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Xpto.swift; sourceTree = "<group>"; };
+		CFF1A83325CF512100996F47 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		CFF1A84425CF565100996F47 /* alfaz */ = {isa = PBXFileReference; lastKnownFileType = folder; path = alfaz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +89,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF58BC7B25D008CA0021021D /* Overture in Frameworks */,
+				CF58BC7525D008750021021D /* ComposableArchitecture in Frameworks */,
+				CF0E311E25D01C59007AA03E /* alfazLive in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,13 +112,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF0E311C25D01C59007AA03E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF0F341A25CFF500005DEE2C /* theming */ = {
+			isa = PBXGroup;
+			children = (
+				CF0F341E25CFF532005DEE2C /* PaletteColor.swift */,
+				CFF1A83325CF512100996F47 /* Typography.swift */,
+			);
+			path = theming;
+			sourceTree = "<group>";
+		};
+		CF0F342E25CFF60E005DEE2C /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				CFA1FAB325D0046000145DD6 /* Artist.swift */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		CF58BC6F25D007F50021021D /* network */ = {
+			isa = PBXGroup;
+			children = (
+				CF58BC6A25D007D20021021D /* ArtistsResponse.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		CFA1FAB125D0041A00145DD6 /* environment */ = {
+			isa = PBXGroup;
+			children = (
+				CFA1FAB225D0042600145DD6 /* extensions */,
+				CF58BC6F25D007F50021021D /* network */,
+				CF0F341A25CFF500005DEE2C /* theming */,
+			);
+			path = environment;
+			sourceTree = "<group>";
+		};
+		CFA1FAB225D0042600145DD6 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CF0F342625CFF60A005DEE2C /* Color+PaletteColor.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
 		CFF1A77E25CEF6AE00996F47 = {
 			isa = PBXGroup;
 			children = (
+				CFF1A84425CF565100996F47 /* alfaz */,
 				CFF1A78925CEF6AE00996F47 /* toscoz */,
 				CFF1A79B25CEF6B000996F47 /* toscozTests */,
 				CFF1A7A625CEF6B000996F47 /* toscozUITests */,
 				CFF1A78825CEF6AE00996F47 /* Products */,
+				CF0E311C25D01C59007AA03E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				CFF1A82225CF4D4500996F47 /* application */,
+				CFA1FAB125D0041A00145DD6 /* environment */,
 				CFF1A82A25CF50D400996F47 /* features */,
 				CFF1A82325CF4D4D00996F47 /* resources */,
 				CFF1A78A25CEF6AE00996F47 /* ToscozApp.swift */,
@@ -136,7 +227,11 @@
 		CFF1A82225CF4D4500996F47 /* application */ = {
 			isa = PBXGroup;
 			children = (
-				CFF1A83325CF512100996F47 /* Xpto.swift */,
+				CF0F342E25CFF60E005DEE2C /* domain */,
+				CF58BC8425D009170021021D /* AppAction.swift */,
+				CF58BC8925D009230021021D /* AppEnvironment.swift */,
+				CF58BC8E25D009760021021D /* AppReducer.swift */,
+				CF58BC7F25D008EA0021021D /* AppState.swift */,
 			);
 			path = application;
 			sourceTree = "<group>";
@@ -168,12 +263,18 @@
 				CFF1A78425CEF6AE00996F47 /* Frameworks */,
 				CFF1A78525CEF6AE00996F47 /* Resources */,
 				CFF1A81825CF482E00996F47 /* Run Swiftlint */,
+				CF0E312025D01C59007AA03E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = toscoz;
+			packageProductDependencies = (
+				CF58BC7425D008750021021D /* ComposableArchitecture */,
+				CF58BC7A25D008CA0021021D /* Overture */,
+				CF0E311D25D01C59007AA03E /* alfazLive */,
+			);
 			productName = toscoz;
 			productReference = CFF1A78725CEF6AE00996F47 /* toscoz.app */;
 			productType = "com.apple.product-type.application";
@@ -245,6 +346,10 @@
 				Base,
 			);
 			mainGroup = CFF1A77E25CEF6AE00996F47;
+			packageReferences = (
+				CF58BC7325D008750021021D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				CF58BC7925D008CA0021021D /* XCRemoteSwiftPackageReference "swift-overture" */,
+			);
 			productRefGroup = CFF1A78825CEF6AE00996F47 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -308,9 +413,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFF1A83425CF512100996F47 /* Xpto.swift in Sources */,
+				CFA1FAB425D0046000145DD6 /* Artist.swift in Sources */,
+				CF58BC8F25D009760021021D /* AppReducer.swift in Sources */,
+				CFF1A83425CF512100996F47 /* Typography.swift in Sources */,
 				CFF1A82C25CF510D00996F47 /* MyTopView.swift in Sources */,
+				CF58BC8025D008EA0021021D /* AppState.swift in Sources */,
+				CF58BC8525D009170021021D /* AppAction.swift in Sources */,
+				CF58BC8A25D009230021021D /* AppEnvironment.swift in Sources */,
 				CFF1A78B25CEF6AE00996F47 /* ToscozApp.swift in Sources */,
+				CF58BC6B25D007D20021021D /* ArtistsResponse.swift in Sources */,
+				CF0F342725CFF60A005DEE2C /* Color+PaletteColor.swift in Sources */,
+				CF0F341F25CFF532005DEE2C /* PaletteColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,6 +747,42 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CF58BC7325D008750021021D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:pointfreeco/swift-composable-architecture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.14.0;
+			};
+		};
+		CF58BC7925D008CA0021021D /* XCRemoteSwiftPackageReference "swift-overture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:pointfreeco/swift-overture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CF0E311D25D01C59007AA03E /* alfazLive */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = alfazLive;
+		};
+		CF58BC7425D008750021021D /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF58BC7325D008750021021D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		CF58BC7A25D008CA0021021D /* Overture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF58BC7925D008CA0021021D /* XCRemoteSwiftPackageReference "swift-overture" */;
+			productName = Overture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CFF1A77F25CEF6AE00996F47 /* Project object */;
 }
