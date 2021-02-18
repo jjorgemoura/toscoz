@@ -7,66 +7,94 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CFF1A78B25CEF6AE00996F47 /* ToscozApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1A78A25CEF6AE00996F47 /* ToscozApp.swift */; };
-		CFF1A78D25CEF6AE00996F47 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1A78C25CEF6AE00996F47 /* ContentView.swift */; };
-		CFF1A78F25CEF6B000996F47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF1A78E25CEF6B000996F47 /* Assets.xcassets */; };
-		CFF1A79225CEF6B000996F47 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF1A79125CEF6B000996F47 /* Preview Assets.xcassets */; };
-		CFF1A79D25CEF6B000996F47 /* ToscozTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1A79C25CEF6B000996F47 /* ToscozTests.swift */; };
-		CFF1A7A825CEF6B000996F47 /* ToscozUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1A7A725CEF6B000996F47 /* ToscozUITests.swift */; };
-		CFF1A82C25CF510D00996F47 /* MyTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1A82B25CF510D00996F47 /* MyTopView.swift */; };
-		CFF1A83425CF512100996F47 /* Xpto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1A83325CF512100996F47 /* Xpto.swift */; };
+		CF07994E25DF0D98005D667A /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07994D25DF0D98005D667A /* AlbumsViewController.swift */; };
+		CF07995625DF0DA2005D667A /* AlbumsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07995525DF0DA2005D667A /* AlbumsViewModel.swift */; };
+		CF07996025DF0E0B005D667A /* AlbumsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF07995F25DF0E0B005D667A /* AlbumsView.xib */; };
+		CF07996A25DF1277005D667A /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07996925DF1277005D667A /* Album.swift */; };
+		CF07997125DF1336005D667A /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07997025DF1336005D667A /* AppState.swift */; };
+		CF07997B25DF137D005D667A /* EventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07997A25DF137D005D667A /* EventHandler.swift */; };
+		CF07998425DF139D005D667A /* TopAlbumsTappedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07998325DF139D005D667A /* TopAlbumsTappedEvent.swift */; };
+		CF07998A25DF13DE005D667A /* TopAlbumsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07998925DF13DE005D667A /* TopAlbumsInteractor.swift */; };
+		CF07999225DF14C3005D667A /* EventDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07999125DF14C3005D667A /* EventDispatcher.swift */; };
+		CF07999725DF1DF4005D667A /* TopAlbumsPresentedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07999625DF1DF4005D667A /* TopAlbumsPresentedEvent.swift */; };
+		CF0799A625DF1E62005D667A /* AppCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0799A525DF1E62005D667A /* AppCore.swift */; };
+		CF0799AF25DF1F58005D667A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0799AE25DF1F58005D667A /* Router.swift */; };
+		CF0799B425DF1F60005D667A /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0799B325DF1F60005D667A /* AppRouter.swift */; };
+		CFC524D525DF034C009CDD66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC524D425DF034C009CDD66 /* AppDelegate.swift */; };
+		CFC524D725DF034C009CDD66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC524D625DF034C009CDD66 /* SceneDelegate.swift */; };
+		CFC524DE25DF034C009CDD66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC524DD25DF034C009CDD66 /* Assets.xcassets */; };
+		CFC524E125DF034C009CDD66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC524DF25DF034C009CDD66 /* LaunchScreen.storyboard */; };
+		CFC524EC25DF034C009CDD66 /* ToscozTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC524EB25DF034C009CDD66 /* ToscozTests.swift */; };
+		CFC524F725DF034C009CDD66 /* ToscozUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC524F625DF034C009CDD66 /* ToscozUITests.swift */; };
+		CFC5252625DF0455009CDD66 /* TopAlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5252525DF0455009CDD66 /* TopAlbumsViewController.swift */; };
+		CFC5252E25DF066F009CDD66 /* TopAlbumsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5252D25DF066F009CDD66 /* TopAlbumsViewModel.swift */; };
+		CFC5253325DF067E009CDD66 /* TopAlbumsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5253225DF067E009CDD66 /* TopAlbumsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CFF1A79925CEF6B000996F47 /* PBXContainerItemProxy */ = {
+		CFC524E825DF034C009CDD66 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CFF1A77F25CEF6AE00996F47 /* Project object */;
+			containerPortal = CFC524C925DF034C009CDD66 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CFF1A78625CEF6AE00996F47;
+			remoteGlobalIDString = CFC524D025DF034C009CDD66;
 			remoteInfo = toscoz;
 		};
-		CFF1A7A425CEF6B000996F47 /* PBXContainerItemProxy */ = {
+		CFC524F325DF034C009CDD66 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CFF1A77F25CEF6AE00996F47 /* Project object */;
+			containerPortal = CFC524C925DF034C009CDD66 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CFF1A78625CEF6AE00996F47;
+			remoteGlobalIDString = CFC524D025DF034C009CDD66;
 			remoteInfo = toscoz;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CFF1A78725CEF6AE00996F47 /* toscoz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toscoz.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFF1A78A25CEF6AE00996F47 /* ToscozApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToscozApp.swift; sourceTree = "<group>"; };
-		CFF1A78C25CEF6AE00996F47 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		CFF1A78E25CEF6B000996F47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CFF1A79125CEF6B000996F47 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CFF1A79325CEF6B000996F47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CFF1A79825CEF6B000996F47 /* toscozTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = toscozTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFF1A79C25CEF6B000996F47 /* ToscozTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToscozTests.swift; sourceTree = "<group>"; };
-		CFF1A79E25CEF6B000996F47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CFF1A7A325CEF6B000996F47 /* toscozUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = toscozUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFF1A7A725CEF6B000996F47 /* ToscozUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToscozUITests.swift; sourceTree = "<group>"; };
-		CFF1A7A925CEF6B000996F47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CFF1A82B25CF510D00996F47 /* MyTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTopView.swift; sourceTree = "<group>"; };
-		CFF1A83325CF512100996F47 /* Xpto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Xpto.swift; sourceTree = "<group>"; };
+		CF07994D25DF0D98005D667A /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
+		CF07995525DF0DA2005D667A /* AlbumsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewModel.swift; sourceTree = "<group>"; };
+		CF07995F25DF0E0B005D667A /* AlbumsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumsView.xib; sourceTree = "<group>"; };
+		CF07996925DF1277005D667A /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		CF07997025DF1336005D667A /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		CF07997A25DF137D005D667A /* EventHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHandler.swift; sourceTree = "<group>"; };
+		CF07998325DF139D005D667A /* TopAlbumsTappedEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlbumsTappedEvent.swift; sourceTree = "<group>"; };
+		CF07998925DF13DE005D667A /* TopAlbumsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlbumsInteractor.swift; sourceTree = "<group>"; };
+		CF07999125DF14C3005D667A /* EventDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDispatcher.swift; sourceTree = "<group>"; };
+		CF07999625DF1DF4005D667A /* TopAlbumsPresentedEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlbumsPresentedEvent.swift; sourceTree = "<group>"; };
+		CF0799A525DF1E62005D667A /* AppCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCore.swift; sourceTree = "<group>"; };
+		CF0799AE25DF1F58005D667A /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		CF0799B325DF1F60005D667A /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		CFC524D125DF034C009CDD66 /* toscoz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toscoz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFC524D425DF034C009CDD66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CFC524D625DF034C009CDD66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CFC524DD25DF034C009CDD66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CFC524E025DF034C009CDD66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CFC524E225DF034C009CDD66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFC524E725DF034C009CDD66 /* toscozTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = toscozTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFC524EB25DF034C009CDD66 /* ToscozTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToscozTests.swift; sourceTree = "<group>"; };
+		CFC524ED25DF034C009CDD66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFC524F225DF034C009CDD66 /* toscozUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = toscozUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFC524F625DF034C009CDD66 /* ToscozUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToscozUITests.swift; sourceTree = "<group>"; };
+		CFC524F825DF034C009CDD66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFC5252525DF0455009CDD66 /* TopAlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlbumsViewController.swift; sourceTree = "<group>"; };
+		CFC5252D25DF066F009CDD66 /* TopAlbumsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlbumsViewModel.swift; sourceTree = "<group>"; };
+		CFC5253225DF067E009CDD66 /* TopAlbumsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlbumsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CFF1A78425CEF6AE00996F47 /* Frameworks */ = {
+		CFC524CE25DF034C009CDD66 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CFF1A79525CEF6B000996F47 /* Frameworks */ = {
+		CFC524E425DF034C009CDD66 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CFF1A7A025CEF6B000996F47 /* Frameworks */ = {
+		CFC524EF25DF034C009CDD66 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,101 +104,179 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CFF1A77E25CEF6AE00996F47 = {
+		CF07994C25DF0D87005D667A /* albums */ = {
 			isa = PBXGroup;
 			children = (
-				CFF1A78925CEF6AE00996F47 /* toscoz */,
-				CFF1A79B25CEF6B000996F47 /* toscozTests */,
-				CFF1A7A625CEF6B000996F47 /* toscozUITests */,
-				CFF1A78825CEF6AE00996F47 /* Products */,
+				CF07994D25DF0D98005D667A /* AlbumsViewController.swift */,
+				CF07995525DF0DA2005D667A /* AlbumsViewModel.swift */,
+				CF07995F25DF0E0B005D667A /* AlbumsView.xib */,
 			);
+			path = albums;
 			sourceTree = "<group>";
 		};
-		CFF1A78825CEF6AE00996F47 /* Products */ = {
+		CF07996725DF1261005D667A /* application */ = {
 			isa = PBXGroup;
 			children = (
-				CFF1A78725CEF6AE00996F47 /* toscoz.app */,
-				CFF1A79825CEF6B000996F47 /* toscozTests.xctest */,
-				CFF1A7A325CEF6B000996F47 /* toscozUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		CFF1A78925CEF6AE00996F47 /* toscoz */ = {
-			isa = PBXGroup;
-			children = (
-				CFF1A82225CF4D4500996F47 /* application */,
-				CFF1A82A25CF50D400996F47 /* features */,
-				CFF1A82325CF4D4D00996F47 /* resources */,
-				CFF1A78A25CEF6AE00996F47 /* ToscozApp.swift */,
-				CFF1A78C25CEF6AE00996F47 /* ContentView.swift */,
-				CFF1A79325CEF6B000996F47 /* Info.plist */,
-				CFF1A79025CEF6B000996F47 /* Preview Content */,
-			);
-			path = toscoz;
-			sourceTree = "<group>";
-		};
-		CFF1A79025CEF6B000996F47 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				CFF1A79125CEF6B000996F47 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		CFF1A79B25CEF6B000996F47 /* toscozTests */ = {
-			isa = PBXGroup;
-			children = (
-				CFF1A79C25CEF6B000996F47 /* ToscozTests.swift */,
-				CFF1A79E25CEF6B000996F47 /* Info.plist */,
-			);
-			path = toscozTests;
-			sourceTree = "<group>";
-		};
-		CFF1A7A625CEF6B000996F47 /* toscozUITests */ = {
-			isa = PBXGroup;
-			children = (
-				CFF1A7A725CEF6B000996F47 /* ToscozUITests.swift */,
-				CFF1A7A925CEF6B000996F47 /* Info.plist */,
-			);
-			path = toscozUITests;
-			sourceTree = "<group>";
-		};
-		CFF1A82225CF4D4500996F47 /* application */ = {
-			isa = PBXGroup;
-			children = (
-				CFF1A83325CF512100996F47 /* Xpto.swift */,
+				CF07996F25DF130A005D667A /* appState */,
+				CF07996825DF1269005D667A /* domain */,
+				CF07997925DF136D005D667A /* eventHandler */,
+				CF07998825DF13CC005D667A /* interactor */,
+				CF0799AA25DF1F1B005D667A /* router */,
+				CF0799A125DF1E3A005D667A /* startUp */,
 			);
 			path = application;
 			sourceTree = "<group>";
 		};
-		CFF1A82325CF4D4D00996F47 /* resources */ = {
+		CF07996825DF1269005D667A /* domain */ = {
 			isa = PBXGroup;
 			children = (
-				CFF1A78E25CEF6B000996F47 /* Assets.xcassets */,
+				CF07996925DF1277005D667A /* Album.swift */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		CF07996F25DF130A005D667A /* appState */ = {
+			isa = PBXGroup;
+			children = (
+				CF07997025DF1336005D667A /* AppState.swift */,
+			);
+			path = appState;
+			sourceTree = "<group>";
+		};
+		CF07997925DF136D005D667A /* eventHandler */ = {
+			isa = PBXGroup;
+			children = (
+				CF07998225DF1383005D667A /* events */,
+				CF07999125DF14C3005D667A /* EventDispatcher.swift */,
+				CF07997A25DF137D005D667A /* EventHandler.swift */,
+			);
+			path = eventHandler;
+			sourceTree = "<group>";
+		};
+		CF07998225DF1383005D667A /* events */ = {
+			isa = PBXGroup;
+			children = (
+				CF07998325DF139D005D667A /* TopAlbumsTappedEvent.swift */,
+				CF07999625DF1DF4005D667A /* TopAlbumsPresentedEvent.swift */,
+			);
+			path = events;
+			sourceTree = "<group>";
+		};
+		CF07998825DF13CC005D667A /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CF07998925DF13DE005D667A /* TopAlbumsInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		CF0799A125DF1E3A005D667A /* startUp */ = {
+			isa = PBXGroup;
+			children = (
+				CF0799A525DF1E62005D667A /* AppCore.swift */,
+			);
+			path = startUp;
+			sourceTree = "<group>";
+		};
+		CF0799AA25DF1F1B005D667A /* router */ = {
+			isa = PBXGroup;
+			children = (
+				CF0799AE25DF1F58005D667A /* Router.swift */,
+				CF0799B325DF1F60005D667A /* AppRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		CFC524C825DF034C009CDD66 = {
+			isa = PBXGroup;
+			children = (
+				CFC524D325DF034C009CDD66 /* toscoz */,
+				CFC524EA25DF034C009CDD66 /* toscozTests */,
+				CFC524F525DF034C009CDD66 /* toscozUITests */,
+				CFC524D225DF034C009CDD66 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CFC524D225DF034C009CDD66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CFC524D125DF034C009CDD66 /* toscoz.app */,
+				CFC524E725DF034C009CDD66 /* toscozTests.xctest */,
+				CFC524F225DF034C009CDD66 /* toscozUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CFC524D325DF034C009CDD66 /* toscoz */ = {
+			isa = PBXGroup;
+			children = (
+				CF07996725DF1261005D667A /* application */,
+				CFC5252325DF043D009CDD66 /* features */,
+				CFC5251F25DF03FD009CDD66 /* resources */,
+				CFC524D425DF034C009CDD66 /* AppDelegate.swift */,
+				CFC524D625DF034C009CDD66 /* SceneDelegate.swift */,
+				CFC524E225DF034C009CDD66 /* Info.plist */,
+			);
+			path = toscoz;
+			sourceTree = "<group>";
+		};
+		CFC524EA25DF034C009CDD66 /* toscozTests */ = {
+			isa = PBXGroup;
+			children = (
+				CFC524EB25DF034C009CDD66 /* ToscozTests.swift */,
+				CFC524ED25DF034C009CDD66 /* Info.plist */,
+			);
+			path = toscozTests;
+			sourceTree = "<group>";
+		};
+		CFC524F525DF034C009CDD66 /* toscozUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CFC524F625DF034C009CDD66 /* ToscozUITests.swift */,
+				CFC524F825DF034C009CDD66 /* Info.plist */,
+			);
+			path = toscozUITests;
+			sourceTree = "<group>";
+		};
+		CFC5251F25DF03FD009CDD66 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				CFC524DD25DF034C009CDD66 /* Assets.xcassets */,
+				CFC524DF25DF034C009CDD66 /* LaunchScreen.storyboard */,
 			);
 			path = resources;
 			sourceTree = "<group>";
 		};
-		CFF1A82A25CF50D400996F47 /* features */ = {
+		CFC5252325DF043D009CDD66 /* features */ = {
 			isa = PBXGroup;
 			children = (
-				CFF1A82B25CF510D00996F47 /* MyTopView.swift */,
+				CF07994C25DF0D87005D667A /* albums */,
+				CFC5252425DF0442009CDD66 /* topAlbums */,
 			);
 			path = features;
+			sourceTree = "<group>";
+		};
+		CFC5252425DF0442009CDD66 /* topAlbums */ = {
+			isa = PBXGroup;
+			children = (
+				CFC5252525DF0455009CDD66 /* TopAlbumsViewController.swift */,
+				CFC5252D25DF066F009CDD66 /* TopAlbumsViewModel.swift */,
+				CFC5253225DF067E009CDD66 /* TopAlbumsTableViewCell.swift */,
+			);
+			path = topAlbums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CFF1A78625CEF6AE00996F47 /* toscoz */ = {
+		CFC524D025DF034C009CDD66 /* toscoz */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CFF1A7AC25CEF6B000996F47 /* Build configuration list for PBXNativeTarget "toscoz" */;
+			buildConfigurationList = CFC524FB25DF034C009CDD66 /* Build configuration list for PBXNativeTarget "toscoz" */;
 			buildPhases = (
-				CFF1A78325CEF6AE00996F47 /* Sources */,
-				CFF1A78425CEF6AE00996F47 /* Frameworks */,
-				CFF1A78525CEF6AE00996F47 /* Resources */,
-				CFF1A81825CF482E00996F47 /* Run Swiftlint */,
+				CFC524CD25DF034C009CDD66 /* Sources */,
+				CFC524CE25DF034C009CDD66 /* Frameworks */,
+				CFC524CF25DF034C009CDD66 /* Resources */,
+				CFC5254025DF09C5009CDD66 /* Run Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -178,68 +284,68 @@
 			);
 			name = toscoz;
 			productName = toscoz;
-			productReference = CFF1A78725CEF6AE00996F47 /* toscoz.app */;
+			productReference = CFC524D125DF034C009CDD66 /* toscoz.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CFF1A79725CEF6B000996F47 /* toscozTests */ = {
+		CFC524E625DF034C009CDD66 /* toscozTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CFF1A7AF25CEF6B000996F47 /* Build configuration list for PBXNativeTarget "toscozTests" */;
+			buildConfigurationList = CFC524FE25DF034C009CDD66 /* Build configuration list for PBXNativeTarget "toscozTests" */;
 			buildPhases = (
-				CFF1A79425CEF6B000996F47 /* Sources */,
-				CFF1A79525CEF6B000996F47 /* Frameworks */,
-				CFF1A79625CEF6B000996F47 /* Resources */,
+				CFC524E325DF034C009CDD66 /* Sources */,
+				CFC524E425DF034C009CDD66 /* Frameworks */,
+				CFC524E525DF034C009CDD66 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CFF1A79A25CEF6B000996F47 /* PBXTargetDependency */,
+				CFC524E925DF034C009CDD66 /* PBXTargetDependency */,
 			);
 			name = toscozTests;
 			productName = toscozTests;
-			productReference = CFF1A79825CEF6B000996F47 /* toscozTests.xctest */;
+			productReference = CFC524E725DF034C009CDD66 /* toscozTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		CFF1A7A225CEF6B000996F47 /* toscozUITests */ = {
+		CFC524F125DF034C009CDD66 /* toscozUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CFF1A7B225CEF6B000996F47 /* Build configuration list for PBXNativeTarget "toscozUITests" */;
+			buildConfigurationList = CFC5250125DF034C009CDD66 /* Build configuration list for PBXNativeTarget "toscozUITests" */;
 			buildPhases = (
-				CFF1A79F25CEF6B000996F47 /* Sources */,
-				CFF1A7A025CEF6B000996F47 /* Frameworks */,
-				CFF1A7A125CEF6B000996F47 /* Resources */,
+				CFC524EE25DF034C009CDD66 /* Sources */,
+				CFC524EF25DF034C009CDD66 /* Frameworks */,
+				CFC524F025DF034C009CDD66 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CFF1A7A525CEF6B000996F47 /* PBXTargetDependency */,
+				CFC524F425DF034C009CDD66 /* PBXTargetDependency */,
 			);
 			name = toscozUITests;
 			productName = toscozUITests;
-			productReference = CFF1A7A325CEF6B000996F47 /* toscozUITests.xctest */;
+			productReference = CFC524F225DF034C009CDD66 /* toscozUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CFF1A77F25CEF6AE00996F47 /* Project object */ = {
+		CFC524C925DF034C009CDD66 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					CFF1A78625CEF6AE00996F47 = {
+					CFC524D025DF034C009CDD66 = {
 						CreatedOnToolsVersion = 12.4;
 					};
-					CFF1A79725CEF6B000996F47 = {
+					CFC524E625DF034C009CDD66 = {
 						CreatedOnToolsVersion = 12.4;
-						TestTargetID = CFF1A78625CEF6AE00996F47;
+						TestTargetID = CFC524D025DF034C009CDD66;
 					};
-					CFF1A7A225CEF6B000996F47 = {
+					CFC524F125DF034C009CDD66 = {
 						CreatedOnToolsVersion = 12.4;
-						TestTargetID = CFF1A78625CEF6AE00996F47;
+						TestTargetID = CFC524D025DF034C009CDD66;
 					};
 				};
 			};
-			buildConfigurationList = CFF1A78225CEF6AE00996F47 /* Build configuration list for PBXProject "toscoz" */;
+			buildConfigurationList = CFC524CC25DF034C009CDD66 /* Build configuration list for PBXProject "toscoz" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -247,36 +353,37 @@
 				en,
 				Base,
 			);
-			mainGroup = CFF1A77E25CEF6AE00996F47;
-			productRefGroup = CFF1A78825CEF6AE00996F47 /* Products */;
+			mainGroup = CFC524C825DF034C009CDD66;
+			productRefGroup = CFC524D225DF034C009CDD66 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CFF1A78625CEF6AE00996F47 /* toscoz */,
-				CFF1A79725CEF6B000996F47 /* toscozTests */,
-				CFF1A7A225CEF6B000996F47 /* toscozUITests */,
+				CFC524D025DF034C009CDD66 /* toscoz */,
+				CFC524E625DF034C009CDD66 /* toscozTests */,
+				CFC524F125DF034C009CDD66 /* toscozUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CFF1A78525CEF6AE00996F47 /* Resources */ = {
+		CFC524CF25DF034C009CDD66 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFF1A79225CEF6B000996F47 /* Preview Assets.xcassets in Resources */,
-				CFF1A78F25CEF6B000996F47 /* Assets.xcassets in Resources */,
+				CFC524E125DF034C009CDD66 /* LaunchScreen.storyboard in Resources */,
+				CFC524DE25DF034C009CDD66 /* Assets.xcassets in Resources */,
+				CF07996025DF0E0B005D667A /* AlbumsView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CFF1A79625CEF6B000996F47 /* Resources */ = {
+		CFC524E525DF034C009CDD66 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CFF1A7A125CEF6B000996F47 /* Resources */ = {
+		CFC524F025DF034C009CDD66 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -286,7 +393,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CFF1A81825CF482E00996F47 /* Run Swiftlint */ = {
+		CFC5254025DF09C5009CDD66 /* Run Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -307,50 +414,74 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CFF1A78325CEF6AE00996F47 /* Sources */ = {
+		CFC524CD25DF034C009CDD66 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFF1A83425CF512100996F47 /* Xpto.swift in Sources */,
-				CFF1A78D25CEF6AE00996F47 /* ContentView.swift in Sources */,
-				CFF1A82C25CF510D00996F47 /* MyTopView.swift in Sources */,
-				CFF1A78B25CEF6AE00996F47 /* ToscozApp.swift in Sources */,
+				CF07997125DF1336005D667A /* AppState.swift in Sources */,
+				CFC524D525DF034C009CDD66 /* AppDelegate.swift in Sources */,
+				CFC5253325DF067E009CDD66 /* TopAlbumsTableViewCell.swift in Sources */,
+				CF07994E25DF0D98005D667A /* AlbumsViewController.swift in Sources */,
+				CF07995625DF0DA2005D667A /* AlbumsViewModel.swift in Sources */,
+				CFC524D725DF034C009CDD66 /* SceneDelegate.swift in Sources */,
+				CF07999725DF1DF4005D667A /* TopAlbumsPresentedEvent.swift in Sources */,
+				CFC5252625DF0455009CDD66 /* TopAlbumsViewController.swift in Sources */,
+				CF0799AF25DF1F58005D667A /* Router.swift in Sources */,
+				CFC5252E25DF066F009CDD66 /* TopAlbumsViewModel.swift in Sources */,
+				CF0799A625DF1E62005D667A /* AppCore.swift in Sources */,
+				CF07999225DF14C3005D667A /* EventDispatcher.swift in Sources */,
+				CF07996A25DF1277005D667A /* Album.swift in Sources */,
+				CF07997B25DF137D005D667A /* EventHandler.swift in Sources */,
+				CF07998A25DF13DE005D667A /* TopAlbumsInteractor.swift in Sources */,
+				CF0799B425DF1F60005D667A /* AppRouter.swift in Sources */,
+				CF07998425DF139D005D667A /* TopAlbumsTappedEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CFF1A79425CEF6B000996F47 /* Sources */ = {
+		CFC524E325DF034C009CDD66 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFF1A79D25CEF6B000996F47 /* ToscozTests.swift in Sources */,
+				CFC524EC25DF034C009CDD66 /* ToscozTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CFF1A79F25CEF6B000996F47 /* Sources */ = {
+		CFC524EE25DF034C009CDD66 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFF1A7A825CEF6B000996F47 /* ToscozUITests.swift in Sources */,
+				CFC524F725DF034C009CDD66 /* ToscozUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CFF1A79A25CEF6B000996F47 /* PBXTargetDependency */ = {
+		CFC524E925DF034C009CDD66 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CFF1A78625CEF6AE00996F47 /* toscoz */;
-			targetProxy = CFF1A79925CEF6B000996F47 /* PBXContainerItemProxy */;
+			target = CFC524D025DF034C009CDD66 /* toscoz */;
+			targetProxy = CFC524E825DF034C009CDD66 /* PBXContainerItemProxy */;
 		};
-		CFF1A7A525CEF6B000996F47 /* PBXTargetDependency */ = {
+		CFC524F425DF034C009CDD66 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CFF1A78625CEF6AE00996F47 /* toscoz */;
-			targetProxy = CFF1A7A425CEF6B000996F47 /* PBXContainerItemProxy */;
+			target = CFC524D025DF034C009CDD66 /* toscoz */;
+			targetProxy = CFC524F325DF034C009CDD66 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		CFC524DF25DF034C009CDD66 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFC524E025DF034C009CDD66 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		CFF1A7AA25CEF6B000996F47 /* Debug */ = {
+		CFC524F925DF034C009CDD66 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -384,7 +515,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -402,7 +533,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -413,7 +544,7 @@
 			};
 			name = Debug;
 		};
-		CFF1A7AB25CEF6B000996F47 /* Release */ = {
+		CFC524FA25DF034C009CDD66 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -447,7 +578,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -459,7 +590,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -470,17 +601,14 @@
 			};
 			name = Release;
 		};
-		CFF1A7AD25CEF6B000996F47 /* Debug */ = {
+		CFC524FC25DF034C009CDD66 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"toscoz/Preview Content\"";
 				DEVELOPMENT_TEAM = 6CHZFW8V57;
-				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = toscoz/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -492,17 +620,14 @@
 			};
 			name = Debug;
 		};
-		CFF1A7AE25CEF6B000996F47 /* Release */ = {
+		CFC524FD25DF034C009CDD66 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"toscoz/Preview Content\"";
 				DEVELOPMENT_TEAM = 6CHZFW8V57;
-				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = toscoz/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -514,7 +639,7 @@
 			};
 			name = Release;
 		};
-		CFF1A7B025CEF6B000996F47 /* Debug */ = {
+		CFC524FF25DF034C009CDD66 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -522,7 +647,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6CHZFW8V57;
 				INFOPLIST_FILE = toscozTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -536,7 +661,7 @@
 			};
 			name = Debug;
 		};
-		CFF1A7B125CEF6B000996F47 /* Release */ = {
+		CFC5250025DF034C009CDD66 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -544,7 +669,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6CHZFW8V57;
 				INFOPLIST_FILE = toscozTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -558,7 +683,7 @@
 			};
 			name = Release;
 		};
-		CFF1A7B325CEF6B000996F47 /* Debug */ = {
+		CFC5250225DF034C009CDD66 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -578,7 +703,7 @@
 			};
 			name = Debug;
 		};
-		CFF1A7B425CEF6B000996F47 /* Release */ = {
+		CFC5250325DF034C009CDD66 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -601,43 +726,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CFF1A78225CEF6AE00996F47 /* Build configuration list for PBXProject "toscoz" */ = {
+		CFC524CC25DF034C009CDD66 /* Build configuration list for PBXProject "toscoz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CFF1A7AA25CEF6B000996F47 /* Debug */,
-				CFF1A7AB25CEF6B000996F47 /* Release */,
+				CFC524F925DF034C009CDD66 /* Debug */,
+				CFC524FA25DF034C009CDD66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CFF1A7AC25CEF6B000996F47 /* Build configuration list for PBXNativeTarget "toscoz" */ = {
+		CFC524FB25DF034C009CDD66 /* Build configuration list for PBXNativeTarget "toscoz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CFF1A7AD25CEF6B000996F47 /* Debug */,
-				CFF1A7AE25CEF6B000996F47 /* Release */,
+				CFC524FC25DF034C009CDD66 /* Debug */,
+				CFC524FD25DF034C009CDD66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CFF1A7AF25CEF6B000996F47 /* Build configuration list for PBXNativeTarget "toscozTests" */ = {
+		CFC524FE25DF034C009CDD66 /* Build configuration list for PBXNativeTarget "toscozTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CFF1A7B025CEF6B000996F47 /* Debug */,
-				CFF1A7B125CEF6B000996F47 /* Release */,
+				CFC524FF25DF034C009CDD66 /* Debug */,
+				CFC5250025DF034C009CDD66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CFF1A7B225CEF6B000996F47 /* Build configuration list for PBXNativeTarget "toscozUITests" */ = {
+		CFC5250125DF034C009CDD66 /* Build configuration list for PBXNativeTarget "toscozUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CFF1A7B325CEF6B000996F47 /* Debug */,
-				CFF1A7B425CEF6B000996F47 /* Release */,
+				CFC5250225DF034C009CDD66 /* Debug */,
+				CFC5250325DF034C009CDD66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = CFF1A77F25CEF6AE00996F47 /* Project object */;
+	rootObject = CFC524C925DF034C009CDD66 /* Project object */;
 }
