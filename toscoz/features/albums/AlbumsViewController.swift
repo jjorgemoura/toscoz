@@ -22,6 +22,10 @@ class AlbumsViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    deinit {
+        print("Album VC -> deinit")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

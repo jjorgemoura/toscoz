@@ -10,15 +10,22 @@ class AppEventHandler: EventHandler, EventRegister {
         let eventType = type(of: T.self)
         let objectID = ObjectIdentifier(eventType)
 
-        eventRegistry[objectID] = { event in
+        print(objectID)
+        print(ObjectIdentifier(T.self))
+
+        eventRegistry[ObjectIdentifier(T.self)] = { event in
             if let event = event as? T {
                 eventBlock(event)
+            } else {
+                fatalError("An event handler was somehow registered with the wrong event type!")
             }
         }
     }
 
     func post(event: Event) -> Bool {
-        let eventType = type(of: event)
+        print(event)
+        
+        let eventType = type(of: event as Any)
         let objectID = ObjectIdentifier(eventType)
 
         if let action = eventRegistry[objectID] {

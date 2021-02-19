@@ -19,6 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let eventHandler = AppEventHandler()
             let appRouter = AppRouter(appUIWindow: window, eventHandler: eventHandler)
             appCore = AppCore(eventHandler: eventHandler, router: appRouter)
+            appCore?.setupDependencies()
 
             window.makeKeyAndVisible()
 

@@ -3,9 +3,9 @@
 
 struct ApplicationInteractor {
 
-    let route: Router
+    let router: Router
 
     func onEvent(event: AppStarted) {
-        // navigate to route
+        router.presentRoot()
     }
 }
