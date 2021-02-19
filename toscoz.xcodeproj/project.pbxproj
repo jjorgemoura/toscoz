@@ -13,13 +13,15 @@
 		CF07996A25DF1277005D667A /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07996925DF1277005D667A /* Album.swift */; };
 		CF07997125DF1336005D667A /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07997025DF1336005D667A /* AppState.swift */; };
 		CF07997B25DF137D005D667A /* EventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07997A25DF137D005D667A /* EventHandler.swift */; };
-		CF07998425DF139D005D667A /* TopAlbumsTappedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07998325DF139D005D667A /* TopAlbumsTappedEvent.swift */; };
+		CF07998425DF139D005D667A /* TopAlbumsTapped.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07998325DF139D005D667A /* TopAlbumsTapped.swift */; };
 		CF07998A25DF13DE005D667A /* TopAlbumsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07998925DF13DE005D667A /* TopAlbumsInteractor.swift */; };
-		CF07999225DF14C3005D667A /* EventDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07999125DF14C3005D667A /* EventDispatcher.swift */; };
-		CF07999725DF1DF4005D667A /* TopAlbumsPresentedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07999625DF1DF4005D667A /* TopAlbumsPresentedEvent.swift */; };
+		CF07999225DF14C3005D667A /* AppEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07999125DF14C3005D667A /* AppEventHandler.swift */; };
+		CF07999725DF1DF4005D667A /* TopAlbumsPresented.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07999625DF1DF4005D667A /* TopAlbumsPresented.swift */; };
 		CF0799A625DF1E62005D667A /* AppCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0799A525DF1E62005D667A /* AppCore.swift */; };
 		CF0799AF25DF1F58005D667A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0799AE25DF1F58005D667A /* Router.swift */; };
 		CF0799B425DF1F60005D667A /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0799B325DF1F60005D667A /* AppRouter.swift */; };
+		CF626EB525DFA43C00519F09 /* AppStarted.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF626EB425DFA43C00519F09 /* AppStarted.swift */; };
+		CF626EC325DFA66600519F09 /* ApplicationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF626EC225DFA66600519F09 /* ApplicationInteractor.swift */; };
 		CFC524D525DF034C009CDD66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC524D425DF034C009CDD66 /* AppDelegate.swift */; };
 		CFC524D725DF034C009CDD66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC524D625DF034C009CDD66 /* SceneDelegate.swift */; };
 		CFC524DE25DF034C009CDD66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC524DD25DF034C009CDD66 /* Assets.xcassets */; };
@@ -55,13 +57,15 @@
 		CF07996925DF1277005D667A /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		CF07997025DF1336005D667A /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		CF07997A25DF137D005D667A /* EventHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHandler.swift; sourceTree = "<group>"; };
-		CF07998325DF139D005D667A /* TopAlbumsTappedEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlbumsTappedEvent.swift; sourceTree = "<group>"; };
+		CF07998325DF139D005D667A /* TopAlbumsTapped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlbumsTapped.swift; sourceTree = "<group>"; };
 		CF07998925DF13DE005D667A /* TopAlbumsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlbumsInteractor.swift; sourceTree = "<group>"; };
-		CF07999125DF14C3005D667A /* EventDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDispatcher.swift; sourceTree = "<group>"; };
-		CF07999625DF1DF4005D667A /* TopAlbumsPresentedEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlbumsPresentedEvent.swift; sourceTree = "<group>"; };
+		CF07999125DF14C3005D667A /* AppEventHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEventHandler.swift; sourceTree = "<group>"; };
+		CF07999625DF1DF4005D667A /* TopAlbumsPresented.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlbumsPresented.swift; sourceTree = "<group>"; };
 		CF0799A525DF1E62005D667A /* AppCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCore.swift; sourceTree = "<group>"; };
 		CF0799AE25DF1F58005D667A /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		CF0799B325DF1F60005D667A /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		CF626EB425DFA43C00519F09 /* AppStarted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStarted.swift; sourceTree = "<group>"; };
+		CF626EC225DFA66600519F09 /* ApplicationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationInteractor.swift; sourceTree = "<group>"; };
 		CFC524D125DF034C009CDD66 /* toscoz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toscoz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFC524D425DF034C009CDD66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFC524D625DF034C009CDD66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,7 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				CF07998225DF1383005D667A /* events */,
-				CF07999125DF14C3005D667A /* EventDispatcher.swift */,
+				CF07999125DF14C3005D667A /* AppEventHandler.swift */,
 				CF07997A25DF137D005D667A /* EventHandler.swift */,
 			);
 			path = eventHandler;
@@ -156,8 +160,9 @@
 		CF07998225DF1383005D667A /* events */ = {
 			isa = PBXGroup;
 			children = (
-				CF07998325DF139D005D667A /* TopAlbumsTappedEvent.swift */,
-				CF07999625DF1DF4005D667A /* TopAlbumsPresentedEvent.swift */,
+				CF626EB425DFA43C00519F09 /* AppStarted.swift */,
+				CF07998325DF139D005D667A /* TopAlbumsTapped.swift */,
+				CF07999625DF1DF4005D667A /* TopAlbumsPresented.swift */,
 			);
 			path = events;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 		CF07998825DF13CC005D667A /* interactor */ = {
 			isa = PBXGroup;
 			children = (
+				CF626EC225DFA66600519F09 /* ApplicationInteractor.swift */,
 				CF07998925DF13DE005D667A /* TopAlbumsInteractor.swift */,
 			);
 			path = interactor;
@@ -423,18 +429,20 @@
 				CFC5253325DF067E009CDD66 /* TopAlbumsTableViewCell.swift in Sources */,
 				CF07994E25DF0D98005D667A /* AlbumsViewController.swift in Sources */,
 				CF07995625DF0DA2005D667A /* AlbumsViewModel.swift in Sources */,
+				CF626EB525DFA43C00519F09 /* AppStarted.swift in Sources */,
 				CFC524D725DF034C009CDD66 /* SceneDelegate.swift in Sources */,
-				CF07999725DF1DF4005D667A /* TopAlbumsPresentedEvent.swift in Sources */,
+				CF07999725DF1DF4005D667A /* TopAlbumsPresented.swift in Sources */,
+				CF626EC325DFA66600519F09 /* ApplicationInteractor.swift in Sources */,
 				CFC5252625DF0455009CDD66 /* TopAlbumsViewController.swift in Sources */,
 				CF0799AF25DF1F58005D667A /* Router.swift in Sources */,
 				CFC5252E25DF066F009CDD66 /* TopAlbumsViewModel.swift in Sources */,
 				CF0799A625DF1E62005D667A /* AppCore.swift in Sources */,
-				CF07999225DF14C3005D667A /* EventDispatcher.swift in Sources */,
+				CF07999225DF14C3005D667A /* AppEventHandler.swift in Sources */,
 				CF07996A25DF1277005D667A /* Album.swift in Sources */,
 				CF07997B25DF137D005D667A /* EventHandler.swift in Sources */,
 				CF07998A25DF13DE005D667A /* TopAlbumsInteractor.swift in Sources */,
 				CF0799B425DF1F60005D667A /* AppRouter.swift in Sources */,
-				CF07998425DF139D005D667A /* TopAlbumsTappedEvent.swift in Sources */,
+				CF07998425DF139D005D667A /* TopAlbumsTapped.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

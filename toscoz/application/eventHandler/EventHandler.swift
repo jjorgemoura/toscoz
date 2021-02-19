@@ -6,4 +6,8 @@ protocol EventHandler {
     func post(event: Event) -> Bool
 }
 
+protocol EventRegister {
+    func register<T: Event>(eventBlock: @escaping (T) -> Void)
+}
+
 protocol Event {}

@@ -3,11 +3,13 @@
 
 struct TopAlbumsInteractor {
 
-    func event(event: TopAlbumsPresentedEvent) {
+    let route: Router
+
+    func onEvent(event: TopAlbumsPresented) {
         // load topAlbums
     }
 
-    func event(event: TopAlbumsTappedEvent) {
+    func onEvent(event: TopAlbumsTapped) {
         // route to AlbumViewController
     }
 }

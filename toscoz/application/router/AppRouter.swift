@@ -5,16 +5,19 @@ import UIKit
 
 struct AppRouter: Router {
 
-    private let eventHandler: EventHandler
-    private let navigationViewController: UINavigationController
+    let appUIWindow: UIWindow
+    let eventHandler: EventHandler
+
+    //            let rootViewController = TopAlbumsViewController()
+    //            let rootViewController = AlbumsViewController()
 
     func presentRoot() {
     }
 
     func showAlbumScreen(with album: String) {
-        let viewModel = AlbumsViewModel()
-        let viewController = AlbumsViewController(viewModel: viewModel, eventHandler: eventHandler)
+//        let viewModel = AlbumsViewModel()
+//        let viewController = AlbumsViewController(viewModel: viewModel, eventHandler: eventHandler)
 
-        navigationViewController.pushViewController(viewController, animated: true)
+//        navigationViewController.pushViewController(viewController, animated: true)
     }
 }

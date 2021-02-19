@@ -5,10 +5,10 @@ import UIKit
 
 class AlbumsViewController: UIViewController {
 
-    @IBOutlet private var albumLabel: UILabel?
-
     private let viewModel: AlbumsViewModel
     private let eventHandler: EventHandler
+
+    @IBOutlet private var albumLabel: UILabel?
 
     init(viewModel: AlbumsViewModel, eventHandler: EventHandler) {
         self.viewModel = viewModel

@@ -1,7 +1,7 @@
 //
 //  Copyright © 2021  ___ORGANIZATIONNAME___ . All rights reserved.
 
-class EventDispatcher: EventHandler {
+class AppEventHandler: EventHandler, EventRegister {
 
     private var eventRegistry: [ObjectIdentifier: (Event) -> Void] = [:]
 

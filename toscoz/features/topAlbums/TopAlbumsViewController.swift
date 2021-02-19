@@ -34,7 +34,7 @@ class TopAlbumsViewController: UIViewController {
         view.addSubview(tableView)
         tableView.bindToSuperView()
 
-        eventHandler.post(event: TopAlbumsPresentedEvent())
+        eventHandler.post(event: TopAlbumsPresented())
     }
 }
 
@@ -58,7 +58,7 @@ extension TopAlbumsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let albumSelected = viewModel.items[indexPath.row]
 
-        eventHandler.post(event: TopAlbumsTappedEvent(albumId: albumSelected))
+        eventHandler.post(event: TopAlbumsTapped(albumId: albumSelected))
     }
 }
 

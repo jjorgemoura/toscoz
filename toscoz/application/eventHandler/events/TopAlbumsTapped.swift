@@ -1,6 +1,6 @@
 //
 //  Copyright © 2021  ___ORGANIZATIONNAME___ . All rights reserved.
 
-struct TopAlbumsTappedEvent: Event {
+struct TopAlbumsTapped: Event {
     let albumId: String
 }
