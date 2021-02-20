@@ -4,7 +4,6 @@
 import UIKit
 
 class TopAlbumsViewController: UIViewController {
-
     private let tableView = UITableView(frame: .zero, style: .plain)
     private let viewModel: TopAlbumsViewModel
     private let eventHandler: EventHandler
@@ -34,7 +33,15 @@ class TopAlbumsViewController: UIViewController {
         view.addSubview(tableView)
         tableView.bindToSuperView()
 
+        viewModel.dataDidLoad = { [weak self] in self?.tableView.reloadData() }
+
         eventHandler.post(event: TopAlbumsPresented())
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        viewModel.refresh()
     }
 }
 
@@ -47,7 +54,7 @@ extension TopAlbumsViewController: UITableViewDataSource {
         if let cell = tableView.dequeueReusableCell(withIdentifier: TopAlbumsTableViewCell.cellIdentifier, for: indexPath) as? TopAlbumsTableViewCell {
             let album = viewModel.items[indexPath.row]
 
-            cell.configure(album: album)
+            cell.configure(album: album.title)
             return cell
         }
         fatalError("This should not happen")
@@ -58,7 +65,7 @@ extension TopAlbumsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let albumSelected = viewModel.items[indexPath.row]
 
-        eventHandler.post(event: TopAlbumsTapped(albumId: albumSelected))
+        eventHandler.post(event: TopAlbumsTapped(albumId: albumSelected.identifier))
     }
 }
 

@@ -16,9 +16,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let window = UIWindow(windowScene: windowScene)
             self.window = window
 
+            let appStateHolder = AppStateHolder(appState: AppState(topAlbums: []))
             let eventHandler = AppEventHandler()
-            let appRouter = AppRouter(appUIWindow: window, eventHandler: eventHandler)
-            appCore = AppCore(eventHandler: eventHandler, router: appRouter)
+            let appRouter = AppRouter(appUIWindow: window, appStateHolder: appStateHolder, eventHandler: eventHandler)
+            appCore = AppCore(appStateHolder: appStateHolder, eventHandler: eventHandler, router: appRouter)
             appCore?.setupDependencies()
 
             window.makeKeyAndVisible()

@@ -3,14 +3,15 @@
 
 struct AppCore {
 
+    let appStateHolder: AppStateHolder
     let eventHandler: EventHandler & EventRegister
     let router: Router
 
     func setupDependencies() {
         let interactorEventRegistry = InteractorEventRegistry(eventHandler: eventHandler)
 
-        let applicationInteractor = ApplicationInteractor(router: router)
-        let topAlbumsInteractor = TopAlbumsInteractor(router: router)
+        let applicationInteractor = ApplicationInteractor(appStateHolder: appStateHolder, router: router)
+        let topAlbumsInteractor = TopAlbumsInteractor(appStateHolder: appStateHolder, router: router)
 
         interactorEventRegistry.register(interactor: applicationInteractor)
         interactorEventRegistry.register(interactor: topAlbumsInteractor)

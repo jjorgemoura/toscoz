@@ -6,24 +6,22 @@ import UIKit
 struct AppRouter: Router {
 
     let appUIWindow: UIWindow
+    let appStateHolder: AppStateHolder
     let eventHandler: EventHandler
 
     let mainNavigarionViewController = UINavigationController()
 
-    //            let rootViewController = TopAlbumsViewController()
-    //            let rootViewController = AlbumsViewController()
-
     func presentRoot() {
-        let viewModel = TopAlbumsViewModel()
+        let viewModel = TopAlbumsViewModel(appStateHolder: appStateHolder)
         let viewController = TopAlbumsViewController(viewModel: viewModel, eventHandler: eventHandler)
         mainNavigarionViewController.pushViewController(viewController, animated: true)
 
         appUIWindow.rootViewController = mainNavigarionViewController
     }
 
-    func showAlbumScreen(with album: String) {
-        let viewModel = AlbumsViewModel()
-        let viewController = AlbumsViewController(viewModel: viewModel, eventHandler: eventHandler)
+    func showAlbumScreen(with album: UUID) {
+        let viewModel = AlbumViewModel(appStateHolder: appStateHolder, albumId: album)
+        let viewController = AlbumViewController(viewModel: viewModel, eventHandler: eventHandler)
 
         mainNavigarionViewController.pushViewController(viewController, animated: true)
     }

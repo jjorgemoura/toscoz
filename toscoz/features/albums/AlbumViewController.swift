@@ -3,14 +3,14 @@
 
 import UIKit
 
-class AlbumsViewController: UIViewController {
+class AlbumViewController: UIViewController {
 
-    private let viewModel: AlbumsViewModel
+    private let viewModel: AlbumViewModel
     private let eventHandler: EventHandler
 
     @IBOutlet private var albumLabel: UILabel?
 
-    init(viewModel: AlbumsViewModel, eventHandler: EventHandler) {
+    init(viewModel: AlbumViewModel, eventHandler: EventHandler) {
         self.viewModel = viewModel
         self.eventHandler = eventHandler
 
@@ -31,6 +31,16 @@ class AlbumsViewController: UIViewController {
 
         view.backgroundColor = .green
 
-        albumLabel?.text = viewModel.album
+        viewModel.dataDidLoad = { [weak self] album in
+            self?.albumLabel?.text = album.title
+        }
+
+        albumLabel?.text = viewModel.album?.title
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        viewModel.refresh()
     }
 }

@@ -7,11 +7,11 @@ class AppEventHandler: EventHandler, EventRegister {
 
     func register<T: Event>(eventBlock: @escaping (T) -> Void) {
 
-        let eventType = type(of: T.self)
-        let objectID = ObjectIdentifier(eventType)
+//        let eventType = type(of: T.self)
+//        let objectID = ObjectIdentifier(eventType)
 
-        print(objectID)
-        print(ObjectIdentifier(T.self))
+//        print(objectID)
+//        print(ObjectIdentifier(T.self))
 
         eventRegistry[ObjectIdentifier(T.self)] = { event in
             if let event = event as? T {
@@ -24,7 +24,7 @@ class AppEventHandler: EventHandler, EventRegister {
 
     func post(event: Event) -> Bool {
         print(event)
-        
+
         let eventType = type(of: event as Any)
         let objectID = ObjectIdentifier(eventType)
 

@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CF07994E25DF0D98005D667A /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07994D25DF0D98005D667A /* AlbumsViewController.swift */; };
-		CF07995625DF0DA2005D667A /* AlbumsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07995525DF0DA2005D667A /* AlbumsViewModel.swift */; };
-		CF07996025DF0E0B005D667A /* AlbumsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF07995F25DF0E0B005D667A /* AlbumsView.xib */; };
+		CF07994E25DF0D98005D667A /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07994D25DF0D98005D667A /* AlbumViewController.swift */; };
+		CF07995625DF0DA2005D667A /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07995525DF0DA2005D667A /* AlbumViewModel.swift */; };
+		CF07996025DF0E0B005D667A /* AlbumView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF07995F25DF0E0B005D667A /* AlbumView.xib */; };
 		CF07996A25DF1277005D667A /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07996925DF1277005D667A /* Album.swift */; };
 		CF07997125DF1336005D667A /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07997025DF1336005D667A /* AppState.swift */; };
 		CF07997B25DF137D005D667A /* EventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07997A25DF137D005D667A /* EventHandler.swift */; };
@@ -20,6 +20,7 @@
 		CF0799A625DF1E62005D667A /* AppCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0799A525DF1E62005D667A /* AppCore.swift */; };
 		CF0799AF25DF1F58005D667A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0799AE25DF1F58005D667A /* Router.swift */; };
 		CF0799B425DF1F60005D667A /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0799B325DF1F60005D667A /* AppRouter.swift */; };
+		CF32CFCE25E10A5F00E3CD8C /* AppStateHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32CFCD25E10A5F00E3CD8C /* AppStateHolder.swift */; };
 		CF626EB525DFA43C00519F09 /* AppStarted.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF626EB425DFA43C00519F09 /* AppStarted.swift */; };
 		CF626EC325DFA66600519F09 /* ApplicationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF626EC225DFA66600519F09 /* ApplicationInteractor.swift */; };
 		CFC524D525DF034C009CDD66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC524D425DF034C009CDD66 /* AppDelegate.swift */; };
@@ -51,9 +52,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CF07994D25DF0D98005D667A /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
-		CF07995525DF0DA2005D667A /* AlbumsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewModel.swift; sourceTree = "<group>"; };
-		CF07995F25DF0E0B005D667A /* AlbumsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumsView.xib; sourceTree = "<group>"; };
+		CF07994D25DF0D98005D667A /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
+		CF07995525DF0DA2005D667A /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
+		CF07995F25DF0E0B005D667A /* AlbumView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumView.xib; sourceTree = "<group>"; };
 		CF07996925DF1277005D667A /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		CF07997025DF1336005D667A /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		CF07997A25DF137D005D667A /* EventHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHandler.swift; sourceTree = "<group>"; };
@@ -64,6 +65,7 @@
 		CF0799A525DF1E62005D667A /* AppCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCore.swift; sourceTree = "<group>"; };
 		CF0799AE25DF1F58005D667A /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		CF0799B325DF1F60005D667A /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		CF32CFCD25E10A5F00E3CD8C /* AppStateHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateHolder.swift; sourceTree = "<group>"; };
 		CF626EB425DFA43C00519F09 /* AppStarted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStarted.swift; sourceTree = "<group>"; };
 		CF626EC225DFA66600519F09 /* ApplicationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationInteractor.swift; sourceTree = "<group>"; };
 		CFC524D125DF034C009CDD66 /* toscoz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toscoz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,9 +113,9 @@
 		CF07994C25DF0D87005D667A /* albums */ = {
 			isa = PBXGroup;
 			children = (
-				CF07994D25DF0D98005D667A /* AlbumsViewController.swift */,
-				CF07995525DF0DA2005D667A /* AlbumsViewModel.swift */,
-				CF07995F25DF0E0B005D667A /* AlbumsView.xib */,
+				CF07994D25DF0D98005D667A /* AlbumViewController.swift */,
+				CF07995525DF0DA2005D667A /* AlbumViewModel.swift */,
+				CF07995F25DF0E0B005D667A /* AlbumView.xib */,
 			);
 			path = albums;
 			sourceTree = "<group>";
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				CF07997025DF1336005D667A /* AppState.swift */,
+				CF32CFCD25E10A5F00E3CD8C /* AppStateHolder.swift */,
 			);
 			path = appState;
 			sourceTree = "<group>";
@@ -378,7 +381,7 @@
 			files = (
 				CFC524E125DF034C009CDD66 /* LaunchScreen.storyboard in Resources */,
 				CFC524DE25DF034C009CDD66 /* Assets.xcassets in Resources */,
-				CF07996025DF0E0B005D667A /* AlbumsView.xib in Resources */,
+				CF07996025DF0E0B005D667A /* AlbumView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,8 +430,8 @@
 				CF07997125DF1336005D667A /* AppState.swift in Sources */,
 				CFC524D525DF034C009CDD66 /* AppDelegate.swift in Sources */,
 				CFC5253325DF067E009CDD66 /* TopAlbumsTableViewCell.swift in Sources */,
-				CF07994E25DF0D98005D667A /* AlbumsViewController.swift in Sources */,
-				CF07995625DF0DA2005D667A /* AlbumsViewModel.swift in Sources */,
+				CF07994E25DF0D98005D667A /* AlbumViewController.swift in Sources */,
+				CF07995625DF0DA2005D667A /* AlbumViewModel.swift in Sources */,
 				CF626EB525DFA43C00519F09 /* AppStarted.swift in Sources */,
 				CFC524D725DF034C009CDD66 /* SceneDelegate.swift in Sources */,
 				CF07999725DF1DF4005D667A /* TopAlbumsPresented.swift in Sources */,
@@ -439,6 +442,7 @@
 				CF0799A625DF1E62005D667A /* AppCore.swift in Sources */,
 				CF07999225DF14C3005D667A /* AppEventHandler.swift in Sources */,
 				CF07996A25DF1277005D667A /* Album.swift in Sources */,
+				CF32CFCE25E10A5F00E3CD8C /* AppStateHolder.swift in Sources */,
 				CF07997B25DF137D005D667A /* EventHandler.swift in Sources */,
 				CF07998A25DF13DE005D667A /* TopAlbumsInteractor.swift in Sources */,
 				CF0799B425DF1F60005D667A /* AppRouter.swift in Sources */,
