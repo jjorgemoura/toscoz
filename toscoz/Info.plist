@@ -25,7 +25,7 @@
 			<string>com.jjorgemoura.toscoz</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>toscoz://callback/</string>
+				<string>toscoz</string>
 			</array>
 		</dict>
 	</array>

@@ -29,6 +29,7 @@
 		CFA254F825E3050D005F18D0 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA254F725E3050D005F18D0 /* AuthenticationViewController.swift */; };
 		CFA2550025E30522005F18D0 /* AuthenticationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFA254FF25E30522005F18D0 /* AuthenticationViewController.xib */; };
 		CFA2550825E30B39005F18D0 /* SignInSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA2550725E30B39005F18D0 /* SignInSelected.swift */; };
+		CFA2551F25E31800005F18D0 /* AuthTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA2551E25E31800005F18D0 /* AuthTokenResponse.swift */; };
 		CFC524D525DF034C009CDD66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC524D425DF034C009CDD66 /* AppDelegate.swift */; };
 		CFC524D725DF034C009CDD66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC524D625DF034C009CDD66 /* SceneDelegate.swift */; };
 		CFC524DE25DF034C009CDD66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC524DD25DF034C009CDD66 /* Assets.xcassets */; };
@@ -84,6 +85,7 @@
 		CFA254F725E3050D005F18D0 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		CFA254FF25E30522005F18D0 /* AuthenticationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationViewController.xib; sourceTree = "<group>"; };
 		CFA2550725E30B39005F18D0 /* SignInSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInSelected.swift; sourceTree = "<group>"; };
+		CFA2551E25E31800005F18D0 /* AuthTokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTokenResponse.swift; sourceTree = "<group>"; };
 		CFC524D125DF034C009CDD66 /* toscoz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toscoz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFC524D425DF034C009CDD66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFC524D625DF034C009CDD66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				CF07998325DF139D005D667A /* TopAlbumsTapped.swift */,
 				CF07999625DF1DF4005D667A /* TopAlbumsPresented.swift */,
 				CFA2550725E30B39005F18D0 /* SignInSelected.swift */,
+				CFA2551E25E31800005F18D0 /* AuthTokenResponse.swift */,
 			);
 			path = events;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				CF0799AF25DF1F58005D667A /* Router.swift in Sources */,
 				CFC5252E25DF066F009CDD66 /* TopAlbumsViewModel.swift in Sources */,
 				CF0799A625DF1E62005D667A /* AppCore.swift in Sources */,
+				CFA2551F25E31800005F18D0 /* AuthTokenResponse.swift in Sources */,
 				CF07999225DF14C3005D667A /* AppEventHandler.swift in Sources */,
 				CFA254ED25E3016A005F18D0 /* Authentication.swift in Sources */,
 				CF07996A25DF1277005D667A /* Album.swift in Sources */,

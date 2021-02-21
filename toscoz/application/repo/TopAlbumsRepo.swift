@@ -5,17 +5,35 @@ import Combine
 import Foundation
 
 struct TopAlbumsRepo {
-    var topAlbums: () -> AnyPublisher<TopAlbumsResponse, Error>
+    var topAlbums: (String) -> AnyPublisher<TopAlbumsResponse, Error>
 }
 
 struct TopAlbumsResponse: Decodable, Equatable {
+    let items: [ArtistResponse]
+}
+
+struct ArtistResponse: Decodable, Equatable {
+    let id: String
+    let name: String
 }
 
 extension TopAlbumsRepo {
     static var live = Self(
-        topAlbums: {
-            URLSession.shared.dataTaskPublisher(for: URL(string: "https://www.metaweather.com/api/location/")!)
-                .map { data, _ in data }
+        topAlbums: { token in
+            guard let url = URL(string: "https://api.spotify.com/v1/me/top/artists") else { fatalError("Devs error") }
+
+            var urlRequest = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
+            urlRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+
+            return URLSession.shared.dataTaskPublisher(for: urlRequest)
+                .map { data, response in data
+                    print(response)
+                    return data
+                }
+                .mapError({ error -> Error in
+                    print(error)
+                    return error
+                })
                 .decode(type: TopAlbumsResponse.self, decoder: JSONDecoder())
                 .receive(on: DispatchQueue.main)
                 .eraseToAnyPublisher()
@@ -24,21 +42,21 @@ extension TopAlbumsRepo {
 
 extension TopAlbumsRepo {
     static let empty = Self(
-        topAlbums: {
-            Just(TopAlbumsResponse())
+        topAlbums: { _ in
+            Just(TopAlbumsResponse(items: []))
                 .setFailureType(to: Error.self)
                 .eraseToAnyPublisher()
         })
-
-    static let happyPath = Self(
-        topAlbums: {
-            Just(TopAlbumsResponse())
-                .setFailureType(to: Error.self)
-                .eraseToAnyPublisher()
-        })
+//
+//    static let happyPath = Self(
+//        topAlbums: { _ in
+//            Just(TopAlbumsResponse())
+//                .setFailureType(to: Error.self)
+//                .eraseToAnyPublisher()
+//        })
 
     static let failed = Self(
-        topAlbums: {
+        topAlbums: { _ in
             Fail(error: NSError(domain: "", code: 1))
                 .eraseToAnyPublisher()
         })

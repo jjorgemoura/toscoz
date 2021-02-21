@@ -19,4 +19,11 @@ struct ApplicationInteractor {
     func onEvent(event: SignInSelected) {
         authenticationRepo.authenticate()
     }
+
+    func onEvent(event: AuthTokenResponse) {
+        let authentication = Authentication(token: event.token, expireAt: "")
+        let newState = AppState(authentication: authentication, topAlbums: appStateHolder.appState.topAlbums)
+        appStateHolder.update(to: newState)
+        router.presentRoot()
+    }
 }

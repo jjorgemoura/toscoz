@@ -7,6 +7,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
     var appCore: AppCore?
+    let eventHandler = AppEventHandler()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -17,7 +18,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window = window
 
             let appStateHolder = AppStateHolder(appState: AppState.initialState)
-            let eventHandler = AppEventHandler()
             let appRouter = AppRouter(appUIWindow: window, appStateHolder: appStateHolder, eventHandler: eventHandler)
             appCore = AppCore(appStateHolder: appStateHolder, eventHandler: eventHandler, router: appRouter)
             appCore?.setupDependencies()
@@ -31,32 +31,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
         print(URLContexts)
 
-//        if URLContexts.count == 1 {
-//            guard let xpto = URLContexts.first?.url else { return }
-//            print(xpto)
-//
-//            let accessT = xpto.absoluteString.split(separator: "#").last!.split(separator: "&").filter { $0.contains("access_token") }
-//
-//            let authToken2 = accessT.first!.split(separator: "=").last!.map { String($0) }
-//            let authToken = String(accessT.first!.split(separator: "=").last!)
-//            print(authToken2)
-//            print(authToken)
-//
-//            var localPersistanceStore = LocalPersistenceStore()
-//            localPersistanceStore.spotifyToken = authToken
-//            localPersistanceStore.spotifyTokenTimestamp = Date().timeIntervalSince1970
-//
-//            let store = Store(initialState: buildAppState(version: AppVersion.appVersion),
-//                              reducer: AppReducer().main,
-//                              environment: buildAppEnvironment(with: authToken))
-//
-//            if let windowScene = scene as? UIWindowScene {
-//                let window = UIWindow(windowScene: windowScene)
-//                window.rootViewController = UIHostingController(rootView: MyAlbumsView(store: store))
-//                self.window = window
-//                window.makeKeyAndVisible()
-//            }
-//        }
+        if URLContexts.count == 1 {
+            guard let xpto = URLContexts.first?.url else { return }
+            print(xpto)
+
+            let accessT = xpto.absoluteString.split(separator: "#").last!.split(separator: "&").filter { $0.contains("access_token") }
+
+            let authToken2 = accessT.first!.split(separator: "=").last!.map { String($0) }
+            let authToken = String(accessT.first!.split(separator: "=").last!)
+            print(authToken2)
+            print(authToken)
+
+            eventHandler.post(event: AuthTokenResponse(token: authToken))
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
