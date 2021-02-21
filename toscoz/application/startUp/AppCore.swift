@@ -8,9 +8,11 @@ struct AppCore {
     let router: Router
 
     func setupDependencies() {
+        let authRepo = AuthenticationRepo.live
+
         let interactorEventRegistry = InteractorEventRegistry(eventHandler: eventHandler)
 
-        let applicationInteractor = ApplicationInteractor(appStateHolder: appStateHolder, router: router)
+        let applicationInteractor = ApplicationInteractor(appStateHolder: appStateHolder, authenticationRepo: authRepo, router: router)
         let topAlbumsInteractor = TopAlbumsInteractor(appStateHolder: appStateHolder, router: router)
 
         interactorEventRegistry.register(interactor: applicationInteractor)
@@ -24,6 +26,7 @@ struct InteractorEventRegistry {
 
     func register(interactor: ApplicationInteractor) {
         eventHandler.register { (event: AppStarted) in interactor.onEvent(event: event) }
+        eventHandler.register { (event: SignInSelected) in interactor.onEvent(event: event) }
     }
 
     func register(interactor: TopAlbumsInteractor) {

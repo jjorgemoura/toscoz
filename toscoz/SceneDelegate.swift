@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let window = UIWindow(windowScene: windowScene)
             self.window = window
 
-            let appStateHolder = AppStateHolder(appState: AppState(topAlbums: []))
+            let appStateHolder = AppStateHolder(appState: AppState.initialState)
             let eventHandler = AppEventHandler()
             let appRouter = AppRouter(appUIWindow: window, appStateHolder: appStateHolder, eventHandler: eventHandler)
             appCore = AppCore(appStateHolder: appStateHolder, eventHandler: eventHandler, router: appRouter)
@@ -26,6 +26,37 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
             eventHandler.post(event: AppStarted())
         }
+    }
+
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        print(URLContexts)
+
+//        if URLContexts.count == 1 {
+//            guard let xpto = URLContexts.first?.url else { return }
+//            print(xpto)
+//
+//            let accessT = xpto.absoluteString.split(separator: "#").last!.split(separator: "&").filter { $0.contains("access_token") }
+//
+//            let authToken2 = accessT.first!.split(separator: "=").last!.map { String($0) }
+//            let authToken = String(accessT.first!.split(separator: "=").last!)
+//            print(authToken2)
+//            print(authToken)
+//
+//            var localPersistanceStore = LocalPersistenceStore()
+//            localPersistanceStore.spotifyToken = authToken
+//            localPersistanceStore.spotifyTokenTimestamp = Date().timeIntervalSince1970
+//
+//            let store = Store(initialState: buildAppState(version: AppVersion.appVersion),
+//                              reducer: AppReducer().main,
+//                              environment: buildAppEnvironment(with: authToken))
+//
+//            if let windowScene = scene as? UIWindowScene {
+//                let window = UIWindow(windowScene: windowScene)
+//                window.rootViewController = UIHostingController(rootView: MyAlbumsView(store: store))
+//                self.window = window
+//                window.makeKeyAndVisible()
+//            }
+//        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

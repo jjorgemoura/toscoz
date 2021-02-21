@@ -13,7 +13,7 @@ struct TopAlbumsInteractor {
             Album(identifier: UUID(), title: "Closer", artist: "Joy Division", year: "1980"),
             Album(identifier: UUID(), title: "The Top", artist: "The Cure", year: "1984")
         ]
-        let newState = AppState(topAlbums: topAlbums)
+        let newState = AppState(authentication: nil, topAlbums: topAlbums)
         appStateHolder.update(to: newState)
     }
 

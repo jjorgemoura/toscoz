@@ -6,7 +6,7 @@ import Combine
 class AppStateHolder {
     private(set) var appState: AppState
 
-    var appStatePublisher = CurrentValueSubject<AppState, Never>(AppState(topAlbums: []))
+    var appStatePublisher = CurrentValueSubject<AppState, Never>(AppState.initialState)
 
     init(appState: AppState) {
         self.appState = appState

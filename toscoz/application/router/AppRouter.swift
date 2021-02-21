@@ -11,6 +11,12 @@ struct AppRouter: Router {
 
     let mainNavigarionViewController = UINavigationController()
 
+    func presentAuthentication() {
+        let authenticationViewController = AuthenticationViewController(eventHandler: eventHandler)
+
+        appUIWindow.rootViewController = authenticationViewController
+    }
+
     func presentRoot() {
         let viewModel = TopAlbumsViewModel(appStateHolder: appStateHolder)
         let viewController = TopAlbumsViewController(viewModel: viewModel, eventHandler: eventHandler)

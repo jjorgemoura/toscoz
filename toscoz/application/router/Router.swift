@@ -4,6 +4,7 @@
 import Foundation
 
 protocol Router {
+    func presentAuthentication()
     func presentRoot()
     func showAlbumScreen(with album: UUID)
 }

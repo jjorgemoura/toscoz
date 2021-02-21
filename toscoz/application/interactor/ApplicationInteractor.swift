@@ -3,9 +3,20 @@
 
 struct ApplicationInteractor {
     let appStateHolder: AppStateHolder
+    let authenticationRepo: AuthenticationRepo
     let router: Router
 
     func onEvent(event: AppStarted) {
-        router.presentRoot()
+        // is the user authenticated
+        // yes
+//        router.presentRoot()
+
+        // no
+        // ask authentication
+        router.presentAuthentication()
+    }
+
+    func onEvent(event: SignInSelected) {
+        authenticationRepo.authenticate()
     }
 }
