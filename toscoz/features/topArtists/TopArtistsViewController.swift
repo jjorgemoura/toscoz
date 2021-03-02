@@ -3,12 +3,12 @@
 
 import UIKit
 
-class TopAlbumsViewController: UIViewController {
+class TopArtistsViewController: UIViewController {
     private let tableView = UITableView(frame: .zero, style: .plain)
-    private let viewModel: TopAlbumsViewModel
+    private let viewModel: TopArtistsViewModel
     private let eventHandler: EventHandler
 
-    init(viewModel: TopAlbumsViewModel, eventHandler: EventHandler) {
+    init(viewModel: TopArtistsViewModel, eventHandler: EventHandler) {
         self.viewModel = viewModel
         self.eventHandler = eventHandler
 
@@ -24,7 +24,7 @@ class TopAlbumsViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .yellow
-        tableView.register(TopAlbumsTableViewCell.self, forCellReuseIdentifier: TopAlbumsTableViewCell.cellIdentifier)
+        tableView.register(TopArtistsTableViewCell.self, forCellReuseIdentifier: TopArtistsTableViewCell.cellIdentifier)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.estimatedRowHeight = 200
@@ -35,7 +35,7 @@ class TopAlbumsViewController: UIViewController {
 
         viewModel.dataDidLoad = { [weak self] in self?.tableView.reloadData() }
 
-        eventHandler.post(event: TopAlbumsPresented())
+        eventHandler.post(event: TopArtistsPresented())
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -45,27 +45,27 @@ class TopAlbumsViewController: UIViewController {
     }
 }
 
-extension TopAlbumsViewController: UITableViewDataSource {
+extension TopArtistsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.items.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: TopAlbumsTableViewCell.cellIdentifier, for: indexPath) as? TopAlbumsTableViewCell {
-            let album = viewModel.items[indexPath.row]
+        if let cell = tableView.dequeueReusableCell(withIdentifier: TopArtistsTableViewCell.cellIdentifier, for: indexPath) as? TopArtistsTableViewCell {
+            let artist = viewModel.items[indexPath.row]
 
-            cell.configure(album: album.title)
+            cell.configure(album: artist.name)
             return cell
         }
         fatalError("This should not happen")
     }
 }
 
-extension TopAlbumsViewController: UITableViewDelegate {
+extension TopArtistsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let albumSelected = viewModel.items[indexPath.row]
 
-        eventHandler.post(event: TopAlbumsTapped(albumId: albumSelected.identifier))
+        eventHandler.post(event: TopArtistsTapped(albumId: albumSelected.identifier))
     }
 }
 

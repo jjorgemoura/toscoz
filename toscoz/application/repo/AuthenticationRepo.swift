@@ -12,7 +12,7 @@ struct AuthenticationRepo {
 // swiftlint:disable line_length
 extension AuthenticationRepo {
     static var live: Self {
-        let authEndpoint = "https://accounts.spotify.com/authorize?client_id=&response_type=token&redirect_uri=toscoz://callback/&state=123&scope=user-top-read,playlist-read-private,playlist-read-collaborative,user-follow-read"
+        let authEndpoint = "https://accounts.spotify.com/authorize?client_id=XXXXXXX&response_type=token&redirect_uri=toscoz://callback/&state=123&scope=user-top-read,playlist-read-private,playlist-read-collaborative,user-follow-read"
         let url = URL(string: authEndpoint)
 
         return Self {

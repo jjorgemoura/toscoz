@@ -3,9 +3,9 @@
 
 import UIKit
 
-class TopAlbumsTableViewCell: UITableViewCell {
+class TopArtistsTableViewCell: UITableViewCell {
 
-    static let cellIdentifier = "TopAlbumsTableViewCell"
+    static let cellIdentifier = "TopArtistsTableViewCell"
 
     private let albumLabel = UILabel()
 

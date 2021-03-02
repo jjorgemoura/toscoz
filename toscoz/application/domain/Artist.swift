@@ -3,6 +3,7 @@
 
 import Foundation
 
-struct TopAlbumsTapped: Event {
-    let albumId: UUID
+struct Artist {
+    let identifier: String
+    let name: String
 }

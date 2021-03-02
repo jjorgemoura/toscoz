@@ -4,17 +4,17 @@
 import Combine
 import Foundation
 
-class AlbumViewModel {
+class ArtistsViewModel {
     private let appStateHolder: AppStateHolder
     private var cancellable: AnyCancellable?
 
-    private let albumId: UUID
-    var album: Album?
-    var dataDidLoad: ((Album) -> Void)?
+    private let artistId: String
+    var artist: Artist?
+    var dataDidLoad: ((Artist) -> Void)?
 
-    init(appStateHolder: AppStateHolder, albumId: UUID) {
+    init(appStateHolder: AppStateHolder, artistId: String) {
         self.appStateHolder = appStateHolder
-        self.albumId = albumId
+        self.artistId = artistId
     }
 
     deinit {
@@ -24,11 +24,11 @@ class AlbumViewModel {
 
     func refresh() {
         cancellable = appStateHolder.appStatePublisher.sink { [weak self] appState in
-            let album = appState.topAlbums.first { album in
-                album.identifier == self?.albumId
+            let album = appState.topArtists.first { album in
+                album.identifier == self?.artistId
             }
 
-            self?.album = album
+            self?.artist = album
             //            print(Thread.isMainThread)
             if let album = album {
                 self?.dataDidLoad?(album)

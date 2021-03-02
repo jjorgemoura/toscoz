@@ -3,9 +3,9 @@
 
 struct AppState {
     let authentication: Authentication?
-    let topAlbums: [Album]
+    let topArtists: [Artist]
 }
 
 extension AppState {
-    static var initialState = Self(authentication: nil, topAlbums: [])
+    static var initialState = Self(authentication: nil, topArtists: [])
 }

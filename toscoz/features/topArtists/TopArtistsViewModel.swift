@@ -4,11 +4,11 @@
 import Combine
 import Foundation
 
-class TopAlbumsViewModel {
+class TopArtistsViewModel {
     private let appStateHolder: AppStateHolder
     private var cancellable: AnyCancellable?
 
-    private(set) var items: [Album] = []
+    private(set) var items: [Artist] = []
 
     var dataDidLoad: (() -> Void)?
 
@@ -22,7 +22,7 @@ class TopAlbumsViewModel {
 
     func refresh() {
         cancellable = appStateHolder.appStatePublisher.sink { [weak self] appState in
-            self?.items = appState.topAlbums
+            self?.items = appState.topArtists
 
 //            print(Thread.isMainThread)
             self?.dataDidLoad?()

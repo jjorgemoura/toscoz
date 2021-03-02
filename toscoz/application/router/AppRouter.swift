@@ -18,16 +18,16 @@ struct AppRouter: Router {
     }
 
     func presentRoot() {
-        let viewModel = TopAlbumsViewModel(appStateHolder: appStateHolder)
-        let viewController = TopAlbumsViewController(viewModel: viewModel, eventHandler: eventHandler)
+        let viewModel = TopArtistsViewModel(appStateHolder: appStateHolder)
+        let viewController = TopArtistsViewController(viewModel: viewModel, eventHandler: eventHandler)
         mainNavigarionViewController.pushViewController(viewController, animated: true)
 
         appUIWindow.rootViewController = mainNavigarionViewController
     }
 
-    func showAlbumScreen(with album: UUID) {
-        let viewModel = AlbumViewModel(appStateHolder: appStateHolder, albumId: album)
-        let viewController = AlbumViewController(viewModel: viewModel, eventHandler: eventHandler)
+    func showAlbumScreen(with artistId: String) {
+        let viewModel = ArtistsViewModel(appStateHolder: appStateHolder, artistId: artistId)
+        let viewController = ArtistsViewController(viewModel: viewModel, eventHandler: eventHandler)
 
         mainNavigarionViewController.pushViewController(viewController, animated: true)
     }

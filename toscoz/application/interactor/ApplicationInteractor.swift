@@ -7,12 +7,6 @@ struct ApplicationInteractor {
     let router: Router
 
     func onEvent(event: AppStarted) {
-        // is the user authenticated
-        // yes
-//        router.presentRoot()
-
-        // no
-        // ask authentication
         router.presentAuthentication()
     }
 
@@ -22,7 +16,7 @@ struct ApplicationInteractor {
 
     func onEvent(event: AuthTokenResponse) {
         let authentication = Authentication(token: event.token, expireAt: "")
-        let newState = AppState(authentication: authentication, topAlbums: appStateHolder.appState.topAlbums)
+        let newState = AppState(authentication: authentication, topArtists: appStateHolder.appState.topArtists)
         appStateHolder.update(to: newState)
         router.presentRoot()
     }

@@ -1,5 +1,5 @@
 //
 //  Copyright © 2021  ___ORGANIZATIONNAME___ . All rights reserved.
 
-struct TopAlbumsPresented: Event {
+struct TopArtistsPresented: Event {
 }
