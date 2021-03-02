@@ -25,12 +25,12 @@ struct TopArtistsInteractor {
                 print(error)
             } receiveValue: { artists in
                 print(artists)
-                onEvent(event: TopArtistsLoaded(topArtists: artists))
+                onEvent(event: TopArtistsRequestCompleted(topArtists: artists))
             }
             .store(in: &TopArtistsInteractor.cancellables)
     }
 
-    func onEvent(event: TopArtistsLoaded) {
+    func onEvent(event: TopArtistsRequestCompleted) {
         let artists: [Artist] = event.topArtists
         let newState = AppState(authentication: nil, topArtists: artists)
         appStateHolder.update(to: newState)

@@ -32,7 +32,7 @@ struct InteractorEventRegistry {
     }
 
     func register(interactor: TopArtistsInteractor) {
-        eventHandler.register { (event: TopArtistsLoaded) in interactor.onEvent(event: event) }
+        eventHandler.register { (event: TopArtistsRequestCompleted) in interactor.onEvent(event: event) }
         eventHandler.register { (event: TopArtistsPresented) in interactor.onEvent(event: event) }
         eventHandler.register { (event: TopArtistsTapped) in interactor.onEvent(event: event) }
     }
