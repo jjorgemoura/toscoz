@@ -19,9 +19,10 @@ struct TopArtistsResponse: Decodable, Equatable {
 struct ArtistResponse: Decodable, Equatable {
     let id: String
     let name: String
+    let popularity: Int
 
     func toModel() -> Artist {
-        return Artist(identifier: id, name: name)
+        return Artist(identifier: id, name: name, popularity: popularity)
     }
 }
 
@@ -60,10 +61,10 @@ extension TopArtistsRepo {
     static let happyPath = Self(
         topArtists: { _ in
             Just(TopArtistsResponse(items: [
-                ArtistResponse(id: "Frances the Mute", name: "The Mars Volta"),
-                ArtistResponse(id: "B Fachada II", name: "B Fachada"),
-                ArtistResponse(id: "Os Homens nao se querem bonitos", name: "GNR"),
-                ArtistResponse(id: "The Top", name: "The Cure")
+                ArtistResponse(id: "Frances the Mute", name: "The Mars Volta", popularity: 80),
+                ArtistResponse(id: "B Fachada II", name: "B Fachada", popularity: 51),
+                ArtistResponse(id: "Os Homens nao se querem bonitos", name: "GNR", popularity: 55),
+                ArtistResponse(id: "The Top", name: "The Cure", popularity: 89)
             ]))
                 .setFailureType(to: Error.self)
                 .eraseToAnyPublisher()

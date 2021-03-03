@@ -54,7 +54,7 @@ extension TopArtistsViewController: UITableViewDataSource {
         if let cell = tableView.dequeueReusableCell(withIdentifier: TopArtistsTableViewCell.cellIdentifier, for: indexPath) as? TopArtistsTableViewCell {
             let artist = viewModel.items[indexPath.row]
 
-            cell.configure(album: artist.name)
+            cell.configure(album: artist.name, popularity: String(artist.popularity))
             return cell
         }
         fatalError("This should not happen")
@@ -71,12 +71,16 @@ extension TopArtistsViewController: UITableViewDelegate {
 
 extension UIView {
     func bindToSuperView() {
+        bindToSuperView(with: 0)
+    }
+
+    func bindToSuperView(with marging: CGFloat) {
         guard let superView = self.superview else { return }
 
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.leadingAnchor.constraint(equalTo: superView.leadingAnchor, constant: 0).isActive = true
-        self.trailingAnchor.constraint(equalTo: superView.trailingAnchor, constant: 0).isActive = true
-        self.topAnchor.constraint(equalTo: superView.topAnchor, constant: 0).isActive = true
-        self.bottomAnchor.constraint(equalTo: superView.bottomAnchor, constant: 0).isActive = true
+        self.leadingAnchor.constraint(equalTo: superView.leadingAnchor, constant: marging).isActive = true
+        self.trailingAnchor.constraint(equalTo: superView.trailingAnchor, constant: -marging).isActive = true
+        self.topAnchor.constraint(equalTo: superView.topAnchor, constant: marging).isActive = true
+        self.bottomAnchor.constraint(equalTo: superView.bottomAnchor, constant: -marging).isActive = true
     }
 }

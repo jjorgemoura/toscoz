@@ -9,7 +9,13 @@ struct ApplicationInteractor {
     let router: Router
 
     func onEvent(event: AppStarted) {
-        router.presentAuthentication()
+        if let tokenValidDate = appStateHolder.appState.authentication?.expireAt, tokenValidDate > Date() {
+            print("JM: ApplicationInteractor -> AppStarted -> Token is still valid")
+            router.presentRoot()
+        } else {
+            print("JM: ApplicationInteractor -> AppStarted -> NO TOKEN")
+            router.presentAuthentication()
+        }
     }
 
     func onEvent(event: SignInSelected) {

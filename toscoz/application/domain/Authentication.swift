@@ -3,7 +3,7 @@
 
 import Foundation
 
-struct Authentication {
+struct Authentication: Codable {
     let token: String
     let expireAt: Date
 }

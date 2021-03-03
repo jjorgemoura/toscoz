@@ -8,6 +8,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     var appCore: AppCore?
     let eventHandler = AppEventHandler()
+    var localStorageService: LocalStorageService?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -17,13 +18,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let window = UIWindow(windowScene: windowScene)
             self.window = window
 
-            let appStateHolder = AppStateHolder(appState: AppState.initialState)
+//            let localStorageService = LocalStorageService(localStorage: .live, appStateHolder: appStateHolder)
+            localStorageService = LocalStorageService(localStorage: .live)
+            let persistedAppState = localStorageService?.read()
+
+            let appStateHolder = AppStateHolder(appState: persistedAppState ?? AppState.initialState)
             let appRouter = AppRouter(appUIWindow: window, appStateHolder: appStateHolder, eventHandler: eventHandler)
             appCore = AppCore(appStateHolder: appStateHolder, eventHandler: eventHandler, router: appRouter)
             appCore?.setupDependencies()
 
             window.makeKeyAndVisible()
 
+            localStorageService?.start(appStateHolder: appStateHolder)
             eventHandler.post(event: AppStarted())
         }
     }

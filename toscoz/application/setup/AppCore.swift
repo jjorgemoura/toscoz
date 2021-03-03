@@ -8,10 +8,10 @@ struct AppCore {
     let router: Router
 
     func setupDependencies() {
+        let interactorEventRegistry = InteractorEventRegistry(eventHandler: eventHandler)
+
         let authRepo = AuthenticationRepo.live
         let topArtistsRepo = TopArtistsRepo.live
-
-        let interactorEventRegistry = InteractorEventRegistry(eventHandler: eventHandler)
 
         let applicationInteractor = ApplicationInteractor(appStateHolder: appStateHolder, authenticationRepo: authRepo, router: router)
         let topArtistsInteractor = TopArtistsInteractor(appStateHolder: appStateHolder, router: router, topArtistsRepo: topArtistsRepo)

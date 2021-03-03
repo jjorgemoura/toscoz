@@ -5,5 +5,5 @@ import Foundation
 
 enum SpotifyConfig {
     static var clientId: String = spotifyApiKey
-    static var tokenLifetimeSeconds: TimeInterval = 55
+    static var tokenLifetimeSeconds: TimeInterval = 3500
 }

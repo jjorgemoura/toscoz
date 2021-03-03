@@ -32,7 +32,7 @@ struct TopArtistsInteractor {
 
     func onEvent(event: TopArtistsRequestCompleted) {
         let artists: [Artist] = event.topArtists
-        let newState = AppState(authentication: nil, topArtists: artists)
+        let newState = AppState(authentication: appStateHolder.appState.authentication, topArtists: artists)
         appStateHolder.update(to: newState)
     }
 

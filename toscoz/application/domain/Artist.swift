@@ -6,4 +6,5 @@ import Foundation
 struct Artist {
     let identifier: String
     let name: String
+    let popularity: Int
 }

@@ -23,6 +23,8 @@
 		CF1AA40325EEEF98006BDCF9 /* TopArtistsRequestCompleted.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1AA40225EEEF98006BDCF9 /* TopArtistsRequestCompleted.swift */; };
 		CF32CFCE25E10A5F00E3CD8C /* AppStateHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32CFCD25E10A5F00E3CD8C /* AppStateHolder.swift */; };
 		CF4F639825EFFD4F0085FC4D /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4F639725EFFD4F0085FC4D /* Secrets.swift */; };
+		CF4F63A425F031A10085FC4D /* LocalStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4F63A325F031A10085FC4D /* LocalStorageService.swift */; };
+		CF4F63AF25F040390085FC4D /* LocalStorageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4F63AE25F040390085FC4D /* LocalStorageClient.swift */; };
 		CF626EB525DFA43C00519F09 /* AppStarted.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF626EB425DFA43C00519F09 /* AppStarted.swift */; };
 		CF626EC325DFA66600519F09 /* ApplicationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF626EC225DFA66600519F09 /* ApplicationInteractor.swift */; };
 		CF9934A625EF72AA0043AF0F /* SpotifyConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9934A525EF72AA0043AF0F /* SpotifyConfig.swift */; };
@@ -82,6 +84,8 @@
 		CF1AA40225EEEF98006BDCF9 /* TopArtistsRequestCompleted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopArtistsRequestCompleted.swift; sourceTree = "<group>"; };
 		CF32CFCD25E10A5F00E3CD8C /* AppStateHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateHolder.swift; sourceTree = "<group>"; };
 		CF4F639725EFFD4F0085FC4D /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		CF4F63A325F031A10085FC4D /* LocalStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageService.swift; sourceTree = "<group>"; };
+		CF4F63AE25F040390085FC4D /* LocalStorageClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageClient.swift; sourceTree = "<group>"; };
 		CF626EB425DFA43C00519F09 /* AppStarted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStarted.swift; sourceTree = "<group>"; };
 		CF626EC225DFA66600519F09 /* ApplicationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationInteractor.swift; sourceTree = "<group>"; };
 		CF9934A525EF72AA0043AF0F /* SpotifyConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyConfig.swift; sourceTree = "<group>"; };
@@ -232,6 +236,15 @@
 			path = router;
 			sourceTree = "<group>";
 		};
+		CF4F63A225F031930085FC4D /* localStorage */ = {
+			isa = PBXGroup;
+			children = (
+				CF4F63A325F031A10085FC4D /* LocalStorageService.swift */,
+				CF4F63AE25F040390085FC4D /* LocalStorageClient.swift */,
+			);
+			path = localStorage;
+			sourceTree = "<group>";
+		};
 		CFA254F625E30502005F18D0 /* authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,6 +337,7 @@
 		CFEBD3AD25E1BE3B00C3DBF7 /* services */ = {
 			isa = PBXGroup;
 			children = (
+				CF4F63A225F031930085FC4D /* localStorage */,
 				CFEBD3AE25E1BE4400C3DBF7 /* networking */,
 			);
 			path = services;
@@ -510,6 +524,7 @@
 				CFC5253325DF067E009CDD66 /* TopArtistsTableViewCell.swift in Sources */,
 				CF07994E25DF0D98005D667A /* ArtistsViewController.swift in Sources */,
 				CFA254F225E301AD005F18D0 /* NetworkError.swift in Sources */,
+				CF4F63AF25F040390085FC4D /* LocalStorageClient.swift in Sources */,
 				CF07995625DF0DA2005D667A /* ArtistsViewModel.swift in Sources */,
 				CF626EB525DFA43C00519F09 /* AppStarted.swift in Sources */,
 				CFC524D725DF034C009CDD66 /* SceneDelegate.swift in Sources */,
@@ -531,6 +546,7 @@
 				CF32CFCE25E10A5F00E3CD8C /* AppStateHolder.swift in Sources */,
 				CF07997B25DF137D005D667A /* EventHandler.swift in Sources */,
 				CF07998A25DF13DE005D667A /* TopArtistsInteractor.swift in Sources */,
+				CF4F63A425F031A10085FC4D /* LocalStorageService.swift in Sources */,
 				CFA254F825E3050D005F18D0 /* AuthenticationViewController.swift in Sources */,
 				CF0799B425DF1F60005D667A /* AppRouter.swift in Sources */,
 				CFA254E525E30031005F18D0 /* AuthenticationRepo.swift in Sources */,

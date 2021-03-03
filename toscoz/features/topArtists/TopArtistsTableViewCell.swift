@@ -7,13 +7,25 @@ class TopArtistsTableViewCell: UITableViewCell {
 
     static let cellIdentifier = "TopArtistsTableViewCell"
 
-    private let albumLabel = UILabel()
+    private let titleLabel = UILabel()
+    private let popularityLabel = UILabel()
+    private let mainStackView = UIStackView()
 
-    func configure(album: String) {
-        albumLabel.text = album
+    func configure(album: String, popularity: String) {
+        titleLabel.text = album
+        titleLabel.font = UIFont.preferredFont(forTextStyle: .body)
+        titleLabel.textColor = .systemGray
 
-        contentView.addSubview(albumLabel)
+        popularityLabel.text = popularity
+        popularityLabel.font = UIFont.preferredFont(forTextStyle: .caption2)
+        popularityLabel.textColor = .systemRed
 
-        albumLabel.bindToSuperView()
+        mainStackView.addArrangedSubview(titleLabel)
+        mainStackView.addArrangedSubview(popularityLabel)
+        mainStackView.axis = .vertical
+
+        contentView.addSubview(mainStackView)
+
+        mainStackView.bindToSuperView(with: 16)
     }
 }
