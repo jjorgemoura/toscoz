@@ -34,7 +34,8 @@ extension TopArtistsRepo {
             urlRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
 
             return URLSession.shared.dataTaskPublisher(for: urlRequest)
-                .map { data, response in data
+                .map { data, response in
+                    print(data)
                     print(response)
                     return data
                 }

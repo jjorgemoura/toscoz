@@ -90,3 +90,7 @@ fastlane/test_output
 iOSInjectionProject/
 
 .DS_Store
+
+
+# Secrets
+toscoz/application/setup/Secrets.swift

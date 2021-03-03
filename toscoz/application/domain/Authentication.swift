@@ -5,5 +5,5 @@ import Foundation
 
 struct Authentication {
     let token: String
-    let expireAt: String
+    let expireAt: Date
 }
