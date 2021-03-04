@@ -28,10 +28,15 @@ class AuthenticationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .systemTeal
+        view.backgroundColor = .appBackground
 
-        descriptionLabel?.text = "Please, login via your local spotify up"
+        descriptionLabel?.text = "Please, login via your local spotify app"
+        descriptionLabel?.textColor = .appOnBackground
+        descriptionLabel?.font = .appMessage
+
         authButton?.addTarget(self, action: #selector(loginTapped(_:)), for: .touchUpInside)
+        authButton?.titleLabel?.textColor = .appPrimary
+        authButton?.titleLabel?.font = .appActionButton
     }
 
     override func viewWillAppear(_ animated: Bool) {

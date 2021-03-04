@@ -20,6 +20,8 @@
 		CF0799A625DF1E62005D667A /* AppCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0799A525DF1E62005D667A /* AppCore.swift */; };
 		CF0799AF25DF1F58005D667A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0799AE25DF1F58005D667A /* Router.swift */; };
 		CF0799B425DF1F60005D667A /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0799B325DF1F60005D667A /* AppRouter.swift */; };
+		CF12CC0125F0CB1600F1D5F5 /* PalletteColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF12CC0025F0CB1600F1D5F5 /* PalletteColor.swift */; };
+		CF12CC0625F0CB2000F1D5F5 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF12CC0525F0CB2000F1D5F5 /* Typography.swift */; };
 		CF1AA40325EEEF98006BDCF9 /* TopArtistsRequestCompleted.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1AA40225EEEF98006BDCF9 /* TopArtistsRequestCompleted.swift */; };
 		CF32CFCE25E10A5F00E3CD8C /* AppStateHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32CFCD25E10A5F00E3CD8C /* AppStateHolder.swift */; };
 		CF4F639825EFFD4F0085FC4D /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4F639725EFFD4F0085FC4D /* Secrets.swift */; };
@@ -81,6 +83,8 @@
 		CF0799A525DF1E62005D667A /* AppCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCore.swift; sourceTree = "<group>"; };
 		CF0799AE25DF1F58005D667A /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		CF0799B325DF1F60005D667A /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		CF12CC0025F0CB1600F1D5F5 /* PalletteColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalletteColor.swift; sourceTree = "<group>"; };
+		CF12CC0525F0CB2000F1D5F5 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
 		CF1AA40225EEEF98006BDCF9 /* TopArtistsRequestCompleted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopArtistsRequestCompleted.swift; sourceTree = "<group>"; };
 		CF32CFCD25E10A5F00E3CD8C /* AppStateHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateHolder.swift; sourceTree = "<group>"; };
 		CF4F639725EFFD4F0085FC4D /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
@@ -223,6 +227,8 @@
 				CF0799A525DF1E62005D667A /* AppCore.swift */,
 				CF9934A525EF72AA0043AF0F /* SpotifyConfig.swift */,
 				CF4F639725EFFD4F0085FC4D /* Secrets.swift */,
+				CF12CC0025F0CB1600F1D5F5 /* PalletteColor.swift */,
+				CF12CC0525F0CB2000F1D5F5 /* Typography.swift */,
 			);
 			path = setup;
 			sourceTree = "<group>";
@@ -523,6 +529,7 @@
 				CFEBD3CC25E1C39300C3DBF7 /* TopArtistsRepo.swift in Sources */,
 				CFC5253325DF067E009CDD66 /* TopArtistsTableViewCell.swift in Sources */,
 				CF07994E25DF0D98005D667A /* ArtistsViewController.swift in Sources */,
+				CF12CC0625F0CB2000F1D5F5 /* Typography.swift in Sources */,
 				CFA254F225E301AD005F18D0 /* NetworkError.swift in Sources */,
 				CF4F63AF25F040390085FC4D /* LocalStorageClient.swift in Sources */,
 				CF07995625DF0DA2005D667A /* ArtistsViewModel.swift in Sources */,
@@ -536,6 +543,7 @@
 				CFC5252625DF0455009CDD66 /* TopArtistsViewController.swift in Sources */,
 				CF0799AF25DF1F58005D667A /* Router.swift in Sources */,
 				CFC5252E25DF066F009CDD66 /* TopArtistsViewModel.swift in Sources */,
+				CF12CC0125F0CB1600F1D5F5 /* PalletteColor.swift in Sources */,
 				CF9934A625EF72AA0043AF0F /* SpotifyConfig.swift in Sources */,
 				CF0799A625DF1E62005D667A /* AppCore.swift in Sources */,
 				CFA2551F25E31800005F18D0 /* AuthTokenResponse.swift in Sources */,
