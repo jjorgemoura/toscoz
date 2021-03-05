@@ -24,8 +24,8 @@
                     <rect key="frame" x="166" y="712" width="82" height="30"/>
                     <state key="normal" title="Auth Button"/>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message about the Authentication Process" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRu-N8-gHu" userLabel="MessageLabel">
-                    <rect key="frame" x="44" y="438" width="326" height="20.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message about the Authentication Process" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRu-N8-gHu" userLabel="MessageLabel">
+                    <rect key="frame" x="64" y="427.5" width="286" height="41"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -37,8 +37,8 @@
                 <constraint firstItem="IRu-N8-gHu" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="0ao-J0-zoz"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="gn6-Nc-Zul" secondAttribute="bottom" constant="120" id="11K-qK-k90"/>
                 <constraint firstItem="gn6-Nc-Zul" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="F8R-e1-jy5"/>
-                <constraint firstItem="IRu-N8-gHu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="44" id="NLH-GI-Pvi"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="IRu-N8-gHu" secondAttribute="trailing" constant="44" id="g5k-RO-nBk"/>
+                <constraint firstItem="IRu-N8-gHu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="64" id="NLH-GI-Pvi"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="IRu-N8-gHu" secondAttribute="trailing" constant="64" id="g5k-RO-nBk"/>
             </constraints>
             <point key="canvasLocation" x="-204" y="135"/>
         </view>

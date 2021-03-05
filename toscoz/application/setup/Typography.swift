@@ -34,7 +34,7 @@ extension UIFont {
     }
 
     static var appMessageTitle: UIFont {
-        return UIFont.preferredFont(forTextStyle: .headline)
+        return UIFont.preferredFont(forTextStyle: .title3)
     }
 
     static var appMessage: UIFont {
