@@ -23,6 +23,8 @@
 		CF12CC0125F0CB1600F1D5F5 /* PalletteColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF12CC0025F0CB1600F1D5F5 /* PalletteColor.swift */; };
 		CF12CC0625F0CB2000F1D5F5 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF12CC0525F0CB2000F1D5F5 /* Typography.swift */; };
 		CF1AA40325EEEF98006BDCF9 /* TopArtistsRequestCompleted.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1AA40225EEEF98006BDCF9 /* TopArtistsRequestCompleted.swift */; };
+		CF2A4F9D25F38464005CF285 /* TopArtistsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2A4F9C25F38464005CF285 /* TopArtistsResponse.swift */; };
+		CF2A4FA525F384B7005CF285 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2A4FA425F384B7005CF285 /* Image.swift */; };
 		CF32CFCE25E10A5F00E3CD8C /* AppStateHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32CFCD25E10A5F00E3CD8C /* AppStateHolder.swift */; };
 		CF4F639825EFFD4F0085FC4D /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4F639725EFFD4F0085FC4D /* Secrets.swift */; };
 		CF4F63A425F031A10085FC4D /* LocalStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4F63A325F031A10085FC4D /* LocalStorageService.swift */; };
@@ -86,6 +88,8 @@
 		CF12CC0025F0CB1600F1D5F5 /* PalletteColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalletteColor.swift; sourceTree = "<group>"; };
 		CF12CC0525F0CB2000F1D5F5 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
 		CF1AA40225EEEF98006BDCF9 /* TopArtistsRequestCompleted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopArtistsRequestCompleted.swift; sourceTree = "<group>"; };
+		CF2A4F9C25F38464005CF285 /* TopArtistsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopArtistsResponse.swift; sourceTree = "<group>"; };
+		CF2A4FA425F384B7005CF285 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		CF32CFCD25E10A5F00E3CD8C /* AppStateHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateHolder.swift; sourceTree = "<group>"; };
 		CF4F639725EFFD4F0085FC4D /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		CF4F63A325F031A10085FC4D /* LocalStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageService.swift; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 			children = (
 				CF07996925DF1277005D667A /* Artist.swift */,
 				CFA254EC25E3016A005F18D0 /* Authentication.swift */,
+				CF2A4FA425F384B7005CF285 /* Image.swift */,
 			);
 			path = domain;
 			sourceTree = "<group>";
@@ -240,6 +245,14 @@
 				CF0799B325DF1F60005D667A /* AppRouter.swift */,
 			);
 			path = router;
+			sourceTree = "<group>";
+		};
+		CF2A4F9B25F38448005CF285 /* networkModel */ = {
+			isa = PBXGroup;
+			children = (
+				CF2A4F9C25F38464005CF285 /* TopArtistsResponse.swift */,
+			);
+			path = networkModel;
 			sourceTree = "<group>";
 		};
 		CF4F63A225F031930085FC4D /* localStorage */ = {
@@ -362,6 +375,7 @@
 		CFEBD3CA25E1C38000C3DBF7 /* repo */ = {
 			isa = PBXGroup;
 			children = (
+				CF2A4F9B25F38448005CF285 /* networkModel */,
 				CFA254E425E30031005F18D0 /* AuthenticationRepo.swift */,
 				CFEBD3CB25E1C39300C3DBF7 /* TopArtistsRepo.swift */,
 				CFA254F125E301AD005F18D0 /* NetworkError.swift */,
@@ -537,6 +551,7 @@
 				CFC524D725DF034C009CDD66 /* SceneDelegate.swift in Sources */,
 				CF1AA40325EEEF98006BDCF9 /* TopArtistsRequestCompleted.swift in Sources */,
 				CFA2550825E30B39005F18D0 /* SignInSelected.swift in Sources */,
+				CF2A4F9D25F38464005CF285 /* TopArtistsResponse.swift in Sources */,
 				CFEBD3C025E1BF1B00C3DBF7 /* Request.swift in Sources */,
 				CF07999725DF1DF4005D667A /* TopArtistsPresented.swift in Sources */,
 				CF626EC325DFA66600519F09 /* ApplicationInteractor.swift in Sources */,
@@ -552,6 +567,7 @@
 				CF07996A25DF1277005D667A /* Artist.swift in Sources */,
 				CFEBD3BB25E1BF1300C3DBF7 /* NetworkClient.swift in Sources */,
 				CF32CFCE25E10A5F00E3CD8C /* AppStateHolder.swift in Sources */,
+				CF2A4FA525F384B7005CF285 /* Image.swift in Sources */,
 				CF07997B25DF137D005D667A /* EventHandler.swift in Sources */,
 				CF07998A25DF13DE005D667A /* TopArtistsInteractor.swift in Sources */,
 				CF4F63A425F031A10085FC4D /* LocalStorageService.swift in Sources */,

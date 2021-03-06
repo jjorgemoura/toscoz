@@ -9,6 +9,7 @@ class TopArtistsTableViewCell: UITableViewCell {
 
     private let titleLabel = UILabel()
     private let popularityLabel = UILabel()
+    private let artistImageView = UIImageView()
     private let mainStackView = UIStackView()
 
     func configure(album: String, popularity: String) {
@@ -20,9 +21,10 @@ class TopArtistsTableViewCell: UITableViewCell {
         popularityLabel.font = UIFont.preferredFont(forTextStyle: .caption2)
         popularityLabel.textColor = .systemRed
 
+        mainStackView.addArrangedSubview(artistImageView)
         mainStackView.addArrangedSubview(titleLabel)
         mainStackView.addArrangedSubview(popularityLabel)
-        mainStackView.axis = .vertical
+        mainStackView.axis = .horizontal
 
         contentView.addSubview(mainStackView)
 

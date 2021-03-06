@@ -8,24 +8,6 @@ struct TopArtistsRepo {
     var topArtists: (String) -> AnyPublisher<TopArtistsResponse, Error>
 }
 
-struct TopArtistsResponse: Decodable, Equatable {
-    let items: [ArtistResponse]
-
-    func toModel() -> [Artist] {
-        return items.map { $0.toModel() }
-    }
-}
-
-struct ArtistResponse: Decodable, Equatable {
-    let id: String
-    let name: String
-    let popularity: Int
-
-    func toModel() -> Artist {
-        return Artist(identifier: id, name: name, popularity: popularity)
-    }
-}
-
 extension TopArtistsRepo {
     static var live = Self(
         topArtists: { token in
@@ -61,10 +43,10 @@ extension TopArtistsRepo {
     static let happyPath = Self(
         topArtists: { _ in
             Just(TopArtistsResponse(items: [
-                ArtistResponse(id: "Frances the Mute", name: "The Mars Volta", popularity: 80),
-                ArtistResponse(id: "B Fachada II", name: "B Fachada", popularity: 51),
-                ArtistResponse(id: "Os Homens nao se querem bonitos", name: "GNR", popularity: 55),
-                ArtistResponse(id: "The Top", name: "The Cure", popularity: 89)
+                ArtistResponse(id: "Frances the Mute", genres: ["prog"], href: "", images: [], name: "The Mars Volta", popularity: 80, uri: ""),
+                ArtistResponse(id: "B Fachada II", genres: ["tuga"], href: "", images: [], name: "B Fachada", popularity: 51, uri: ""),
+                ArtistResponse(id: "Os Homens nao se querem bonitos", genres: ["pop rock"], href: "", images: [], name: "GNR", popularity: 55, uri: ""),
+                ArtistResponse(id: "The Top", genres: ["new wave"], href: "", images: [], name: "The Cure", popularity: 89, uri: "")
             ]))
                 .setFailureType(to: Error.self)
                 .eraseToAnyPublisher()

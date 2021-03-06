@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window = window
 
 //            let localStorageService = LocalStorageService(localStorage: .live, appStateHolder: appStateHolder)
-            localStorageService = LocalStorageService(localStorage: .live)
+            localStorageService = LocalStorageService(localStorage: .mock)
             let persistedAppState = localStorageService?.read()
 
             let appStateHolder = AppStateHolder(appState: persistedAppState ?? AppState.initialState)
